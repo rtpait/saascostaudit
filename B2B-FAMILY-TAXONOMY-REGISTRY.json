@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.3.0",
-  "updated_at": "2026-10-27T08:22:00-04:00",
+  "schema_version": "1.4.0",
+  "updated_at": "2026-10-27T09:47:00-04:00",
   "sister_family_group": "b2b-audit-family",
   "based_on_audit": "/workspace/b2bfeeaudit/FEE-VS-COST-PO-AUDIT-2026-10-27.md",
   "conflict_resolution_doc": "/workspace/CROSS-SPOKE-CONFLICT-RESOLUTION-RULE.md",
@@ -58,7 +58,7 @@
       "product_workspace": "/workspace/b2bcostaudit",
       "sister_portfolio_tag": "SISTER_PORTFOLIO_B2B_COST_AUDIT",
       "macro_category": "COSTS (Non-SaaS Recurring Commercial Operating, Insurance, Compliance, Fleet, Facilities & Headcount Burden Costs)",
-      "road_to_revenue_stage": "STAGE_0_TO_1",
+      "road_to_revenue_stage": "STAGE_1",
       "starting_kaizen_mode": "MODE_1: Discovery, Indexation & AEO Velocity Mode (Day-0 Indexation)",
       "canonical_url_ownership": [
         "/eo-insurance/* \u2014 All 5 commercial Tech E&O and Cyber Liability routes migrated from b2bfeeaudit.com (/eo-insurance/, /eo-insurance/cyber-eo-premium-estimator/, /eo-insurance/industry-policy-requirements/, /eo-insurance/coi-compliance-checker/, /eo-insurance/state-minimum-liability-limits/)",
@@ -86,7 +86,7 @@
       "product_workspace": "/workspace/saascostaudit",
       "sister_portfolio_tag": "SISTER_PORTFOLIO_SAAS_COST_AUDIT",
       "macro_category": "SAAS PLATFORMS (Per-Seat B2B Software, Collaboration, HRIS PEPM, CRM, Cloud/DevTools & AI License Tier Costs)",
-      "road_to_revenue_stage": "STAGE_0_TO_1",
+      "road_to_revenue_stage": "STAGE_1",
       "starting_kaizen_mode": "MODE_1: Discovery, Indexation & AEO Velocity Mode (Day-0 Indexation)",
       "canonical_url_ownership": [
         "/ucaas/* \u2014 All 5 UCaaS & collaboration suite pricing audit routes migrated from b2bfeeaudit.com (/ucaas/, /ucaas/cisco-webex-pricing-audit/, /ucaas/microsoft-teams-pricing-audit/, /ucaas/zoom-workplace-pricing-audit/, /ucaas/google-workspace-meet-pricing-audit/)",
@@ -118,7 +118,7 @@
       "product_workspace": "/workspace/apicostaudit",
       "sister_portfolio_tag": "SISTER_PORTFOLIO_API_COST_AUDIT",
       "macro_category": "API_COSTS (Usage-Based, Metered, Per-Call, Per-1M Token, Per-Minute Voice/Video AI, Vector Read/Write Unit & GPU/Serverless Inference API Spend)",
-      "road_to_revenue_stage": "STAGE_0_TO_1",
+      "road_to_revenue_stage": "STAGE_1",
       "starting_kaizen_mode": "MODE_1: Discovery, Indexation & AEO Velocity Mode (Day-0 Indexation)",
       "canonical_url_ownership": [
         "/llm-api/* \u2014 Metered per-1M input/output/cached token, batch API, and fine-tuning cost calculators across frontier and open-weight LLM APIs (OpenAI API, Anthropic Claude API, Google Gemini/Vertex AI, AWS Bedrock, Azure OpenAI, Mistral, Cohere, DeepSeek, Together AI, Fireworks AI, Groq, Replicate)",
@@ -259,6 +259,49 @@
       "overflow_backlog_products": [],
       "same_family_concurrency_allowed": false,
       "counts_as_single_spoke_context": true
+    }
+  },
+  "four_axis_affiliate_taxonomy_path": "/workspace/B2B-FAMILY-4-AXIS-AFFILIATE-TAXONOMY.json",
+  "pm_affiliate_segment_routing_priority": "P0_TOP_PRIORITY",
+  "dynamic_leader_chasing_parity_policy": {
+    "rule_id": "CHASE_CURRENT_FAMILY_LEADER",
+    "description": "Parity across the B2B Cost Audit Family means maintaining a tight spread across all four sister sites (b2bfeeaudit.com, b2bcostaudit.com, saascostaudit.com, apicostaudit.com), where the scheduler and B2B Audit Family PM (9c1c413e) are always in pursuit of whichever product is currently leading at any given moment (rather than targeting a static stage number).",
+    "current_family_leader": "b2bfeeaudit.com",
+    "current_leader_metrics": {
+      "domain": "b2bfeeaudit.com",
+      "road_to_revenue_stage": "STAGE_2",
+      "version_tag": "v1.5.1",
+      "canonical_routes": 16,
+      "redirect_shims": 10,
+      "total_html_endpoints": 26,
+      "day0_external_gates": "ACCEPT (ALL MANDATORY GATES PASSED)",
+      "four_axis_affiliate_taxonomy": "ACTIVE (B2B_FEES)"
+    },
+    "chasing_pack_status": {
+      "b2bcostaudit.com": {
+        "road_to_revenue_stage": "STAGE_1 -> STAGE_2",
+        "version_tag": "v1.1.1",
+        "active_routes": 11,
+        "day0_external_gates": "ACCEPT (ALL MANDATORY GATES PASSED)",
+        "four_axis_affiliate_taxonomy": "ACTIVE (B2B_COSTS)",
+        "gap_to_leader": "+5 canonical routes + GSC indexation parity to match b2bfeeaudit.com"
+      },
+      "saascostaudit.com": {
+        "road_to_revenue_stage": "STAGE_1 -> STAGE_2",
+        "version_tag": "v1.1.1",
+        "active_routes": 11,
+        "day0_external_gates": "ACCEPT (ALL MANDATORY GATES PASSED)",
+        "four_axis_affiliate_taxonomy": "ACTIVE (SAAS_COSTS)",
+        "gap_to_leader": "+5 canonical routes + GSC indexation parity to match b2bfeeaudit.com"
+      },
+      "apicostaudit.com": {
+        "road_to_revenue_stage": "STAGE_1",
+        "version_tag": "v1.0.0",
+        "active_routes": 17,
+        "day0_external_gates": "GITHUB_PAGES_DEPLOYED_AWAITING_PORKBUN_DNS_A_AND_GSC_TXT",
+        "four_axis_affiliate_taxonomy": "ACTIVE (API_COSTS generic placeholders + CROSS_FAMILY_TRAFFIC_FUNNEL)",
+        "gap_to_leader": "Porkbun DNS A record cutover (207.207.210.x -> 185.199.108-111.153) + GSC TXT record to match b2bfeeaudit.com"
+      }
     }
   }
 }

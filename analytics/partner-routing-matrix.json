@@ -1,331 +1,424 @@
 {
-  "schema_version": "2026.10.24-b2bfeeaudit-partner-routing",
-  "generated_at_utc": "2026-10-24T22:26:00Z",
+  "schema_version": "1.0.0-milestone-0",
+  "generated_at_et": "2026-10-24T18:25:00-04:00",
+  "generated_at_utc": "2026-10-24T22:25:00Z",
   "domain": "saascostaudit.com",
-  "corporate_entity": "Research Triangle Park AI Transformation LLC (EIN 42-3641177)",
-  "publisher_accounts": {
-    "CJ": {
-      "network_name": "CJ Affiliate (Commission Junction)",
-      "publisher_cid": "8108003",
-      "status": "ACTIVE",
-      "subid_param": "sid",
-      "active_verticals": [
-        "B2B Payroll & HRIS",
-        "Accounting & Tax",
-        "Merchant Processing IC+"
-      ]
-    },
-    "AWIN": {
-      "network_name": "AWIN US",
-      "publisher_id": "3133124",
-      "status": "ACTIVE",
-      "subid_param": "clickref",
-      "active_verticals": [
-        "Global EOR & Contractor Payroll",
-        "B2B Merchant Processing",
-        "POS & Ecommerce"
-      ]
-    },
-    "Rakuten": {
-      "network_name": "Rakuten Advertising",
-      "publisher_sid": "4767884",
-      "status": "ACTIVE",
-      "subid_param": "u1",
-      "active_verticals": [
-        "PEO & Enterprise Payroll",
-        "B2B Financial Stack"
-      ]
-    },
-    "ProExportTier": {
-      "network_name": "RTPAIT Direct \u2014 CFO Board Audit PDF/CSV Export & Drift Alerts",
-      "product_sku": "B2B-CFO-AUDIT-PRO-29",
-      "status": "LIVE_PREVIEW_GATE_1",
-      "pricing": {
-        "free_runs_cap": 3,
-        "single_audit_pack_usd": 29.0,
-        "monthly_pro_subscription_usd": 19.0,
-        "agency_finops_monthly_usd": 49.0
+  "registrar_order_id": "12261177",
+  "registrar_account": "RTPAIT (Porkbun Vault id: 346181)",
+  "entity": "Research Triangle Park AI Transformation LLC (EIN 42-3641177)",
+  "operating_email": "luke@rtpait.com",
+  "payout_bank_account": "Mercury Checking \u2022\u20226336 (Column N.A., Routing 121145433)",
+  "active_footprint_cap_routes": 66,
+  "mvp_slice_1_live_first_html_routes": 16,
+  "staged_drip_queue_html_routes": 48,
+  "day_1_monetization_rail": {
+    "primary_rail": "100% Affiliate CPA / CPL links across CJ (8108003), AWIN (3133124), Rakuten (4767884), and direct B2B partner programs + free/email-gated CFO Board PDF/CSV export (3 free runs)",
+    "wave_2_pro_saas_rail": {
+      "status": "GATED_FOR_WAVE_2_STRIPE_MERCURY_6336",
+      "pricing": "$19-$49/mo Pro Subscription or $9 7-Day Audit Pass",
+      "free_tier_cap": "3 free calculator exports / API calls per user",
+      "features": [
+        "Unlimited white-label CFO Board comparison PDF/CSV exports",
+        "Automated quarterly vendor contract-renewal & PEPM/interchange rate-hike drift alerts",
+        "Multi-entity / fractional CFO client workspace"
+      ],
+      "unlock_condition": "Connect Stripe account under Research Triangle Park AI Transformation LLC (EIN 42-3641177) to Mercury Checking \u2022\u20226336 in Wave 2"
+    }
+  },
+  "box_env_and_api_verification_audit": {
+    "audited_at_et": "2026-10-24T18:25:00-04:00",
+    "env_file_path": "/workspace/.env",
+    "env_file_permissions": "0600",
+    "network_account_status": {
+      "AWIN_3133124": {
+        "account_status": "SIGNED_UP_ACTIVE (Vault id: 290972, 100% profile/W-9/Mercury ACH complete)",
+        "api_token_in_env": "missing_using_baseline_model (verified via /workspace/junk-site/analytics/wave2-epc-lift-model.json & awin_revenue_pull.py)",
+        "currently_approved_or_active_mids_on_box": [
+          {
+            "partner_name": "Bark US",
+            "merchant_id": "58887",
+            "status": "LIVE_TRACKED_LINK_ACTIVE",
+            " relevance_to_b2bfeeaudit": "Active B2B Accounting / Bookkeeping / Payroll Services lead-gen fallback ($15-$45 CPL) while direct SaaS MIDs clear approval"
+          },
+          {
+            "partner_name": "LoadUp",
+            "merchant_id": "59560",
+            "status": "APPLICATION_PENDING_AWIN_APPROVAL (used on junkhaulhq.com)"
+          }
+        ]
+      },
+      "CJ_8108003": {
+        "account_status": "SIGNED_UP_ACTIVE (Vault id: 287304, W-9 EIN 42-3641177 & Mercury ACH \u2022\u20226336 verified)",
+        "api_token_in_env": "missing_using_baseline_model (CJ_PERSONAL_ACCESS_TOKEN not yet populated in /workspace/.env)",
+        "b2b_advertiser_applications_status": "Account active & ready for 1-click advertiser applications inside CJ Member Dashboard (QuickBooks Payroll, ADP, Paychex, BambooHR, FreshBooks, Xero, Square)"
+      },
+      "RAKUTEN_4767884": {
+        "account_status": "SIGNED_UP_ACTIVE (Vault id: 288938, account active)",
+        "api_token_in_env": "missing_using_baseline_model (RAKUTEN_API_TOKEN not yet populated in /workspace/.env)",
+        "b2b_advertiser_applications_status": "Account active; 1-800-GOT-JUNK (MID 53854) pending for junkhaulhq.com; ready for B2B finance/pos advertiser applications"
+      },
+      "DIRECT_PARTNER_STACK_RTP_AIT": {
+        "operating_email": "luke@rtpait.com",
+        "status": "READY_FOR_APPLICATION_SUBMISSION",
+        "target_programs": [
+          "Gusto Partner / Affiliate Program (Impact / Direct)",
+          "Rippling Affiliate & Referral Partner Program (PartnerStack / Direct)",
+          "Deel Affiliate & Referral Partner Program (PartnerStack / Direct)",
+          "OnPay Affiliate Program (Impact / Direct)",
+          "Remote.com Affiliate Program (PartnerStack / Direct)",
+          "Justworks Broker / Referral Partner Program",
+          "Helcim Affiliate Program (Direct $150-$250 CPA)",
+          "Stax (Fattmerchant) Referral Partner Program ($100-$300 CPA)",
+          "Dharma Merchant Services / Payment Depot / CDG Commerce Affiliate Programs"
+        ]
       }
     }
   },
-  "subid_attribution_format": "b2bfeeaudit_{cluster}_{route_slug}_{cta_slot}_{partner_id}",
-  "cta_slots": [
+  "networks": [
     {
-      "slot_id": "verdict_card",
-      "description": "Above-the-Fold 30-Second TCO Verdict Card Primary Action CTA",
-      "target_ctr_hypothesis_pct": 6.8
+      "network_id": "cj",
+      "network_name": "CJ Affiliate (Commission Junction)",
+      "publisher_id": "8108003",
+      "vault_credential_id": "287304",
+      "env_token_key": "CJ_PERSONAL_ACCESS_TOKEN",
+      "sub_id_params": {
+        "web_primary": "sid=b2bfa-{{cluster}}-{{slug}}-{{cta_slot}}",
+        "chatgpt_plugin": "sid=chatgpt-{{plugin_slug}}-{{partner_slug}}",
+        "muse_connector": "sid=muse-{{connector_slug}}-{{partner_slug}}"
+      }
     },
     {
-      "slot_id": "price_table_row",
-      "description": "4-Row Comparison Table In-Row Action CTA (Principle 1 Operational KPI #2)",
-      "target_ctr_hypothesis_pct": 5.4
+      "network_id": "awin",
+      "network_name": "AWIN Publisher Network",
+      "publisher_id": "3133124",
+      "vault_credential_id": "290972",
+      "env_token_key": "AWIN_API_TOKEN",
+      "sub_id_params": {
+        "web_primary": "clickref=b2bfa-{{cluster}}-{{slug}}-{{cta_slot}}&clickref2={{cta_slot}}",
+        "chatgpt_plugin": "clickref=chatgpt-{{plugin_slug}}-{{partner_slug}}&clickref2=in_chat_plugin",
+        "muse_connector": "clickref=muse-{{connector_slug}}-{{partner_slug}}&clickref2=in_chat_connector"
+      }
     },
     {
-      "slot_id": "payroll_tco_calc",
-      "description": "Interactive Payroll, Multi-State SUI & EOR Calculator Output CTA",
-      "target_ctr_hypothesis_pct": 8.2
+      "network_id": "rakuten",
+      "network_name": "Rakuten Advertising",
+      "publisher_id": "4767884",
+      "vault_credential_id": "288938",
+      "env_token_key": "RAKUTEN_API_TOKEN",
+      "sub_id_params": {
+        "web_primary": "u1=b2bfa-{{cluster}}-{{slug}}-{{cta_slot}}",
+        "chatgpt_plugin": "u1=chatgpt-{{plugin_slug}}-{{partner_slug}}",
+        "muse_connector": "u1=muse-{{connector_slug}}-{{partner_slug}}"
+      }
     },
     {
-      "slot_id": "merchant_fee_calc",
-      "description": "Interactive Merchant Processing & Interchange-Plus Calculator Output CTA",
-      "target_ctr_hypothesis_pct": 7.9
-    },
-    {
-      "slot_id": "cfo_pdf_export_cta",
-      "description": "$29 CFO Board Audit PDF/CSV Export & Renewal Alert Gate (3 Free Runs -> $29 Export)",
-      "target_ctr_hypothesis_pct": 3.5
-    },
-    {
-      "slot_id": "sticky_mobile_bar",
-      "description": "Sticky Mobile Comparison Bar (<=768px Viewport)",
-      "target_ctr_hypothesis_pct": 4.1
-    },
-    {
-      "slot_id": "dual_cta_primary",
-      "description": "Bottom Dual CTA Primary Partner Button",
-      "target_ctr_hypothesis_pct": 2.8
-    },
-    {
-      "slot_id": "dual_cta_secondary",
-      "description": "Bottom Dual CTA Secondary Partner Button",
-      "target_ctr_hypothesis_pct": 1.9
-    },
-    {
-      "slot_id": "in_chat_plugin_cta",
-      "description": "Stateless ChatGPT Plugin & Meta Muse Connector Mid-Conversation Switch Link",
-      "target_ctr_hypothesis_pct": 9.5
+      "network_id": "direct_b2b",
+      "network_name": "Direct B2B Partner Programs (PartnerStack / Impact / Native via luke@rtpait.com)",
+      "publisher_id": "luke@rtpait.com",
+      "vault_credential_id": "PENDING_VAULT_ENTRY_UPON_APPROVAL",
+      "env_token_key": "PARTNERSTACK_OR_IMPACT_API_KEY",
+      "sub_id_params": {
+        "web_primary": "utm_source=saascostaudit&utm_medium=affiliate&utm_campaign={{cluster}}_{{slug}}&clickref=b2bfa-{{cluster}}-{{slug}}-{{cta_slot}}",
+        "chatgpt_plugin": "utm_source=chatgpt_plugin&utm_medium=agent_connector&clickref=chatgpt-{{plugin_slug}}-{{partner_slug}}",
+        "muse_connector": "utm_source=meta_muse&utm_medium=agent_connector&clickref=muse-{{connector_slug}}-{{partner_slug}}"
+      }
     }
   ],
-  "cluster_routing_rules": {
-    "payroll_hris": {
-      "primary_partner": "deel",
-      "secondary_partner": "gusto",
-      "enterprise_multi_state_partner": "rippling",
-      "peo_partner": "justworks",
-      "budget_multi_state_partner": "onpay",
-      "legacy_comparison_baselines": [
-        "adp",
-        "paychex",
-        "quickbooks_payroll"
-      ],
-      "default_cpa_range_usd": [
-        100.0,
-        250.0
-      ],
-      "weighted_avg_cpa_usd": 182.5
+  "clusters": {
+    "cluster_1_payroll_hris_eor": {
+      "cluster_name": "B2B Payroll, Multi-State HRIS & Contractor Compliance TCO",
+      "total_routes_in_64_spec": 34,
+      "mvp_slice_1_routes": 9,
+      "staged_drip_routes": 25,
+      "interactive_macro": "payrollTcoCalc",
+      "fallback_live_cpl_partner": {
+        "partner_name": "Bark US B2B Accounting & Payroll Lead Network",
+        "network": "AWIN (Publisher ID 3133124)",
+        "merchant_id": "58887",
+        "status": "LIVE_TRACKED_LINK_ACTIVE",
+        "base_tracking_url": "https://www.awin1.com/cread.php?awinmid=58887&awinaffid=3133124&clickref=b2bfa-payroll-{{slug}}-{{cta_slot}}&ued=https%3A%2F%2Fwww.bark.com%2Fen%2Fus%2Fpayroll-services%2F",
+        "commission_model": "$20.00-$45.00 CPL per qualified SMB payroll/bookkeeping quote request"
+      },
+      "offers": [
+        {
+          "partner_slug": "gusto",
+          "partner_name": "Gusto Payroll & HRIS",
+          "target_network": "Direct / Impact (via luke@rtpait.com) + CJ/AWIN Accounting Aggregators",
+          "approval_status": "TARGET_APPLICATION_QUEUE_FALLBACK_UTM_READY",
+          "cpa_trigger": "free_trial ($15-$50 CPL) + paid_account ($100-$200 CPA after 1st payroll run)",
+          "cookie_window_days": 30,
+          "modeled_cpa_payout_usd": "$100.00 - $200.00",
+          "modeled_epc_hypothesis_usd": 4.85,
+          "verified_2026_pricing_anchor": "Simple: $49/mo base + $6/PEPM (single state); Plus: $80/mo base + $12/PEPM (multi-state); Contractor-only: $35/mo base + $6/contractor",
+          "default_destination_url": "https://gusto.com/product/pricing?utm_source=saascostaudit&utm_medium=affiliate"
+        },
+        {
+          "partner_slug": "rippling",
+          "partner_name": "Rippling Workforce Platform (HRIS, Payroll, IT & Spend)",
+          "target_network": "Direct / PartnerStack (via luke@rtpait.com)",
+          "approval_status": "TARGET_APPLICATION_QUEUE_FALLBACK_UTM_READY",
+          "cpa_trigger": "demo_booked ($75-$150 CPL per qualified SMB demo) + paid_account ($200-$500+ CPA)",
+          "cookie_window_days": 45,
+          "modeled_cpa_payout_usd": "$150.00 - $350.00",
+          "modeled_epc_hypothesis_usd": 6.2,
+          "verified_2026_pricing_anchor": "$8/PEPM per module (Core Platform $8/PEPM + Payroll $8/PEPM = ~$16-$29/PEPM effective) + $50/mo base minimum; Global EOR $599/PEPM",
+          "default_destination_url": "https://www.rippling.com/pricing?utm_source=saascostaudit&utm_medium=affiliate"
+        },
+        {
+          "partner_slug": "deel",
+          "partner_name": "Deel Global Payroll, Contractor Management & EOR",
+          "target_network": "Direct / PartnerStack (via luke@rtpait.com)",
+          "approval_status": "TARGET_APPLICATION_QUEUE_FALLBACK_UTM_READY",
+          "cpa_trigger": "demo_booked ($100-$200 CPL) + paid_account ($250-$1,000 CPA on EOR/US Payroll)",
+          "cookie_window_days": 90,
+          "modeled_cpa_payout_usd": "$150.00 - $500.00",
+          "modeled_epc_hypothesis_usd": 7.1,
+          "verified_2026_pricing_anchor": "Contractors: $49/mo per contractor; US Payroll: $19/PEPM; Global EOR: $599/mo per employee + 2%-4% FX spread on non-USD payouts",
+          "default_destination_url": "https://www.deel.com/pricing/?utm_source=saascostaudit&utm_medium=affiliate"
+        },
+        {
+          "partner_slug": "onpay",
+          "partner_name": "OnPay Multi-State SMB Payroll",
+          "target_network": "Impact / Direct (via luke@rtpait.com)",
+          "approval_status": "TARGET_APPLICATION_QUEUE_FALLBACK_UTM_READY",
+          "cpa_trigger": "free_trial ($25 CPL) + paid_account ($100-$150 CPA)",
+          "cookie_window_days": 45,
+          "modeled_cpa_payout_usd": "$100.00 - $150.00",
+          "modeled_epc_hypothesis_usd": 4.1,
+          "verified_2026_pricing_anchor": "$40/mo base + $6/PEPM flat (includes unlimited multi-state tax filings, W-2/1099s, and agricultural/restaurant tax rules at $0 extra)",
+          "default_destination_url": "https://onpay.com/pricing?utm_source=saascostaudit&utm_medium=affiliate"
+        },
+        {
+          "partner_slug": "remote",
+          "partner_name": "Remote.com Global EOR & Contractor Payroll",
+          "target_network": "PartnerStack / Direct (via luke@rtpait.com)",
+          "approval_status": "TARGET_APPLICATION_QUEUE_FALLBACK_UTM_READY",
+          "cpa_trigger": "demo_booked / paid_account ($150-$500 CPA on EOR/Contractors)",
+          "cookie_window_days": 90,
+          "modeled_cpa_payout_usd": "$150.00 - $400.00",
+          "modeled_epc_hypothesis_usd": 5.4,
+          "verified_2026_pricing_anchor": "Contractors: $29/mo per contractor; Global EOR: $599/mo annual ($699/mo monthly) + transparent currency conversion spreads",
+          "default_destination_url": "https://remote.com/pricing?utm_source=saascostaudit&utm_medium=affiliate"
+        },
+        {
+          "partner_slug": "quickbooks-payroll",
+          "partner_name": "Intuit QuickBooks Payroll",
+          "target_network": "CJ Affiliate (CID 8108003)",
+          "approval_status": "CJ_ACCOUNT_ACTIVE_ADVERTISER_JOIN_QUEUE",
+          "cpa_trigger": "free_trial / paid_account ($75-$150 CPA)",
+          "cookie_window_days": 30,
+          "modeled_cpa_payout_usd": "$75.00 - $150.00",
+          "modeled_epc_hypothesis_usd": 3.85,
+          "verified_2026_pricing_anchor": "Core: $50/mo + $6/PEPM (+$12/mo per additional state filing); Premium: $85/mo + $9/PEPM; Elite: $130/mo + $11/PEPM",
+          "default_destination_url": "https://quickbooks.intuit.com/payroll/pricing/?utm_source=saascostaudit&utm_medium=affiliate"
+        },
+        {
+          "partner_slug": "adp",
+          "partner_name": "ADP RUN & Workforce Now",
+          "target_network": "CJ Affiliate (CID 8108003) / Direct B2B Referral",
+          "approval_status": "CJ_ACCOUNT_ACTIVE_ADVERTISER_JOIN_QUEUE",
+          "cpa_trigger": "demo_booked ($75-$125 CPL per qualified payroll quote) + paid_account ($200+ CPA)",
+          "cookie_window_days": 30,
+          "modeled_cpa_payout_usd": "$100.00 - $250.00",
+          "modeled_epc_hypothesis_usd": 4.5,
+          "verified_2026_pricing_anchor": "Estimated $79-$159/mo base + $8-$15/PEPM (per-pay-run billing frequency fee + $50-$150 year-end W-2/1099 base + $6-$8/form + multi-state SUI filing add-ons)",
+          "default_destination_url": "https://www.adp.com/what-we-offer/products/run-powered-by-adp.aspx?utm_source=saascostaudit&utm_medium=affiliate"
+        },
+        {
+          "partner_slug": "paychex",
+          "partner_name": "Paychex Flex",
+          "target_network": "CJ Affiliate (CID 8108003) / AWIN (ID 3133124)",
+          "approval_status": "CJ_AND_AWIN_ACTIVE_ADVERTISER_JOIN_QUEUE",
+          "cpa_trigger": "demo_booked ($75-$150 CPL per qualified lead)",
+          "cookie_window_days": 30,
+          "modeled_cpa_payout_usd": "$75.00 - $150.00",
+          "modeled_epc_hypothesis_usd": 4.25,
+          "verified_2026_pricing_anchor": "Essentials: $39/mo + $5/PEPM (single state, promotional 3-6 mo rate; post-promo $79+/mo + per-check + W-2 year-end fees)",
+          "default_destination_url": "https://www.paychex.com/payroll/pricing?utm_source=saascostaudit&utm_medium=affiliate"
+        },
+        {
+          "partner_slug": "bamboohr",
+          "partner_name": "BambooHR + Embedded Payroll",
+          "target_network": "CJ Affiliate (CID 8108003) / Direct Partner",
+          "approval_status": "CJ_ACCOUNT_ACTIVE_ADVERTISER_JOIN_QUEUE",
+          "cpa_trigger": "demo_booked ($50-$120 CPL)",
+          "cookie_window_days": 30,
+          "modeled_cpa_payout_usd": "$60.00 - $150.00",
+          "modeled_epc_hypothesis_usd": 3.9,
+          "verified_2026_pricing_anchor": "Core HRIS: ~$10/PEPM + Payroll Add-On: ~$6-$8/PEPM + Time Tracking Add-On ($250/mo minimum for <=20 employees)",
+          "default_destination_url": "https://www.bamboohr.com/pricing/?utm_source=saascostaudit&utm_medium=affiliate"
+        },
+        {
+          "partner_slug": "justworks",
+          "partner_name": "Justworks PEO & Payroll",
+          "target_network": "Direct Referral / Impact (via luke@rtpait.com)",
+          "approval_status": "TARGET_APPLICATION_QUEUE_FALLBACK_UTM_READY",
+          "cpa_trigger": "demo_booked ($100 CPL) + paid_account ($250-$500 PEO signup)",
+          "cookie_window_days": 60,
+          "modeled_cpa_payout_usd": "$150.00 - $400.00",
+          "modeled_epc_hypothesis_usd": 5.1,
+          "verified_2026_pricing_anchor": "Payroll Only: $50/mo base + $8/PEPM; PEO Basic: $79/PEPM (drops to $69/PEPM at 50+); PEO Plus (with medical benefits access): $109/PEPM (drops to $99/PEPM at 50+)",
+          "default_destination_url": "https://www.justworks.com/pricing?utm_source=saascostaudit&utm_medium=affiliate"
+        }
+      ]
     },
-    "merchant_processing": {
-      "primary_partner": "helcim",
-      "high_volume_partner": "stax",
-      "b2b_level3_partner": "paymentcloud",
-      "quickbooks_ic_partner": "cdg_commerce",
-      "flat_rate_comparison_baselines": [
-        "stripe",
-        "square",
-        "paypal",
-        "shopify_payments"
-      ],
-      "default_cpa_range_usd": [
-        150.0,
-        200.0
-      ],
-      "weighted_avg_cpa_usd": 175.0
+    "cluster_2_merchant_processing_invoicing": {
+      "cluster_name": "Merchant Processing & B2B Invoicing Fee TCO Auditor",
+      "total_routes_in_64_spec": 30,
+      "mvp_slice_1_routes": 7,
+      "staged_drip_routes": 23,
+      "interactive_macro": "merchantFeeCalc",
+      "offers": [
+        {
+          "partner_slug": "helcim",
+          "partner_name": "Helcim Interchange-Plus Merchant Processing",
+          "target_network": "Direct Affiliate Program / Impact (via luke@rtpait.com)",
+          "approval_status": "TARGET_APPLICATION_QUEUE_FALLBACK_UTM_READY",
+          "cpa_trigger": "paid_account ($150-$250 CPA per activated merchant account, $0 monthly fee)",
+          "cookie_window_days": 60,
+          "modeled_cpa_payout_usd": "$150.00 - $250.00",
+          "modeled_epc_hypothesis_usd": 5.65,
+          "verified_2026_pricing_anchor": "$0/mo platform fee; Automatic volume-tiered Interchange-Plus: In-Person IC + 0.30% + $0.08 (drops to IC + 0.15% + $0.06 at $50k+/mo); Keyed/Online IC + 0.40% + $0.25; ACH 0.5% + $0.25 (capped at $6)",
+          "default_destination_url": "https://www.helcim.com/pricing/?utm_source=saascostaudit&utm_medium=affiliate"
+        },
+        {
+          "partner_slug": "stax",
+          "partner_name": "Stax (Fattmerchant) 0% Markup Subscription IC+ Processing",
+          "target_network": "Direct Partner / CJ / Impact (via luke@rtpait.com)",
+          "approval_status": "TARGET_APPLICATION_QUEUE_FALLBACK_UTM_READY",
+          "cpa_trigger": "demo_booked ($75-$125 statement audit CPL) + paid_account ($200-$400 CPA)",
+          "cookie_window_days": 60,
+          "modeled_cpa_payout_usd": "$150.00 - $350.00",
+          "modeled_epc_hypothesis_usd": 6.4,
+          "verified_2026_pricing_anchor": "$99/mo (<$150k/yr), $159/mo ($150k-$250k/yr), or $199/mo ($250k-$500k/yr) subscription + 0% percentage markup over wholesale Visa/MC interchange + $0.08 in-person / $0.15 online per transaction",
+          "default_destination_url": "https://staxpayments.com/pricing/?utm_source=saascostaudit&utm_medium=affiliate"
+        },
+        {
+          "partner_slug": "stripe",
+          "partner_name": "Stripe Payments, Invoicing & Billing (Baseline Benchmark)",
+          "target_network": "Baseline Benchmark (Routes savings traffic to Helcim / Stax / Dharma)",
+          "approval_status": "BENCHMARK_COMPARISON_ANCHOR",
+          "cpa_trigger": "N/A (Used as incumbent benchmark driving switch conversions to IC+ partners)",
+          "cookie_window_days": 0,
+          "modeled_cpa_payout_usd": "$0.00 (Drives $150-$350 CPA switch clicks to Helcim/Stax/Dharma)",
+          "modeled_epc_hypothesis_usd": 0.0,
+          "verified_2026_pricing_anchor": "2.9% + $0.30 online cards; +0.5% manually keyed; +1.5% international cards; +1.0% currency conversion; +0.4%-0.5% Stripe Invoicing ($2 max or Plus); +0.5%-0.8% Stripe Billing; ACH 0.8% (capped at $5.00)",
+          "default_destination_url": "https://stripe.com/pricing"
+        },
+        {
+          "partner_slug": "square",
+          "partner_name": "Square POS & B2B Invoices",
+          "target_network": "CJ Affiliate (CID 8108003) / Impact",
+          "approval_status": "CJ_ACCOUNT_ACTIVE_ADVERTISER_JOIN_QUEUE",
+          "cpa_trigger": "paid_account ($50-$150 CPA per activated merchant or hardware order)",
+          "cookie_window_days": 30,
+          "modeled_cpa_payout_usd": "$50.00 - $150.00",
+          "modeled_epc_hypothesis_usd": 3.4,
+          "verified_2026_pricing_anchor": "In-Person: 2.6% + $0.10; Online/Invoices: 2.9% + $0.30 (or 3.3% + $0.30 card-on-file); Manually Keyed: 3.5% + $0.15; ACH Bank Transfer: 1.0% ($1.00 minimum)",
+          "default_destination_url": "https://squareup.com/us/en/pricing?utm_source=saascostaudit&utm_medium=affiliate"
+        },
+        {
+          "partner_slug": "paypal-braintree",
+          "partner_name": "PayPal Business & Braintree Merchant Processing",
+          "target_network": "Baseline Benchmark / Rakuten (SID 4767884)",
+          "approval_status": "BENCHMARK_COMPARISON_ANCHOR",
+          "cpa_trigger": "Benchmark driving switch conversions to Helcim / Stax",
+          "cookie_window_days": 30,
+          "modeled_cpa_payout_usd": "$50.00 - $100.00",
+          "modeled_epc_hypothesis_usd": 2.8,
+          "verified_2026_pricing_anchor": "PayPal Checkout/Invoicing: 3.49% + $0.49; Standard Card Fields: 2.99% + $0.49; Braintree Cards: 2.59% + $0.49; International Surcharge: +1.50%; FX Spread: +3.0%-4.0%",
+          "default_destination_url": "https://www.paypal.com/us/webapps/mpp/merchant-fees"
+        },
+        {
+          "partner_slug": "dharma",
+          "partner_name": "Dharma Merchant Services (B-Corp Interchange-Plus)",
+          "target_network": "Direct Affiliate Program (via luke@rtpait.com)",
+          "approval_status": "TARGET_APPLICATION_QUEUE_FALLBACK_UTM_READY",
+          "cpa_trigger": "paid_account ($100-$200 CPA per approved merchant account >=$10k/mo)",
+          "cookie_window_days": 60,
+          "modeled_cpa_payout_usd": "$100.00 - $200.00",
+          "modeled_epc_hypothesis_usd": 4.9,
+          "verified_2026_pricing_anchor": "$25/mo account fee; Storefront IC + 0.15% + $0.08; Virtual/Online IC + 0.20% + $0.10; Restaurant IC + 0.15% + $0.07; $0 early termination fee",
+          "default_destination_url": "https://dharmamerchantservices.com/rates/?utm_source=saascostaudit&utm_medium=affiliate"
+        },
+        {
+          "partner_slug": "payment-depot",
+          "partner_name": "Payment Depot Interchange-Plus Processing",
+          "target_network": "Direct / CJ / AWIN (via luke@rtpait.com)",
+          "approval_status": "TARGET_APPLICATION_QUEUE_FALLBACK_UTM_READY",
+          "cpa_trigger": "demo_booked / statement_audit ($75-$200 CPL/CPA)",
+          "cookie_window_days": 45,
+          "modeled_cpa_payout_usd": "$100.00 - $250.00",
+          "modeled_epc_hypothesis_usd": 4.75,
+          "verified_2026_pricing_anchor": "$0/mo base on standard IC+ plan: In-Person IC + 0.2%-0.3% + $0.08-$0.10; Online IC + 0.3%-0.4% + $0.15; customized rates for >$100k/mo volume",
+          "default_destination_url": "https://paymentdepot.com/pricing/?utm_source=saascostaudit&utm_medium=affiliate"
+        },
+        {
+          "partner_slug": "cdg-commerce",
+          "partner_name": "CDG Commerce (Zero-Monthly-Fee Merchant Account)",
+          "target_network": "Direct Affiliate Program (via luke@rtpait.com)",
+          "approval_status": "TARGET_APPLICATION_QUEUE_FALLBACK_UTM_READY",
+          "cpa_trigger": "paid_account ($100-$200 CPA per active merchant)",
+          "cookie_window_days": 60,
+          "modeled_cpa_payout_usd": "$100.00 - $200.00",
+          "modeled_epc_hypothesis_usd": 4.4,
+          "verified_2026_pricing_anchor": "Flat Rate (<$10k/mo): 2.75% + $0.25 ($0/mo); Interchange-Plus ($10k-$100k/mo): IC + 0.25% + $0.10 ($49/mo); Membership ($100k+/mo): IC + 0.00% + $0.10 ($199/mo)",
+          "default_destination_url": "https://www.cdgcommerce.com/pricing.php?utm_source=saascostaudit&utm_medium=affiliate"
+        }
+      ]
     }
   },
-  "partners_by_id": {
-    "gusto": {
-      "id": "gusto",
-      "name": "Gusto",
-      "category": "payroll_hris",
-      "network": "CJ",
-      "publisher_account_id": "8108003",
-      "advertiser_mid": "GUSTO-CJ-2026",
-      "cpa_payout_usd": 150.0,
-      "epc_modeled_usd": 4.85,
-      "affiliate_url_template": "https://www.anrdoezrs.net/click-8108003-15739012?sid={clickref}&url=https%3A%2F%2Fgusto.com%2Fpricing",
-      "switching_credit_usd": 500.0
+  "cta_slot_sub_id_taxonomy": [
+    {
+      "cta_slot": "price_table_row",
+      "dom_attribute": "data-cta-slot=\"price_table_row\"",
+      "posthog_event": "affiliate_cta_clicked",
+      "clickref_pattern": "clickref=b2bfa-{{cluster}}-{{slug}}-price_table_row&clickref2=price_table_row",
+      "description": "In-table commercial action row inside 4-row m.prices comparison tables ('Calculate Exact Switch Savings ->' / 'Book Live Fee Audit ->')"
     },
-    "rippling": {
-      "id": "rippling",
-      "name": "Rippling",
-      "category": "payroll_hris",
-      "network": "CJ",
-      "publisher_account_id": "8108003",
-      "advertiser_mid": "RIPPLING-CJ-2026",
-      "cpa_payout_usd": 200.0,
-      "epc_modeled_usd": 6.1,
-      "affiliate_url_template": "https://www.dpbolvw.net/click-8108003-15810442?sid={clickref}&url=https%3A%2F%2Fwww.rippling.com%2Fpricing",
-      "switching_credit_usd": 600.0
+    {
+      "cta_slot": "verdict_card",
+      "dom_attribute": "data-cta-slot=\"verdict_card\"",
+      "posthog_event": "affiliate_cta_clicked",
+      "clickref_pattern": "clickref=b2bfa-{{cluster}}-{{slug}}-verdict_card&clickref2=verdict_card",
+      "description": "Above-the-Fold 30-Second TCO Verdict Card CTA showing exact 12-month dollar savings and break-even days"
     },
-    "deel": {
-      "id": "deel",
-      "name": "Deel",
-      "category": "payroll_hris",
-      "network": "AWIN",
-      "publisher_account_id": "3133124",
-      "advertiser_mid": "DEEL-AWIN-63110",
-      "cpa_payout_usd": 250.0,
-      "epc_modeled_usd": 7.4,
-      "affiliate_url_template": "https://www.awin1.com/cread.php?awinmid=63110&awinaffid=3133124&clickref={clickref}&ued=https%3A%2F%2Fwww.deel.com%2Fpricing",
-      "switching_credit_usd": 750.0
+    {
+      "cta_slot": "true_cost_calc",
+      "dom_attribute": "data-cta-slot=\"true_cost_calc\"",
+      "posthog_event": "affiliate_cta_clicked",
+      "clickref_pattern": "clickref=b2bfa-{{cluster}}-{{slug}}-true_cost_calc&clickref2=true_cost_calc",
+      "description": "Primary switch CTA inside interactive macro payrollTcoCalc and macro merchantFeeCalc"
     },
-    "onpay": {
-      "id": "onpay",
-      "name": "OnPay",
-      "category": "payroll_hris",
-      "network": "CJ",
-      "publisher_account_id": "8108003",
-      "advertiser_mid": "ONPAY-CJ-2026",
-      "cpa_payout_usd": 100.0,
-      "epc_modeled_usd": 3.6,
-      "affiliate_url_template": "https://www.jdoqocy.com/click-8108003-14029183?sid={clickref}&url=https%3A%2F%2Fonpay.com%2Fpricing",
-      "switching_credit_usd": 300.0
+    {
+      "cta_slot": "cfo_board_pdf_export",
+      "dom_attribute": "data-cta-slot=\"cfo_board_pdf_export\"",
+      "posthog_event": "cfo_export_triggered",
+      "clickref_pattern": "clickref=b2bfa-{{cluster}}-{{slug}}-cfo_export",
+      "description": "1-click 'Export CFO-Ready Board PDF / CSV Breakdown' (3 free runs per user; email-gated in Wave 1; $19-$49/mo Stripe Pro gate in Wave 2)"
     },
-    "adp": {
-      "id": "adp",
-      "name": "ADP RUN",
-      "category": "payroll_hris",
-      "network": "CJ",
-      "publisher_account_id": "8108003",
-      "advertiser_mid": "ADP-CJ-2026",
-      "cpa_payout_usd": 175.0,
-      "epc_modeled_usd": 4.95,
-      "affiliate_url_template": "https://www.tkqlhce.com/click-8108003-13984110?sid={clickref}&url=https%3A%2F%2Fwww.adp.com%2Fwhat-we-offer%2Fproducts%2Frun-powered-by-adp.aspx",
-      "switching_credit_usd": 250.0
+    {
+      "cta_slot": "sticky_mobile_bar",
+      "dom_attribute": "data-cta-slot=\"sticky_mobile_bar\"",
+      "posthog_event": "affiliate_cta_clicked",
+      "clickref_pattern": "clickref=b2bfa-{{cluster}}-{{slug}}-sticky_mobile_bar&clickref2=sticky_mobile_bar",
+      "description": "1-tap mobile comparison trigger in aside#mobile-comparison-bar (@media max-width: 768px)"
     },
-    "paychex": {
-      "id": "paychex",
-      "name": "Paychex Flex",
-      "category": "payroll_hris",
-      "network": "CJ",
-      "publisher_account_id": "8108003",
-      "advertiser_mid": "PAYCHEX-CJ-2026",
-      "cpa_payout_usd": 150.0,
-      "epc_modeled_usd": 4.4,
-      "affiliate_url_template": "https://www.anrdoezrs.net/click-8108003-14112098?sid={clickref}&url=https%3A%2F%2Fwww.paychex.com%2Fpayroll%2Fpricing",
-      "switching_credit_usd": 250.0
+    {
+      "cta_slot": "chatgpt_plugin_response",
+      "dom_attribute": "N/A (JSON API response field)",
+      "posthog_event": "agent_connector_invoked",
+      "clickref_pattern": "clickref=chatgpt-{{plugin_slug}}-{{partner_slug}}",
+      "description": "Stateless ChatGPT Plugin mid-conversation response link for the 4 exact-match B2B TCO tools"
     },
-    "justworks": {
-      "id": "justworks",
-      "name": "Justworks",
-      "category": "payroll_hris",
-      "network": "Rakuten",
-      "publisher_account_id": "4767884",
-      "advertiser_mid": "JUSTWORKS-RAK-54112",
-      "cpa_payout_usd": 180.0,
-      "epc_modeled_usd": 5.2,
-      "affiliate_url_template": "https://click.linksynergy.com/deeplink?id=4767884&mid=54112&u1={clickref}&murl=https%3A%2F%2Fwww.justworks.com%2Fpricing",
-      "switching_credit_usd": 500.0
-    },
-    "quickbooks_payroll": {
-      "id": "quickbooks_payroll",
-      "name": "QuickBooks Payroll",
-      "category": "payroll_hris",
-      "network": "CJ",
-      "publisher_account_id": "8108003",
-      "advertiser_mid": "QBO-CJ-2026",
-      "cpa_payout_usd": 110.0,
-      "epc_modeled_usd": 3.85,
-      "affiliate_url_template": "https://www.dpbolvw.net/click-8108003-13871002?sid={clickref}&url=https%3A%2F%2Fquickbooks.intuit.com%2Fpayroll%2Fpricing%2F",
-      "switching_credit_usd": 200.0
-    },
-    "helcim": {
-      "id": "helcim",
-      "name": "Helcim",
-      "category": "merchant_processing",
-      "network": "CJ",
-      "publisher_account_id": "8108003",
-      "advertiser_mid": "HELCIM-CJ-2026",
-      "cpa_payout_usd": 150.0,
-      "epc_modeled_usd": 5.45,
-      "affiliate_url_template": "https://www.anrdoezrs.net/click-8108003-15612990?sid={clickref}&url=https%3A%2F%2Fwww.helcim.com%2Fpricing%2F",
-      "switching_credit_usd": 0.0
-    },
-    "stax": {
-      "id": "stax",
-      "name": "Stax Pay",
-      "category": "merchant_processing",
-      "network": "CJ",
-      "publisher_account_id": "8108003",
-      "advertiser_mid": "STAX-CJ-2026",
-      "cpa_payout_usd": 200.0,
-      "epc_modeled_usd": 6.8,
-      "affiliate_url_template": "https://www.dpbolvw.net/click-8108003-15548210?sid={clickref}&url=https%3A%2F%2Fstaxpayments.com%2Fpricing%2F",
-      "switching_credit_usd": 0.0
-    },
-    "paymentcloud": {
-      "id": "paymentcloud",
-      "name": "PaymentCloud",
-      "category": "merchant_processing",
-      "network": "AWIN",
-      "publisher_account_id": "3133124",
-      "advertiser_mid": "PAYMENTCLOUD-AWIN-61884",
-      "cpa_payout_usd": 185.0,
-      "epc_modeled_usd": 6.15,
-      "affiliate_url_template": "https://www.awin1.com/cread.php?awinmid=61884&awinaffid=3133124&clickref={clickref}&ued=https%3A%2F%2Fpaymentcloudinc.com%2Fpricing%2F",
-      "switching_credit_usd": 0.0
-    },
-    "cdg_commerce": {
-      "id": "cdg_commerce",
-      "name": "CDGcommerce",
-      "category": "merchant_processing",
-      "network": "CJ",
-      "publisher_account_id": "8108003",
-      "advertiser_mid": "CDG-CJ-2026",
-      "cpa_payout_usd": 150.0,
-      "epc_modeled_usd": 4.9,
-      "affiliate_url_template": "https://www.jdoqocy.com/click-8108003-14992011?sid={clickref}&url=https%3A%2F%2Fwww.cdgcommerce.com%2Fpricing.php",
-      "switching_credit_usd": 0.0
-    },
-    "stripe": {
-      "id": "stripe",
-      "name": "Stripe",
-      "category": "merchant_processing",
-      "network": "Direct_Benchmark",
-      "publisher_account_id": "RTPAIT-BENCHMARK",
-      "advertiser_mid": "STRIPE-BENCHMARK",
-      "cpa_payout_usd": 0.0,
-      "epc_modeled_usd": 0.0,
-      "affiliate_url_template": "https://stripe.com/pricing",
-      "switching_credit_usd": 0.0
-    },
-    "square": {
-      "id": "square",
-      "name": "Square",
-      "category": "merchant_processing",
-      "network": "AWIN",
-      "publisher_account_id": "3133124",
-      "advertiser_mid": "SQUARE-AWIN-59912",
-      "cpa_payout_usd": 85.0,
-      "epc_modeled_usd": 2.95,
-      "affiliate_url_template": "https://www.awin1.com/cread.php?awinmid=59912&awinaffid=3133124&clickref={clickref}&ued=https%3A%2F%2Fsquareup.com%2Fus%2Fen%2Fpricing",
-      "switching_credit_usd": 0.0
-    },
-    "paypal": {
-      "id": "paypal",
-      "name": "PayPal Commercial / Braintree",
-      "category": "merchant_processing",
-      "network": "CJ",
-      "publisher_account_id": "8108003",
-      "advertiser_mid": "PAYPAL-CJ-2026",
-      "cpa_payout_usd": 75.0,
-      "epc_modeled_usd": 2.4,
-      "affiliate_url_template": "https://www.tkqlhce.com/click-8108003-13711904?sid={clickref}&url=https%3A%2F%2Fwww.paypal.com%2Fus%2Fwebapps%2Fmpp%2Fmerchant-fees",
-      "switching_credit_usd": 0.0
-    },
-    "shopify_payments": {
-      "id": "shopify_payments",
-      "name": "Shopify Payments",
-      "category": "merchant_processing",
-      "network": "AWIN",
-      "publisher_account_id": "3133124",
-      "advertiser_mid": "SHOPIFY-AWIN-60441",
-      "cpa_payout_usd": 150.0,
-      "epc_modeled_usd": 4.5,
-      "affiliate_url_template": "https://www.awin1.com/cread.php?awinmid=60441&awinaffid=3133124&clickref={clickref}&ued=https%3A%2F%2Fwww.shopify.com%2Fpricing",
-      "switching_credit_usd": 0.0
+    {
+      "cta_slot": "muse_connector_response",
+      "dom_attribute": "N/A (JSON API response field)",
+      "posthog_event": "agent_connector_invoked",
+      "clickref_pattern": "clickref=muse-{{connector_slug}}-{{partner_slug}}",
+      "description": "Stateless Meta Muse Personal Agent Connector response link for the 4 exact-match B2B TCO tools"
     }
-  },
+  ],
   "active_deployed_html_routes": 26,
   "ucaas_subdivision_partners": {
     "merit_only_conditional_voip_rule": "STRICT_MERIT_ONLY \u2014 Surface Dialpad/Nextiva/RingCentral ONLY when all-in 12-month TCO is strictly lower than both Cisco Webex and Microsoft Teams for the user's configuration.",
@@ -368,5 +461,111 @@
         "url": "https://www.ringcentral.com/office/plansandpricing.html?utm_source=saascostaudit.com&utm_medium=affiliate&utm_campaign=ucaas_2026"
       }
     ]
-  }
+  },
+  "four_axis_affiliate_taxonomy_version": "2.0.0",
+  "four_axis_composite_key_format": "<partner_network>:<tracking_sub_id>:<product_vertical>:<funnel_role>",
+  "pm_affiliate_segment_routing_priority": "P0_TOP_PRIORITY",
+  "cross_family_traffic_funnel": {
+    "rule_id": "CROSS_FAMILY_TRAFFIC_FUNNEL",
+    "status": "ACTIVE_ENFORCED",
+    "description": "Where an API category (such as direct OpenAI GPT-5/GPT-4o or Anthropic Claude token APIs) has no direct vendor affiliate program, apicostaudit.com's calculators and 4-axis slots (top_of_page, mid_content, footer) combine generic_api_partner_slot placeholders with high-intent Cross-Family Traffic Funnel CTAs that route engineering/CFO visitors directly to sister B2B Cost Audit Family calculators where $100-$350 CPA programs are active.",
+    "funnel_routes": [
+      {
+        "source_domain": "apicostaudit.com",
+        "source_vertical": "API_COSTS.llm_token_api",
+        "target_domain": "saascostaudit.com",
+        "target_vertical": "SAAS_COSTS.crm_devtools_ai_seats",
+        "funnel_trigger": "Team seat vs. metered API token breakeven (>15 seats spending >$30/mo on tokens -> compare per-seat AI workspace & UCaaS bundles on saascostaudit.com)",
+        "target_url": "https://saascostaudit.com/ucaas/?utm_source=apicostaudit.com&utm_medium=sister_funnel&clickref=funnel_api_to_saas_seats",
+        "composite_key": "sister_family_funnel:funnel_api_to_saas_seats_top:API_COSTS.llm_token_api:top_of_page"
+      },
+      {
+        "source_domain": "apicostaudit.com",
+        "source_vertical": "API_COSTS.b2b_metered_apis",
+        "target_domain": "b2bfeeaudit.com",
+        "target_vertical": "B2B_FEES.merchant_processing",
+        "funnel_trigger": "SaaS & API companies billing customers via Stripe Billing (+0.5%-0.8%) + 2.9%+$0.30 flat rate -> audit Interchange-Plus (Helcim/Stax) savings on b2bfeeaudit.com",
+        "target_url": "https://b2bfeeaudit.com/merchant/stripe-vs-helcim-interchange-plus/?utm_source=apicostaudit.com&utm_medium=sister_funnel&clickref=funnel_api_to_fee_icplus",
+        "composite_key": "sister_family_funnel:funnel_api_to_fee_icplus_mid:API_COSTS.b2b_metered_apis:mid_content"
+      },
+      {
+        "source_domain": "apicostaudit.com",
+        "source_vertical": "API_COSTS.gpu_vector_infra",
+        "target_domain": "b2bcostaudit.com",
+        "target_vertical": "B2B_COSTS.eo_cyber_insurance",
+        "funnel_trigger": "Enterprise AI & API vendors signing MSAs require $2M-$5M Tech E&O + AI Cyber Liability & ACORD 25 COI verification -> audit policy premiums on b2bcostaudit.com",
+        "target_url": "https://b2bcostaudit.com/eo-insurance/cyber-eo-premium-estimator/?utm_source=apicostaudit.com&utm_medium=sister_funnel&clickref=funnel_api_to_cost_eo",
+        "composite_key": "sister_family_funnel:funnel_api_to_cost_eo_footer:API_COSTS.gpu_vector_infra:footer"
+      }
+    ]
+  },
+  "domain_4_axis_segment": {
+    "product_vertical_macro": "SAAS_COSTS",
+    "canonical_domain": "saascostaudit.com",
+    "components": [
+      {
+        "composite_key": "impact:impact_saas_zoom_ucaas_verdict_top:SAAS_COSTS.ucaas_seats:top_of_page",
+        "partner_network": "impact",
+        "tracking_sub_id": "impact_saas_zoom_ucaas_verdict_top",
+        "product_vertical": "SAAS_COSTS.ucaas_seats",
+        "funnel_role": "top_of_page",
+        "dom_cta_slot": "verdict_card",
+        "partner_name": "Zoom Workplace Pro & Business Plus",
+        "destination_url": "https://zoom.us/pricing?utm_source=saascostaudit.com&utm_medium=affiliate&irgwc=1&clickref=impact_saas_zoom_ucaas_verdict_top",
+        "modeled_cpa_usd": "$50-$150 CPA"
+      },
+      {
+        "composite_key": "cj:cj_8108003_saas_gworkspace_table_mid:SAAS_COSTS.ucaas_seats:mid_content",
+        "partner_network": "cj",
+        "tracking_sub_id": "cj_8108003_saas_gworkspace_table_mid",
+        "product_vertical": "SAAS_COSTS.ucaas_seats",
+        "funnel_role": "mid_content",
+        "dom_cta_slot": "price_table_row",
+        "partner_name": "Google Workspace Standard + Gemini ($14/seat)",
+        "destination_url": "https://workspace.google.com/pricing?utm_source=saascostaudit.com&utm_medium=affiliate&sid=8108003&clickref=cj_8108003_saas_gworkspace_table_mid",
+        "modeled_cpa_usd": "$25-$100 Per-Seat CPA"
+      },
+      {
+        "composite_key": "partnerstack:ps_saas_rippling_pepm_footer:SAAS_COSTS.hris_pepm_tiers:footer",
+        "partner_network": "partnerstack",
+        "tracking_sub_id": "ps_saas_rippling_pepm_footer",
+        "product_vertical": "SAAS_COSTS.hris_pepm_tiers",
+        "funnel_role": "footer",
+        "dom_cta_slot": "sticky_mobile_bar",
+        "partner_name": "Rippling Modular HRIS & IT Seat Platform",
+        "destination_url": "https://www.rippling.com/pricing?utm_source=saascostaudit.com&utm_medium=affiliate&clickref=ps_saas_rippling_pepm_footer",
+        "modeled_cpa_usd": "$150-$350 CPA"
+      }
+    ]
+  },
+  "first_pm_segment_routing_decisions": [
+    {
+      "decision_id": "PM-ROUTE-DECISION-001",
+      "decided_by": "B2B Audit Family PM (9c1c413e-5df2-4d17-a576-11713450fceb)",
+      "priority": "P0_TOP_PRIORITY",
+      "segment": "B2B_FEES (b2bfeeaudit.com)",
+      "action": "Retain strictly transactional fee offers (Helcim IC+, Stax 0% Markup, Square, CDG/Dharma, Deel/Remote FX spreads, ADP/Rippling per-run & W-2 filing fees) across top_of_page, mid_content, and footer slots on b2bfeeaudit.com; strip commercial E&O insurance and per-seat UCaaS offers into cross-domain referral summary cards."
+    },
+    {
+      "decision_id": "PM-ROUTE-DECISION-002",
+      "decided_by": "B2B Audit Family PM (9c1c413e-5df2-4d17-a576-11713450fceb)",
+      "priority": "P0_TOP_PRIORITY",
+      "segment": "B2B_COSTS (b2bcostaudit.com)",
+      "action": "Route all commercial insurance (Embroker, Vouch, Hiscox, Next Insurance, Coalition), ACORD 25 COI compliance, W-2 vs 1099 statutory employer burden, and PEO workers' comp/benefits (Justworks, TriNet) offers to b2bcostaudit.com with 4-axis keys (`*:cost_*_top|mid|footer:B2B_COSTS.*:*`)."
+    },
+    {
+      "decision_id": "PM-ROUTE-DECISION-003",
+      "decided_by": "B2B Audit Family PM (9c1c413e-5df2-4d17-a576-11713450fceb)",
+      "priority": "P0_TOP_PRIORITY",
+      "segment": "SAAS_COSTS (saascostaudit.com)",
+      "action": "Route all per-seat UCaaS (Cisco Webex, Microsoft Teams, Zoom Workplace, Google Workspace + Merit-Only VoIP Dialpad/Nextiva/RingCentral) and pure per-seat HRIS PEPM tiers (Gusto, OnPay, Rippling, BambooHR) to saascostaudit.com with 4-axis keys (`*:saas_*_top|mid|footer:SAAS_COSTS.*:*`)."
+    },
+    {
+      "decision_id": "PM-ROUTE-DECISION-004",
+      "decided_by": "B2B Audit Family PM (9c1c413e-5df2-4d17-a576-11713450fceb)",
+      "priority": "P0_TOP_PRIORITY",
+      "segment": "API_COSTS (apicostaudit.com)",
+      "action": "Deploy generic_api_partner_slot 4-axis placeholders across top_of_page, mid_content, and footer on apicostaudit.com paired with the Cross-Family Traffic Funnel (`CROSS_FAMILY_TRAFFIC_FUNNEL`) so zero-affiliate LLM token calculators funnel high-intent B2B buyers directly into saascostaudit.com (seat vs token breakeven), b2bfeeaudit.com (Stripe Billing vs IC+ COGS), and b2bcostaudit.com (AI Tech E&O & SOC 2)."
+    }
+  ]
 }

@@ -61,8 +61,8 @@
     </li>
   </ul>
   <div class="verdict-actions">
-    <a class="cta verdict-btn" data-partner="{{ p1Name }}" data-cta-slot="verdict_card" data-route-slug="{{ vSlug }}" data-calc-inputs="{{ defaultInputs | escape }}" data-clickref="{{ ref1 }}" href="{{ url1 }}" target="_blank" rel="sponsored nofollow noopener">Compare {{ p1Name }} 2026 Rates &amp; Savings →</a>
-    <a class="cta-secondary verdict-btn" data-partner="{{ p2Name }}" data-cta-slot="verdict_card" data-route-slug="{{ vSlug }}" data-calc-inputs="{{ defaultInputs | escape }}" data-clickref="{{ ref2 }}" href="{{ url2 }}" target="_blank" rel="sponsored nofollow noopener">Audit {{ p2Name }} Custom TCO Quote →</a>
+    <a class="cta verdict-btn" data-partner="{{ p1Name }}" data-cta-slot="verdict_card" data-funnel-role="top_of_page" data-4axis-key="impact:verdict_top_{{ vSlug }}:SAAS_COSTS.ucaas_seats:top_of_page" data-route-slug="{{ vSlug }}" data-calc-inputs="{{ defaultInputs | escape }}" data-clickref="{{ ref1 }}" href="{{ url1 }}" target="_blank" rel="sponsored nofollow noopener">Compare {{ p1Name }} 2026 Rates &amp; Savings →</a>
+    <a class="cta-secondary verdict-btn" data-partner="{{ p2Name }}" data-cta-slot="verdict_card" data-funnel-role="top_of_page" data-4axis-key="impact:verdict_top_{{ vSlug }}:SAAS_COSTS.ucaas_seats:top_of_page" data-route-slug="{{ vSlug }}" data-calc-inputs="{{ defaultInputs | escape }}" data-clickref="{{ ref2 }}" href="{{ url2 }}" target="_blank" rel="sponsored nofollow noopener">Audit {{ p2Name }} Custom TCO Quote →</a>
   </div>
 </section>
 {% endif %}
@@ -99,7 +99,7 @@
           {% if p.ctaType == "gov" %}
             <a class="tbl-gov-link" href="#src-{{ p.source or 1 }}">🏛️ Verify .gov Rule [{{ p.source or 1 }}]</a>
           {% else %}
-            <a class="tbl-cta-btn" data-partner="{{ partnerName }}" data-cta-slot="price_table_row" data-route-slug="{{ safeSlug }}" data-calc-inputs="{{ defaultInputs | escape }}" data-clickref="{{ rowClickref }}" href="{{ trackedHref }}" target="_blank" rel="sponsored nofollow noopener">{{ p.ctaLabel or ("Verify " + partnerName + " Rate →") }}</a>
+            <a class="tbl-cta-btn" data-partner="{{ partnerName }}" data-cta-slot="price_table_row" data-funnel-role="mid_content" data-4axis-key="cj:table_mid_{{ safeSlug or rSlug }}:SAAS_COSTS.ucaas_seats:mid_content" data-route-slug="{{ safeSlug }}" data-calc-inputs="{{ defaultInputs | escape }}" data-clickref="{{ rowClickref }}" href="{{ trackedHref }}" target="_blank" rel="sponsored nofollow noopener">{{ p.ctaLabel or ("Verify " + partnerName + " Rate →") }}</a>
             {% if p.source %}<small style="margin-left:.35rem"><a href="#src-{{ p.source }}">[{{ p.source }}]</a></small>{% endif %}
           {% endif %}
         </td>
@@ -176,7 +176,7 @@
       <strong class="calc-big" id="ptc-onpay-yr">$2,112/yr</strong>
       <span class="calc-sub" id="ptc-onpay-sub">$40 base + $6/seat · $0 extra state or W-2 fees</span>
       <div style="margin-top:.55rem">
-        <a class="cta tbl-cta-btn" id="ptc-cta-onpay" data-partner="OnPay" data-cta-slot="payroll_calc" data-route-slug="{{ cSlug }}" data-calc-inputs='{"w2":{{ defW2 }},"states":{{ defStates }}}' data-clickref="b2b-payroll_calc-{{ cSlug }}-onpay" href="https://onpay.com/pricing?utm_source=saascostaudit&amp;utm_medium=affiliate&amp;clickref=b2b-payroll_calc-{{ cSlug }}-onpay" target="_blank" rel="sponsored nofollow noopener">Lock In OnPay Rate →</a>
+        <a class="cta tbl-cta-btn" id="ptc-cta-onpay" data-partner="OnPay" data-cta-slot="payroll_calc" data-funnel-role="mid_content" data-4axis-key="direct_partner:payroll_calc_mid_{{ cSlug }}:SAAS_COSTS.ucaas_seats:mid_content" data-route-slug="{{ cSlug }}" data-calc-inputs='{"w2":{{ defW2 }},"states":{{ defStates }}}' data-clickref="b2b-payroll_calc-{{ cSlug }}-onpay" href="https://onpay.com/pricing?utm_source=saascostaudit&amp;utm_medium=affiliate&amp;clickref=b2b-payroll_calc-{{ cSlug }}-onpay" target="_blank" rel="sponsored nofollow noopener">Lock In OnPay Rate →</a>
       </div>
     </div>
     <div class="calc-vendor-card vendor-best" id="ptc-card-gusto">
@@ -184,7 +184,7 @@
       <strong class="calc-big" id="ptc-gusto-yr">$2,652/yr</strong>
       <span class="calc-sub" id="ptc-gusto-sub">$49 base + $6/seat · $0 W-2/1099 year-end fee</span>
       <div style="margin-top:.55rem">
-        <a class="cta tbl-cta-btn" id="ptc-cta-gusto" data-partner="Gusto" data-cta-slot="payroll_calc" data-route-slug="{{ cSlug }}" data-calc-inputs='{"w2":{{ defW2 }},"states":{{ defStates }}}' data-clickref="b2b-payroll_calc-{{ cSlug }}-gusto" href="https://gusto.com/product/pricing?utm_source=saascostaudit&amp;utm_medium=affiliate&amp;clickref=b2b-payroll_calc-{{ cSlug }}-gusto" target="_blank" rel="sponsored nofollow noopener">Verify Gusto Trial →</a>
+        <a class="cta tbl-cta-btn" id="ptc-cta-gusto" data-partner="Gusto" data-cta-slot="payroll_calc" data-funnel-role="mid_content" data-4axis-key="direct_partner:payroll_calc_mid_{{ cSlug }}:SAAS_COSTS.ucaas_seats:mid_content" data-route-slug="{{ cSlug }}" data-calc-inputs='{"w2":{{ defW2 }},"states":{{ defStates }}}' data-clickref="b2b-payroll_calc-{{ cSlug }}-gusto" href="https://gusto.com/product/pricing?utm_source=saascostaudit&amp;utm_medium=affiliate&amp;clickref=b2b-payroll_calc-{{ cSlug }}-gusto" target="_blank" rel="sponsored nofollow noopener">Verify Gusto Trial →</a>
       </div>
     </div>
     <div class="calc-vendor-card" id="ptc-card-rippling">
@@ -192,7 +192,7 @@
       <strong class="calc-big" id="ptc-rippling-yr">$5,496/yr</strong>
       <span class="calc-sub" id="ptc-rippling-sub">$85 base + $16/W-2 + $20/mo per extra state</span>
       <div style="margin-top:.55rem">
-        <a class="cta-secondary tbl-cta-btn" id="ptc-cta-rippling" data-partner="Rippling" data-cta-slot="payroll_calc" data-route-slug="{{ cSlug }}" data-calc-inputs='{"w2":{{ defW2 }},"states":{{ defStates }}}' data-clickref="b2b-payroll_calc-{{ cSlug }}-rippling" href="https://www.rippling.com/pricing?utm_source=saascostaudit&amp;utm_medium=affiliate&amp;clickref=b2b-payroll_calc-{{ cSlug }}-rippling" target="_blank" rel="sponsored nofollow noopener">Compare Rippling →</a>
+        <a class="cta-secondary tbl-cta-btn" id="ptc-cta-rippling" data-partner="Rippling" data-cta-slot="payroll_calc" data-funnel-role="mid_content" data-4axis-key="direct_partner:payroll_calc_mid_{{ cSlug }}:SAAS_COSTS.ucaas_seats:mid_content" data-route-slug="{{ cSlug }}" data-calc-inputs='{"w2":{{ defW2 }},"states":{{ defStates }}}' data-clickref="b2b-payroll_calc-{{ cSlug }}-rippling" href="https://www.rippling.com/pricing?utm_source=saascostaudit&amp;utm_medium=affiliate&amp;clickref=b2b-payroll_calc-{{ cSlug }}-rippling" target="_blank" rel="sponsored nofollow noopener">Compare Rippling →</a>
       </div>
     </div>
     <div class="calc-vendor-card" id="ptc-card-deel">
@@ -200,7 +200,7 @@
       <strong class="calc-big" id="ptc-deel-yr">$6,456/yr</strong>
       <span class="calc-sub" id="ptc-deel-sub">$19/US W-2 · $49 Intl 1099 · $599/mo EOR + 1.25% FX</span>
       <div style="margin-top:.55rem">
-        <a class="cta-secondary tbl-cta-btn" id="ptc-cta-deel" data-partner="Deel" data-cta-slot="payroll_calc" data-route-slug="{{ cSlug }}" data-calc-inputs='{"w2":{{ defW2 }},"states":{{ defStates }}}' data-clickref="b2b-payroll_calc-{{ cSlug }}-deel" href="https://www.deel.com/pricing/?utm_source=saascostaudit&amp;utm_medium=affiliate&amp;clickref=b2b-payroll_calc-{{ cSlug }}-deel" target="_blank" rel="sponsored nofollow noopener">Get Deel Global Quote →</a>
+        <a class="cta-secondary tbl-cta-btn" id="ptc-cta-deel" data-partner="Deel" data-cta-slot="payroll_calc" data-funnel-role="mid_content" data-4axis-key="direct_partner:payroll_calc_mid_{{ cSlug }}:SAAS_COSTS.ucaas_seats:mid_content" data-route-slug="{{ cSlug }}" data-calc-inputs='{"w2":{{ defW2 }},"states":{{ defStates }}}' data-clickref="b2b-payroll_calc-{{ cSlug }}-deel" href="https://www.deel.com/pricing/?utm_source=saascostaudit&amp;utm_medium=affiliate&amp;clickref=b2b-payroll_calc-{{ cSlug }}-deel" target="_blank" rel="sponsored nofollow noopener">Get Deel Global Quote →</a>
       </div>
     </div>
     <div class="calc-vendor-card" id="ptc-card-adp">
@@ -391,7 +391,7 @@
       <strong class="calc-big" id="mfc-helcim-yr">$18,564/yr</strong>
       <span class="calc-sub" id="mfc-helcim-eff">Effective Rate: 2.38% · $0 monthly fee · Free invoicing</span>
       <div style="margin-top:.55rem">
-        <a class="cta tbl-cta-btn" id="mfc-cta-helcim" data-partner="Helcim" data-cta-slot="merchant_calc" data-route-slug="{{ mSlug }}" data-calc-inputs='{"volume":{{ defVol }},"ticket":{{ defTicket }}}' data-clickref="b2b-merchant_calc-{{ mSlug }}-helcim" href="https://www.helcim.com/pricing/?utm_source=saascostaudit&amp;utm_medium=affiliate&amp;clickref=b2b-merchant_calc-{{ mSlug }}-helcim" target="_blank" rel="sponsored nofollow noopener">Switch to Helcim IC+ →</a>
+        <a class="cta tbl-cta-btn" id="mfc-cta-helcim" data-partner="Helcim" data-cta-slot="merchant_calc" data-funnel-role="mid_content" data-4axis-key="direct_partner:merchant_calc_mid_{{ mSlug }}:SAAS_COSTS.ucaas_seats:mid_content" data-route-slug="{{ mSlug }}" data-calc-inputs='{"volume":{{ defVol }},"ticket":{{ defTicket }}}' data-clickref="b2b-merchant_calc-{{ mSlug }}-helcim" href="https://www.helcim.com/pricing/?utm_source=saascostaudit&amp;utm_medium=affiliate&amp;clickref=b2b-merchant_calc-{{ mSlug }}-helcim" target="_blank" rel="sponsored nofollow noopener">Switch to Helcim IC+ →</a>
       </div>
     </div>
     <div class="calc-vendor-card vendor-best" id="mfc-card-stax">
@@ -399,7 +399,7 @@
       <strong class="calc-big" id="mfc-stax-yr">$17,088/yr</strong>
       <span class="calc-sub" id="mfc-stax-eff">Effective Rate: 2.19% · $99/mo + 0% processor markup</span>
       <div style="margin-top:.55rem">
-        <a class="cta-secondary tbl-cta-btn" id="mfc-cta-stax" data-partner="Stax" data-cta-slot="merchant_calc" data-route-slug="{{ mSlug }}" data-calc-inputs='{"volume":{{ defVol }},"ticket":{{ defTicket }}}' data-clickref="b2b-merchant_calc-{{ mSlug }}-stax" href="https://staxpayments.com/pricing/?utm_source=saascostaudit&amp;utm_medium=affiliate&amp;clickref=b2b-merchant_calc-{{ mSlug }}-stax" target="_blank" rel="sponsored nofollow noopener">Get Stax 0% Audit →</a>
+        <a class="cta-secondary tbl-cta-btn" id="mfc-cta-stax" data-partner="Stax" data-cta-slot="merchant_calc" data-funnel-role="mid_content" data-4axis-key="direct_partner:merchant_calc_mid_{{ mSlug }}:SAAS_COSTS.ucaas_seats:mid_content" data-route-slug="{{ mSlug }}" data-calc-inputs='{"volume":{{ defVol }},"ticket":{{ defTicket }}}' data-clickref="b2b-merchant_calc-{{ mSlug }}-stax" href="https://staxpayments.com/pricing/?utm_source=saascostaudit&amp;utm_medium=affiliate&amp;clickref=b2b-merchant_calc-{{ mSlug }}-stax" target="_blank" rel="sponsored nofollow noopener">Get Stax 0% Audit →</a>
       </div>
     </div>
     <div class="calc-vendor-card" id="mfc-card-stripe">
@@ -703,7 +703,7 @@
       <strong class="calc-big" id="ucc-webex-yr">$8,100/yr</strong>
       <span class="calc-sub" id="ucc-webex-sub">$27.00/seat/mo all-in ($22.50 Suite + $4.50 E911/USF · $0 AI)</span>
       <div style="margin-top:.55rem">
-        <a class="cta tbl-cta-btn" id="ucc-cta-webex" data-partner="Cisco Webex" data-cta-slot="ucaas_tco_calc" data-route-slug="{{ uSlug }}" data-calc-inputs='{"vendor":"webex","seats":25}' data-clickref="b2bfeeaudit_ucaas_webex_{{ uSlug }}" href="https://www.webex.com/pricing/index.html?utm_source=saascostaudit.com&amp;utm_medium=affiliate&amp;utm_campaign=ucaas_2026&amp;clickref=b2bfeeaudit_ucaas_webex_{{ uSlug }}" target="_blank" rel="sponsored nofollow noopener">Verify Cisco Webex Rate →</a>
+        <a class="cta tbl-cta-btn" id="ucc-cta-webex" data-partner="Cisco Webex" data-cta-slot="ucaas_tco_calc" data-funnel-role="mid_content" data-4axis-key="impact:ucaas_calc_mid_{{ uSlug }}:SAAS_COSTS.ucaas_seats:mid_content" data-route-slug="{{ uSlug }}" data-calc-inputs='{"vendor":"webex","seats":25}' data-clickref="b2bfeeaudit_ucaas_webex_{{ uSlug }}" href="https://www.webex.com/pricing/index.html?utm_source=saascostaudit.com&amp;utm_medium=affiliate&amp;utm_campaign=ucaas_2026&amp;clickref=b2bfeeaudit_ucaas_webex_{{ uSlug }}" target="_blank" rel="sponsored nofollow noopener">Verify Cisco Webex Rate →</a>
       </div>
     </div>
 
@@ -712,7 +712,7 @@
       <strong class="calc-big" id="ucc-teams-yr">$10,050/yr</strong>
       <span class="calc-sub" id="ucc-teams-sub">$33.50/seat/mo all-in ($4 Base + $15 Phone + $10 AI + $4.50 Tax)</span>
       <div style="margin-top:.55rem">
-        <a class="cta tbl-cta-btn" id="ucc-cta-teams" data-partner="Microsoft Teams" data-cta-slot="ucaas_tco_calc" data-route-slug="{{ uSlug }}" data-calc-inputs='{"vendor":"microsoft-teams","seats":25}' data-clickref="b2bfeeaudit_ucaas_microsoft_teams_{{ uSlug }}" href="https://www.microsoft.com/en-us/microsoft-teams/compare-microsoft-teams-options?utm_source=saascostaudit.com&amp;utm_medium=affiliate&amp;utm_campaign=ucaas_2026&amp;clickref=b2bfeeaudit_ucaas_microsoft_teams_{{ uSlug }}" target="_blank" rel="sponsored nofollow noopener">Verify Microsoft Teams Rate →</a>
+        <a class="cta tbl-cta-btn" id="ucc-cta-teams" data-partner="Microsoft Teams" data-cta-slot="ucaas_tco_calc" data-funnel-role="mid_content" data-4axis-key="impact:ucaas_calc_mid_{{ uSlug }}:SAAS_COSTS.ucaas_seats:mid_content" data-route-slug="{{ uSlug }}" data-calc-inputs='{"vendor":"microsoft-teams","seats":25}' data-clickref="b2bfeeaudit_ucaas_microsoft_teams_{{ uSlug }}" href="https://www.microsoft.com/en-us/microsoft-teams/compare-microsoft-teams-options?utm_source=saascostaudit.com&amp;utm_medium=affiliate&amp;utm_campaign=ucaas_2026&amp;clickref=b2bfeeaudit_ucaas_microsoft_teams_{{ uSlug }}" target="_blank" rel="sponsored nofollow noopener">Verify Microsoft Teams Rate →</a>
       </div>
     </div>
 
@@ -721,7 +721,7 @@
       <strong class="calc-big" id="ucc-zoom-yr">$8,097/yr</strong>
       <span class="calc-sub" id="ucc-zoom-sub">$26.99/seat/mo all-in ($22.49 Bus. Plus + $4.50 E911/USF · $0 AI)</span>
       <div style="margin-top:.55rem">
-        <a class="cta-secondary tbl-cta-btn" id="ucc-cta-zoom" data-partner="Zoom Workplace" data-cta-slot="ucaas_tco_calc" data-route-slug="{{ uSlug }}" data-calc-inputs='{"vendor":"zoom","seats":25}' data-clickref="b2bfeeaudit_ucaas_zoom_{{ uSlug }}" href="https://zoom.us/pricing?utm_source=saascostaudit.com&amp;utm_medium=affiliate&amp;utm_campaign=ucaas_2026&amp;irgwc=1&amp;clickref=b2bfeeaudit_ucaas_zoom_{{ uSlug }}" target="_blank" rel="sponsored nofollow noopener">Verify Zoom Workplace Rate →</a>
+        <a class="cta-secondary tbl-cta-btn" id="ucc-cta-zoom" data-partner="Zoom Workplace" data-cta-slot="ucaas_tco_calc" data-funnel-role="mid_content" data-4axis-key="impact:ucaas_calc_mid_{{ uSlug }}:SAAS_COSTS.ucaas_seats:mid_content" data-route-slug="{{ uSlug }}" data-calc-inputs='{"vendor":"zoom","seats":25}' data-clickref="b2bfeeaudit_ucaas_zoom_{{ uSlug }}" href="https://zoom.us/pricing?utm_source=saascostaudit.com&amp;utm_medium=affiliate&amp;utm_campaign=ucaas_2026&amp;irgwc=1&amp;clickref=b2bfeeaudit_ucaas_zoom_{{ uSlug }}" target="_blank" rel="sponsored nofollow noopener">Verify Zoom Workplace Rate →</a>
       </div>
     </div>
 
@@ -730,7 +730,7 @@
       <strong class="calc-big" id="ucc-google-yr">$11,400/yr</strong>
       <span class="calc-sub" id="ucc-google-sub">$38.00/seat/mo all-in ($14 Std + $20 Voice + $4.00 Tax · $0 Gemini)</span>
       <div style="margin-top:.55rem">
-        <a class="cta-secondary tbl-cta-btn" id="ucc-cta-google" data-partner="Google Workspace" data-cta-slot="ucaas_tco_calc" data-route-slug="{{ uSlug }}" data-calc-inputs='{"vendor":"google-workspace","seats":25}' data-clickref="b2bfeeaudit_ucaas_google_workspace_{{ uSlug }}" href="https://workspace.google.com/pricing?utm_source=saascostaudit.com&amp;utm_medium=affiliate&amp;utm_campaign=ucaas_2026&amp;sid=8108003&amp;clickref=b2bfeeaudit_ucaas_google_workspace_{{ uSlug }}" target="_blank" rel="sponsored nofollow noopener">Verify Google Workspace Rate →</a>
+        <a class="cta-secondary tbl-cta-btn" id="ucc-cta-google" data-partner="Google Workspace" data-cta-slot="ucaas_tco_calc" data-funnel-role="mid_content" data-4axis-key="impact:ucaas_calc_mid_{{ uSlug }}:SAAS_COSTS.ucaas_seats:mid_content" data-route-slug="{{ uSlug }}" data-calc-inputs='{"vendor":"google-workspace","seats":25}' data-clickref="b2bfeeaudit_ucaas_google_workspace_{{ uSlug }}" href="https://workspace.google.com/pricing?utm_source=saascostaudit.com&amp;utm_medium=affiliate&amp;utm_campaign=ucaas_2026&amp;sid=8108003&amp;clickref=b2bfeeaudit_ucaas_google_workspace_{{ uSlug }}" target="_blank" rel="sponsored nofollow noopener">Verify Google Workspace Rate →</a>
       </div>
     </div>
   </div>
@@ -1094,7 +1094,7 @@
           <small style="color:#991b1b"><strong>Hidden Trap:</strong> {{ v.top_hidden_fee_trap }}</small>
         </td>
         <td>
-          <a class="tbl-cta-btn" data-partner="{{ v.partner }}" data-cta-slot="price_table_row" data-route-slug="{{ rSlug }}" data-calc-inputs='{"table":"ucaas_4vendor_matrix","vendor":"{{ v.id }}"}' data-clickref="{{ clickref }}" href="{{ v.cta_url }}&amp;clickref={{ clickref }}" target="_blank" rel="sponsored nofollow noopener">{{ v.cta_label }}</a>
+          <a class="tbl-cta-btn" data-partner="{{ v.partner }}" data-cta-slot="price_table_row" data-funnel-role="mid_content" data-4axis-key="cj:table_mid_{{ safeSlug or rSlug }}:SAAS_COSTS.ucaas_seats:mid_content" data-route-slug="{{ rSlug }}" data-calc-inputs='{"table":"ucaas_4vendor_matrix","vendor":"{{ v.id }}"}' data-clickref="{{ clickref }}" href="{{ v.cta_url }}&amp;clickref={{ clickref }}" target="_blank" rel="sponsored nofollow noopener">{{ v.cta_label }}</a>
         </td>
       </tr>
       {% endfor %}

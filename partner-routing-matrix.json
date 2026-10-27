@@ -461,5 +461,111 @@
         "url": "https://www.ringcentral.com/office/plansandpricing.html?utm_source=saascostaudit.com&utm_medium=affiliate&utm_campaign=ucaas_2026"
       }
     ]
-  }
+  },
+  "four_axis_affiliate_taxonomy_version": "2.0.0",
+  "four_axis_composite_key_format": "<partner_network>:<tracking_sub_id>:<product_vertical>:<funnel_role>",
+  "pm_affiliate_segment_routing_priority": "P0_TOP_PRIORITY",
+  "cross_family_traffic_funnel": {
+    "rule_id": "CROSS_FAMILY_TRAFFIC_FUNNEL",
+    "status": "ACTIVE_ENFORCED",
+    "description": "Where an API category (such as direct OpenAI GPT-5/GPT-4o or Anthropic Claude token APIs) has no direct vendor affiliate program, apicostaudit.com's calculators and 4-axis slots (top_of_page, mid_content, footer) combine generic_api_partner_slot placeholders with high-intent Cross-Family Traffic Funnel CTAs that route engineering/CFO visitors directly to sister B2B Cost Audit Family calculators where $100-$350 CPA programs are active.",
+    "funnel_routes": [
+      {
+        "source_domain": "apicostaudit.com",
+        "source_vertical": "API_COSTS.llm_token_api",
+        "target_domain": "saascostaudit.com",
+        "target_vertical": "SAAS_COSTS.crm_devtools_ai_seats",
+        "funnel_trigger": "Team seat vs. metered API token breakeven (>15 seats spending >$30/mo on tokens -> compare per-seat AI workspace & UCaaS bundles on saascostaudit.com)",
+        "target_url": "https://saascostaudit.com/ucaas/?utm_source=apicostaudit.com&utm_medium=sister_funnel&clickref=funnel_api_to_saas_seats",
+        "composite_key": "sister_family_funnel:funnel_api_to_saas_seats_top:API_COSTS.llm_token_api:top_of_page"
+      },
+      {
+        "source_domain": "apicostaudit.com",
+        "source_vertical": "API_COSTS.b2b_metered_apis",
+        "target_domain": "b2bfeeaudit.com",
+        "target_vertical": "B2B_FEES.merchant_processing",
+        "funnel_trigger": "SaaS & API companies billing customers via Stripe Billing (+0.5%-0.8%) + 2.9%+$0.30 flat rate -> audit Interchange-Plus (Helcim/Stax) savings on b2bfeeaudit.com",
+        "target_url": "https://b2bfeeaudit.com/merchant/stripe-vs-helcim-interchange-plus/?utm_source=apicostaudit.com&utm_medium=sister_funnel&clickref=funnel_api_to_fee_icplus",
+        "composite_key": "sister_family_funnel:funnel_api_to_fee_icplus_mid:API_COSTS.b2b_metered_apis:mid_content"
+      },
+      {
+        "source_domain": "apicostaudit.com",
+        "source_vertical": "API_COSTS.gpu_vector_infra",
+        "target_domain": "b2bcostaudit.com",
+        "target_vertical": "B2B_COSTS.eo_cyber_insurance",
+        "funnel_trigger": "Enterprise AI & API vendors signing MSAs require $2M-$5M Tech E&O + AI Cyber Liability & ACORD 25 COI verification -> audit policy premiums on b2bcostaudit.com",
+        "target_url": "https://b2bcostaudit.com/eo-insurance/cyber-eo-premium-estimator/?utm_source=apicostaudit.com&utm_medium=sister_funnel&clickref=funnel_api_to_cost_eo",
+        "composite_key": "sister_family_funnel:funnel_api_to_cost_eo_footer:API_COSTS.gpu_vector_infra:footer"
+      }
+    ]
+  },
+  "domain_4_axis_segment": {
+    "product_vertical_macro": "SAAS_COSTS",
+    "canonical_domain": "saascostaudit.com",
+    "components": [
+      {
+        "composite_key": "impact:impact_saas_zoom_ucaas_verdict_top:SAAS_COSTS.ucaas_seats:top_of_page",
+        "partner_network": "impact",
+        "tracking_sub_id": "impact_saas_zoom_ucaas_verdict_top",
+        "product_vertical": "SAAS_COSTS.ucaas_seats",
+        "funnel_role": "top_of_page",
+        "dom_cta_slot": "verdict_card",
+        "partner_name": "Zoom Workplace Pro & Business Plus",
+        "destination_url": "https://zoom.us/pricing?utm_source=saascostaudit.com&utm_medium=affiliate&irgwc=1&clickref=impact_saas_zoom_ucaas_verdict_top",
+        "modeled_cpa_usd": "$50-$150 CPA"
+      },
+      {
+        "composite_key": "cj:cj_8108003_saas_gworkspace_table_mid:SAAS_COSTS.ucaas_seats:mid_content",
+        "partner_network": "cj",
+        "tracking_sub_id": "cj_8108003_saas_gworkspace_table_mid",
+        "product_vertical": "SAAS_COSTS.ucaas_seats",
+        "funnel_role": "mid_content",
+        "dom_cta_slot": "price_table_row",
+        "partner_name": "Google Workspace Standard + Gemini ($14/seat)",
+        "destination_url": "https://workspace.google.com/pricing?utm_source=saascostaudit.com&utm_medium=affiliate&sid=8108003&clickref=cj_8108003_saas_gworkspace_table_mid",
+        "modeled_cpa_usd": "$25-$100 Per-Seat CPA"
+      },
+      {
+        "composite_key": "partnerstack:ps_saas_rippling_pepm_footer:SAAS_COSTS.hris_pepm_tiers:footer",
+        "partner_network": "partnerstack",
+        "tracking_sub_id": "ps_saas_rippling_pepm_footer",
+        "product_vertical": "SAAS_COSTS.hris_pepm_tiers",
+        "funnel_role": "footer",
+        "dom_cta_slot": "sticky_mobile_bar",
+        "partner_name": "Rippling Modular HRIS & IT Seat Platform",
+        "destination_url": "https://www.rippling.com/pricing?utm_source=saascostaudit.com&utm_medium=affiliate&clickref=ps_saas_rippling_pepm_footer",
+        "modeled_cpa_usd": "$150-$350 CPA"
+      }
+    ]
+  },
+  "first_pm_segment_routing_decisions": [
+    {
+      "decision_id": "PM-ROUTE-DECISION-001",
+      "decided_by": "B2B Audit Family PM (9c1c413e-5df2-4d17-a576-11713450fceb)",
+      "priority": "P0_TOP_PRIORITY",
+      "segment": "B2B_FEES (b2bfeeaudit.com)",
+      "action": "Retain strictly transactional fee offers (Helcim IC+, Stax 0% Markup, Square, CDG/Dharma, Deel/Remote FX spreads, ADP/Rippling per-run & W-2 filing fees) across top_of_page, mid_content, and footer slots on b2bfeeaudit.com; strip commercial E&O insurance and per-seat UCaaS offers into cross-domain referral summary cards."
+    },
+    {
+      "decision_id": "PM-ROUTE-DECISION-002",
+      "decided_by": "B2B Audit Family PM (9c1c413e-5df2-4d17-a576-11713450fceb)",
+      "priority": "P0_TOP_PRIORITY",
+      "segment": "B2B_COSTS (b2bcostaudit.com)",
+      "action": "Route all commercial insurance (Embroker, Vouch, Hiscox, Next Insurance, Coalition), ACORD 25 COI compliance, W-2 vs 1099 statutory employer burden, and PEO workers' comp/benefits (Justworks, TriNet) offers to b2bcostaudit.com with 4-axis keys (`*:cost_*_top|mid|footer:B2B_COSTS.*:*`)."
+    },
+    {
+      "decision_id": "PM-ROUTE-DECISION-003",
+      "decided_by": "B2B Audit Family PM (9c1c413e-5df2-4d17-a576-11713450fceb)",
+      "priority": "P0_TOP_PRIORITY",
+      "segment": "SAAS_COSTS (saascostaudit.com)",
+      "action": "Route all per-seat UCaaS (Cisco Webex, Microsoft Teams, Zoom Workplace, Google Workspace + Merit-Only VoIP Dialpad/Nextiva/RingCentral) and pure per-seat HRIS PEPM tiers (Gusto, OnPay, Rippling, BambooHR) to saascostaudit.com with 4-axis keys (`*:saas_*_top|mid|footer:SAAS_COSTS.*:*`)."
+    },
+    {
+      "decision_id": "PM-ROUTE-DECISION-004",
+      "decided_by": "B2B Audit Family PM (9c1c413e-5df2-4d17-a576-11713450fceb)",
+      "priority": "P0_TOP_PRIORITY",
+      "segment": "API_COSTS (apicostaudit.com)",
+      "action": "Deploy generic_api_partner_slot 4-axis placeholders across top_of_page, mid_content, and footer on apicostaudit.com paired with the Cross-Family Traffic Funnel (`CROSS_FAMILY_TRAFFIC_FUNNEL`) so zero-affiliate LLM token calculators funnel high-intent B2B buyers directly into saascostaudit.com (seat vs token breakeven), b2bfeeaudit.com (Stripe Billing vs IC+ COGS), and b2bcostaudit.com (AI Tech E&O & SOC 2)."
+    }
+  ]
 }
