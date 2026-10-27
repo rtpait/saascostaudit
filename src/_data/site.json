@@ -1,0 +1,27 @@
+{
+  "name": "SaaS Cost Audit",
+  "legalEntity": "Research Triangle Park AI Transformation LLC (EIN 42-3641177)",
+  "url": "https://saascostaudit.com",
+  "domain": "saascostaudit.com",
+  "tagline": "Independent Per-Seat B2B SaaS, UCaaS (Webex, Microsoft Teams, Zoom, Google Workspace) & HRIS PEPM TCO Auditor (2026 Verified Rate Cards)",
+  "updated": "2026-10-27",
+  "posthogKey": "phc_v89RLR6JhvrN3Hy7mmWPBSQqVGwFAr7dPLpLan9Pjky8",
+  "posthogProjectId": "685354",
+  "githubRepoUrl": "https://github.com/rtpait/saascostaudit",
+  "affiliateNetworks": {
+    "cjCid": "8108003",
+    "awinId": "3133124",
+    "rakutenSid": "4767884"
+  },
+  "primaryPayrollPartner": "Gusto",
+  "primaryPayrollUrl": "https://gusto.com/?utm_source=saascostaudit&utm_medium=affiliate&clickref=b2b-default-gusto",
+  "secondaryPayrollPartner": "Deel",
+  "secondaryPayrollUrl": "https://www.deel.com/?utm_source=saascostaudit&utm_medium=affiliate&clickref=b2b-default-deel",
+  "primaryMerchantPartner": "Helcim",
+  "primaryMerchantUrl": "https://www.helcim.com/?utm_source=saascostaudit&utm_medium=affiliate&clickref=b2b-default-helcim",
+  "secondaryMerchantPartner": "Stax",
+  "secondaryMerchantUrl": "https://staxpayments.com/?utm_source=saascostaudit&utm_medium=affiliate&clickref=b2b-default-stax",
+  "proExportPriceMonthly": 29,
+  "proExportPass7Day": 9,
+  "freeCalcRunsLimit": 3
+}

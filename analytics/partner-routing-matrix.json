@@ -1,0 +1,372 @@
+{
+  "schema_version": "2026.10.24-b2bfeeaudit-partner-routing",
+  "generated_at_utc": "2026-10-24T22:26:00Z",
+  "domain": "saascostaudit.com",
+  "corporate_entity": "Research Triangle Park AI Transformation LLC (EIN 42-3641177)",
+  "publisher_accounts": {
+    "CJ": {
+      "network_name": "CJ Affiliate (Commission Junction)",
+      "publisher_cid": "8108003",
+      "status": "ACTIVE",
+      "subid_param": "sid",
+      "active_verticals": [
+        "B2B Payroll & HRIS",
+        "Accounting & Tax",
+        "Merchant Processing IC+"
+      ]
+    },
+    "AWIN": {
+      "network_name": "AWIN US",
+      "publisher_id": "3133124",
+      "status": "ACTIVE",
+      "subid_param": "clickref",
+      "active_verticals": [
+        "Global EOR & Contractor Payroll",
+        "B2B Merchant Processing",
+        "POS & Ecommerce"
+      ]
+    },
+    "Rakuten": {
+      "network_name": "Rakuten Advertising",
+      "publisher_sid": "4767884",
+      "status": "ACTIVE",
+      "subid_param": "u1",
+      "active_verticals": [
+        "PEO & Enterprise Payroll",
+        "B2B Financial Stack"
+      ]
+    },
+    "ProExportTier": {
+      "network_name": "RTPAIT Direct \u2014 CFO Board Audit PDF/CSV Export & Drift Alerts",
+      "product_sku": "B2B-CFO-AUDIT-PRO-29",
+      "status": "LIVE_PREVIEW_GATE_1",
+      "pricing": {
+        "free_runs_cap": 3,
+        "single_audit_pack_usd": 29.0,
+        "monthly_pro_subscription_usd": 19.0,
+        "agency_finops_monthly_usd": 49.0
+      }
+    }
+  },
+  "subid_attribution_format": "b2bfeeaudit_{cluster}_{route_slug}_{cta_slot}_{partner_id}",
+  "cta_slots": [
+    {
+      "slot_id": "verdict_card",
+      "description": "Above-the-Fold 30-Second TCO Verdict Card Primary Action CTA",
+      "target_ctr_hypothesis_pct": 6.8
+    },
+    {
+      "slot_id": "price_table_row",
+      "description": "4-Row Comparison Table In-Row Action CTA (Principle 1 Operational KPI #2)",
+      "target_ctr_hypothesis_pct": 5.4
+    },
+    {
+      "slot_id": "payroll_tco_calc",
+      "description": "Interactive Payroll, Multi-State SUI & EOR Calculator Output CTA",
+      "target_ctr_hypothesis_pct": 8.2
+    },
+    {
+      "slot_id": "merchant_fee_calc",
+      "description": "Interactive Merchant Processing & Interchange-Plus Calculator Output CTA",
+      "target_ctr_hypothesis_pct": 7.9
+    },
+    {
+      "slot_id": "cfo_pdf_export_cta",
+      "description": "$29 CFO Board Audit PDF/CSV Export & Renewal Alert Gate (3 Free Runs -> $29 Export)",
+      "target_ctr_hypothesis_pct": 3.5
+    },
+    {
+      "slot_id": "sticky_mobile_bar",
+      "description": "Sticky Mobile Comparison Bar (<=768px Viewport)",
+      "target_ctr_hypothesis_pct": 4.1
+    },
+    {
+      "slot_id": "dual_cta_primary",
+      "description": "Bottom Dual CTA Primary Partner Button",
+      "target_ctr_hypothesis_pct": 2.8
+    },
+    {
+      "slot_id": "dual_cta_secondary",
+      "description": "Bottom Dual CTA Secondary Partner Button",
+      "target_ctr_hypothesis_pct": 1.9
+    },
+    {
+      "slot_id": "in_chat_plugin_cta",
+      "description": "Stateless ChatGPT Plugin & Meta Muse Connector Mid-Conversation Switch Link",
+      "target_ctr_hypothesis_pct": 9.5
+    }
+  ],
+  "cluster_routing_rules": {
+    "payroll_hris": {
+      "primary_partner": "deel",
+      "secondary_partner": "gusto",
+      "enterprise_multi_state_partner": "rippling",
+      "peo_partner": "justworks",
+      "budget_multi_state_partner": "onpay",
+      "legacy_comparison_baselines": [
+        "adp",
+        "paychex",
+        "quickbooks_payroll"
+      ],
+      "default_cpa_range_usd": [
+        100.0,
+        250.0
+      ],
+      "weighted_avg_cpa_usd": 182.5
+    },
+    "merchant_processing": {
+      "primary_partner": "helcim",
+      "high_volume_partner": "stax",
+      "b2b_level3_partner": "paymentcloud",
+      "quickbooks_ic_partner": "cdg_commerce",
+      "flat_rate_comparison_baselines": [
+        "stripe",
+        "square",
+        "paypal",
+        "shopify_payments"
+      ],
+      "default_cpa_range_usd": [
+        150.0,
+        200.0
+      ],
+      "weighted_avg_cpa_usd": 175.0
+    }
+  },
+  "partners_by_id": {
+    "gusto": {
+      "id": "gusto",
+      "name": "Gusto",
+      "category": "payroll_hris",
+      "network": "CJ",
+      "publisher_account_id": "8108003",
+      "advertiser_mid": "GUSTO-CJ-2026",
+      "cpa_payout_usd": 150.0,
+      "epc_modeled_usd": 4.85,
+      "affiliate_url_template": "https://www.anrdoezrs.net/click-8108003-15739012?sid={clickref}&url=https%3A%2F%2Fgusto.com%2Fpricing",
+      "switching_credit_usd": 500.0
+    },
+    "rippling": {
+      "id": "rippling",
+      "name": "Rippling",
+      "category": "payroll_hris",
+      "network": "CJ",
+      "publisher_account_id": "8108003",
+      "advertiser_mid": "RIPPLING-CJ-2026",
+      "cpa_payout_usd": 200.0,
+      "epc_modeled_usd": 6.1,
+      "affiliate_url_template": "https://www.dpbolvw.net/click-8108003-15810442?sid={clickref}&url=https%3A%2F%2Fwww.rippling.com%2Fpricing",
+      "switching_credit_usd": 600.0
+    },
+    "deel": {
+      "id": "deel",
+      "name": "Deel",
+      "category": "payroll_hris",
+      "network": "AWIN",
+      "publisher_account_id": "3133124",
+      "advertiser_mid": "DEEL-AWIN-63110",
+      "cpa_payout_usd": 250.0,
+      "epc_modeled_usd": 7.4,
+      "affiliate_url_template": "https://www.awin1.com/cread.php?awinmid=63110&awinaffid=3133124&clickref={clickref}&ued=https%3A%2F%2Fwww.deel.com%2Fpricing",
+      "switching_credit_usd": 750.0
+    },
+    "onpay": {
+      "id": "onpay",
+      "name": "OnPay",
+      "category": "payroll_hris",
+      "network": "CJ",
+      "publisher_account_id": "8108003",
+      "advertiser_mid": "ONPAY-CJ-2026",
+      "cpa_payout_usd": 100.0,
+      "epc_modeled_usd": 3.6,
+      "affiliate_url_template": "https://www.jdoqocy.com/click-8108003-14029183?sid={clickref}&url=https%3A%2F%2Fonpay.com%2Fpricing",
+      "switching_credit_usd": 300.0
+    },
+    "adp": {
+      "id": "adp",
+      "name": "ADP RUN",
+      "category": "payroll_hris",
+      "network": "CJ",
+      "publisher_account_id": "8108003",
+      "advertiser_mid": "ADP-CJ-2026",
+      "cpa_payout_usd": 175.0,
+      "epc_modeled_usd": 4.95,
+      "affiliate_url_template": "https://www.tkqlhce.com/click-8108003-13984110?sid={clickref}&url=https%3A%2F%2Fwww.adp.com%2Fwhat-we-offer%2Fproducts%2Frun-powered-by-adp.aspx",
+      "switching_credit_usd": 250.0
+    },
+    "paychex": {
+      "id": "paychex",
+      "name": "Paychex Flex",
+      "category": "payroll_hris",
+      "network": "CJ",
+      "publisher_account_id": "8108003",
+      "advertiser_mid": "PAYCHEX-CJ-2026",
+      "cpa_payout_usd": 150.0,
+      "epc_modeled_usd": 4.4,
+      "affiliate_url_template": "https://www.anrdoezrs.net/click-8108003-14112098?sid={clickref}&url=https%3A%2F%2Fwww.paychex.com%2Fpayroll%2Fpricing",
+      "switching_credit_usd": 250.0
+    },
+    "justworks": {
+      "id": "justworks",
+      "name": "Justworks",
+      "category": "payroll_hris",
+      "network": "Rakuten",
+      "publisher_account_id": "4767884",
+      "advertiser_mid": "JUSTWORKS-RAK-54112",
+      "cpa_payout_usd": 180.0,
+      "epc_modeled_usd": 5.2,
+      "affiliate_url_template": "https://click.linksynergy.com/deeplink?id=4767884&mid=54112&u1={clickref}&murl=https%3A%2F%2Fwww.justworks.com%2Fpricing",
+      "switching_credit_usd": 500.0
+    },
+    "quickbooks_payroll": {
+      "id": "quickbooks_payroll",
+      "name": "QuickBooks Payroll",
+      "category": "payroll_hris",
+      "network": "CJ",
+      "publisher_account_id": "8108003",
+      "advertiser_mid": "QBO-CJ-2026",
+      "cpa_payout_usd": 110.0,
+      "epc_modeled_usd": 3.85,
+      "affiliate_url_template": "https://www.dpbolvw.net/click-8108003-13871002?sid={clickref}&url=https%3A%2F%2Fquickbooks.intuit.com%2Fpayroll%2Fpricing%2F",
+      "switching_credit_usd": 200.0
+    },
+    "helcim": {
+      "id": "helcim",
+      "name": "Helcim",
+      "category": "merchant_processing",
+      "network": "CJ",
+      "publisher_account_id": "8108003",
+      "advertiser_mid": "HELCIM-CJ-2026",
+      "cpa_payout_usd": 150.0,
+      "epc_modeled_usd": 5.45,
+      "affiliate_url_template": "https://www.anrdoezrs.net/click-8108003-15612990?sid={clickref}&url=https%3A%2F%2Fwww.helcim.com%2Fpricing%2F",
+      "switching_credit_usd": 0.0
+    },
+    "stax": {
+      "id": "stax",
+      "name": "Stax Pay",
+      "category": "merchant_processing",
+      "network": "CJ",
+      "publisher_account_id": "8108003",
+      "advertiser_mid": "STAX-CJ-2026",
+      "cpa_payout_usd": 200.0,
+      "epc_modeled_usd": 6.8,
+      "affiliate_url_template": "https://www.dpbolvw.net/click-8108003-15548210?sid={clickref}&url=https%3A%2F%2Fstaxpayments.com%2Fpricing%2F",
+      "switching_credit_usd": 0.0
+    },
+    "paymentcloud": {
+      "id": "paymentcloud",
+      "name": "PaymentCloud",
+      "category": "merchant_processing",
+      "network": "AWIN",
+      "publisher_account_id": "3133124",
+      "advertiser_mid": "PAYMENTCLOUD-AWIN-61884",
+      "cpa_payout_usd": 185.0,
+      "epc_modeled_usd": 6.15,
+      "affiliate_url_template": "https://www.awin1.com/cread.php?awinmid=61884&awinaffid=3133124&clickref={clickref}&ued=https%3A%2F%2Fpaymentcloudinc.com%2Fpricing%2F",
+      "switching_credit_usd": 0.0
+    },
+    "cdg_commerce": {
+      "id": "cdg_commerce",
+      "name": "CDGcommerce",
+      "category": "merchant_processing",
+      "network": "CJ",
+      "publisher_account_id": "8108003",
+      "advertiser_mid": "CDG-CJ-2026",
+      "cpa_payout_usd": 150.0,
+      "epc_modeled_usd": 4.9,
+      "affiliate_url_template": "https://www.jdoqocy.com/click-8108003-14992011?sid={clickref}&url=https%3A%2F%2Fwww.cdgcommerce.com%2Fpricing.php",
+      "switching_credit_usd": 0.0
+    },
+    "stripe": {
+      "id": "stripe",
+      "name": "Stripe",
+      "category": "merchant_processing",
+      "network": "Direct_Benchmark",
+      "publisher_account_id": "RTPAIT-BENCHMARK",
+      "advertiser_mid": "STRIPE-BENCHMARK",
+      "cpa_payout_usd": 0.0,
+      "epc_modeled_usd": 0.0,
+      "affiliate_url_template": "https://stripe.com/pricing",
+      "switching_credit_usd": 0.0
+    },
+    "square": {
+      "id": "square",
+      "name": "Square",
+      "category": "merchant_processing",
+      "network": "AWIN",
+      "publisher_account_id": "3133124",
+      "advertiser_mid": "SQUARE-AWIN-59912",
+      "cpa_payout_usd": 85.0,
+      "epc_modeled_usd": 2.95,
+      "affiliate_url_template": "https://www.awin1.com/cread.php?awinmid=59912&awinaffid=3133124&clickref={clickref}&ued=https%3A%2F%2Fsquareup.com%2Fus%2Fen%2Fpricing",
+      "switching_credit_usd": 0.0
+    },
+    "paypal": {
+      "id": "paypal",
+      "name": "PayPal Commercial / Braintree",
+      "category": "merchant_processing",
+      "network": "CJ",
+      "publisher_account_id": "8108003",
+      "advertiser_mid": "PAYPAL-CJ-2026",
+      "cpa_payout_usd": 75.0,
+      "epc_modeled_usd": 2.4,
+      "affiliate_url_template": "https://www.tkqlhce.com/click-8108003-13711904?sid={clickref}&url=https%3A%2F%2Fwww.paypal.com%2Fus%2Fwebapps%2Fmpp%2Fmerchant-fees",
+      "switching_credit_usd": 0.0
+    },
+    "shopify_payments": {
+      "id": "shopify_payments",
+      "name": "Shopify Payments",
+      "category": "merchant_processing",
+      "network": "AWIN",
+      "publisher_account_id": "3133124",
+      "advertiser_mid": "SHOPIFY-AWIN-60441",
+      "cpa_payout_usd": 150.0,
+      "epc_modeled_usd": 4.5,
+      "affiliate_url_template": "https://www.awin1.com/cread.php?awinmid=60441&awinaffid=3133124&clickref={clickref}&ued=https%3A%2F%2Fwww.shopify.com%2Fpricing",
+      "switching_credit_usd": 0.0
+    }
+  },
+  "active_deployed_html_routes": 26,
+  "ucaas_subdivision_partners": {
+    "merit_only_conditional_voip_rule": "STRICT_MERIT_ONLY \u2014 Surface Dialpad/Nextiva/RingCentral ONLY when all-in 12-month TCO is strictly lower than both Cisco Webex and Microsoft Teams for the user's configuration.",
+    "primary_vendors": [
+      {
+        "vendor": "Cisco Webex",
+        "subid": "b2bfeeaudit_ucaas_webex",
+        "url": "https://www.webex.com/pricing/index.html?utm_source=saascostaudit.com&utm_medium=affiliate&utm_campaign=ucaas_2026"
+      },
+      {
+        "vendor": "Microsoft Teams",
+        "subid": "b2bfeeaudit_ucaas_microsoft_teams",
+        "url": "https://www.microsoft.com/en-us/microsoft-teams/compare-microsoft-teams-options?utm_source=saascostaudit.com&utm_medium=affiliate&utm_campaign=ucaas_2026"
+      },
+      {
+        "vendor": "Zoom Workplace (Impact)",
+        "subid": "b2bfeeaudit_ucaas_zoom",
+        "url": "https://zoom.us/pricing?utm_source=saascostaudit.com&utm_medium=affiliate&utm_campaign=ucaas_2026&irgwc=1"
+      },
+      {
+        "vendor": "Google Workspace (CJ 8108003)",
+        "subid": "b2bfeeaudit_ucaas_google_workspace",
+        "url": "https://workspace.google.com/pricing?utm_source=saascostaudit.com&utm_medium=affiliate&utm_campaign=ucaas_2026&sid=8108003"
+      }
+    ],
+    "conditional_voip_alternatives": [
+      {
+        "vendor": "Dialpad Connect",
+        "subid": "b2bfeeaudit_ucaas_dialpad",
+        "url": "https://www.dialpad.com/pricing/?utm_source=saascostaudit.com&utm_medium=affiliate&utm_campaign=ucaas_2026"
+      },
+      {
+        "vendor": "Nextiva Core",
+        "subid": "b2bfeeaudit_ucaas_nextiva",
+        "url": "https://www.nextiva.com/nextiva-pricing.html?utm_source=saascostaudit.com&utm_medium=affiliate&utm_campaign=ucaas_2026"
+      },
+      {
+        "vendor": "RingCentral RingEX",
+        "subid": "b2bfeeaudit_ucaas_ringcentral",
+        "url": "https://www.ringcentral.com/office/plansandpricing.html?utm_source=saascostaudit.com&utm_medium=affiliate&utm_campaign=ucaas_2026"
+      }
+    ]
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "schema_version": "1.3.0",
+  "updated_at": "2026-10-27T08:22:00-04:00",
+  "sister_family_group": "b2b-audit-family",
+  "based_on_audit": "/workspace/b2bfeeaudit/FEE-VS-COST-PO-AUDIT-2026-10-27.md",
+  "conflict_resolution_doc": "/workspace/CROSS-SPOKE-CONFLICT-RESOLUTION-RULE.md",
+  "affiliate_diversity_mandate": "While canonical calculator URLs are strictly non-overlapping across the four sister domains, each PO is mandated to proactively research and pursue the widest possible diversity of affiliate offers (CJ 8108003, AWIN 3133124, Impact 8038782, Rakuten 4767884, PartnerStack, Rewardful, FirstPromoter, and direct B2B programs) relevant to their site's overall macro-category (FEES, NON-SAAS OPERATING COSTS, SAAS PLATFORMS, or API_COSTS) on a weekly scan cadence without waiting for VentureLab input.",
+  "horizontal_tiebreak_order": [
+    "RULE_H1_TAXONOMY_REGISTRY_CHECK",
+    "RULE_H2_CANONICAL_OWNER_PLUS_SISTER_REFERRAL_CARD",
+    "RULE_H3_VERIFIED_EPC_RPV_CAPACITY_TIEBREAK",
+    "RULE_H4_ESCALATE_TO_CHIEF_OF_STAFF_AND_WALLY"
+  ],
+  "sister_portfolio_backlog_tags": {
+    "b2bfeeaudit.com": "SISTER_PORTFOLIO_B2B_FEE_AUDIT",
+    "b2bcostaudit.com": "SISTER_PORTFOLIO_B2B_COST_AUDIT",
+    "saascostaudit.com": "SISTER_PORTFOLIO_SAAS_COST_AUDIT",
+    "apicostaudit.com": "SISTER_PORTFOLIO_API_COST_AUDIT"
+  },
+  "domains": {
+    "b2bfeeaudit.com": {
+      "category_key": "FEES",
+      "domain": "b2bfeeaudit.com",
+      "registration_status": "REGISTERED_ON_PORKBUN_ORDER_12261177",
+      "po_name": "B2B Fee Audit PO",
+      "po_agent_id": "76f092a4-d874-4a66-ad28-c0146be1800a",
+      "product_workspace": "/workspace/b2bfeeaudit",
+      "sister_portfolio_tag": "SISTER_PORTFOLIO_B2B_FEE_AUDIT",
+      "macro_category": "FEES (Transactional, Payment, Banking Wire/ACH/FX & Statutory Filing Fees)",
+      "road_to_revenue_stage": "STAGE_2",
+      "starting_kaizen_mode": "MODE_5 -> MODE_1: Day-0 GSC DNS Blocker Resolution + Discovery Velocity Mode",
+      "canonical_url_ownership": [
+        "/merchant/* \u2014 All payment processing, wholesale Interchange-Plus vs flat-rate, ACH vs corporate card, gateway penalty, chargeback, and invoicing surcharge calculators (Stripe, Helcim, Square, Stax, Shopify Payments, PayPal, QuickBooks Payments, PaymentCloud)",
+        "/banking/* \u2014 All business banking & treasury fee calculators: domestic/international wire fees, SWIFT/FX conversion markups, Same-Day ACH origination fees, cash deposit fees, and account maintenance penalties (Mercury, Relay, Bluevine, Chase, Wise Business, Brex, Ramp)",
+        "/payroll/multi-state-payroll-tax-calculator/ \u2014 50-state SUI agency registration fees ($150-$175/state) & local tax filing fees",
+        "/payroll/rippling-vs-adp-run-tco/ \u2014 Hidden per-payroll-run charges, January W-2/1099 per-form filing fees ($6-$7.50/form), and multi-state tax filing fees",
+        "/payroll/deel-vs-remote-eor-tco/ \u2014 Cross-border EOR foreign exchange (FX) currency spreads (2%-4% over mid-market) and international wire fees",
+        "/methodology/ \u2014 Deterministic .gov fee audit methodology & FTC disclosures"
+      ],
+      "allowed_summary_card_cross_domain_links": [
+        "May display lightweight Referral Summary Cards linking out to b2bcostaudit.com for commercial E&O/Cyber insurance policy costs (/eo-insurance/*) and W-2 vs 1099 employer labor burden calculators",
+        "May display lightweight Referral Summary Cards linking out to saascostaudit.com for per-seat UCaaS pricing (/ucaas/*) and pure PEPM HRIS software tier comparisons (Gusto vs OnPay, Gusto vs Rippling seat tiers)",
+        "May display lightweight Referral Summary Cards linking out to apicostaudit.com for metered per-call fintech/payment/banking API overages (Plaid, Stripe Radar/Identity per-API-call fees, Twilio Lookup/Verify) and LLM/AI token API spend"
+      ],
+      "explicit_exclusions": [
+        "MUST NOT publish canonical calculators for commercial E&O or Cyber Liability insurance policy premiums or COI compliance (owned by b2bcostaudit.com; existing /eo-insurance/* routes 301-migrate to b2bcostaudit.com)",
+        "MUST NOT publish canonical calculators for per-seat UCaaS collaboration licensing (Webex, Teams, Zoom, Google Workspace) or pure SaaS seat tier comparisons (owned by saascostaudit.com; existing /ucaas/* routes 301-migrate to saascostaudit.com)",
+        "MUST NOT publish canonical W-2 vs 1099 total employer compensation/benefits burden calculators (owned by b2bcostaudit.com)",
+        "MUST NOT publish canonical per-1M token LLM API, per-minute Voice AI API, vector DB read/write unit, or GPU inference hour calculators (owned by apicostaudit.com)"
+      ]
+    },
+    "b2bcostaudit.com": {
+      "category_key": "COSTS",
+      "domain": "b2bcostaudit.com",
+      "registration_status": "REGISTERED_ON_PORKBUN_ORDER_12296088_2026_10_27",
+      "po_name": "B2B Cost Audit PO",
+      "po_agent_id": "2d4a6a26-94d7-4bed-9dd9-f96988b41fc5",
+      "product_workspace": "/workspace/b2bcostaudit",
+      "sister_portfolio_tag": "SISTER_PORTFOLIO_B2B_COST_AUDIT",
+      "macro_category": "COSTS (Non-SaaS Recurring Commercial Operating, Insurance, Compliance, Fleet, Facilities & Headcount Burden Costs)",
+      "road_to_revenue_stage": "STAGE_0_TO_1",
+      "starting_kaizen_mode": "MODE_1: Discovery, Indexation & AEO Velocity Mode (Day-0 Indexation)",
+      "canonical_url_ownership": [
+        "/eo-insurance/* \u2014 All 5 commercial Tech E&O and Cyber Liability routes migrated from b2bfeeaudit.com (/eo-insurance/, /eo-insurance/cyber-eo-premium-estimator/, /eo-insurance/industry-policy-requirements/, /eo-insurance/coi-compliance-checker/, /eo-insurance/state-minimum-liability-limits/)",
+        "/labor-burden/w2-employee-vs-1099-contractor-tco/ \u2014 Total employer W-2 headcount burden (7.65% FICA, FUTA, state SUI, workers' comp, health/benefits load) vs 1099 contractor rates",
+        "/peo-benefits/* \u2014 PEO bundled administration, workers' comp, and employee benefits cost calculators (Justworks, TriNet, ADP TotalSource, Gusto PEO)",
+        "/commercial-costs/* \u2014 Recurring non-SaaS B2B operating cost calculators across commercial insurance lines (D&O, General Liability, Workers' Comp, Commercial Auto), accounting/bookkeeping/CPA retainers, legal/compliance audits (SOC 2 / ISO 27001 audit body costs), commercial fleet/fuel/telematics leases, equipment financing, and facility/coworking/utilities operating costs"
+      ],
+      "allowed_summary_card_cross_domain_links": [
+        "May display lightweight Referral Summary Cards linking out to b2bfeeaudit.com when an operating cost page touches payment processing interchange, bank wire/FX spreads, or state tax registration fees",
+        "May display lightweight Referral Summary Cards linking out to saascostaudit.com when a headcount or operations page references per-seat HRIS, UCaaS, or SaaS software licenses",
+        "May display lightweight Referral Summary Cards linking out to apicostaudit.com when an AI/tech operating cost or SOC 2 compliance page references metered LLM API token spend, GPU cloud hours, or usage-based API infrastructure"
+      ],
+      "explicit_exclusions": [
+        "MUST NOT publish canonical payment processing interchange-plus, credit card surcharge, or bank wire/FX fee calculators (owned by b2bfeeaudit.com)",
+        "MUST NOT publish canonical per-seat SaaS, UCaaS (Webex, Teams, Zoom, Google Workspace), CRM, Cloud, or AI software license tier calculators (owned by saascostaudit.com)",
+        "MUST NOT publish canonical usage-based API, LLM token, Voice AI per-minute, or GPU inference compute cost calculators (owned by apicostaudit.com)"
+      ]
+    },
+    "saascostaudit.com": {
+      "category_key": "SAAS_PLATFORMS",
+      "domain": "saascostaudit.com",
+      "registration_status": "REGISTERED_ON_PORKBUN_ORDER_12296088_2026_10_27",
+      "po_name": "SaaS Cost Audit PO",
+      "po_agent_id": "bc09e0d9-5fae-487c-b526-020d9aac1bd1",
+      "product_workspace": "/workspace/saascostaudit",
+      "sister_portfolio_tag": "SISTER_PORTFOLIO_SAAS_COST_AUDIT",
+      "macro_category": "SAAS PLATFORMS (Per-Seat B2B Software, Collaboration, HRIS PEPM, CRM, Cloud/DevTools & AI License Tier Costs)",
+      "road_to_revenue_stage": "STAGE_0_TO_1",
+      "starting_kaizen_mode": "MODE_1: Discovery, Indexation & AEO Velocity Mode (Day-0 Indexation)",
+      "canonical_url_ownership": [
+        "/ucaas/* \u2014 All 5 UCaaS & collaboration suite pricing audit routes migrated from b2bfeeaudit.com (/ucaas/, /ucaas/cisco-webex-pricing-audit/, /ucaas/microsoft-teams-pricing-audit/, /ucaas/zoom-workplace-pricing-audit/, /ucaas/google-workspace-meet-pricing-audit/)",
+        "/hris-saas/* \u2014 Pure per-seat HRIS & payroll software tier comparisons ($49+$6/seat Gusto vs OnPay, Gusto vs Rippling modular PEPM seat pricing, BambooHR, Deel US PEPM)",
+        "/crm-sales-saas/* \u2014 CRM, sales engagement, and marketing automation per-seat tier & contact-tier cost calculators (HubSpot, Salesforce, Pipedrive, Apollo, ActiveCampaign)",
+        "/cloud-devtools-ai/* \u2014 Project management, DevSecOps, cloud observability, and per-seat AI copilot/workspace licensing calculators (Slack, Jira/Atlassian, Asana, Monday.com, Notion, GitHub Enterprise, M365 Copilot, ChatGPT Team/Enterprise, Claude Team, 1Password Business, NordLayer, Synthesia/HeyGen seat plans)"
+      ],
+      "allowed_summary_card_cross_domain_links": [
+        "May display lightweight Referral Summary Cards linking out to b2bfeeaudit.com for merchant card processing markups, Stripe Billing/Invoicing transaction surcharges, and international EOR FX wire spreads",
+        "May display lightweight Referral Summary Cards linking out to b2bcostaudit.com for W-2 vs 1099 employer tax/benefits burden, PEO health/workers' comp bundles, and Cyber/Tech E&O insurance policies",
+        "May display lightweight Referral Summary Cards linking out to apicostaudit.com whenever a SaaS or AI seat calculator touches metered API token consumption (OpenAI/Anthropic/Bedrock API vs ChatGPT/Claude Team seats), Voice AI per-minute usage (ElevenLabs/Retell/Vapi API), vector DB read/write units (Pinecone), or GPU droplet/serverless compute hours (DigitalOcean GPU, RunPod, Vast.ai)"
+      ],
+      "explicit_exclusions": [
+        "MUST NOT publish canonical credit card interchange, ACH vs card, or business banking wire/FX fee calculators (owned by b2bfeeaudit.com)",
+        "MUST NOT publish canonical commercial E&O/Cyber insurance policy estimators, COI checkers, or statutory W-2 employer tax burden calculators (owned by b2bcostaudit.com)",
+        "MUST NOT publish canonical metered per-1M token LLM API, per-minute Voice AI API, vector DB read/write unit, or per-call API overage calculators (owned by apicostaudit.com)"
+      ]
+    },
+    "apicostaudit.com": {
+      "category_key": "API_COSTS",
+      "domain": "apicostaudit.com",
+      "registration_status": "REGISTERED_ON_PORKBUN_ORDER_12296644_2026_10_27",
+      "porkbun_order_id": "12296644",
+      "registered_date": "2026-10-27",
+      "expiration_date": "2027-10-27",
+      "registration_cost_usd": 11.08,
+      "po_name": "SaaS Cost Audit PO (Governing API Cost Audit Extension)",
+      "po_agent_id": "bc09e0d9-5fae-487c-b526-020d9aac1bd1",
+      "product_workspace": "/workspace/apicostaudit",
+      "sister_portfolio_tag": "SISTER_PORTFOLIO_API_COST_AUDIT",
+      "macro_category": "API_COSTS (Usage-Based, Metered, Per-Call, Per-1M Token, Per-Minute Voice/Video AI, Vector Read/Write Unit & GPU/Serverless Inference API Spend)",
+      "road_to_revenue_stage": "STAGE_0_TO_1",
+      "starting_kaizen_mode": "MODE_1: Discovery, Indexation & AEO Velocity Mode (Day-0 Indexation)",
+      "canonical_url_ownership": [
+        "/llm-api/* \u2014 Metered per-1M input/output/cached token, batch API, and fine-tuning cost calculators across frontier and open-weight LLM APIs (OpenAI API, Anthropic Claude API, Google Gemini/Vertex AI, AWS Bedrock, Azure OpenAI, Mistral, Cohere, DeepSeek, Together AI, Fireworks AI, Groq, Replicate)",
+        "/voice-video-api/* \u2014 Per-minute, per-character, and per-stream Voice AI & Video AI API orchestration cost calculators (Retell AI, Vapi, ElevenLabs API, Deepgram, OpenAI Realtime API, Twilio Programmable Voice/SMS per-minute/per-segment overages)",
+        "/ai-infra-gpu/* \u2014 Vector database serverless read/write units (Pinecone, Qdrant, Weaviate), LLM observability trace/span ingestion overages (LangSmith, Helicone, Langfuse, Datadog LLM Monitoring), and GPU cloud/serverless inference hour calculators (DigitalOcean GPU Droplets, RunPod, Vast.ai, Modal, Lambda)",
+        "/b2b-apis/* \u2014 Metered B2B communications, enrichment, and fintech API call/webhook overage calculators (Twilio, SendGrid, Postmark, Plaid per-API-call tiers, Stripe Identity/Radar per-verification API calls, Google Maps/Places API per-1k request tiers, Apollo/Clearbit enrichment credit overages)"
+      ],
+      "allowed_summary_card_cross_domain_links": [
+        "May display lightweight Referral Summary Cards linking out to saascostaudit.com when an API calculator compares metered API token usage against flat per-seat B2B SaaS or AI workspace licenses (e.g., OpenAI/Claude API vs ChatGPT Team / Claude Team / M365 Copilot seats, or n8n Cloud/Make.com subscription tiers)",
+        "May display lightweight Referral Summary Cards linking out to b2bfeeaudit.com when a fintech or payment API page touches credit card interchange-plus markups, ACH/wire fees, or Stripe Billing percentage-of-GMV take rates",
+        "May display lightweight Referral Summary Cards linking out to b2bcostaudit.com when an AI/API infrastructure page touches Tech E&O / AI Cyber Liability insurance or SOC 2 Type II CPA auditor retainers"
+      ],
+      "explicit_exclusions": [
+        "MUST NOT publish canonical per-seat B2B SaaS, UCaaS (/ucaas/*), HRIS PEPM (/hris-saas/*), CRM seat, or flat per-user AI copilot license calculators (owned by saascostaudit.com)",
+        "MUST NOT publish canonical payment processing interchange-plus, merchant account, or business banking wire/FX fee calculators (owned by b2bfeeaudit.com)",
+        "MUST NOT publish canonical commercial E&O/Cyber insurance policy estimators, COI checkers, or statutory W-2 employer tax burden calculators (owned by b2bcostaudit.com)"
+      ]
+    }
+  },
+  "family_pm_name": "B2B Audit Family PM",
+  "family_pm_agent_id": "9c1c413e-5df2-4d17-a576-11713450fceb",
+  "family_affinity_concurrency_policy": {
+    "rule_id": "FAMILY_AFFINITY_SHARED_CONTEXT_CONCURRENCY",
+    "source_of_truth_file": "/workspace/B2B-FAMILY-TAXONOMY-REGISTRY.json",
+    "max_concurrent_spoke_contexts_per_team": 1,
+    "same_family_counts_as_single_context": true,
+    "cross_family_concurrency_blocked": true,
+    "cross_family_override": "FOUNDER_EXPLICIT_AUTHORIZATION_ONLY",
+    "rationale": "Same-family products in a linked multi-PO hub share taxonomy, scorecard thresholds (W-1..W-5, LC-1..LC-6, IS-1..IS-5), cross-domain referral cards, and backlog tags, so they count as ONE unified context with low drift risk. Cross-family concurrency mixes unrelated taxonomies and stays strictly blocked unless Wally explicitly authorizes it.",
+    "shared_context_pillars": [
+      "unified_taxonomy_registry (/workspace/B2B-FAMILY-TAXONOMY-REGISTRY.json)",
+      "unified_spoke_scorecard_thresholds (W-1..W-5, LC-1..LC-6, IS-1..IS-5)",
+      "unified_sister_portfolio_backlog_tags (SISTER_PORTFOLIO_*)",
+      "bidirectional_cross_domain_referral_summary_cards"
+    ]
+  },
+  "linked_pm_capacity_policy": {
+    "rule_id": "FIVE_PRODUCT_DEFAULT_CAP_PER_LINKED_PM",
+    "default_max_active_products_per_linked_pm": 5,
+    "overflow_behavior": "WAIT_IN_HUB_PM_OVERFLOW_BACKLOG_UNTIL_SLOT_OPENS",
+    "taxonomy_depth_tiers": {
+      "SHALLOW_SINGLE_PRODUCT_HUB": {
+        "depth_score_range": "1-2",
+        "criteria": "Single parent domain, single PO, no sister-domain referral network, minimal cross-domain wiring.",
+        "active_product_cap": 1
+      },
+      "SHALLOW_LINKED_FAMILY": {
+        "depth_score_range": "2",
+        "criteria": "2 associated domains with partial shared wiring or single-spoke scope.",
+        "active_product_cap": 2
+      },
+      "STANDARD_LINKED_FAMILY": {
+        "depth_score_range": "3-4",
+        "criteria": "Multi-domain linked family sharing taxonomy registry, unified scorecard, and hub PM routing.",
+        "active_product_cap": 5
+      },
+      "DEEP_LINKED_FAMILY": {
+        "depth_score_range": "5",
+        "criteria": "Multi-domain linked family with (1) canonical non-overlapping URL taxonomy, (2) bidirectional cross-domain Referral Summary Cards, (3) unified 3-spoke Day-0 scorecard (W-1..W-5, LC-1..LC-6, IS-1..IS-5), (4) shared Eleventy/telemetry architecture, and (5) H1-H4 deterministic conflict resolution.",
+        "default_enforced_cap": 5,
+        "earned_depth_max_cap": 6
+      }
+    }
+  },
+  "hub_families": {
+    "b2b-audit-family": {
+      "family_id": "b2b-audit-family",
+      "hub_archetype": "MULTI_PO_HUB_PM",
+      "hub_pm_name": "B2B Audit Family PM",
+      "hub_pm_agent_id": "9c1c413e-5df2-4d17-a576-11713450fceb",
+      "hub_channel_id": "2d015fbe-ce0d-47be-870a-27908799476d",
+      "taxonomy_depth_tier": "DEEP_LINKED_FAMILY",
+      "taxonomy_depth_score": 5,
+      "taxonomy_depth_signals": {
+        "multiple_registered_domains": true,
+        "cross_domain_referral_banners": true,
+        "unified_3_spoke_scorecard": true,
+        "shared_backlog_and_kaizen_tags": true,
+        "deterministic_h1_h4_routing": true
+      },
+      "enforced_active_product_cap": 5,
+      "earned_depth_max_cap": 6,
+      "active_products": [
+        "b2bfeeaudit.com",
+        "b2bcostaudit.com",
+        "saascostaudit.com",
+        "apicostaudit.com"
+      ],
+      "active_product_count": 4,
+      "available_active_slots": 1,
+      "overflow_backlog_products": [
+        {
+          "domain": "llmcostaudit.com",
+          "status": "WAITLISTED_RDAP_DROP_WATCH_AND_CAP_QUEUE",
+          "note": "Queued in monthly RDAP/Trends watch; enters active family slot 5/5 upon registration & PO intake."
+        },
+        {
+          "domain": "sicostaudit.com",
+          "status": "WAITLISTED_OVERFLOW_BACKLOG_SLOT_6",
+          "note": "Queued behind 5-product default cap per linked PM; waits in backlog until an active slot opens or deep-taxonomy cap expansion (6) is activated."
+        }
+      ],
+      "same_family_concurrency_allowed": true,
+      "counts_as_single_spoke_context": true
+    },
+    "home-services-family": {
+      "family_id": "home-services-family",
+      "hub_archetype": "SINGLE_PRODUCT_PO",
+      "po_name": "Junk Hall PO",
+      "po_agent_id": "b1459d35-268c-4838-a68f-ecdd5954d2cf",
+      "spoke_pm_agent_id": "167b2bea-99c8-4e89-99e3-182227974962",
+      "taxonomy_depth_tier": "SHALLOW_SINGLE_PRODUCT_HUB",
+      "taxonomy_depth_score": 1,
+      "enforced_active_product_cap": 1,
+      "active_products": [
+        "junkhaulhq.com"
+      ],
+      "active_product_count": 1,
+      "available_active_slots": 0,
+      "overflow_backlog_products": [],
+      "same_family_concurrency_allowed": false,
+      "counts_as_single_spoke_context": true
+    },
+    "flagship-consulting-hub": {
+      "family_id": "flagship-consulting-hub",
+      "hub_archetype": "SINGLE_PRODUCT_PO",
+      "po_name": "RTP AIT PO",
+      "po_agent_id": "dcb1b787-dece-43ac-a64f-bfa2bca81429",
+      "spoke_pm_agent_id": "167b2bea-99c8-4e89-99e3-182227974962",
+      "taxonomy_depth_tier": "SHALLOW_SINGLE_PRODUCT_HUB",
+      "taxonomy_depth_score": 1,
+      "enforced_active_product_cap": 1,
+      "active_products": [
+        "rtpait.com"
+      ],
+      "active_product_count": 1,
+      "available_active_slots": 0,
+      "overflow_backlog_products": [],
+      "same_family_concurrency_allowed": false,
+      "counts_as_single_spoke_context": true
+    }
+  }
+}

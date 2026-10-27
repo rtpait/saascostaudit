@@ -1,0 +1,183 @@
+---
+layout: base.njk
+permalink: "/"
+title: "B2B Payroll, HRIS & Merchant Fee TCO Calculator (2026 .gov)"
+description: "Audit 2026 B2B payroll (Gusto, Rippling, Deel, OnPay, ADP) + 50-state .gov SUI taxes and merchant fees (Stripe 2.9% vs. Helcim & Stax Interchange-Plus)."
+serviceOffer:
+  seoTitle: "B2B Payroll, Multi-State HRIS & Merchant Processing TCO Calculator (2026)"
+  seoDescription: "Audit 2026 B2B payroll (Gusto, Rippling, Deel, OnPay, ADP) + 50-state .gov SUI taxes and merchant fees (Stripe 2.9% vs. Helcim & Stax Interchange-Plus)."
+  type: "payroll"
+  offerLowPrice: "0"
+  offerHighPrice: "2500"
+  prices:
+    - label: "OnPay All-Inclusive 50-State Payroll ($40 base + $6/seat)"
+      price: "$2,112/yr (18 W-2 + 4 1099 across 3 states · $0 state fee)"
+      partner: "OnPay"
+      ctaType: "payroll"
+      ctaLabel: "Verify OnPay 2026 Rate →"
+      ctaUrl: "https://onpay.com/pricing?utm_source=saascostaudit&utm_medium=affiliate"
+      source: 1
+    - label: "Gusto Simple / Multi-State Payroll ($49 base + $6/seat)"
+      price: "$2,652/yr (18 W-2 + 4 1099 · $0 W-2/1099 year-end fee)"
+      partner: "Gusto"
+      ctaType: "payroll"
+      ctaLabel: "Start Gusto Trial →"
+      ctaUrl: "https://gusto.com/product/pricing?utm_source=saascostaudit&utm_medium=affiliate"
+      source: 2
+    - label: "Helcim Interchange-Plus Merchant Processing ($0 Monthly Fee)"
+      price: "2.38% Effective ($18,564/yr on $65k/mo · Saves $11,154/yr vs. Stripe)"
+      partner: "Helcim"
+      ctaType: "merchant"
+      ctaLabel: "Switch to Helcim IC+ →"
+      ctaUrl: "https://www.helcim.com/pricing/?utm_source=saascostaudit&utm_medium=affiliate"
+      source: 3
+    - label: "Stax 0% Markup Wholesale Interchange Subscription ($99/mo)"
+      price: "2.19% Effective ($17,088/yr on $65k/mo · 0% processor markup)"
+      partner: "Stax"
+      ctaType: "merchant"
+      ctaLabel: "Get Stax 0% Markup Quote →"
+      ctaUrl: "https://staxpayments.com/pricing/?utm_source=saascostaudit&utm_medium=affiliate"
+      source: 4
+---
+{% import "macros.njk" as m %}
+{% set hubEntry = {
+  slug: "home-hub",
+  type: "payroll",
+  title: "2026 B2B Payroll, Multi-State HRIS & Merchant Processing TCO Audit",
+  primaryPartner: "Gusto",
+  primaryPartnerUrl: "https://gusto.com/product/pricing?utm_source=saascostaudit&utm_medium=affiliate",
+  secondaryPartner: "Helcim",
+  secondaryPartnerUrl: "https://www.helcim.com/pricing/?utm_source=saascostaudit&utm_medium=affiliate",
+  lastVerified: "2026-10-24",
+  calcDefaults: {w2: 18, states: 3, primaryState: "CA", contractors: 4, eor: 1, volume: 65000, ticket: 85, cnpPct: 80, intlPct: 10},
+  verdict: {
+    winner: "Save $2,412/yr on Multi-State Payroll (Gusto/OnPay vs. Rippling/ADP) + $11,154/yr on Card Fees (Helcim/Stax IC+ vs. Stripe 2.9%)",
+    hiddenFeeTrap: "SMB CFOs lose $5,000–$45,000/yr to unquoted PEPM modules, $150–$175 multi-state SUI registration fees, $7.50/form W-2 fees, and +0.8% Stripe Invoicing surcharges.",
+    actionLine: "Run both deterministic 2026 calculators below—backed by IRS Publication 15 (.gov), 50-state DOL SUI wage bases, and Federal Reserve Reg II debit caps."
+  },
+  sources: [
+    {id: 1, title: "IRS Publication 15 (2026 Employer Tax Guide) & State DOL SUI Wage Base Tables (.gov)", url: "https://www.irs.gov/publications/p15", accessed: "2026-10-24"},
+    {id: 2, title: "Federal Reserve Board Regulation II — Regulated Debit Card Interchange Cap (0.05% + $0.21) (.gov)", url: "https://www.federalreserve.gov/paymentsystems/regii-average-interchange-fee.htm", accessed: "2026-10-24"},
+    {id: 3, title: "Gusto, OnPay, Rippling, Deel & ADP RUN 2026 Published Pricing Schedules", url: "https://gusto.com/product/pricing", accessed: "2026-10-24"},
+    {id: 4, title: "Helcim, Stax, Stripe, Square & PayPal 2026 Published Merchant Fee Schedules", url: "https://www.helcim.com/pricing/", accessed: "2026-10-24"}
+  ],
+  faq: [
+    {q: "How does SaaS Cost Audit calculate true 12-month payroll and HRIS Total Cost of Ownership?", a: "Unlike generic software directories that only multiply entry base price by headcount, our calculator models base platform fees, per-employee-per-month (PEPM) tiers, per-state monthly tax filing fees, state tax registration fees, January W-2/1099 form charges, international EOR FX spreads, and official 2026 .gov state SUI + federal FUTA taxes."},
+    {q: "Why do businesses processing over $25,000/month overpay on Stripe, Square, and PayPal?", a: "Blended flat-rate processors charge 2.9% + $0.30 (plus +0.8% on invoices and +1.5% on international cards) even on regulated bank debit cards capped at 0.05% + $0.22 under Federal Reserve Regulation II (.gov). Switching to Interchange-Plus (Helcim $0/mo or Stax $99/mo 0% markup) passes the true wholesale rate directly to you."},
+    {q: "Can AI assistants (ChatGPT, Meta Muse, Claude, Perplexity, Grok) query SaaS Cost Audit directly?", a: "Yes. saascostaudit.com is built for both human CFOs and AI agents via /.well-known/webmcp.json, /.well-known/openapi.json, /llms.txt, /llms-full.txt, and our CC-BY-4.0 open dataset (/datasets/b2b-payroll-and-merchant-fee-benchmarks-2026.json)."},
+    {q: "Are your state SUI tax rates and debit card caps verified against official .gov sources?", a: "Yes. Every calculator cites IRS Publication 15 (2026 Circular E), state Department of Labor unemployment insurance schedules (CA EDD, TX TWC, NYSDOL, FL DOR, NC DES, WA ESD), and the Federal Reserve Board Regulation II debit interchange fee benchmark."}
+  ]
+} %}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DataCatalog","@id":"{{ site.url }}/#datacatalog","name":"SaaS Cost Audit 2026 Open Benchmark Datasets","url":"{{ site.url }}/datasets/b2b-payroll-and-merchant-fee-benchmarks-2026.json","dataset":[{"@type":"Dataset","name":"2026 US B2B Payroll, 50-State SUI Tax & Merchant Interchange-Plus Benchmarks","description":"CC-BY-4.0 machine-readable dataset of 2026 B2B payroll PEPM fees, 15-state .gov SUI taxable wage bases, and Visa/Mastercard/Reg II interchange benchmarks.","license":"https://creativecommons.org/licenses/by/4.0/","url":"{{ site.url }}/datasets/b2b-payroll-and-merchant-fee-benchmarks-2026.json","sameAs":"https://github.com/rtpait/b2b-payroll-and-merchant-fee-benchmarks-2026","distribution":[{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"{{ site.url }}/datasets/b2b-payroll-and-merchant-fee-benchmarks-2026.json"},{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"{{ site.url }}/datasets/b2b-payroll-and-merchant-fee-benchmarks-2026.csv"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in hubEntry.faq %}{"@type":"Question","name":{{ f.q | json | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | json | safe }}}}{% if not loop.last %},{% endif %}{% endfor %}]}</script>
+
+{{ m. breadcrumbs(site, [["SaaS Cost Audit Hub", "/"]]) }}
+{{ m.verifiedGovBadge(hubEntry, "hub") }}
+
+<h1>B2B Payroll, Multi-State HRIS &amp; Merchant Processing Fee TCO Auditor (2026)</h1>
+<p><strong>Stop Guessing on Hidden B2B SaaS &amp; Payment Fees:</strong> Incumbent review directories hide real pricing behind sales forms and quote misleading entry tiers. Use our deterministic 2026 calculators below—grounded in official <code>.gov</code> state unemployment insurance (SUI) tax tables and Federal Reserve Regulation II interchange benchmarks—to audit your exact 12-month Total Cost of Ownership in under 15 seconds.</p>
+
+{{ m.verdictCard(hubEntry, site, "hub") }}
+
+{{ m.payrollTcoCalc(hubEntry, site, state_sui_taxes_2026) }}
+
+{{ m.merchantFeeCalc(hubEntry, site, interchange_rates_2026) }}
+
+{{ m.prices(serviceOffer.prices, site, "home-hub", "hub", hubEntry.calcDefaults) }}
+
+{{ m.crossLinkHub(payrollPages, merchantPages, "/") }}
+
+<section class="tco-calc-box" id="eo-insurance-subdivision" aria-label="E&O and Cyber Liability Insurance Comparison Subdivision">
+  <span class="verified-gov-badge">🛡️ NEW SUBDIVISION · COMMERCIAL E&amp;O &amp; CYBER LIABILITY COMPLIANCE</span>
+  <h2 style="margin:.4rem 0 .25rem;border-top:0;padding-top:0"><a href="/eo-insurance/" style="color:#0f172a;text-decoration:none">Errors &amp; Omissions (E&amp;O) &amp; Cyber Insurance Comparison Subdivision (<code>/eo-insurance/</code>)</a></h2>
+  <p style="margin:0 0 .85rem;font-size:.94rem;color:#334155">Enterprise procurement teams require verified <strong>Tech E&amp;O ($1M/$2M to $5M/$5M)</strong>, <strong>First- &amp; Third-Party Cyber Liability</strong>, and compliant <strong>ACORD 25 Certificates of Insurance (COIs)</strong> before signing B2B SaaS, AI, FinTech, Healthcare BAA, and IT consulting contracts. Explore our 4 dedicated search-intent tools:</p>
+  <div class="card-grid-2">
+    <div class="calc-vendor-card vendor-best">
+      <small>Flagship Tool · NAIC &amp; Carrier Rate Filings</small>
+      <h3 style="margin:.25rem 0 .35rem"><a href="/eo-insurance/cyber-eo-premium-estimator/">1. Cyber Insurance Cost Calculator &amp; Professional Liability Cost by Industry</a></h3>
+      <p style="margin:0 0 .6rem;font-size:.86rem;color:#334155">Estimate 2026 premiums across SaaS/AI ($1,882/yr avg), Healthcare ($1,395/yr), FinTech ($1,365/yr), Consulting ($1,197/yr), and SMBs ($999/yr cyber / $675/yr 1–4 emp E&amp;O) with MFA/EDR/Backup control credits.</p>
+      <a class="cta tbl-cta-btn" href="/eo-insurance/cyber-eo-premium-estimator/">Launch Cyber &amp; E&amp;O Calculator →</a>
+    </div>
+    <div class="calc-vendor-card vendor-best">
+      <small>Contract-Driven Buyer Guide · SOC 2 &amp; HIPAA</small>
+      <h3 style="margin:.25rem 0 .35rem"><a href="/eo-insurance/industry-policy-requirements/">2. Tech E&amp;O &amp; Cyber Insurance Policy Requirements by Industry</a></h3>
+      <p style="margin:0 0 .6rem;font-size:.86rem;color:#334155">Unblock enterprise MSA Insurance Exhibits: First-Party vs. Third-Party Cyber, Retroactive Dates, 80/20 Soft Hammer Clauses, $250k+ Social Engineering sublimits, and same-day COI binding.</p>
+      <a class="cta-secondary tbl-cta-btn" href="/eo-insurance/industry-policy-requirements/">Audit MSA Policy Requirements →</a>
+    </div>
+    <div class="calc-vendor-card">
+      <small>Instant ACORD 25 Verification &amp; Gap Remediation</small>
+      <h3 style="margin:.25rem 0 .35rem"><a href="/eo-insurance/coi-compliance-checker/">3. Certificate of Insurance Requirements &amp; ACORD 25 COI Checker</a></h3>
+      <p style="margin:0 0 .6rem;font-size:.86rem;color:#334155">Paste an ACORD 25 COI to flag limit or endorsement gaps against $1M/$1M, $2M/$2M SOC 2, or $5M/$5M HIPAA MSAs—with direct vendor fix-gap quotes and 1-click procurement notices.</p>
+      <a class="cta-secondary tbl-cta-btn" href="/eo-insurance/coi-compliance-checker/">Run Free ACORD 25 COI Checker →</a>
+    </div>
+    <div class="calc-vendor-card">
+      <small>50-State + DC Statutory vs. Contractual Table</small>
+      <h3 style="margin:.25rem 0 .35rem"><a href="/eo-insurance/state-minimum-liability-limits/">4. State-by-State E&amp;O Minimum Liability Limits Matrix</a></h3>
+      <p style="margin:0 0 .6rem;font-size:.86rem;color:#334155">Single supporting authority table covering the 12 mandatory Real Estate E&amp;O states, OR producer/attorney statutes, state cyber tort safe-harbor laws (OH, UT, CT, TN), and state IT contract floors.</p>
+      <a class="cta-secondary tbl-cta-btn" href="/eo-insurance/state-minimum-liability-limits/">View 50-State Limits Matrix →</a>
+    </div>
+  </div>
+  <p style="margin:.65rem 0 0;font-size:.85rem"><a href="/eo-insurance/"><strong>Open the E&amp;O &amp; Cyber Insurance Subdivision Hub (`/eo-insurance/`) →</strong></a> · <a href="/datasets/eo-cyber-insurance-benchmarks-2026.json">Download 2026 E&amp;O &amp; Cyber Benchmark Dataset (JSON)</a></p>
+</section>
+
+
+
+<section class="tco-calc-box" id="ucaas-subdivision" aria-label="Unified Communications and Collaboration Pricing Audit Subdivision">
+  <span class="verified-gov-badge">📞 NEW SUBDIVISION · UNIFIED COMMUNICATIONS &amp; COLLABORATION (UCAAS) FEE AUDIT</span>
+  <h2 style="margin:.4rem 0 .25rem;border-top:0;padding-top:0"><a href="/ucaas/" style="color:#0f172a;text-decoration:none">Webex vs. Microsoft Teams vs. Zoom vs. Google Workspace Pricing Subdivision (<code>/ucaas/</code>)</a></h2>
+  <p style="margin:0 0 .85rem;font-size:.94rem;color:#334155">Compare verified 2026 per-seat list prices, monthly vs. annual NCE billing markups (+11%–20.8%), PSTN business calling add-ons, FCC Universal Service Fund (USF) &amp; E911 surcharges ($3.50–$6.50/line), AI assistant fees ($0 Webex/Zoom/Google vs. +$10 Teams Premium / +$30 Copilot), and cloud recording storage traps across all 4 collaboration leaders:</p>
+  <div class="card-grid-2">
+    <div class="calc-vendor-card vendor-best">
+      <small>All-In Suite ($22.50/mo) · $0 Bundled Webex AI</small>
+      <h3 style="margin:.25rem 0 .35rem"><a href="/ucaas/cisco-webex-pricing-audit/">1. Cisco Webex Pricing, Calling &amp; Suite Hidden Fee Audit</a></h3>
+      <p style="margin:0 0 .6rem;font-size:.86rem;color:#334155">Audit Webex Free ($0), Meet ($12/$14.50), Calling ($17/$20), Suite ($22.50/$25), and Enterprise (~$30–$38), plus E911/USF recovery fees and $55+ Webinars.</p>
+      <a class="cta tbl-cta-btn" href="/ucaas/cisco-webex-pricing-audit/">Audit Cisco Webex Pricing →</a>
+    </div>
+    <div class="calc-vendor-card vendor-best">
+      <small>M365 Bundling vs. +$15 Teams Phone &amp; +$30 Copilot</small>
+      <h3 style="margin:.25rem 0 .35rem"><a href="/ucaas/microsoft-teams-pricing-audit/">2. Microsoft Teams, Teams Phone &amp; M365 Unbundled Cost Audit</a></h3>
+      <p style="margin:0 0 .6rem;font-size:.86rem;color:#334155">Audit Teams Essentials ($4/$4.80), M365 Basic/Standard/Premium ($6/$12.50/$22), Enterprise unbundled Teams ($5.25), Teams Phone (+$8–$17), and +20% NCE monthly penalties.</p>
+      <a class="cta tbl-cta-btn" href="/ucaas/microsoft-teams-pricing-audit/">Audit Microsoft Teams Pricing →</a>
+    </div>
+    <div class="calc-vendor-card">
+      <small>$0 AI Companion vs. $40–$500/mo Cloud Recording Overages</small>
+      <h3 style="margin:.25rem 0 .35rem"><a href="/ucaas/zoom-workplace-pricing-audit/">3. Zoom Workplace &amp; Zoom Phone Pricing Audit</a></h3>
+      <p style="margin:0 0 .6rem;font-size:.86rem;color:#334155">Audit Zoom Pro ($13.33/$15.99), Business ($18.32/$21.99), Business Plus ($22.49/$26.99 w/ Phone), 5–10 GB cloud recording caps, and $40–$500/mo storage overage tiers.</p>
+      <a class="cta-secondary tbl-cta-btn" href="/ucaas/zoom-workplace-pricing-audit/">Audit Zoom Workplace Pricing →</a>
+    </div>
+    <div class="calc-vendor-card">
+      <small>2 TB Pooled Drive + Gemini vs. +$10–$30 Google Voice</small>
+      <h3 style="margin:.25rem 0 .35rem"><a href="/ucaas/google-workspace-meet-pricing-audit/">4. Google Workspace, Meet &amp; Voice Pricing Audit</a></h3>
+      <p style="margin:0 0 .6rem;font-size:.86rem;color:#334155">Audit Business Starter ($7/$8.40 — no recording), Standard ($14/$16.80), Plus ($22/$26.40), the +100% recording upgrade cliff, and Google Voice PSTN add-ons (+$10/$20/$30).</p>
+      <a class="cta-secondary tbl-cta-btn" href="/ucaas/google-workspace-meet-pricing-audit/">Audit Google Workspace Pricing →</a>
+    </div>
+  </div>
+  <p style="margin:.65rem 0 0;font-size:.85rem"><a href="/ucaas/"><strong>Open the 4-Vendor UCaaS TCO Calculator &amp; Comparison Hub (`/ucaas/`) →</strong></a> · <a href="/datasets/ucaas-collaboration-pricing-2026.json">Download 2026 UCaaS Pricing Dataset (JSON)</a></p>
+</section>
+
+<section class="box" id="b2b-audit-family-banner" aria-label="B2B Audit Product Family Cross-Domain Network" style="margin:1.1rem 0;background:#f8fafc;border:1.5px solid #cbd5e1;padding:.85rem 1rem">
+  <span class="verified-gov-badge">🏛️ B2B AUDIT PRODUCT FAMILY · 4 NON-OVERLAPPING SISTER DOMAINS (RULE H1–H4)</span>
+  <h2 style="margin:.35rem 0 .35rem;border-top:0;padding-top:0;font-size:1.08rem">Explore the Complete 4-Domain B2B Audit Portfolio</h2>
+  <p style="margin:0 0 .65rem;font-size:.88rem;color:#334155">Each sister property in the <strong>B2B Audit Family</strong> audits one distinct economic cost driver so CFOs, FinOps leads, and engineering teams get deterministic, non-overlapping calculators:</p>
+  <ul style="margin:0;padding-left:1.15rem;font-size:.88rem;line-height:1.55;color:#1e293b">
+    <li><a href="https://b2bfeeaudit.com/" rel="noopener"><strong>B2BFeeAudit.com (<code>FEES</code>)</strong></a> — Transactional payment processing, Interchange-Plus vs. flat-rate, banking wire/ACH/FX spreads &amp; statutory filing fees.</li>
+    <li><a href="https://b2bcostaudit.com/" rel="noopener"><strong>B2BCostAudit.com (<code>COSTS</code>)</strong></a> — Non-SaaS recurring commercial operating overhead, Tech E&amp;O / Cyber Liability insurance (<code>/eo-insurance/</code>), SOC 2 CPA audit retainers &amp; W-2 vs. 1099 headcount burden.</li>
+    <li><a href="https://saascostaudit.com/" rel="noopener"><strong>SaaSCostAudit.com (<code>SAAS_PLATFORMS</code>)</strong></a> — Per-seat B2B software subscriptions, UCaaS collaboration suites (<code>/ucaas/</code>), pure PEPM HRIS software tiers, CRM &amp; per-user AI workspace licenses.</li>
+    <li><a href="https://apicostaudit.com/" rel="noopener"><strong>APICostAudit.com (<code>API_COSTS</code>)</strong></a> — Usage-based, metered, per-call, per-1M token LLM API, per-minute Voice AI API, vector DB read/write unit &amp; GPU/serverless inference spend.</li>
+  </ul>
+</section>
+
+<section class="box" id="agentic-open-data">
+  <span class="badge-agent">🤖 AGENTIC ENGINE OPTIMIZATION (WEBMCP + OPENAPI 3.1 + LLMS.TXT)</span>
+  <h2 style="margin-top:.35rem;border-top:0;padding-top:0">Machine-Readable Endpoints for AI Agents &amp; Financial Analysts</h2>
+  <p>Unlike legacy comparison sites that block AI crawlers or return <code>HTTP 404</code> on <code>/.well-known/webmcp.json</code>, <strong>SaaS Cost Audit</strong> exposes open, deterministic JSON endpoints under <code>CC-BY-4.0</code>:</p>
+  <ul>
+    <li><a href="/.well-known/webmcp.json"><strong><code>/.well-known/webmcp.json</code></strong></a> — WebMCP tool manifest exposing 4 deterministic TCO calculation tools to browser and autonomous agents.</li>
+    <li><a href="/.well-known/openapi.json"><strong><code>/.well-known/openapi.json</code></strong></a> &amp; <a href="/.well-known/ai-plugin.json"><strong><code>/.well-known/ai-plugin.json</code></strong></a> — OpenAPI 3.1.0 specification for ChatGPT Plugins &amp; Meta Muse Connectors.</li>
+    <li><a href="/llms.txt"><strong><code>/llms.txt</code></strong></a> &amp; <a href="/llms-full.txt"><strong><code>/llms-full.txt</code></strong></a> — Complete 2026 B2B payroll PEPM, 50-state <code>.gov</code> SUI tax, and Visa/Mastercard interchange reference tables.</li>
+    <li><a href="/datasets/b2b-payroll-and-merchant-fee-benchmarks-2026.json"><strong><code>/datasets/b2b-payroll-and-merchant-fee-benchmarks-2026.json</code></strong></a> &amp; <a href="/datasets/b2b-payroll-and-merchant-fee-benchmarks-2026.csv"><strong><code>.csv</code></strong></a> — Downloadable CC-BY-4.0 benchmark dataset (mirrored at <a href="https://github.com/rtpait/b2b-payroll-and-merchant-fee-benchmarks-2026" target="_blank" rel="noopener">GitHub Open-Data Repository</a>).</li>
+  </ul>
+</section>
+
+{{ m.faq(hubEntry.faq) }}
+{{ m.sources(hubEntry.sources) }}

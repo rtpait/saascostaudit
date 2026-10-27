@@ -1,0 +1,41 @@
+---
+layout: base.njk
+pagination:
+  data: allEntries
+  size: 1
+  alias: e
+permalink: "{{ e.url }}"
+eleventyComputed:
+  title: "{{ e.seoTitle | safe }}"
+  description: "{{ e.seoDescription | safe }}"
+---
+{% import "macros.njk" as m %}
+{{ m.breadcrumbs(site, [["SaaS Cost Audit Hub", "/"], ["Payroll & HRIS TCO" if e.type == "payroll" else "Merchant & IC+ TCO", "/#" + ("payroll-tco-calc" if e.type == "payroll" else "merchant-fee-calc")], [e.title, e.url]]) }}
+{{ m.verifiedGovBadge(e, e.type) }}
+<h1>{{ e.h1 or e.title }}</h1>
+<p><strong>2026 Executive Audit Summary:</strong> {{ e.summary }}</p>
+
+{{ m.verdictCard(e, site, e.type) }}
+
+{% if e.type == "payroll" %}
+  {{ m.payrollTcoCalc(e, site, state_sui_taxes_2026) }}
+{% else %}
+  {{ m.merchantFeeCalc(e, site, interchange_rates_2026) }}
+{% endif %}
+
+{{ m.prices(e.prices, site, e.slug, e.type, e.calcDefaults) }}
+
+{% if e.auditNotes and e.auditNotes.length %}
+<section class="box">
+  <h2 style="margin-top:0;border-top:0;padding-top:0">Key 2026 Hidden-Fee &amp; Statutory Audit Findings</h2>
+  <ul>
+    {% for note in e.auditNotes %}
+    <li>{{ note }}</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+{{ m.faq(e.faq) }}
+{{ m.crossLinkHub(payrollPages, merchantPages, page.url) }}
+{{ m.sources(e.sources) }}

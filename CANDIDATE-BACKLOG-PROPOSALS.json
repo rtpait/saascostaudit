@@ -1,0 +1,164 @@
+{
+  "schema_version": "2.1.0",
+  "updated_at": "2026-10-27T05:00:00-04:00",
+  "product_domain": "saascostaudit.com",
+  "product_workspace": "/workspace/saascostaudit",
+  "owning_po_name": "SaaS Cost Audit PO",
+  "owning_po_id": "bc09e0d9-5fae-487c-b526-020d9aac1bd1",
+  "family_pm_name": "B2B Audit Family PM",
+  "family_pm_id": "9c1c413e-5df2-4d17-a576-11713450fceb",
+  "governing_standard": "/workspace/WEB-TEAM-4-PILLAR-OPERATING-SYSTEM.md",
+  "taxonomy_registry": "/workspace/B2B-FAMILY-TAXONOMY-REGISTRY.json",
+  "proposals": [
+    {
+      "proposal_id": "CBP-2026-10-27-SCA-001",
+      "submitted_by_pm": "B2B Audit Family PM (9c1c413e-5df2-4d17-a576-11713450fceb) & Web Team PM (167b2bea-99c8-4e89-99e3-182227974962)",
+      "target_scope": "SISTER_PORTFOLIO_SHARED",
+      "target_domains": [
+        "saascostaudit.com",
+        "b2bfeeaudit.com"
+      ],
+      "owning_po_ids": [
+        "bc09e0d9-5fae-487c-b526-020d9aac1bd1",
+        "76f092a4-d874-4a66-ad28-c0146be1800a"
+      ],
+      "sprint_backlog_id": "P0-SCA-01",
+      "bottleneck_solved": "Indexation | Crawl Velocity | Monetization",
+      "proposed_change": "Provision static Eleventy build and GitHub Pages custom domain (https://saascostaudit.com/, _site/CNAME) and execute atomic SHARED_ASSET_MIGRATION_LOCK 301 canonical migration of the 5 /ucaas/* routes (/ucaas/, cisco-webex, microsoft-teams, zoom-workplace, google-workspace-meet) from b2bfeeaudit.com to saascostaudit.com with Impact (8038782), CJ (8108003), Rakuten (4767884), and PartnerStack Sub-ID routing (Zoom, M365, Google Workspace, Dialpad, Nextiva, RingCentral).",
+      "verification_metric_7_to_14d": "100% HTTP 200 on https://saascostaudit.com/ and all 5 /ucaas/* routes, 301/canonical cutover verified from b2bfeeaudit.com/ucaas/*, 0 errors in scripts/validate.js (Gate W-1/W-2), and 100% rel='sponsored noopener' CTA parity (Gate W-5).",
+      "po_disposition": "APPROVE",
+      "sister_portfolio_tags": [
+        "SISTER_PORTFOLIO_SAAS_COST_AUDIT",
+        "SISTER_PORTFOLIO_B2B_FEE_AUDIT"
+      ]
+    },
+    {
+      "proposal_id": "CBP-2026-10-27-SCA-002",
+      "submitted_by_pm": "B2B Audit Family PM (9c1c413e-5df2-4d17-a576-11713450fceb)",
+      "target_scope": "SISTER_PORTFOLIO_SHARED",
+      "target_domains": [
+        "saascostaudit.com",
+        "b2bfeeaudit.com",
+        "b2bcostaudit.com"
+      ],
+      "owning_po_ids": [
+        "bc09e0d9-5fae-487c-b526-020d9aac1bd1",
+        "76f092a4-d874-4a66-ad28-c0146be1800a",
+        "2d4a6a26-94d7-4bed-9dd9-f96988b41fc5"
+      ],
+      "sprint_backlog_id": "P0-SCA-02",
+      "bottleneck_solved": "Conversion | Monetization | Compliance",
+      "proposed_change": "Launch the 4 initial /hris-saas/* pure PEPM software tier calculators on saascostaudit.com (Gusto vs. OnPay $49+$6/seat, Gusto vs. Rippling modular PEPM seat pricing, BambooHR PEPM add-on audit, and Deel US PEPM software tiers) wired to PartnerStack, Impact (8038782), CJ (8108003), and AWIN (3133124 Bark US MID 58887 fallback), embedding Rule H2 Sister Referral Summary Cards linking to b2bfeeaudit.com (filing/FX fees) and b2bcostaudit.com (W-2 statutory tax burden & PEO insurance).",
+      "verification_metric_7_to_14d": "All 4 /hris-saas/* routes + core hub (/ and /methodology/) pass W-1..W-5 and LC-1..LC-6 with 100% HTTP 200 vendor pricing citations, [Quote-Only \u00b7 Modeled] badges on Rippling modular tiers, and active Rule H2 Sister Referral Summary Cards.",
+      "po_disposition": "APPROVE",
+      "sister_portfolio_tags": [
+        "SISTER_PORTFOLIO_SAAS_COST_AUDIT",
+        "SISTER_PORTFOLIO_B2B_FEE_AUDIT",
+        "SISTER_PORTFOLIO_B2B_COST_AUDIT"
+      ]
+    },
+    {
+      "proposal_id": "CBP-2026-10-27-SCA-003",
+      "submitted_by_pm": "Web Team PM (167b2bea-99c8-4e89-99e3-182227974962), Legal & Compliance PM (b5853ae2-8ff6-47df-a19a-f3621b64a484), and Identity & Security PM (ef20b463-034b-4ac8-93b8-5b6d6a3141bb)",
+      "target_scope": "SINGLE_DOMAIN",
+      "target_domains": [
+        "saascostaudit.com"
+      ],
+      "owning_po_ids": [
+        "bc09e0d9-5fae-487c-b526-020d9aac1bd1"
+      ],
+      "sprint_backlog_id": "P0-SCA-03",
+      "bottleneck_solved": "Indexation | Compliance",
+      "proposed_change": "Wire PostHog Project 685354 ($host == 'saascostaudit.com') with Stage 1A/1B 3-bucket bot and owner-device exclusion (01a16e5f, 01a17086, 01a16f99, 01a17083), publish and submit https://saascostaudit.com/sitemap.xml in GSC (sc-domain:saascostaudit.com) with analytics/gsc-index-status.json ETL, ship AEO discovery endpoints (/llms.txt, /.well-known/webmcp.json with STAGE_2_AUTO_TRIGGER_ENABLED=False, /datasets/), and clear Dual-Spoke Day-0 Gates (LC-1..LC-6, IS-1..IS-5) + AES-256-GCM /admin/ console.",
+      "verification_metric_7_to_14d": "100% PASS on python3 /workspace/scheduler/audit_day0_launch_gate.py --domain saascostaudit.com, HTTP 200 to GPTBot/1.2 and PerplexityBot/1.0 (Gate W-3), and verified PASS verdicts logged in LEGAL-COMPLIANCE-RELEASE-LEDGER.json and IDENTITY-SECURITY-SCORECARD.json.",
+      "po_disposition": "APPROVE",
+      "sister_portfolio_tags": [
+        "SISTER_PORTFOLIO_SAAS_COST_AUDIT"
+      ]
+    },
+    {
+      "proposal_id": "CBP-2026-10-27-SCA-004",
+      "submitted_by_pm": "B2B Audit Family PM (9c1c413e-5df2-4d17-a576-11713450fceb)",
+      "target_scope": "SINGLE_DOMAIN",
+      "target_domains": [
+        "saascostaudit.com"
+      ],
+      "owning_po_ids": [
+        "bc09e0d9-5fae-487c-b526-020d9aac1bd1"
+      ],
+      "sprint_backlog_id": "P1-SCA-04A",
+      "bottleneck_solved": "Monetization | Conversion",
+      "proposed_change": "Stage Cohort-1 /crm-sales-saas/* calculators (5 routes: HubSpot seat + marketing contact cliffs, Salesforce vs. HubSpot TCO, Pipedrive vs. HubSpot SMB seat audit, Apollo.io seat & credit cliff calculator, and ActiveCampaign contact-tier pricing) targeting HubSpot (Impact 8038782 30% recurring rev-share, 180d cookie), Pipedrive (PartnerStack 20%-33% rev-share), Apollo.io (PartnerStack 20%-25% rev-share), and ActiveCampaign (20%-30% recurring rev-share).",
+      "verification_metric_7_to_14d": "Staged in /workspace/saascostaudit/drip-queue/cohort-1/ with 0 premature routes leaked into _site/ while GSC indexation < 75%; promotes to production once analytics/gsc-index-status.json verifies drip_gate_passed == true (>=75% of 11 MVP routes indexed).",
+      "po_disposition": "DEFER_UNTIL_GATE",
+      "sister_portfolio_tags": [
+        "SISTER_PORTFOLIO_SAAS_COST_AUDIT"
+      ]
+    },
+    {
+      "proposal_id": "CBP-2026-10-27-SCA-005",
+      "submitted_by_pm": "B2B Audit Family PM (9c1c413e-5df2-4d17-a576-11713450fceb)",
+      "target_scope": "SINGLE_DOMAIN",
+      "target_domains": [
+        "saascostaudit.com"
+      ],
+      "owning_po_ids": [
+        "bc09e0d9-5fae-487c-b526-020d9aac1bd1"
+      ],
+      "sprint_backlog_id": "P1-SCA-04B",
+      "bottleneck_solved": "Monetization | Conversion",
+      "proposed_change": "Stage Cohort-1 /cloud-devtools-ai/* calculators (5 routes: Slack vs. Teams seat + AI audit, Atlassian Jira/Confluence user-tier cliff + Atlassian Guard SSO tax calculator, Monday.com 3/5/10 seat-bucket waste vs. Asana & ClickUp calculator, Notion Plus/Business + workspace-wide Notion AI attachment calculator, and M365 Copilot $30/mo annual lock-in vs. ChatGPT Team vs. Claude Team TCO) targeting Notion (PartnerStack 50% Year-1 rev-share), Monday.com (PartnerStack up to 100% Month-1 CPA), ClickUp (PartnerStack), and M365 (Rakuten 4767884).",
+      "verification_metric_7_to_14d": "Staged in /workspace/saascostaudit/drip-queue/cohort-1/ behind Principle 3 (>=75% GSC Indexation Drip Gate); upon unlock, achieves >=5% price_table_row CTR on seat-bucket and AI attachment calculators.",
+      "po_disposition": "DEFER_UNTIL_GATE",
+      "sister_portfolio_tags": [
+        "SISTER_PORTFOLIO_SAAS_COST_AUDIT"
+      ]
+    },
+    {
+      "proposal_id": "CBP-2026-10-27-SCA-006",
+      "submitted_by_pm": "B2B Audit Family PM (9c1c413e-5df2-4d17-a576-11713450fceb)",
+      "target_scope": "SINGLE_DOMAIN",
+      "target_domains": [
+        "saascostaudit.com"
+      ],
+      "owning_po_ids": [
+        "bc09e0d9-5fae-487c-b526-020d9aac1bd1"
+      ],
+      "sprint_backlog_id": "P2-SCA-05",
+      "bottleneck_solved": "Monetization | Activation",
+      "proposed_change": "Stage Cohort-2 IT/Identity/Security SaaS & AI Support Resolution calculators (1Password Business vs. Bitwarden/Dashlane on Impact 8038782 25% Year-1 rev-share; NordLayer vs. Perimeter 81 5/10-seat VPN minimums on Impact 8038782; Okta vs. JumpCloud vs. Rippling IT 'SSO Tax' consolidation on PartnerStack; Intercom Fin AI $0.99/resolution vs. Zendesk/Freshdesk agent seats; and Semrush extra-seat surcharge on Impact 8038782 $200 CPA).",
+      "verification_metric_7_to_14d": "Staged in /workspace/saascostaudit/drip-queue/cohort-2/ behind Cohort-1 >=75% GSC indexation gate; expands verified affiliate diversity across all 5 B2B SaaS verticals in Charter Section 3.",
+      "po_disposition": "DEFER_UNTIL_GATE",
+      "sister_portfolio_tags": [
+        "SISTER_PORTFOLIO_SAAS_COST_AUDIT"
+      ]
+    },
+    {
+      "proposal_id": "CBP-2026-10-27-API-001",
+      "submitted_by_pm": "B2B Audit Family PM (9c1c413e-5df2-4d17-a576-11713450fceb)",
+      "target_scope": "SISTER_PORTFOLIO_SHARED",
+      "sister_portfolio_tags": [
+        "SISTER_PORTFOLIO_API_COST_AUDIT",
+        "SISTER_PORTFOLIO_SAAS_COST_AUDIT"
+      ],
+      "target_domains": [
+        "apicostaudit.com",
+        "saascostaudit.com"
+      ],
+      "owning_po_ids": [
+        "bc09e0d9-5fae-487c-b526-020d9aac1bd1"
+      ],
+      "sprint_backlog_id": "P1-API-01",
+      "bottleneck_solved": "Acquisition | Indexation | Monetization",
+      "proposed_change": "Onboarding apicostaudit.com (Porkbun Order #12296644, registered 2026-10-27) as the 4th B2B Audit Family domain owning API_COSTS (usage-based, metered, per-call, per-1M token LLM API, per-minute Voice AI API, Pinecone serverless read/write units, and DigitalOcean GPU / RunPod / Vast.ai compute hours), wired to AWIN (3133124 DigitalOcean 10% 12-mo), PartnerStack (ElevenLabs 22% 12-mo, Pinecone 10% Year-1 up to $1,200, n8n Cloud 30% 12-mo), Rewardful (Synthesia 25%, HeyGen 35%), and direct affiliates (Make.com 35%, Retell AI 15%, Vapi 15%, RunPod, Vast.ai) with Rule H2 Sister Referral Summary Cards linking bidirectionally with saascostaudit.com.",
+      "verification_metric_7_to_14d": "100% PASS on python3 /workspace/scheduler/audit_day0_launch_gate.py --domain apicostaudit.com upon Day-0 cutover and zero keyword cannibalization between per-seat SAAS_PLATFORMS (saascostaudit.com) and metered API_COSTS (apicostaudit.com).",
+      "po_disposition": "DEFER_UNTIL_GATE"
+    }
+  ],
+  "sister_portfolio_tags": {
+    "b2bfeeaudit.com": "SISTER_PORTFOLIO_B2B_FEE_AUDIT",
+    "b2bcostaudit.com": "SISTER_PORTFOLIO_B2B_COST_AUDIT",
+    "saascostaudit.com": "SISTER_PORTFOLIO_SAAS_COST_AUDIT",
+    "apicostaudit.com": "SISTER_PORTFOLIO_API_COST_AUDIT"
+  }
+}

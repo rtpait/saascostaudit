@@ -1,0 +1,107 @@
+---
+layout: base.njk
+permalink: "/methodology/"
+title: "2026 B2B TCO Methodology, .gov SUI Sources & Disclosure"
+description: "Review our deterministic 2026 B2B payroll & merchant fee TCO methodology, official .gov SUI & Federal Reserve Reg II sources, and affiliate disclosure."
+serviceOffer:
+  seoTitle: "2026 B2B TCO Audit Methodology, .gov SUI Sources & Disclosure"
+  seoDescription: "Review our deterministic 2026 B2B payroll & merchant fee TCO methodology, official .gov SUI & Federal Reserve Reg II sources, and affiliate disclosure."
+  type: "payroll"
+  offerLowPrice: "0"
+  offerHighPrice: "2500"
+  prices:
+    - label: "IRS Publication 15 (Circular E) Federal FICA (7.65%) & FUTA ($42/emp)"
+      price: "6.2% OASDI ($176,100 cap) + 1.45% Medicare + 0.6% FUTA ($7,000 cap)"
+      partner: "Gov"
+      ctaType: "gov"
+      source: 1
+    - label: "Federal Reserve Regulation II Regulated Debit Interchange Cap (.gov)"
+      price: "0.05% + $0.21 (+$0.01 fraud adj = $0.22/tx) on banks >$10B assets"
+      partner: "Gov"
+      ctaType: "gov"
+      source: 2
+    - label: "Gusto vs. OnPay vs. Rippling vs. Deel Verified 2026 Payroll Audit"
+      price: "$40–$85/mo base + $6–$19 PEPM · Audited for hidden state & W-2 fees"
+      partner: "Gusto"
+      ctaType: "payroll"
+      ctaLabel: "Verify Gusto 2026 Pricing →"
+      ctaUrl: "https://gusto.com/product/pricing?utm_source=saascostaudit&utm_medium=affiliate"
+      source: 3
+    - label: "Helcim & Stax Verified 2026 Interchange-Plus Merchant Audit"
+      price: "IC+ 0.30%–0.40% ($0/mo) or $99/mo 0% Markup · Saves 0.8%–1.5% vs. Flat"
+      partner: "Helcim"
+      ctaType: "merchant"
+      ctaLabel: "Verify Helcim IC+ Pricing →"
+      ctaUrl: "https://www.helcim.com/pricing/?utm_source=saascostaudit&utm_medium=affiliate"
+      source: 4
+---
+{% import "macros.njk" as m %}
+{% set methEntry = {
+  slug: "methodology",
+  type: "payroll",
+  title: "2026 B2B TCO Audit Methodology, Primary .gov Citations & Affiliate Disclosure",
+  primaryPartner: "Gusto",
+  primaryPartnerUrl: "https://gusto.com/product/pricing?utm_source=saascostaudit&utm_medium=affiliate",
+  secondaryPartner: "Helcim",
+  secondaryPartnerUrl: "https://www.helcim.com/pricing/?utm_source=saascostaudit&utm_medium=affiliate",
+  lastVerified: "2026-10-24",
+  calcDefaults: {w2: 18, states: 3, primaryState: "CA", contractors: 4, eor: 1, volume: 65000, ticket: 85, cnpPct: 80, intlPct: 10},
+  verdict: {
+    winner: "100% Deterministic Line-Item Formulas Backed by Primary .gov Tax & Interchange Schedules",
+    hiddenFeeTrap: "We never accept paid ranking placements or hide math behind lead-capture forms; every formula is inspectable in client-side JS, /llms-full.txt, and /.well-known/webmcp.json.",
+    actionLine: "Verify any formula below using our live calculators or download the raw CC-BY-4.0 CSV/JSON dataset."
+  },
+  sources: [
+    {id: 1, title: "IRS Publication 15 (2026 Circular E, Employer's Tax Guide — FICA & FUTA) (.gov)", url: "https://www.irs.gov/publications/p15", accessed: "2026-10-24"},
+    {id: 2, title: "Federal Reserve Board — Regulation II Debit Card Interchange Fee Cap (.gov)", url: "https://www.federalreserve.gov/paymentsystems/regii-average-interchange-fee.htm", accessed: "2026-10-24"},
+    {id: 3, title: "California EDD, Texas TWC, NYSDOL, Florida DOR, NC DES & WA ESD 2026 SUI Schedules (.gov)", url: "https://edd.ca.gov/en/payroll_taxes/rates_and_withholding/", accessed: "2026-10-24"},
+    {id: 4, title: "Published 2026 Vendor Fee Schedules (Gusto, OnPay, Rippling, Deel, Helcim, Stax, Stripe)", url: "https://www.helcim.com/pricing/", accessed: "2026-10-24"}
+  ],
+  faq: [
+    {q: "How often are vendor PEPM rates and state .gov SUI wage bases updated?", a: "We audit published vendor pricing pages monthly and update state Department of Labor SUI taxable wage bases and IRS Publication 15 parameters whenever new annual schedules take effect (most recently verified October 24, 2026)."},
+    {q: "How does SaaS Cost Audit make money while keeping calculators 100% free and ungated?", a: "When you click a verified partner link (such as Gusto, OnPay, Rippling, Deel, Helcim, Stax, or PaymentCloud) via our CJ Affiliate (CID 8108003), AWIN (ID 3133124), or Rakuten (SID 4767884) integrations, we may earn a referral commission at zero additional cost to your business."},
+    {q: "Does affiliate compensation ever alter the calculator math or ranking order?", a: "Never. Our calculators execute deterministic mathematical formulas in your browser and via our stateless WebMCP/OpenAPI specifications. If a partner costs more for your headcount or card mix, our calculator shows that higher cost transparently."},
+    {q: "Can I reuse your 2026 payroll and merchant fee benchmark datasets in my own research?", a: "Yes. Our benchmark files (/datasets/b2b-payroll-and-merchant-fee-benchmarks-2026.json and .csv) are licensed under Creative Commons Attribution 4.0 (CC-BY-4.0) with attribution to https://saascostaudit.com/."}
+  ]
+} %}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in methEntry.faq %}{"@type":"Question","name":{{ f.q | json | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | json | safe }}}}{% if not loop.last %},{% endif %}{% endfor %}]}</script>
+
+{{ m.breadcrumbs(site, [["SaaS Cost Audit Hub", "/"], ["2026 Audit Methodology & Disclosure", "/methodology/"]]) }}
+{{ m.verifiedGovBadge(methEntry, "methodology") }}
+
+<h1>2026 B2B TCO Audit Methodology, Primary <code>.gov</code> Data Sources &amp; Affiliate Disclosure</h1>
+<p><strong>Operated by Research Triangle Park AI Transformation LLC:</strong> Every comparison on <strong>SaaS Cost Audit</strong> (<code>saascostaudit.com</code>) is engineered to give SMB founders, fractional CFOs, controllers, and autonomous AI shopping agents an auditable, line-item 12-month Total Cost of Ownership (TCO) breakdown.</p>
+
+{{ m.verdictCard(methEntry, site, "methodology") }}
+
+<h2>1. Payroll, Multi-State HRIS &amp; Global EOR TCO Formula</h2>
+<p>We compute 12-month Payroll &amp; HRIS TCO using five explicit cost components:</p>
+<ul>
+  <li><strong>Base Platform + Per-Employee-Per-Month (PEPM) Spend:</strong> <code>12 × (Base_Monthly + W2_Count × W2_PEPM + Contractor_Count × Contractor_PEPM)</code>.</li>
+  <li><strong>Multi-State Tax Compliance Surcharges:</strong> <code>12 × max(0, States - 1) × Per_Extra_State_Fee</code> + one-time third-party state tax registration fees (<code>$150–$175/state</code> where applicable vs. <code>$0</code> self-registration on state <code>.gov</code> portals).</li>
+  <li><strong>Year-End W-2 &amp; 1099-NEC Filing Fees:</strong> <code>$0</code> on Gusto, OnPay, Rippling, and Deel vs. <code>$65 base + $7.50/form</code> on legacy bureaus (ADP RUN / Paychex Flex).</li>
+  <li><strong>Global Employer of Record (EOR) Seat &amp; FX Spread:</strong> <code>12 × EOR_Count × $599</code> + foreign-exchange treasury spread (<code>1.25%–3.0%</code> on gross foreign payroll).</li>
+  <li><strong>Statutory Federal &amp; State Tax Baseline (<code>.gov</code>):</strong> <code>7.65%</code> FICA + <code>$42/employee</code> federal FUTA (<code>0.6%</code> on <code>$7,000</code> per IRS Publication 15) + state-specific SUI (<code>$160/emp</code> in AZ up to <code>$1,056/emp</code> in WA and <code>$1,290/emp</code> in NJ).</li>
+</ul>
+
+{{ m.payrollTcoCalc(methEntry, site, state_sui_taxes_2026) }}
+
+<h2>2. Merchant Processing &amp; Interchange-Plus Effective Rate Formula</h2>
+<p>We compute 12-month payment processing cost by comparing flat-rate blended pricing against wholesale Interchange-Plus (<code>IC+</code>) and <code>0%</code>-markup subscription models:</p>
+<ul>
+  <li><strong>Wholesale Interchange + Assessments Baseline:</strong> Blended <code>1.88% + $0.10</code> (online CNP) / <code>1.52% + $0.07</code> (card-present POS) + <code>0.14%</code> card-brand assessments, incorporating the Federal Reserve Regulation II (<code>.gov</code>) regulated debit cap of <code>0.05% + $0.22</code>.</li>
+  <li><strong>Flat-Rate Surcharge Stacking (Stripe / PayPal / Square):</strong> Headline <code>2.9% + $0.30</code> (or <code>3.49% + $0.49</code> on PayPal Wallet) + <code>+0.80%</code> on Stripe Invoicing Plus + <code>+1.50%</code> on international cards.</li>
+</ul>
+
+{{ m.merchantFeeCalc(methEntry, site, interchange_rates_2026) }}
+
+{{ m.prices(serviceOffer.prices, site, "methodology", "methodology", methEntry.calcDefaults) }}
+
+<section class="box" id="affiliate-disclosure">
+  <h2 style="margin-top:0;border-top:0;padding-top:0">3. FTC &amp; Commercial Affiliate Disclosure</h2>
+  <p>saascostaudit.com is an independent benchmark publication operated by <strong>Research Triangle Park AI Transformation LLC</strong>. To provide free, ungated calculators and open CC-BY-4.0 datasets without display ads or paywalls, we participate in B2B partner referral programs across <strong>CJ Affiliate (Publisher CID <code>8108003</code>)</strong>, <strong>AWIN (Publisher ID <code>3133124</code>)</strong>, <strong>Rakuten Advertising (SID <code>4767884</code>)</strong>, and direct partner networks. Clicking a tracked <code>clickref=b2b-...</code> link may earn us a referral commission if you request a demo, start a trial, or open an account, at zero additional cost to you.</p>
+</section>
+
+{{ m.faq(methEntry.faq) }}
+{{ m.crossLinkHub(payrollPages, merchantPages, "/methodology/") }}
+{{ m.sources(methEntry.sources) }}

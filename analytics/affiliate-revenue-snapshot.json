@@ -1,0 +1,22 @@
+{
+  "schema_version": "2026.10.24-principle-1",
+  "generated_at_utc": "2026-10-26T12:44:41Z",
+  "domain": "saascostaudit.com",
+  "networks": {
+    "cj_cid": "8108003",
+    "awin_id": "3133124",
+    "rakuten_sid": "4767884"
+  },
+  "live_measured_actuals": {
+    "confirmed_revenue_usd": 0.0,
+    "confirmed_conversions": 0,
+    "pro_export_subscriptions": 0,
+    "operational_kpi_4_revenue_per_visitor_rpv": "$0.00"
+  },
+  "quarantined_target_hypotheses": {
+    "badge": "HYPOTHESIS / TARGET MODEL \u2014 NOT LIVE TELEMETRY",
+    "modeled_monthly_revenue_16_routes_usd": 2876.0,
+    "modeled_target_rpm_usd": 599.2,
+    "actual_vs_model_variance_usd": -2876.0
+  }
+}

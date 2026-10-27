@@ -1,0 +1,65 @@
+---
+layout: base.njk
+permalink: "/privacy/"
+title: "SaaS Cost Audit Privacy Policy & Zero-PII Rules (2026)"
+description: "Read the SaaS Cost Audit (saascostaudit.com) 2026 Privacy Policy: 100% client-side B2B TCO calculators with zero PII collection and CCPA/CPRA compliance."
+serviceOffer:
+  seoTitle: "SaaS Cost Audit Privacy Policy & Zero-PII Rules (2026)"
+  seoDescription: "Read the SaaS Cost Audit (saascostaudit.com) 2026 Privacy Policy: 100% client-side B2B TCO calculators with zero PII collection and CCPA/CPRA compliance."
+  type: "payroll"
+  offerLowPrice: "0"
+  offerHighPrice: "2500"
+  prices:
+    - label: "IRS Publication 15 (2026 Federal Employer Tax Guide) (.gov)"
+      price: "7.65% FICA + $42 FUTA statutory baseline"
+      partner: "Gov"
+      ctaType: "gov"
+      source: 1
+    - label: "Verified 2026 Commercial Cost & Rate Schedule Audit"
+      price: "100% Free Client-Side TCO Calculator · $0 PII Collected"
+      partner: "Gusto"
+      ctaType: "payroll"
+      ctaLabel: "Verify 2026 Partner Rates →"
+      ctaUrl: "https://gusto.com/product/pricing?utm_source=saascostaudit&utm_medium=affiliate"
+      source: 2
+---
+{% import "macros.njk" as m %}
+{% set legalEntry = {
+  slug: "privacy",
+  type: "payroll",
+  title: "SaaS Cost Audit Privacy Policy & Zero-PII Client-Side Data Architecture (2026)",
+  primaryPartner: "Gusto",
+  primaryPartnerUrl: "https://gusto.com/product/pricing?utm_source=saascostaudit&utm_medium=affiliate",
+  secondaryPartner: "OnPay",
+  secondaryPartnerUrl: "https://onpay.com/pricing?utm_source=saascostaudit&utm_medium=affiliate",
+  lastVerified: "2026-10-27",
+  calcDefaults: {w2: 18, states: 3, primaryState: "CA", contractors: 4, eor: 1, volume: 65000, ticket: 85, cnpPct: 80, intlPct: 10},
+  verdict: {
+    winner: "Zero-PII Client-Side Calculation Architecture + Explicit FTC 16 CFR Part 255 Compliance",
+    hiddenFeeTrap: "We never collect SSNs, EINs, bank account numbers, or raw policy documents on our servers; all calculations execute locally in your browser.",
+    actionLine: "Review our full privacy terms and primary .gov regulatory citations below."
+  },
+  sources: [
+    {id: 1, title: "FTC 16 CFR Part 255 — Guides Concerning the Use of Endorsements and Testimonials in Advertising (.gov)", url: "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-255", accessed: "2026-10-27"},
+    {id: 2, title: "IRS Publication 15 (2026 Employer's Tax Guide) (.gov)", url: "https://www.irs.gov/publications/p15", accessed: "2026-10-27"}
+  ],
+  faq: [
+    {q: "Does SaaS Cost Audit collect or store personally identifiable information (PII) in its calculators?", a: "No. Every calculator on saascostaudit.com executes 100% client-side in your browser. We never ask for or store names, emails, phone numbers, EINs, SSNs, or uploaded documents on any backend server."},
+    {q: "Is SaaS Cost Audit a licensed insurance producer, CPA firm, or law firm?", a: "No. SaaS Cost Audit (saascostaudit.com) is an independent B2B financial benchmark publication operated by Research Triangle Park AI Transformation LLC. All calculators provide mathematical estimates for informational planning only."},
+    {q: "How are affiliate links disclosed on saascostaudit.com?", a: "In strict compliance with FTC 16 CFR Part 255, every page carries an above-the-fold disclosure banner and every commercial outbound link is tagged with rel='sponsored nofollow noopener' and a deterministic clickref parameter."},
+    {q: "Where can I send privacy, CCPA/CPRA, or legal inquiries?", a: "Contact Research Triangle Park AI Transformation LLC at luke@rtpait.com."}
+  ]
+} %}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in legalEntry.faq %}{"@type":"Question","name":{{ f.q | json | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | json | safe }}}}{% if not loop.last %},{% endif %}{% endfor %}]}</script>
+
+{{ m.breadcrumbs(site, [["SaaS Cost Audit Hub", "/"], ["SaaS Cost Audit Privacy Policy & Zero-PII Client-Side Data Architecture (2026)", "/privacy/"]]) }}
+{{ m.verifiedGovBadge(legalEntry, "methodology") }}
+
+<h1>SaaS Cost Audit Privacy Policy & Zero-PII Client-Side Data Architecture (2026)</h1>
+<p><strong>Effective Date: October 27, 2026:</strong> <strong>SaaS Cost Audit</strong> (<code>saascostaudit.com</code>), operated by <strong>Research Triangle Park AI Transformation LLC</strong>, enforces a strict Zero-PII client-side calculation policy. All calculator inputs (headcount, salaries, states, policy limits, or seat counts) are evaluated exclusively in your local browser memory and are never transmitted to or stored in any backend database.</p>
+
+{{ m.verdictCard(legalEntry, site, "privacy") }}
+{{ m.payrollTcoCalc(legalEntry, site, state_sui_taxes_2026) }}
+{{ m.prices(serviceOffer.prices, site, "privacy", "methodology", legalEntry.calcDefaults) }}
+{{ m.faq(legalEntry.faq) }}
+{{ m.sources(legalEntry.sources) }}

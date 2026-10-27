@@ -1,0 +1,17 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>{{ site.url }}/</loc><lastmod>{{ site.updated }}</lastmod></url>
+  <url><loc>{{ site.url }}/methodology/</loc><lastmod>{{ site.updated }}</lastmod></url>
+  <url><loc>{{ site.url }}/privacy/</loc><lastmod>{{ site.updated }}</lastmod></url>
+  <url><loc>{{ site.url }}/terms/</loc><lastmod>{{ site.updated }}</lastmod></url>
+{% for e in allEntries %}
+  <url><loc>{{ site.url }}{{ e.url }}</loc><lastmod>{{ e.updated or site.updated }}</lastmod></url>
+{% endfor %}
+{% for up in ucaas_benchmarks_2026.subpages %}
+  <url><loc>{{ site.url }}{{ up.url }}</loc><lastmod>2026-10-27</lastmod></url>
+{% endfor %}
+</urlset>

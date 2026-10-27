@@ -1,0 +1,113 @@
+---
+layout: base.njk
+permalink: "/ucaas/zoom-workplace-pricing-audit/"
+isUcaasSubdivision: true
+ucaasSlug: "zoom-workplace-pricing-audit"
+title: "Zoom Workplace & Zoom Phone Pricing Audit: Cloud Storage & Add-On Fees (2026)"
+description: "Audit 2026 Zoom Workplace list prices—Pro ($13.33/$15.99), Business ($18.32/$21.99), Business Plus ($22.49/$26.99), and Zoom Phone ($10–$15/seat)—plus the $40–$500/mo Cloud Recording storage overage trap and $0 AI Companion."
+keywords: "zoom workplace pricing 2026, zoom business plus cost, zoom phone pricing, zoom cloud recording storage cost, zoom vs microsoft teams vs webex"
+faqSchema:
+  "@context": "https://schema.org"
+  "@type": "FAQPage"
+  mainEntity:
+    - "@type": "Question"
+      name: "How much does Zoom Workplace cost per user in 2026?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Zoom Workplace commercial plans in 2026 start at $0 for Basic (40-min cap), $13.33/user/mo billed annually ($15.99/mo monthly) for Zoom Pro, $18.32/user/mo annual ($21.99/mo monthly) for Zoom Business (300 attendees, SSO), and $22.49/user/mo annual ($26.99/mo monthly) for Zoom Business Plus (which bundles Zoom Phone Unlimited Regional Calling and 10 GB cloud recording storage). All paid plans include Zoom AI Companion 2.0 at $0 extra."
+    - "@type": "Question"
+      name: "Why is Zoom Cloud Recording storage considered a major hidden fee trap?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Zoom Workplace Pro and Business include only 5 GB of cloud recording storage per license (10 GB on Business Plus). Video recordings with HD screen-sharing consume ~350–600 MB per hour. Once a team exhausts its base allocation, Zoom's Cloud Recording storage add-on tiers cost $40/month for 100 GB, $100/month for 500 GB, or $500/month for 3 TB ($480 to $6,000/year)—whereas Microsoft 365 (1 TB OneDrive/user) and Google Workspace Business Standard (2 TB pooled Drive/user) store meeting recordings in existing drive quotas at $0 extra."
+    - "@type": "Question"
+      name: "Is it cheaper to buy Zoom Business Plus or add Zoom Phone to Zoom Pro?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Zoom Business Plus ($22.49/user/mo annual) is almost always cheaper than buying Zoom Pro ($13.33/mo) + Zoom Phone US & Canada Unlimited ($15.00/mo = $28.33/mo combined), saving $5.84/user/month ($70.08/user/year) while also doubling cloud storage to 10 GB/license and raising meeting capacity from 100 to 300 attendees."
+---
+{% import "macros.njk" as m %}
+{{ m.breadcrumbs(site, [["SaaS Cost Audit Hub", "/"], ["UCaaS & Collaboration Hub", "/ucaas/"], ["Zoom Workplace Pricing Audit", "/ucaas/zoom-workplace-pricing-audit/"]]) }}
+
+<div class="verified-gov-bar" role="region" aria-label="Regulatory Verification Status">
+  <span class="verified-gov-badge">✓ Verified Oct 2026 Zoom Workplace &amp; Zoom Phone Rate Card + FCC USF / E911 Rules (.gov)</span>
+  <a class="gov-seal-pill" href="#zoom-tiers-table">🏛️ Zoom Business Plus ($22.49/mo) · Cloud Storage Overage Audit</a>
+</div>
+
+<h1>Zoom Workplace &amp; Zoom Phone Pricing Audit (2026): Pro, Business Plus &amp; Cloud Recording Overage Traps</h1>
+<p><strong>Gold-Standard External Video &amp; $0 Bundled AI Companion—If You Avoid the Cloud Recording Storage Cliff:</strong> Zoom remains the frictionless standard for external sales calls and client webinars, and its decision to include <strong>Zoom AI Companion 2.0 at $0 extra</strong> on all paid plans is a major TCO win. However, CFOs routinely get blindsided by <strong>$40–$500/month Cloud Recording storage overages</strong>, <strong>$79+/month Webinar host licenses</strong>, and <strong>$49/month Zoom Rooms fees</strong>.</p>
+
+<section class="verdict-card" aria-label="30-Second Zoom Workplace Pricing Verdict">
+  <div class="verdict-header">
+    <strong>⏱️ 30-Second CFO Audit Verdict: Zoom Workplace &amp; Zoom Phone (2026)</strong>
+    <span class="verdict-pill">Impact Verified Rate Audit</span>
+  </div>
+  <ul class="verdict-list">
+    <li class="verdict-item">
+      <span class="verdict-tag tag-winner">🏆 SMARTEST ZOOM BUY: BUSINESS PLUS ($22.49/MO)</span>
+      <div>Never buy Zoom Pro ($13.33) + Unlimited Zoom Phone ($15.00 = $28.33/mo) separately. <strong>Zoom Workplace Business Plus ($22.49/user/mo annual)</strong> bundles 300-seat meetings, Unlimited Regional Zoom Phone, 10 GB storage, Translated Captions, and AI Companion—saving <strong>$70/seat/year</strong>.</div>
+    </li>
+    <li class="verdict-item">
+      <span class="verdict-tag tag-trap">⚠️ #1 ZOOM BILL SHOCK: CLOUD RECORDING STORAGE ($40–$500/MO)</span>
+      <div>Zoom Pro and Business include only <strong>5 GB to 10 GB of cloud recording storage per license</strong>. Sales and onboarding teams that archive video calls hit overage tiers of <strong>$40/mo (100 GB)</strong>, <strong>$100/mo (500 GB)</strong>, or <strong>$500/mo (3 TB)</strong>—adding up to $6,000/yr unless recordings are offloaded to S3/Drive.</div>
+    </li>
+    <li class="verdict-item">
+      <span class="verdict-tag tag-action">⚡ TEST CLOUD STORAGE IN THE CALCULATOR</span>
+      <div>Switch Input #5 (<em>Cloud Recording Storage Volume</em>) to <strong>250 GB or 1 TB</strong> in the calculator below to see how storage overages shift 12-month TCO across Zoom, Webex, Teams, and Google.</div>
+    </li>
+  </ul>
+  <div class="verdict-actions">
+    <a class="cta verdict-btn" data-partner="Zoom Workplace" data-cta-slot="verdict_card" data-route-slug="zoom-workplace-pricing-audit" data-calc-inputs='{"vendor":"zoom","plan":"business_plus"}' data-clickref="b2bfeeaudit_ucaas_zoom_verdict_audit" href="https://zoom.us/pricing?utm_source=saascostaudit.com&amp;utm_medium=affiliate&amp;utm_campaign=ucaas_2026&amp;irgwc=1&amp;clickref=b2bfeeaudit_ucaas_zoom_verdict_audit" target="_blank" rel="sponsored nofollow noopener">Compare Zoom Workplace Plans ($13.33–$22.49) →</a>
+    <a class="cta-secondary verdict-btn" href="#ucaas-tco-calculator">Model Zoom Storage &amp; Phone TCO ↓</a>
+  </div>
+</section>
+
+<h2 id="zoom-tiers-table">Zoom Workplace &amp; Zoom Phone 2026 Published Plan Tiers &amp; Add-On Schedule</h2>
+<div class="table-wrap">
+  <table class="price-action-table">
+    <thead>
+      <tr>
+        <th>Zoom Workplace Tier</th>
+        <th>Annual Billing Rate</th>
+        <th>Monthly Billing Rate (+20%)</th>
+        <th>Meeting Cap &amp; Features</th>
+        <th>Zoom Phone (PSTN) Status</th>
+        <th>Cloud Storage Cap &amp; AI Companion</th>
+        <th>Verify Plan</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% set zoomVendor = ucaas_benchmarks_2026.primary_vendors[2] %}
+      {% for t in zoomVendor.tiers %}
+      {% set clickref = "b2bfeeaudit_ucaas_zoom_tier_" + loop.index %}
+      <tr>
+        <td><strong>{{ t.tier_name }}</strong></td>
+        <td><strong>{{ t.annual_pepm_usd }}</strong></td>
+        <td>{{ t.monthly_pepm_usd }}</td>
+        <td>{{ t.meeting_cap }}</td>
+        <td>{{ t.pstn_calling }}</td>
+        <td>{{ t.cloud_storage }} · <strong>{{ t.ai_included }}</strong></td>
+        <td>
+          <a class="tbl-cta-btn" data-partner="Zoom Workplace" data-cta-slot="price_table_row" data-route-slug="zoom-workplace-pricing-audit" data-calc-inputs='{"tier":"{{ t.tier_name }}"}' data-clickref="{{ clickref }}" href="{{ zoomVendor.cta_url }}&amp;clickref={{ clickref }}" target="_blank" rel="sponsored nofollow noopener">Check Zoom Tier →</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{{ m.ucaasTcoCalc("zoom-workplace-pricing-audit", "unlimited", "none") }}
+
+{{ m.ucaasMasterMatrixTable(ucaas_benchmarks_2026, "zoom-workplace-pricing-audit") }}
+
+<section class="box" aria-label="Related UCaaS Vendor Audits">
+  <h2 style="margin-top:0;border-top:0;padding-top:0">Compare Zoom Workplace Against Competing UCaaS Platforms</h2>
+  <ul>
+    <li><a href="/ucaas/"><strong>4-Vendor UCaaS &amp; Collaboration Hub (`/ucaas/`)</strong></a> — Master comparison matrix across Webex, Teams, Zoom, and Google Workspace.</li>
+    <li><a href="/ucaas/cisco-webex-pricing-audit/"><strong>Cisco Webex Pricing &amp; Hidden Fee Audit</strong></a> — Compare Zoom Business Plus ($22.49) vs. Cisco Webex Suite ($22.50).</li>
+    <li><a href="/ucaas/microsoft-teams-pricing-audit/"><strong>Microsoft Teams &amp; M365 Unbundled Pricing Audit</strong></a> — Compare Zoom's $0 AI Companion vs. Microsoft Teams Premium (+$10) and Copilot (+$30).</li>
+    <li><a href="/ucaas/google-workspace-meet-pricing-audit/"><strong>Google Workspace, Meet &amp; Voice Pricing Audit</strong></a> — Compare Zoom's 5–10 GB cloud recording cap vs. Google Workspace Standard's 2 TB pooled Drive storage.</li>
+  </ul>
+</section>
+
+{{ m.sources(ucaas_benchmarks_2026.sources) }}

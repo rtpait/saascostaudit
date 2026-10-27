@@ -1,0 +1,135 @@
+---
+layout: base.njk
+permalink: "/ucaas/"
+isUcaasSubdivision: true
+ucaasSlug: "ucaas-hub"
+title: "Webex vs Microsoft Teams vs Zoom vs Google Workspace Pricing (2026 Per-Seat & Hidden Fee Audit)"
+description: "Compare 2026 list prices, per-seat tiers, PSTN calling add-ons, AI assistant fees, cloud recording overages, and FCC E911/USF surcharges across Cisco Webex, Microsoft Teams, Zoom Workplace, and Google Workspace."
+keywords: "webex vs microsoft teams pricing, zoom vs teams vs webex vs google workspace, ucaas pricing comparison 2026, microsoft teams phone cost, zoom cloud recording overage fees, google voice business pricing"
+faqSchema:
+  "@context": "https://schema.org"
+  "@type": "FAQPage"
+  mainEntity:
+    - "@type": "Question"
+      name: "Which UCaaS platform has the lowest all-in per-seat price in 2026: Webex, Microsoft Teams, Zoom, or Google Workspace?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "For video meetings and chat only, Microsoft Teams Essentials ($4.00/user/mo annual) is the lowest standalone tier, or $0 incremental if your company already licenses Microsoft 365 Business Basic ($6/mo) or Standard ($12.50/mo). When AI meeting recaps are required without PSTN phone, Cisco Webex Meet ($12.00/user/mo annual) and Zoom Workplace Pro ($13.33/user/mo annual) include AI Assistants at $0 extra, whereas Microsoft charges +$10/user/mo for Teams Premium or +$30/user/mo for M365 Copilot. For full Meetings + Unlimited US/Canada PSTN Phone + AI, Zoom Business Plus ($22.49/mo + ~$4.50 E911/USF) and Cisco Webex Suite ($22.50/mo + ~$4.50 E911/USF) beat unbundled Microsoft Teams + Teams Phone + AI ($29–$49/seat/mo) and Google Workspace Standard + Voice Standard ($34/mo + ~$4 tax)."
+    - "@type": "Question"
+      name: "What are the biggest hidden fees in Webex, Microsoft Teams, Zoom, and Google Workspace contracts?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "The five largest hidden fee traps audited across 2026 commercial bills are: (1) +11% to +20.8% monthly billing surcharges (such as Microsoft's strict +20% NCE monthly commitment markup), (2) unbundled PSTN calling plans (+$15–$17/seat on Teams Phone; +$10–$30/seat on Google Voice), (3) FCC Universal Service Fund (USF) and E911 regulatory recovery surcharges adding $3.50–$6.50/line/month on every PSTN seat, (4) Zoom Cloud Recording storage overages ($40/mo for 100 GB, $100/mo for 500 GB, $500/mo for 3 TB above the 5–10 GB base cap), and (5) Google Workspace Business Starter ($7/mo) blocking meeting recordings entirely until you double your per-seat spend (+100%) to Business Standard ($14/mo)."
+    - "@type": "Question"
+      name: "How does SaaS Cost Audit's Merit-Only Conditional VoIP Recommendation Rule work?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Our calculator evaluates your exact seat count, PSTN calling requirement, AI assistant tier, and existing Microsoft 365, Google Workspace, or Cisco EA licensing. It only displays dedicated VoIP alternatives (Dialpad Connect at $15/mo, Nextiva Core at $15/mo, or RingCentral RingEX at $20/mo) when their all-in 12-month TCO is strictly cheaper than both Cisco Webex and Microsoft Teams for your chosen needs. When Microsoft Teams or Cisco Webex is the lower-cost or bundled winner, third-party VoIP callouts are automatically suppressed."
+    - "@type": "Question"
+      name: "Are AI assistants included free in Webex, Zoom, Microsoft Teams, and Google Workspace in 2026?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Cisco Webex (Webex AI Assistant), Zoom Workplace (Zoom AI Companion 2.0), and Google Workspace (Gemini integrated into Business Starter $7, Standard $14, and Plus $22) include meeting summaries and AI assistance at $0 additional per-seat cost on paid plans. Microsoft Teams is the sole major holdout: intelligent meeting recap requires Microsoft Teams Premium (+$10/user/mo), and full generative AI requires Microsoft 365 Copilot (+$30/user/mo on an annual commitment)."
+---
+{% import "macros.njk" as m %}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"2026 Unified Communications & Collaboration (UCaaS) List Price & Hidden Fee Benchmark Dataset (Webex, Microsoft Teams, Zoom, Google Workspace)","description":"CC-BY-4.0 machine-readable dataset comparing 2026 per-seat list prices, monthly vs. annual billing spreads, PSTN calling add-ons, AI assistant fees, cloud recording overages, and FCC USF/E911 regulatory surcharges across Cisco Webex, Microsoft Teams, Zoom Workplace, Google Workspace, Dialpad, Nextiva, and RingCentral.","license":"https://creativecommons.org/licenses/by/4.0/","url":"{{ site.url }}/datasets/ucaas-collaboration-pricing-2026.json","distribution":[{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"{{ site.url }}/datasets/ucaas-collaboration-pricing-2026.json"}]}</script>
+
+{{ m.breadcrumbs(site, [["SaaS Cost Audit Hub", "/"], ["UCaaS & Collaboration Pricing Hub", "/ucaas/"]]) }}
+
+<div class="verified-gov-bar" role="region" aria-label="Regulatory Verification Status">
+  <span class="verified-gov-badge">✓ Verified Oct 2026 Published Vendor Rate Cards &amp; FCC USF / E911 Telecom Rules (.gov)</span>
+  <a class="gov-seal-pill" href="#four-vendor-comparison-matrix">🏛️ FCC Universal Service Fund (.gov) · Kari's Law / RAY BAUM's Act E911</a>
+</div>
+
+<h1>Webex vs. Microsoft Teams vs. Zoom Workplace vs. Google Workspace: 2026 List Pricing, Per-Seat Tiers &amp; Hidden Fee Audit</h1>
+<p><strong>Stop Overpaying 35%–110% on Unbundled Telephony, AI Add-Ons &amp; Cloud Recording Overages:</strong> Published entry prices for unified communications and collaboration platforms hide the real cost of business voice (PSTN), AI meeting recaps, cloud recording storage, and monthly billing flexibility. Use our deterministic 2026 4-vendor calculator and vendor audit pages below to calculate your exact 12-month Total Cost of Ownership.</p>
+
+<section class="verdict-card" aria-label="30-Second CFO UCaaS Audit Verdict">
+  <div class="verdict-header">
+    <strong>⏱️ 30-Second CFO Audit Verdict: Webex vs. Microsoft Teams vs. Zoom vs. Google Workspace (2026)</strong>
+    <span class="verdict-pill">Deterministic 2026 Per-Seat Math</span>
+  </div>
+  <ul class="verdict-list">
+    <li class="verdict-item">
+      <span class="verdict-tag tag-winner">🏆 12-MONTH TCO WINNERS BY USE CASE</span>
+      <div>
+        • <strong>Meetings + Chat Only (Bundled M365 or Standalone):</strong> <strong>Microsoft Teams Essentials ($4.00/seat/mo)</strong> or <strong>$0 incremental</strong> if already on M365 Business Basic ($6/mo) / Standard ($12.50/mo).<br>
+        • <strong>Meetings + Bundled AI Assistant (No PSTN Phone):</strong> <strong>Cisco Webex Meet ($12.00/seat/mo)</strong> &amp; <strong>Zoom Workplace Pro ($13.33/seat/mo)</strong> include AI Assistant/Companion at $0 extra (vs. +$10 Teams Premium or +$30 M365 Copilot).<br>
+        • <strong>All-In Meetings + Unlimited US/CA PSTN Phone + AI:</strong> <strong>Zoom Business Plus ($22.49/seat/mo + $4.50 E911/USF)</strong> and <strong>Cisco Webex Suite ($22.50/seat/mo + $4.50 E911/USF)</strong> beat unbundled Microsoft Teams + Phone + AI ($33.50–$53.50/seat/mo) and Google Workspace Standard + Voice Standard ($38.00/seat/mo all-in).
+      </div>
+    </li>
+    <li class="verdict-item">
+      <span class="verdict-tag tag-trap">⚠️ TOP 4 HIDDEN FEE TRAPS</span>
+      <div>
+        <strong>(1) Microsoft Add-On Stacking:</strong> Teams Phone Calling Plan (+$15–$17/mo) + Teams Premium (+$10/mo) + M365 Copilot (+$30/mo annual lock-in) + 20% NCE monthly surcharge.<br>
+        <strong>(2) Zoom Cloud Recording Overages:</strong> Base Pro/Business includes only 5–10 GB/license; 100 GB–3 TB cloud storage adds <strong>$40–$500/month ($480–$6,000/yr)</strong>.<br>
+        <strong>(3) Google Starter Recording Cliff &amp; Voice Unbundling:</strong> Business Starter ($7/mo) blocks Meet recording (forcing a +100% jump to $14 Standard) and Google Voice adds <strong>+$10–$30/seat/mo</strong>.<br>
+        <strong>(4) FCC USF &amp; E911 Surcharges:</strong> Every PSTN voice seat across all 4 vendors carries <strong>$3.50–$6.50/line/mo</strong> in regulatory recovery and E911 taxes.
+      </div>
+    </li>
+    <li class="verdict-item">
+      <span class="verdict-tag tag-action">⚡ MERIT-ONLY CONDITIONAL RULE</span>
+      <div>Run the interactive calculator below: it evaluates your exact seat count, PSTN calling needs, and existing M365/Google/Webex licensing—and only surfaces dedicated VoIP options (Dialpad/Nextiva/RingCentral) when they genuinely beat Cisco Webex and Microsoft Teams on 12-month TCO.</div>
+    </li>
+  </ul>
+  <div class="verdict-actions">
+    <a class="cta verdict-btn" data-partner="Cisco Webex" data-cta-slot="verdict_card" data-route-slug="ucaas-hub" data-calc-inputs='{"slot":"verdict_hub","vendor":"webex"}' data-clickref="b2bfeeaudit_ucaas_webex_verdict_hub" href="https://www.webex.com/pricing/index.html?utm_source=saascostaudit.com&amp;utm_medium=affiliate&amp;utm_campaign=ucaas_2026&amp;clickref=b2bfeeaudit_ucaas_webex_verdict_hub" target="_blank" rel="sponsored nofollow noopener">Compare Cisco Webex Suite ($22.50/mo) →</a>
+    <a class="cta-secondary verdict-btn" data-partner="Zoom Workplace" data-cta-slot="verdict_card" data-route-slug="ucaas-hub" data-calc-inputs='{"slot":"verdict_hub","vendor":"zoom"}' data-clickref="b2bfeeaudit_ucaas_zoom_verdict_hub" href="https://zoom.us/pricing?utm_source=saascostaudit.com&amp;utm_medium=affiliate&amp;utm_campaign=ucaas_2026&amp;irgwc=1&amp;clickref=b2bfeeaudit_ucaas_zoom_verdict_hub" target="_blank" rel="sponsored nofollow noopener">Compare Zoom Workplace Plans ($13.33+) →</a>
+  </div>
+</section>
+
+<section class="box" aria-label="4 Dedicated Vendor Pricing Audit Pages">
+  <h2 style="margin-top:0;border-top:0;padding-top:0">Explore All 4 Per-Vendor UCaaS &amp; Collaboration Pricing Audits</h2>
+  <div class="card-grid-2">
+    <div class="calc-vendor-card vendor-best">
+      <small>All-In-One Meetings + Enterprise Cloud PBX + $0 AI</small>
+      <h3 style="margin:.25rem 0 .35rem"><a href="/ucaas/cisco-webex-pricing-audit/">1. Cisco Webex Pricing &amp; Hidden Fee Audit (2026)</a></h3>
+      <p style="margin:0 0 .6rem;font-size:.86rem;color:#334155">Line-item audit of Webex Free ($0), Meet ($12/$14.50), Calling ($17/$20), Suite ($22.50/$25), and Enterprise (~$30–$38), plus FCC E911/USF recovery fees ($3.50–$6.50/line) and $55+/mo Webinars.</p>
+      <a class="cta tbl-cta-btn" href="/ucaas/cisco-webex-pricing-audit/">Open Cisco Webex Audit →</a>
+    </div>
+    <div class="calc-vendor-card vendor-best">
+      <small>M365 Bundling vs. Unbundled Phone &amp; Copilot Stacking</small>
+      <h3 style="margin:.25rem 0 .35rem"><a href="/ucaas/microsoft-teams-pricing-audit/">2. Microsoft Teams &amp; M365 Unbundled Pricing Audit (2026)</a></h3>
+      <p style="margin:0 0 .6rem;font-size:.86rem;color:#334155">Audit Teams Essentials ($4/$4.80), M365 Business Basic/Standard/Premium ($6/$12.50/$22), Enterprise unbundled Teams ($5.25), Teams Phone (+$8–$17), Teams Premium (+$10), and M365 Copilot (+$30).</p>
+      <a class="cta tbl-cta-btn" href="/ucaas/microsoft-teams-pricing-audit/">Open Microsoft Teams Audit →</a>
+    </div>
+    <div class="calc-vendor-card">
+      <small>Free AI Companion vs. $40–$500/mo Cloud Storage Overages</small>
+      <h3 style="margin:.25rem 0 .35rem"><a href="/ucaas/zoom-workplace-pricing-audit/">3. Zoom Workplace &amp; Zoom Phone Pricing Audit (2026)</a></h3>
+      <p style="margin:0 0 .6rem;font-size:.86rem;color:#334155">Audit Zoom Pro ($13.33/$15.99), Business ($18.32/$21.99), Business Plus ($22.49/$26.99 w/ Phone), Zoom Phone ($10–$15), Cloud Recording storage overages ($40–$500/mo), and $79+ Webinars.</p>
+      <a class="cta-secondary tbl-cta-btn" href="/ucaas/zoom-workplace-pricing-audit/">Open Zoom Workplace Audit →</a>
+    </div>
+    <div class="calc-vendor-card">
+      <small>Bundled Gemini AI + 2 TB Drive vs. +$10–$30 Google Voice</small>
+      <h3 style="margin:.25rem 0 .35rem"><a href="/ucaas/google-workspace-meet-pricing-audit/">4. Google Workspace, Meet &amp; Voice Pricing Audit (2026)</a></h3>
+      <p style="margin:0 0 .6rem;font-size:.86rem;color:#334155">Audit Business Starter ($7/$8.40 — no recording), Standard ($14/$16.80), Plus ($22/$26.40), the +100% recording upgrade cliff, and unbundled Google Voice PSTN tiers (+$10/$20/$30/seat).</p>
+      <a class="cta-secondary tbl-cta-btn" href="/ucaas/google-workspace-meet-pricing-audit/">Open Google Workspace Audit →</a>
+    </div>
+  </div>
+</section>
+
+{{ m.ucaasTcoCalc("ucaas-hub", "unlimited", "none") }}
+
+{{ m.ucaasMasterMatrixTable(ucaas_benchmarks_2026, "ucaas-hub") }}
+
+<h2 id="five-hidden-fee-traps">5 Hidden UCaaS &amp; Collaboration Fee Traps Audited Across 2026 Invoices</h2>
+<div class="card-grid-2">
+  <div class="box" style="margin:0;background:#fff;border:1.5px solid #cbd5e1">
+    <span class="verified-gov-badge" style="margin-bottom:.35rem">1. Monthly Billing Penalty (+11.1% to +20.8%)</span>
+    <p style="margin:.35rem 0;font-size:.88rem;color:#334155">Every major vendor advertises annual-commitment rates on their pricing hero banner while charging a steep premium for month-to-month flexibility: <strong>Microsoft NCE (+20.0%)</strong>, <strong>Zoom (+20.0%)</strong>, <strong>Google Workspace (+20.0%)</strong>, and <strong>Cisco Webex (+11.1% on Suite to +20.8% on Meet)</strong>.</p>
+  </div>
+  <div class="box" style="margin:0;background:#fff;border:1.5px solid #cbd5e1">
+    <span class="verified-gov-badge" style="margin-bottom:.35rem">2. Unbundled PSTN Business Phone Add-Ons</span>
+    <p style="margin:.35rem 0;font-size:.88rem;color:#334155">Base collaboration tiers only include app-to-app VoIP calls. Adding a real 10-digit PSTN phone number with domestic calling adds <strong>+$15–$17/seat on Microsoft Teams</strong> and <strong>+$10–$30/seat on Google Voice</strong>—whereas <strong>Webex Suite ($22.50)</strong> and <strong>Zoom Business Plus ($22.49)</strong> bundle phone + meetings together.</p>
+  </div>
+  <div class="box" style="margin:0;background:#fff;border:1.5px solid #cbd5e1">
+    <span class="verified-gov-badge" style="margin-bottom:.35rem">3. FCC USF &amp; E911 Regulatory Surcharges ($3.50–$6.50/line)</span>
+    <p style="margin:.35rem 0;font-size:.88rem;color:#334155">Under FCC interconnected VoIP rules, carriers pass through Universal Service Fund (USF) contribution factors, Kari's Law / RAY BAUM's Act E911 fees, and state telecom recovery surcharges—adding <strong>$42 to $78 per user per year</strong> outside quoted SaaS list prices.</p>
+  </div>
+  <div class="box" style="margin:0;background:#fff;border:1.5px solid #cbd5e1">
+    <span class="verified-gov-badge" style="margin-bottom:.35rem">4. Cloud Recording Storage &amp; AI Add-On Traps</span>
+    <p style="margin:.35rem 0;font-size:.88rem;color:#334155"><strong>Zoom Pro/Business</strong> caps cloud recording at 5–10 GB/license and charges <strong>$40–$500/mo</strong> for storage add-ons. <strong>Microsoft Teams</strong> provides 1 TB OneDrive storage on M365 but charges <strong>+$10/mo (Teams Premium)</strong> or <strong>+$30/mo (Copilot)</strong> for AI meeting recaps that Webex, Zoom, and Google include for $0.</p>
+  </div>
+</div>
+
+{{ m.sources(ucaas_benchmarks_2026.sources) }}

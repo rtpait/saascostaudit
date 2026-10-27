@@ -1,0 +1,1288 @@
+{
+  "schema_version": "2.2.0-live-hogql-bot-filtered",
+  "domain": "saascostaudit.com",
+  "generated_at_utc": "2026-10-27T05:10:36Z",
+  "posthog_project_id": "685354",
+  "posthog_public_token": "phc_v89RLR6JhvrN3Hy7mmWPBSQqVGwFAr7dPLpLan9Pjky8",
+  "status": "LIVE_HOGQL_CONNECTED_BOT_FILTERED",
+  "status_note": "Connected to PostHog US Cloud Project 685354 with permanent 2-stage traffic filtering (Stage 1: Owner NC devices & Linux box excluded; Stage 2: Multi-Signal Bot/Datacenter filter active). Clean Likely Human Visits: 0 (Flagged & Excluded Bot/Stateless Visits: 39 out of 39 raw external hits).",
+  "live_measured_actuals": {
+    "window_days": 30,
+    "live_site_visits": 0,
+    "live_unique_visitors": 0,
+    "last_visit_timestamp_edt": "No verified human visits yet (25 bot/crawler hits filtered)",
+    "raw_external_site_visits_unfiltered": 39,
+    "flagged_bot_visits_excluded": 39,
+    "llm_queries_count": 0,
+    "live_llm_queries": 0,
+    "live_cta_clicks": 0,
+    "live_outbound_affiliate_clicks": 0,
+    "live_price_table_row_clicks": 0,
+    "live_gov_citation_clicks": 0,
+    "mobile_views": 0,
+    "desktop_views": 0,
+    "mobile_share_pct": 0.0,
+    "desktop_share_pct": 0.0,
+    "last_llm_query_timestamp_edt": "No LLM queries recorded yet",
+    "llm_queries_list": [],
+    "recent_visits_list": [],
+    "route_pageviews_map": {},
+    "tco_calculator_interactions_30d": 0,
+    "live_estimator_interactions": 0,
+    "live_cfo_report_exports": 0,
+    "affiliate_cta_clicks_30d": 0,
+    "prices_table_affiliate_ctr_pct": 0.0,
+    "export_cfo_report_clicks_30d": 0,
+    "gov_citation_clicks_30d": 0,
+    "device_conversion_split": {
+      "mobile_views": 0,
+      "desktop_views": 0,
+      "mobile_share_pct": 0.0,
+      "desktop_share_pct": 0.0
+    },
+    "bot_traffic_audit": {
+      "filter_status": "ACTIVE_3_BUCKET_ANALYTICS_ONLY_NO_EDGE_BLOCK",
+      "edge_blocking_policy": "DISABLED \u2014 Zero Cloudflare Turnstile / Zero JS Challenges / Zero Edge ASN Blocks (Preserves WebMCP & llms.txt AI RAG fetches)",
+      "domain": "saascostaudit.com",
+      "total_external_visits_raw": 39,
+      "likely_human_visits": 0,
+      "likely_human_unique_visitors": 0,
+      "flagged_bot_visits_total": 39,
+      "flagged_hard_datacenter_or_headless_bots": 37,
+      "flagged_stateless_zero_engagement_residential": 2,
+      "flagged_bot_percentage": 100.0,
+      "three_bucket_breakdown": {
+        "bucket_a_verified_human_sessions": 0,
+        "bucket_a_passive_residential_bounces": 2,
+        "bucket_a_description": "Verified residential/mobile human sessions with >=1 engagement signal (sole denominator for Conversion Rate & Revenue Per Visitor)",
+        "bucket_b_ai_and_serp_discovery_velocity": 0,
+        "bucket_b_description": "Automated SEO rank-trackers (AWS Ashburn + LeaseWeb/M247 SERP pairs), AI RAG crawlers, and deep-route discovery crawlers",
+        "bucket_c_ssl_ct_security_scanners": 37,
+        "bucket_c_description": "SSL Certificate Transparency (CT) log monitors (Mandiant, Scaleway, Qualys Qlfd, IP Volume, HostRoyale) triggered by new domain certs"
+      },
+      "serp_rank_tracker_routes": [],
+      "signal_category_counts": {
+        "datacenter_or_cloud_asn": 32,
+        "headless_or_geometry_anomaly": 21,
+        "bot_or_synthetic_ua": 20,
+        "suspicious_session_pattern": 9,
+        "zero_engagement_signal": 38
+      },
+      "top_flagged_providers": [
+        {
+          "provider": "AWS Cloud (us-east-1 Ashburn, VA)",
+          "visits": 4
+        },
+        {
+          "provider": "AWS Cloud (us-west-2 Boardman, OR)",
+          "visits": 3
+        },
+        {
+          "provider": "Palo Alto Networks, Inc (AS3356)",
+          "visits": 3
+        },
+        {
+          "provider": "Scaleway Cloud Datacenter (Paris, FR)",
+          "visits": 3
+        },
+        {
+          "provider": "Google Cloud / Mandiant Scanner (Council Bluffs, IA)",
+          "visits": 2
+        },
+        {
+          "provider": "Google LLC (AS396982)",
+          "visits": 2
+        },
+        {
+          "provider": "HostRoyale Datacenter Proxy (S\u00e3o Paulo, BR)",
+          "visits": 2
+        },
+        {
+          "provider": "Scaleway SAS (AS12876)",
+          "visits": 2
+        },
+        {
+          "provider": "AWS Cloud (ap-southeast-1 Singapore)",
+          "visits": 1
+        },
+        {
+          "provider": "AltusHost Datacenter Hosting (Stockholm, SE)",
+          "visits": 1
+        },
+        {
+          "provider": "Amazon Technologies Inc. (AS16509)",
+          "visits": 1
+        },
+        {
+          "provider": "Aventice LLC (AS9009)",
+          "visits": 1
+        },
+        {
+          "provider": "BTnet Business/Telecom ISP (Huddersfield, UK)",
+          "visits": 1
+        },
+        {
+          "provider": "Bell Canada Telecom ISP (BC, Canada)",
+          "visits": 1
+        },
+        {
+          "provider": "Charter Communications Inc (AS33363)",
+          "visits": 1
+        },
+        {
+          "provider": "Clouvider Datacenter Hosting (Atlanta, GA)",
+          "visits": 1
+        },
+        {
+          "provider": "Datacamp/code200 Commercial Proxy (Toronto, CA)",
+          "visits": 1
+        },
+        {
+          "provider": "Fidium (AS13977)",
+          "visits": 1
+        },
+        {
+          "provider": "Google Cloud (europe-west4 Groningen, NL)",
+          "visits": 1
+        },
+        {
+          "provider": "HostRoyale/truview Datacenter Proxy (Reston, VA)",
+          "visits": 1
+        },
+        {
+          "provider": "IP Volume Internet Scanner Network (NL)",
+          "visits": 1
+        },
+        {
+          "provider": "IP Volume Internet Scanner Network (Utrecht, NL)",
+          "visits": 1
+        },
+        {
+          "provider": "LogicWeb Datacenter Hosting (New York, NY)",
+          "visits": 1
+        },
+        {
+          "provider": "M247 Datacenter/VPN Proxy (Amsterdam, NL)",
+          "visits": 1
+        },
+        {
+          "provider": "Vultr/Choopa Cloud Datacenter (US)",
+          "visits": 1
+        },
+        {
+          "provider": "cleardocks LLC (AS203020)",
+          "visits": 1
+        }
+      ],
+      "criteria_used": [
+        {
+          "id": "ASN_CLOUD_DATACENTER",
+          "name": "1. Cloud Provider, Data-Center Hosting & Proxy ASN Ownership",
+          "description": "Flags visits originating from non-human cloud compute, VPS hosting, commercial proxy, and scanner ASNs (AWS AS14618/AS16509, Google Cloud/Mandiant AS396982, Scaleway AS12876, LeaseWeb AS395954/AS7203, M247 AS9009, HostRoyale AS203020/AS207990, Vultr/Choopa AS20473, Datacamp/code200 AS212238, IP Volume AS202425, Clouvider AS62240, LogicWeb AS64286, AltusHost AS51430, Latitude.sh AS396356, SYNLINQ AS44486) via cached/live ASN lookup."
+        },
+        {
+          "id": "HEADLESS_GEOMETRY_ANOMALY",
+          "name": "2. Headless Browser & Screen/Viewport Geometry Anomalies",
+          "description": "Flags navigator.webdriver=true, headless default 800x600 physical screen resolution (often paired with larger overridden viewports like 1920x993 or 1366x768), desktop macOS UA paired with mobile 375x667 screen, mobile iPhone UA paired with 800x600/1920x993 screen, or full-page screenshot crawler viewports taller than the display (e.g., 1280x1696 on a 1920x1080 screen)."
+        },
+        {
+          "id": "BOT_OR_SYNTHETIC_UA",
+          "name": "3. Known Bot, Scanner, Truncated & Outdated/Synthetic User-Agents",
+          "description": "Flags explicit scanner/crawler tokens ('Qlfd' Qualys tag, 'HeadlessChrome', 'bot', 'crawler'), truncated WebKit strings ('Safari/537.3' missing trailing '6'), legacy synthetic UAs ('Edge/12.246', 'Windows NT 6.1 Chrome/45'), synthetic old iOS profiles ('iPhone OS 14_0', 'iPhone OS 16_6'), and outdated headless Chromium builds (Chrome 104\u2013149)."
+        },
+        {
+          "id": "SUSPICIOUS_SESSION_PATTERN",
+          "name": "4. Synchronized SERP-Scraper Pairs, Twin-Hit Rotation & Stateless Repeat IPs",
+          "description": "Flags synchronized two-stage Google rank-checker pairs (AWS Ashburn Chrome/124 hit followed 31\u201366s later by a LeaseWeb/M247 Chrome/149 hit on the exact same deep route), sub-second/multi-OS UA rotation on the same distinct_id, cross-domain scanner IPs hitting both JunkHaulHQ.com and B2BFeeAudit.com root '/', and repeat IPs minting fresh stateless distinct_ids per hit."
+        },
+        {
+          "id": "ZERO_ENGAGEMENT_BOUNCE",
+          "name": "5. Lack of Human Engagement Signals (Zero Scroll, No Pageleave/Dwell, Zero Clicks)",
+          "description": "Evaluates session-level interaction across all PostHog events: requires >0% scroll depth, meaningful dwell time (>=5s on $pageleave), multi-page navigation, or interactive events (calculator/estimator inputs, CTA clicks, citation clicks). Stateless single-page hits with 0% scroll, no $pageleave (or <1s bounce), and 0 clicks are flagged."
+        }
+      ],
+      "flagged_visits_log": [
+        {
+          "timestamp_edt": "2026-10-26 16:10 EDT",
+          "location": "US",
+          "ip": "205.169.39.22",
+          "asn": "AS3356",
+          "provider": "Palo Alto Networks, Inc (AS3356)",
+          "is_datacenter_asn": false,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Windows \u00b7 Chrome",
+          "screen_viewport": "scr 800x600 / vp 1600x1200",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Headless default 800x600 screen with larger overridden viewport (1600x1200)",
+            "Full-page screenshot crawler viewport taller than display (vp=1600x1200 > scr=800x600)",
+            "Outdated/synthetic headless Chromium build (Chrome/117.0)",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "bot_or_synthetic_ua",
+            "headless_or_geometry_anomaly",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-26 15:27 EDT",
+          "location": "US",
+          "ip": "205.169.39.38",
+          "asn": "AS3356",
+          "provider": "Palo Alto Networks, Inc (AS3356)",
+          "is_datacenter_asn": false,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Windows \u00b7 Chrome",
+          "screen_viewport": "scr 800x600 / vp 1600x1200",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Headless default 800x600 screen with larger overridden viewport (1600x1200)",
+            "Full-page screenshot crawler viewport taller than display (vp=1600x1200 > scr=800x600)",
+            "Outdated/synthetic headless Chromium build (Chrome/117.0)",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "bot_or_synthetic_ua",
+            "headless_or_geometry_anomaly",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-26 11:10 EDT",
+          "location": "Altamonte Springs, FL, US",
+          "ip": "72.187.93.236",
+          "asn": "AS33363",
+          "provider": "Charter Communications Inc (AS33363)",
+          "is_datacenter_asn": false,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Mac OS X \u00b7 Chrome",
+          "screen_viewport": "scr 1728x1117 / vp 1632x770",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_A_PASSIVE_RESIDENTIAL_BOUNCE",
+          "telemetry_bucket_label": "Bucket A (Excluded Unengaged Bounce) \u2014 Stateless Residential Hit",
+          "bot_category": "Bucket A (Excluded) \u2014 Stateless Zero-Engagement Residential Bounce",
+          "signals_triggered": [
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-26 08:28 EDT",
+          "location": "US",
+          "ip": "2.57.79.183",
+          "asn": "AS203020",
+          "provider": "cleardocks LLC (AS203020)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Mobile \u00b7 iOS \u00b7 Chrome iOS",
+          "screen_viewport": "scr 390x844 / vp 390x844",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: cleardocks LLC (AS203020) [AS203020]",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "datacenter_or_cloud_asn",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-26 08:28 EDT",
+          "location": "Paris, IDF, FR",
+          "ip": "62.210.198.211",
+          "asn": "AS12876",
+          "provider": "Scaleway SAS (AS12876)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Linux \u00b7 Chrome",
+          "screen_viewport": "scr 800x600 / vp 1920x993",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: Scaleway SAS (AS12876) [AS12876]",
+            "Headless default 800x600 screen with larger overridden viewport (1920x993)",
+            "Truncated headless WebKit User-Agent ('Safari/537.3' missing '6')",
+            "Outdated/synthetic headless Chromium build (Chrome/134.0)",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "bot_or_synthetic_ua",
+            "datacenter_or_cloud_asn",
+            "headless_or_geometry_anomaly",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-26 07:56 EDT",
+          "location": "US",
+          "ip": "205.169.39.0",
+          "asn": "AS3356",
+          "provider": "Palo Alto Networks, Inc (AS3356)",
+          "is_datacenter_asn": false,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Windows \u00b7 Chrome",
+          "screen_viewport": "scr 800x600 / vp 1600x1200",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Headless default 800x600 screen with larger overridden viewport (1600x1200)",
+            "Full-page screenshot crawler viewport taller than display (vp=1600x1200 > scr=800x600)",
+            "Outdated/synthetic headless Chromium build (Chrome/117.0)",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "bot_or_synthetic_ua",
+            "headless_or_geometry_anomaly",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-26 06:15 EDT",
+          "location": "CA",
+          "ip": "204.101.161.15",
+          "asn": "AS577",
+          "provider": "Bell Canada Telecom ISP (BC, Canada)",
+          "is_datacenter_asn": false,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Linux \u00b7 Chrome",
+          "screen_viewport": "scr 800x600 / vp 1920x993",
+          "engagement": "scroll=16%, dwell=4.7s, clicks=0",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Headless default 800x600 screen with larger overridden viewport (1920x993)"
+          ],
+          "signal_categories": [
+            "headless_or_geometry_anomaly"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-26 04:11 EDT",
+          "location": "Paris, IDF, FR",
+          "ip": "62.210.198.201",
+          "asn": "AS12876",
+          "provider": "Scaleway SAS (AS12876)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Linux \u00b7 Chrome",
+          "screen_viewport": "scr 800x600 / vp 1920x993",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: Scaleway SAS (AS12876) [AS12876]",
+            "Headless default 800x600 screen with larger overridden viewport (1920x993)",
+            "Truncated headless WebKit User-Agent ('Safari/537.3' missing '6')",
+            "Outdated/synthetic headless Chromium build (Chrome/134.0)",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "bot_or_synthetic_ua",
+            "datacenter_or_cloud_asn",
+            "headless_or_geometry_anomaly",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-26 02:59 EDT",
+          "location": "Boardman, OR, US",
+          "ip": "34.213.146.127",
+          "asn": "AS16509",
+          "provider": "Amazon Technologies Inc. (AS16509)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Windows \u00b7 Firefox",
+          "screen_viewport": "scr 800x600 / vp 1920x1080",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: Amazon Technologies Inc. (AS16509) [AS16509]",
+            "Headless default 800x600 screen with larger overridden viewport (1920x1080)",
+            "Full-page screenshot crawler viewport taller than display (vp=1920x1080 > scr=800x600)",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "datacenter_or_cloud_asn",
+            "headless_or_geometry_anomaly",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-26 02:59 EDT",
+          "location": "Vienna, 9, AT",
+          "ip": "154.37.68.215",
+          "asn": "AS9009",
+          "provider": "Aventice LLC (AS9009)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Linux \u00b7 Chrome",
+          "screen_viewport": "scr 1920x1080 / vp 1920x1080",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: Aventice LLC (AS9009) [AS9009]",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "datacenter_or_cloud_asn",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-26 02:40 EDT",
+          "location": "Council Bluffs, IA, US",
+          "ip": "34.72.176.129",
+          "asn": "AS396982",
+          "provider": "Google Cloud / Mandiant Scanner (Council Bluffs, IA)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Windows \u00b7 Microsoft Edge",
+          "screen_viewport": "scr 800x600 / vp 800x600",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: Google Cloud / Mandiant Scanner (Council Bluffs, IA) [AS396982]",
+            "Headless default 800x600 screen resolution",
+            "Legacy synthetic scanner User-Agent (Edge/12.246 or Windows NT 6.1)",
+            "Outdated/synthetic headless Chromium build (Chrome/125.0)",
+            "Cross-domain automated scanner IP hitting both JunkHaulHQ.com and B2BFeeAudit.com (34.72.176.129)",
+            "Stateless repeat IP minting fresh distinct_id per hit (2 ephemeral IDs on 34.72.176.129)",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "bot_or_synthetic_ua",
+            "datacenter_or_cloud_asn",
+            "headless_or_geometry_anomaly",
+            "suspicious_session_pattern",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-26 02:40 EDT",
+          "location": "Council Bluffs, IA, US",
+          "ip": "34.123.170.104",
+          "asn": "AS396982",
+          "provider": "Google LLC (AS396982)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Windows \u00b7 Microsoft Edge",
+          "screen_viewport": "scr 800x600 / vp 780x493",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: Google LLC (AS396982) [AS396982]",
+            "Headless default 800x600 screen resolution",
+            "Legacy synthetic scanner User-Agent (Edge/12.246 or Windows NT 6.1)",
+            "Outdated/synthetic headless Chromium build (Chrome/125.0)",
+            "Stateless repeat IP minting fresh distinct_id per hit (2 ephemeral IDs on 34.123.170.104)",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "bot_or_synthetic_ua",
+            "datacenter_or_cloud_asn",
+            "headless_or_geometry_anomaly",
+            "suspicious_session_pattern",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-26 02:40 EDT",
+          "location": "Council Bluffs, IA, US",
+          "ip": "34.123.170.104",
+          "asn": "AS396982",
+          "provider": "Google LLC (AS396982)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Windows \u00b7 Microsoft Edge",
+          "screen_viewport": "scr 800x600 / vp 800x600",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: Google LLC (AS396982) [AS396982]",
+            "Headless default 800x600 screen resolution",
+            "Legacy synthetic scanner User-Agent (Edge/12.246 or Windows NT 6.1)",
+            "Outdated/synthetic headless Chromium build (Chrome/125.0)",
+            "Stateless repeat IP minting fresh distinct_id per hit (2 ephemeral IDs on 34.123.170.104)",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "bot_or_synthetic_ua",
+            "datacenter_or_cloud_asn",
+            "headless_or_geometry_anomaly",
+            "suspicious_session_pattern",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-26 01:34 EDT",
+          "location": "Portland, ME, US",
+          "ip": "64.222.212.199",
+          "asn": "AS13977",
+          "provider": "Fidium (AS13977)",
+          "is_datacenter_asn": false,
+          "pathname": "/",
+          "referrer": "https://saascostaudit.com/",
+          "device_os_browser": "Mobile \u00b7 iOS \u00b7 Mobile Safari",
+          "screen_viewport": "scr 320x568 / vp 357x634",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_A_PASSIVE_RESIDENTIAL_BOUNCE",
+          "telemetry_bucket_label": "Bucket A (Excluded Unengaged Bounce) \u2014 Stateless Residential Hit",
+          "bot_category": "Bucket A (Excluded) \u2014 Stateless Zero-Engagement Residential Bounce",
+          "signals_triggered": [
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-25 19:14 EDT",
+          "location": "S\u00e3o Paulo, SP, BR",
+          "ip": "172.111.15.64",
+          "asn": "AS203020",
+          "provider": "HostRoyale Datacenter Proxy (S\u00e3o Paulo, BR)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Mobile \u00b7 iOS \u00b7 Mobile Safari",
+          "screen_viewport": "scr 390x844 / vp 390x844",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: HostRoyale Datacenter Proxy (S\u00e3o Paulo, BR) [AS203020]",
+            "Outdated synthetic iOS crawler profile (iPhone OS 16_6)",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "bot_or_synthetic_ua",
+            "datacenter_or_cloud_asn",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-25 15:14 EDT",
+          "location": "Paris, IDF, FR",
+          "ip": "2001:bc8:1201:617:2247:47ff:fe7d:bf8e",
+          "asn": "AS12876",
+          "provider": "Scaleway Cloud Datacenter (Paris, FR)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Linux \u00b7 Chrome",
+          "screen_viewport": "scr 800x600 / vp 1920x993",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: Scaleway Cloud Datacenter (Paris, FR) [AS12876]",
+            "Headless default 800x600 screen with larger overridden viewport (1920x993)",
+            "Truncated headless WebKit User-Agent ('Safari/537.3' missing '6')",
+            "Outdated/synthetic headless Chromium build (Chrome/134.0)",
+            "Stateless repeat IP minting fresh distinct_id per hit (2 ephemeral IDs on 2001:bc8:1201:617:2247:47ff:fe7d:bf8e)",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "bot_or_synthetic_ua",
+            "datacenter_or_cloud_asn",
+            "headless_or_geometry_anomaly",
+            "suspicious_session_pattern",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-25 15:14 EDT",
+          "location": "Paris, IDF, FR",
+          "ip": "2001:bc8:1201:617:2247:47ff:fe7d:bf8e",
+          "asn": "AS12876",
+          "provider": "Scaleway Cloud Datacenter (Paris, FR)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Linux \u00b7 Chrome",
+          "screen_viewport": "scr 800x600 / vp 1920x993",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: Scaleway Cloud Datacenter (Paris, FR) [AS12876]",
+            "Headless default 800x600 screen with larger overridden viewport (1920x993)",
+            "Truncated headless WebKit User-Agent ('Safari/537.3' missing '6')",
+            "Outdated/synthetic headless Chromium build (Chrome/134.0)",
+            "Stateless repeat IP minting fresh distinct_id per hit (2 ephemeral IDs on 2001:bc8:1201:617:2247:47ff:fe7d:bf8e)",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "bot_or_synthetic_ua",
+            "datacenter_or_cloud_asn",
+            "headless_or_geometry_anomaly",
+            "suspicious_session_pattern",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-25 05:07 EDT",
+          "location": "Singapore, SG",
+          "ip": "13.213.37.23",
+          "asn": "AS16509",
+          "provider": "AWS Cloud (ap-southeast-1 Singapore)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Mobile \u00b7 iOS \u00b7 Mobile Safari",
+          "screen_viewport": "scr 800x600 / vp 1920x993",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: AWS Cloud (ap-southeast-1 Singapore) [AS16509]",
+            "Headless default 800x600 screen with larger overridden viewport (1920x993)",
+            "Mobile iPhone User-Agent paired with desktop screen/viewport (scr=800x600, vp=1920x993)",
+            "Outdated synthetic iOS crawler profile (iPhone OS 14_0)",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "bot_or_synthetic_ua",
+            "datacenter_or_cloud_asn",
+            "headless_or_geometry_anomaly",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-25 04:01 EDT",
+          "location": "Huddersfield, ENG, GB",
+          "ip": "31.121.111.20",
+          "asn": "AS2856",
+          "provider": "BTnet Business/Telecom ISP (Huddersfield, UK)",
+          "is_datacenter_asn": false,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Windows \u00b7 Chrome",
+          "screen_viewport": "scr 1920x1080 / vp 1280x1696",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Full-page screenshot crawler viewport taller than display (vp=1280x1696 > scr=1920x1080)",
+            "Outdated/synthetic headless Chromium build (Chrome/146.0)",
+            "Cross-domain automated scanner IP hitting both JunkHaulHQ.com and B2BFeeAudit.com (31.121.111.20)",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "bot_or_synthetic_ua",
+            "headless_or_geometry_anomaly",
+            "suspicious_session_pattern",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-25 02:32 EDT",
+          "location": "Ashburn, VA, US",
+          "ip": "34.207.247.170",
+          "asn": "AS14618",
+          "provider": "AWS Cloud (us-east-1 Ashburn, VA)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Linux \u00b7 Chrome",
+          "screen_viewport": "scr 1366x768 / vp 1366x768",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: AWS Cloud (us-east-1 Ashburn, VA) [AS14618]",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "datacenter_or_cloud_asn",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-25 02:32 EDT",
+          "location": "Ashburn, VA, US",
+          "ip": "54.89.103.235",
+          "asn": "AS14618",
+          "provider": "AWS Cloud (us-east-1 Ashburn, VA)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Mobile \u00b7 Android \u00b7 Chrome",
+          "screen_viewport": "scr 375x812 / vp 375x812",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: AWS Cloud (us-east-1 Ashburn, VA) [AS14618]",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "datacenter_or_cloud_asn",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-25 01:40 EDT",
+          "location": "Council Bluffs, IA, US",
+          "ip": "34.72.176.129",
+          "asn": "AS396982",
+          "provider": "Google Cloud / Mandiant Scanner (Council Bluffs, IA)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Windows \u00b7 Microsoft Edge",
+          "screen_viewport": "scr 800x600 / vp 800x600",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: Google Cloud / Mandiant Scanner (Council Bluffs, IA) [AS396982]",
+            "Headless default 800x600 screen resolution",
+            "Legacy synthetic scanner User-Agent (Edge/12.246 or Windows NT 6.1)",
+            "Outdated/synthetic headless Chromium build (Chrome/125.0)",
+            "Cross-domain automated scanner IP hitting both JunkHaulHQ.com and B2BFeeAudit.com (34.72.176.129)",
+            "Stateless repeat IP minting fresh distinct_id per hit (2 ephemeral IDs on 34.72.176.129)",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "bot_or_synthetic_ua",
+            "datacenter_or_cloud_asn",
+            "headless_or_geometry_anomaly",
+            "suspicious_session_pattern",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-24 23:25 EDT",
+          "location": "Boardman, OR, US",
+          "ip": "44.243.35.208",
+          "asn": "AS16509",
+          "provider": "AWS Cloud (us-west-2 Boardman, OR)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Mobile \u00b7 iOS \u00b7 Mobile Safari",
+          "screen_viewport": "scr 393x852 / vp 393x852",
+          "engagement": "scroll=0%, dwell=2.1s, clicks=0",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: AWS Cloud (us-west-2 Boardman, OR) [AS16509]",
+            "Stateless repeat IP minting fresh distinct_id per hit (2 ephemeral IDs on 44.243.35.208)",
+            "Zero engagement: sub-second bounce (2.07s dwell, 0% scroll, 0 clicks)"
+          ],
+          "signal_categories": [
+            "datacenter_or_cloud_asn",
+            "suspicious_session_pattern",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-24 23:24 EDT",
+          "location": "Boardman, OR, US",
+          "ip": "44.243.35.208",
+          "asn": "AS16509",
+          "provider": "AWS Cloud (us-west-2 Boardman, OR)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Mac OS X \u00b7 Chrome",
+          "screen_viewport": "scr 800x600 / vp 1680x1050",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: AWS Cloud (us-west-2 Boardman, OR) [AS16509]",
+            "Headless default 800x600 screen with larger overridden viewport (1680x1050)",
+            "Full-page screenshot crawler viewport taller than display (vp=1680x1050 > scr=800x600)",
+            "Stateless repeat IP minting fresh distinct_id per hit (2 ephemeral IDs on 44.243.35.208)",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "datacenter_or_cloud_asn",
+            "headless_or_geometry_anomaly",
+            "suspicious_session_pattern",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-24 22:21 EDT",
+          "location": "New York, NY, US",
+          "ip": "149.57.180.84",
+          "asn": "AS64286",
+          "provider": "LogicWeb Datacenter Hosting (New York, NY)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Linux \u00b7 Chrome",
+          "screen_viewport": "scr 1600x1200 / vp 1600x1200",
+          "engagement": "scroll=0%, dwell=3.4s, clicks=0",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: LogicWeb Datacenter Hosting (New York, NY) [AS64286]",
+            "Zero engagement: sub-second bounce (3.42s dwell, 0% scroll, 0 clicks)"
+          ],
+          "signal_categories": [
+            "datacenter_or_cloud_asn",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-24 21:44 EDT",
+          "location": "Groningen, GR, NL",
+          "ip": "34.90.165.170",
+          "asn": "AS396982",
+          "provider": "Google Cloud (europe-west4 Groningen, NL)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Linux \u00b7 Chrome",
+          "screen_viewport": "scr 1920x1080 / vp 1920x1080",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: Google Cloud (europe-west4 Groningen, NL) [AS396982]",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "datacenter_or_cloud_asn",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-24 21:36 EDT",
+          "location": "S\u00e3o Paulo, SP, BR",
+          "ip": "172.111.15.145",
+          "asn": "AS203020",
+          "provider": "HostRoyale Datacenter Proxy (S\u00e3o Paulo, BR)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Mobile \u00b7 iOS \u00b7 Mobile Safari",
+          "screen_viewport": "scr 390x844 / vp 390x844",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: HostRoyale Datacenter Proxy (S\u00e3o Paulo, BR) [AS203020]",
+            "Outdated synthetic iOS crawler profile (iPhone OS 16_6)",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "bot_or_synthetic_ua",
+            "datacenter_or_cloud_asn",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-24 21:14 EDT",
+          "location": "Paris, IDF, FR",
+          "ip": "2001:bc8:701:34:d6ae:52ff:fecb:beea",
+          "asn": "AS12876",
+          "provider": "Scaleway Cloud Datacenter (Paris, FR)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Linux \u00b7 Chrome",
+          "screen_viewport": "scr 800x600 / vp 1920x993",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: Scaleway Cloud Datacenter (Paris, FR) [AS12876]",
+            "Headless default 800x600 screen with larger overridden viewport (1920x993)",
+            "Truncated headless WebKit User-Agent ('Safari/537.3' missing '6')",
+            "Outdated/synthetic headless Chromium build (Chrome/134.0)",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "bot_or_synthetic_ua",
+            "datacenter_or_cloud_asn",
+            "headless_or_geometry_anomaly",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-24 21:07 EDT",
+          "location": "Atlanta, GA, US",
+          "ip": "91.193.232.123",
+          "asn": "AS62240",
+          "provider": "Clouvider Datacenter Hosting (Atlanta, GA)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Windows \u00b7 Chrome",
+          "screen_viewport": "scr 1536x864 / vp 1280x1024",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: Clouvider Datacenter Hosting (Atlanta, GA) [AS62240]",
+            "Full-page screenshot crawler viewport taller than display (vp=1280x1024 > scr=1536x864)",
+            "Outdated/synthetic headless Chromium build (Chrome/144.0)",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "bot_or_synthetic_ua",
+            "datacenter_or_cloud_asn",
+            "headless_or_geometry_anomaly",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-24 20:52 EDT",
+          "location": "Toronto, ON, CA",
+          "ip": "205.188.37.30",
+          "asn": "AS212238",
+          "provider": "Datacamp/code200 Commercial Proxy (Toronto, CA)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Mobile \u00b7 iOS \u00b7 Chrome iOS",
+          "screen_viewport": "scr 390x844 / vp 390x844",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: Datacamp/code200 Commercial Proxy (Toronto, CA) [AS212238]",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "datacenter_or_cloud_asn",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-24 20:48 EDT",
+          "location": "Ashburn, VA, US",
+          "ip": "34.230.30.179",
+          "asn": "AS14618",
+          "provider": "AWS Cloud (us-east-1 Ashburn, VA)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Windows \u00b7 Chrome",
+          "screen_viewport": "scr 800x600 / vp 1600x1200",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: AWS Cloud (us-east-1 Ashburn, VA) [AS14618]",
+            "Headless default 800x600 screen with larger overridden viewport (1600x1200)",
+            "Full-page screenshot crawler viewport taller than display (vp=1600x1200 > scr=800x600)",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "datacenter_or_cloud_asn",
+            "headless_or_geometry_anomaly",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-24 20:46 EDT",
+          "location": "Ashburn, VA, US",
+          "ip": "34.236.78.183",
+          "asn": "AS14618",
+          "provider": "AWS Cloud (us-east-1 Ashburn, VA)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Linux \u00b7 Chrome",
+          "screen_viewport": "scr 800x600 / vp 1440x810",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: AWS Cloud (us-east-1 Ashburn, VA) [AS14618]",
+            "Headless default 800x600 screen with larger overridden viewport (1440x810)",
+            "Known scanner/crawler User-Agent token ('qlfd')",
+            "Outdated/synthetic headless Chromium build (Chrome/127.0)",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "bot_or_synthetic_ua",
+            "datacenter_or_cloud_asn",
+            "headless_or_geometry_anomaly",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-24 20:41 EDT",
+          "location": "Amsterdam, NH, NL",
+          "ip": "185.212.171.150",
+          "asn": "AS9009",
+          "provider": "M247 Datacenter/VPN Proxy (Amsterdam, NL)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Mac OS X \u00b7 Safari",
+          "screen_viewport": "scr 1024x898 / vp 1024x768",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: M247 Datacenter/VPN Proxy (Amsterdam, NL) [AS9009]",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "datacenter_or_cloud_asn",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-24 20:40 EDT",
+          "location": "Utrecht, UT, NL",
+          "ip": "89.248.172.33",
+          "asn": "AS202425",
+          "provider": "IP Volume Internet Scanner Network (Utrecht, NL)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Windows \u00b7 Chrome",
+          "screen_viewport": "scr 1366x768 / vp 1366x768",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: IP Volume Internet Scanner Network (Utrecht, NL) [AS202425]",
+            "Outdated/synthetic headless Chromium build (Chrome/104.0)",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "bot_or_synthetic_ua",
+            "datacenter_or_cloud_asn",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-24 20:38 EDT",
+          "location": "NL",
+          "ip": "80.82.70.40",
+          "asn": "AS202425",
+          "provider": "IP Volume Internet Scanner Network (NL)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Windows \u00b7 Chrome",
+          "screen_viewport": "scr 800x600 / vp 1905x1096",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: IP Volume Internet Scanner Network (NL) [AS202425]",
+            "Headless default 800x600 screen with larger overridden viewport (1905x1096)",
+            "Full-page screenshot crawler viewport taller than display (vp=1905x1096 > scr=800x600)",
+            "Legacy synthetic scanner User-Agent (Edge/12.246 or Windows NT 6.1)",
+            "Outdated/synthetic headless Chromium build (Chrome/45.0)",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "bot_or_synthetic_ua",
+            "datacenter_or_cloud_asn",
+            "headless_or_geometry_anomaly",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-24 20:38 EDT",
+          "location": "Stockholm, AB, SE",
+          "ip": "79.142.77.207",
+          "asn": "AS51430",
+          "provider": "AltusHost Datacenter Hosting (Stockholm, SE)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Linux \u00b7 Chrome",
+          "screen_viewport": "scr 1600x1200 / vp 1600x1200",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: AltusHost Datacenter Hosting (Stockholm, SE) [AS51430]",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "datacenter_or_cloud_asn",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-24 20:34 EDT",
+          "location": "Reston, VA, US",
+          "ip": "203.109.60.188",
+          "asn": "AS207990",
+          "provider": "HostRoyale/truview Datacenter Proxy (Reston, VA)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Mobile \u00b7 iOS \u00b7 Chrome iOS",
+          "screen_viewport": "scr 390x844 / vp 390x844",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: HostRoyale/truview Datacenter Proxy (Reston, VA) [AS207990]",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "datacenter_or_cloud_asn",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-24 20:34 EDT",
+          "location": "US",
+          "ip": "152.39.172.98",
+          "asn": "AS20473",
+          "provider": "Vultr/Choopa Cloud Datacenter (US)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Mobile \u00b7 iOS \u00b7 Chrome iOS",
+          "screen_viewport": "scr 390x844 / vp 390x844",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: Vultr/Choopa Cloud Datacenter (US) [AS20473]",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "datacenter_or_cloud_asn",
+            "zero_engagement_signal"
+          ]
+        },
+        {
+          "timestamp_edt": "2026-10-24 20:24 EDT",
+          "location": "Boardman, OR, US",
+          "ip": "52.34.76.65",
+          "asn": "AS16509",
+          "provider": "AWS Cloud (us-west-2 Boardman, OR)",
+          "is_datacenter_asn": true,
+          "pathname": "/",
+          "referrer": "$direct",
+          "device_os_browser": "Desktop \u00b7 Windows \u00b7 Chrome",
+          "screen_viewport": "scr 2560x1440 / vp 1920x1080",
+          "engagement": "0% scroll, no $pageleave, 0 clicks",
+          "classification": "LIKELY_BOT",
+          "telemetry_bucket": "BUCKET_C_SECURITY_CT_SCANNERS",
+          "telemetry_bucket_label": "Bucket C \u2014 SSL Certificate Transparency (CT) & Security Scanner",
+          "bot_category": "Bucket C \u2014 SSL CT / Security / Cloud Infrastructure Scanner",
+          "signals_triggered": [
+            "Cloud/Datacenter ASN: AWS Cloud (us-west-2 Boardman, OR) [AS16509]",
+            "Zero engagement: 0% scroll depth, no $pageleave event, 0 clicks/interactions"
+          ],
+          "signal_categories": [
+            "datacenter_or_cloud_asn",
+            "zero_engagement_signal"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,113 @@
+---
+layout: base.njk
+permalink: "/ucaas/microsoft-teams-pricing-audit/"
+isUcaasSubdivision: true
+ucaasSlug: "microsoft-teams-pricing-audit"
+title: "Microsoft Teams Pricing, Teams Phone & M365 Unbundled Cost Audit (2026)"
+description: "Audit 2026 Microsoft Teams list prices—Teams Essentials ($4/$4.80), M365 Business Basic/Standard/Premium ($6/$12.50/$22), Enterprise unbundled Teams ($5.25), Teams Phone (+$8–$17), Teams Premium (+$10), M365 Copilot (+$30), and the +20% NCE monthly surcharge."
+keywords: "microsoft teams pricing 2026, microsoft teams phone cost per user, m365 unbundled teams pricing, teams premium vs copilot cost, microsoft nce 20% monthly surcharge"
+faqSchema:
+  "@context": "https://schema.org"
+  "@type": "FAQPage"
+  mainEntity:
+    - "@type": "Question"
+      name: "How much does Microsoft Teams cost per user in 2026 after global M365 unbundling?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "For SMBs (up to 300 users), Microsoft Teams Essentials costs $4.00/user/mo billed annually ($4.80/mo monthly), or comes bundled inside M365 Business Basic ($6.00/mo), Business Standard ($12.50/mo), and Business Premium ($22.00/mo). For Enterprise E3/E5 customers under Microsoft's post-unbundling licensing structure, Microsoft Teams Enterprise Standalone is sold as a $5.25/user/month add-on alongside unbundled M365 E3 ($33.75/mo) or E5 ($54.75/mo)."
+    - "@type": "Question"
+      name: "How much does Microsoft Teams Phone cost with a domestic calling plan?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Microsoft Teams Phone Standard (the cloud PBX software license alone, with zero calling minutes) costs $8.00–$10.00/user/month (included in M365 E5). Bundling Teams Phone with a Microsoft Domestic Calling Plan (3,000 US/Canada minutes) costs +$15.00–$17.00/user/month on top of your base Teams/M365 license, plus ~$4.50/line/month in E911 and FCC USF telecom taxes."
+    - "@type": "Question"
+      name: "What is Microsoft's 20% NCE monthly billing penalty?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Under Microsoft's New Commerce Experience (NCE), choosing a flexible month-to-month subscription term instead of a locked 12-month annual commitment triggers a strict +20.0% price surcharge across Teams Essentials ($4.80 vs. $4.00), M365 Business Basic ($7.20 vs. $6.00), Business Standard ($15.00 vs. $12.50), and Business Premium ($26.40 vs. $22.00)."
+---
+{% import "macros.njk" as m %}
+{{ m.breadcrumbs(site, [["SaaS Cost Audit Hub", "/"], ["UCaaS & Collaboration Hub", "/ucaas/"], ["Microsoft Teams Pricing Audit", "/ucaas/microsoft-teams-pricing-audit/"]]) }}
+
+<div class="verified-gov-bar" role="region" aria-label="Regulatory Verification Status">
+  <span class="verified-gov-badge">✓ Verified Oct 2026 Microsoft Commercial NCE Licensing Schedule &amp; FCC USF / E911 Rules (.gov)</span>
+  <a class="gov-seal-pill" href="#teams-tiers-table">🏛️ Microsoft NCE (+20% Monthly) · Teams Phone &amp; Copilot Stack Audit</a>
+</div>
+
+<h1>Microsoft Teams &amp; M365 Unbundled Pricing Audit (2026): Essentials, Teams Phone, Premium &amp; Copilot TCO</h1>
+<p><strong>The Ultimate Bundled Bargain for Meetings—Or the Priciest Stack When Unbundled Add-Ons Pile Up:</strong> If your company already licenses <strong>Microsoft 365 Business Basic ($6/mo), Standard ($12.50/mo), or E3/E5</strong>, using Microsoft Teams for video meetings, chat, and 1 TB OneDrive storage costs <strong>$0 incremental</strong> and beats every standalone competitor. However, once you add <strong>Teams Phone with Domestic Calling (+$15–$17/mo)</strong>, <strong>Teams Premium (+$10/mo)</strong>, or <strong>Microsoft 365 Copilot (+$30/mo annual lock-in)</strong>, per-seat costs surge past $35–$65/user/month.</p>
+
+<section class="verdict-card" aria-label="30-Second Microsoft Teams Pricing Verdict">
+  <div class="verdict-header">
+    <strong>⏱️ 30-Second CFO Audit Verdict: Microsoft Teams 2026 Licensing &amp; Add-On Math</strong>
+    <span class="verdict-pill">Microsoft NCE Rate Audit</span>
+  </div>
+  <ul class="verdict-list">
+    <li class="verdict-item">
+      <span class="verdict-tag tag-winner">🏆 UNBEATABLE FOR M365 MEETINGS &amp; E5 VOICE</span>
+      <div><strong>Teams Essentials ($4.00/user/mo)</strong> is the cheapest 300-person video meeting license on the market, and companies already on <strong>M365 E5</strong> get the <strong>Teams Phone Standard PBX license ($8–$10/mo value) included</strong>—needing only a Calling Plan or Operator Connect SIP trunk.</div>
+    </li>
+    <li class="verdict-item">
+      <span class="verdict-tag tag-trap">⚠️ ADD-ON STACKING &amp; 20% NCE SURCHARGE TRAP</span>
+      <div>Unlike Webex, Zoom, and Google (which bundle AI meeting notes for $0), Microsoft charges <strong>+$10.00/user/mo for Teams Premium</strong> (AI intelligent recap, live translation, webinar controls) or <strong>+$30.00/user/mo ($360/yr upfront/annual lock-in) for M365 Copilot</strong>, plus a strict <strong>+20% NCE surcharge</strong> on monthly billing terms.</div>
+    </li>
+    <li class="verdict-item">
+      <span class="verdict-tag tag-action">⚡ AUDIT YOUR M365 BUNDLE BELOW</span>
+      <div>Select <em>"Already Licensed on Microsoft 365"</em> in Input #7 of the calculator below to see your true incremental cost vs. switching or adding standalone VoIP.</div>
+    </li>
+  </ul>
+  <div class="verdict-actions">
+    <a class="cta verdict-btn" data-partner="Microsoft Teams" data-cta-slot="verdict_card" data-route-slug="microsoft-teams-pricing-audit" data-calc-inputs='{"vendor":"microsoft-teams","plan":"m365"}' data-clickref="b2bfeeaudit_ucaas_microsoft_teams_verdict_audit" href="https://www.microsoft.com/en-us/microsoft-teams/compare-microsoft-teams-options?utm_source=saascostaudit.com&amp;utm_medium=affiliate&amp;utm_campaign=ucaas_2026&amp;clickref=b2bfeeaudit_ucaas_microsoft_teams_verdict_audit" target="_blank" rel="sponsored nofollow noopener">Verify Microsoft Teams &amp; M365 Rates →</a>
+    <a class="cta-secondary verdict-btn" href="#ucaas-tco-calculator">Run Incremental M365 TCO Calculator ↓</a>
+  </div>
+</section>
+
+<h2 id="teams-tiers-table">Microsoft Teams &amp; M365 2026 Published Plan Tiers &amp; Add-On Schedule</h2>
+<div class="table-wrap">
+  <table class="price-action-table">
+    <thead>
+      <tr>
+        <th>Microsoft Teams / M365 Tier</th>
+        <th>Annual NCE Rate</th>
+        <th>Monthly NCE Rate (+20%)</th>
+        <th>Meeting Cap &amp; Features</th>
+        <th>Teams Phone (PSTN) Status</th>
+        <th>OneDrive Storage &amp; AI Policy</th>
+        <th>Verify Plan</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% set teamsVendor = ucaas_benchmarks_2026.primary_vendors[1] %}
+      {% for t in teamsVendor.tiers %}
+      {% set clickref = "b2bfeeaudit_ucaas_microsoft_teams_tier_" + loop.index %}
+      <tr>
+        <td><strong>{{ t.tier_name }}</strong></td>
+        <td><strong>{{ t.annual_pepm_usd }}</strong></td>
+        <td>{{ t.monthly_pepm_usd }}</td>
+        <td>{{ t.meeting_cap }}</td>
+        <td>{{ t.pstn_calling }}</td>
+        <td>{{ t.cloud_storage }} · <strong>{{ t.ai_included }}</strong></td>
+        <td>
+          <a class="tbl-cta-btn" data-partner="Microsoft Teams" data-cta-slot="price_table_row" data-route-slug="microsoft-teams-pricing-audit" data-calc-inputs='{"tier":"{{ t.tier_name }}"}' data-clickref="{{ clickref }}" href="{{ teamsVendor.cta_url }}&amp;clickref={{ clickref }}" target="_blank" rel="sponsored nofollow noopener">Check Teams Tier →</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{{ m.ucaasTcoCalc("microsoft-teams-pricing-audit", "unlimited", "m365_basic_std") }}
+
+{{ m.ucaasMasterMatrixTable(ucaas_benchmarks_2026, "microsoft-teams-pricing-audit") }}
+
+<section class="box" aria-label="Related UCaaS Vendor Audits">
+  <h2 style="margin-top:0;border-top:0;padding-top:0">Compare Microsoft Teams Against Competing UCaaS Platforms</h2>
+  <ul>
+    <li><a href="/ucaas/"><strong>4-Vendor UCaaS &amp; Collaboration Hub (`/ucaas/`)</strong></a> — Master comparison matrix across Webex, Teams, Zoom, and Google Workspace.</li>
+    <li><a href="/ucaas/cisco-webex-pricing-audit/"><strong>Cisco Webex Pricing &amp; Hidden Fee Audit</strong></a> — See how Webex Suite ($22.50 w/ Phone + AI) compares against unbundled Teams add-ons.</li>
+    <li><a href="/ucaas/zoom-workplace-pricing-audit/"><strong>Zoom Workplace &amp; Zoom Phone Pricing Audit</strong></a> — Compare Zoom Business Plus ($22.49 w/ Phone + $0 AI Companion) against Teams.</li>
+    <li><a href="/ucaas/google-workspace-meet-pricing-audit/"><strong>Google Workspace, Meet &amp; Voice Pricing Audit</strong></a> — Compare M365 Business Standard ($12.50) vs. Google Workspace Business Standard ($14.00).</li>
+  </ul>
+</section>
+
+{{ m.sources(ucaas_benchmarks_2026.sources) }}

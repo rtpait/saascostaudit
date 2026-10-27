@@ -1,0 +1,153 @@
+{
+  "schema_version": "2026.10.24-visa-mc-reg-ii-interchange",
+  "generated_at_utc": "2026-10-24T22:26:00Z",
+  "license": "CC-BY-4.0",
+  "blended_wholesale_benchmarks": {
+    "card_present_weighted_ic_pct": 1.48,
+    "card_present_weighted_fixed_usd": 0.09,
+    "online_cnp_weighted_ic_pct": 1.89,
+    "online_cnp_weighted_fixed_usd": 0.11,
+    "b2b_level3_optimized_ic_pct": 1.72,
+    "b2b_level3_optimized_fixed_usd": 0.1,
+    "card_brand_assessment_pct": 0.14,
+    "reg_ii_regulated_debit_cap_pct": 0.05,
+    "reg_ii_regulated_debit_cap_fixed_usd": 0.22,
+    "default_smb_card_mix": {
+      "regulated_debit_share_pct": 28.0,
+      "exempt_debit_share_pct": 10.0,
+      "consumer_rewards_credit_share_pct": 44.0,
+      "b2b_commercial_corporate_share_pct": 18.0
+    }
+  },
+  "official_citations": [
+    {
+      "authority": "Board of Governors of the Federal Reserve System",
+      "title": "Regulation II (Debit Card Interchange Fees and Routing \u2014 12 CFR Part 235)",
+      "url": "https://www.federalreserve.gov/paymentsystems/regii-average-interchange-fee.htm"
+    },
+    {
+      "authority": "Visa USA",
+      "title": "Visa Core Rules and Interchange Reimbursement Fees (April / October 2026)",
+      "url": "https://usa.visa.com/support/small-business/regulations-fees.html"
+    },
+    {
+      "authority": "Mastercard U.S.",
+      "title": "Mastercard U.S. Region Merchant Interchange Rates & Commercial Data Rate II/III",
+      "url": "https://www.mastercard.us/en-us/business/overview/support/merchant-interchange-rates.html"
+    }
+  ],
+  "tiers": [
+    {
+      "tier_id": "reg_ii_regulated_debit_cp",
+      "network": "Visa / Mastercard (Regulated Bank >$10B Assets)",
+      "card_type": "Regulated Consumer Debit (Card-Present)",
+      "environment": "card_present",
+      "interchange_pct": 0.05,
+      "interchange_fixed_usd": 0.22,
+      "network_assessment_pct": 0.14,
+      "effective_wholesale_on_100_ticket_pct": 0.41,
+      "flat_rate_stripe_290_30_on_100_ticket_pct": 3.2,
+      "overpayment_bps_on_flat_rate": 279,
+      "citation_source": "Federal Reserve Regulation II (12 CFR Part 235 \u2014 Durbin Amendment)",
+      "citation_url": "https://www.federalreserve.gov/paymentsystems/regii-average-interchange-fee.htm"
+    },
+    {
+      "tier_id": "reg_ii_regulated_debit_cnp",
+      "network": "Visa / Mastercard (Regulated Bank >$10B Assets)",
+      "card_type": "Regulated Consumer Debit (Online / CNP)",
+      "environment": "online_cnp",
+      "interchange_pct": 0.05,
+      "interchange_fixed_usd": 0.22,
+      "network_assessment_pct": 0.14,
+      "effective_wholesale_on_100_ticket_pct": 0.41,
+      "flat_rate_stripe_290_30_on_100_ticket_pct": 3.2,
+      "overpayment_bps_on_flat_rate": 279,
+      "citation_source": "Federal Reserve Regulation II (12 CFR Part 235)",
+      "citation_url": "https://www.federalreserve.gov/paymentsystems/regii-average-interchange-fee.htm"
+    },
+    {
+      "tier_id": "exempt_debit_cnp",
+      "network": "Visa / Mastercard (Exempt Community Bank <$10B)",
+      "card_type": "Exempt Consumer Debit (Online / CNP)",
+      "environment": "online_cnp",
+      "interchange_pct": 1.65,
+      "interchange_fixed_usd": 0.15,
+      "network_assessment_pct": 0.14,
+      "effective_wholesale_on_100_ticket_pct": 1.94,
+      "flat_rate_stripe_290_30_on_100_ticket_pct": 3.2,
+      "overpayment_bps_on_flat_rate": 126,
+      "citation_source": "Visa USA Core Interchange Reimbursement Fee Schedule (2026)",
+      "citation_url": "https://usa.visa.com/support/small-business/regulations-fees.html"
+    },
+    {
+      "tier_id": "visa_cps_retail_credit_cp",
+      "network": "Visa",
+      "card_type": "CPS Retail Consumer Credit (EMV / Tap Card-Present)",
+      "environment": "card_present",
+      "interchange_pct": 1.65,
+      "interchange_fixed_usd": 0.1,
+      "network_assessment_pct": 0.14,
+      "effective_wholesale_on_100_ticket_pct": 1.89,
+      "flat_rate_stripe_290_30_on_100_ticket_pct": 2.75,
+      "overpayment_bps_on_flat_rate": 86,
+      "citation_source": "Visa USA Interchange Schedule (2026)",
+      "citation_url": "https://usa.visa.com/support/small-business/regulations-fees.html"
+    },
+    {
+      "tier_id": "visa_rewards_ecommerce_cnp",
+      "network": "Visa",
+      "card_type": "Visa Traditional Rewards / Signature (Ecommerce CNP)",
+      "environment": "online_cnp",
+      "interchange_pct": 1.95,
+      "interchange_fixed_usd": 0.1,
+      "network_assessment_pct": 0.14,
+      "effective_wholesale_on_100_ticket_pct": 2.19,
+      "flat_rate_stripe_290_30_on_100_ticket_pct": 3.2,
+      "overpayment_bps_on_flat_rate": 101,
+      "citation_source": "Visa USA Interchange Schedule (2026)",
+      "citation_url": "https://usa.visa.com/support/small-business/regulations-fees.html"
+    },
+    {
+      "tier_id": "mc_world_elite_cnp",
+      "network": "Mastercard",
+      "card_type": "Mastercard World / World Elite Consumer Credit (CNP)",
+      "environment": "online_cnp",
+      "interchange_pct": 2.05,
+      "interchange_fixed_usd": 0.1,
+      "network_assessment_pct": 0.1375,
+      "effective_wholesale_on_100_ticket_pct": 2.29,
+      "flat_rate_stripe_290_30_on_100_ticket_pct": 3.2,
+      "overpayment_bps_on_flat_rate": 91,
+      "citation_source": "Mastercard U.S. Region Interchange Programs (2026)",
+      "citation_url": "https://www.mastercard.us/en-us/business/overview/support/merchant-interchange-rates.html"
+    },
+    {
+      "tier_id": "b2b_commercial_level1_standard",
+      "network": "Visa / Mastercard Commercial",
+      "card_type": "B2B Corporate / Purchasing Card \u2014 Level 1 Unoptimized (Standard CNP)",
+      "environment": "b2b_invoicing",
+      "interchange_pct": 2.7,
+      "interchange_fixed_usd": 0.1,
+      "network_assessment_pct": 0.14,
+      "effective_wholesale_on_100_ticket_pct": 2.94,
+      "flat_rate_stripe_290_30_on_100_ticket_pct": 3.6,
+      "overpayment_bps_on_flat_rate": 66,
+      "citation_source": "Visa Commercial Solutions & Mastercard B2B Interchange (2026)",
+      "citation_url": "https://usa.visa.com/support/small-business/regulations-fees.html"
+    },
+    {
+      "tier_id": "b2b_commercial_level3_optimized",
+      "network": "Visa / Mastercard Commercial (Level-2 / Level-3 Enhanced Data)",
+      "card_type": "B2B Corporate / Purchasing Card \u2014 Level-3 Line-Item Optimized",
+      "environment": "b2b_invoicing",
+      "interchange_pct": 1.9,
+      "interchange_fixed_usd": 0.1,
+      "network_assessment_pct": 0.14,
+      "effective_wholesale_on_100_ticket_pct": 2.14,
+      "flat_rate_stripe_290_30_on_100_ticket_pct": 3.6,
+      "overpayment_bps_on_flat_rate": 146,
+      "citation_source": "Visa Commercial Level-2/Level-3 Data Rate Table (2026)",
+      "citation_url": "https://usa.visa.com/support/small-business/regulations-fees.html"
+    }
+  ]
+}

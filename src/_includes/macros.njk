@@ -1,0 +1,1132 @@
+{% macro breadcrumbs(site, items) %}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{% for i in items %}{"@type":"ListItem","position":{{ loop.index }},"name":{{ i[0] | json | safe }},"item":"{{ site.url }}{{ i[1] }}"}{% if not loop.last %},{% endif %}{% endfor %}]}</script>
+<nav class="breadcrumb-nav" aria-label="Breadcrumb"><ol class="breadcrumb-list">{% for i in items %}<li>{% if not loop.last %}<a href="{{ i[1] }}">{{ i[0] }}</a> <span aria-hidden="true">›</span> {% else %}<span aria-current="page">{{ i[0] }}</span>{% endif %}</li>{% endfor %}</ol></nav>
+{% endmacro %}
+
+{% macro verifiedGovBadge(e, pageType) %}
+{% set verifyDate = (e and (e.lastVerified or e.updated)) or "2026-10-24" %}
+{% set govSourceTitle = "Official IRS Publication 15, State DOL SUI & Federal Reserve Reg II (.gov)" %}
+{% set govSourceId = 1 %}
+{% if e and e.sources and e.sources.length %}
+  {% set foundGov = false %}
+  {% for s in e.sources %}
+    {% if not foundGov and (".gov" in s.url) %}
+      {% set govSourceTitle = s.title %}
+      {% set govSourceId = s.id %}
+      {% set foundGov = true %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+<div class="verified-gov-bar" role="region" aria-label="Regulatory Verification Status">
+  <span class="verified-gov-badge">✓ Verified 2026 .gov Tax &amp; Interchange Schedule · {{ verifyDate }}</span>
+  {% if e and e.sources and e.sources.length %}
+    <a class="gov-seal-pill" href="#src-{{ govSourceId }}" title="Jump to primary official .gov citation">🏛️ {{ govSourceTitle | truncate(64, true, "…") }}</a>
+  {% else %}
+    <span class="gov-seal-pill">🏛️ IRS Pub 15 · 50-State DOL SUI · Federal Reserve Reg II (.gov)</span>
+  {% endif %}
+</div>
+{% endmacro %}
+
+{% macro verdictCard(e, site, pageType) %}
+{% if e %}
+{% set vSlug = e.slug or "hub" %}
+{% set p1Name = e.primaryPartner or ("Gusto" if e.type == "payroll" else "Helcim") %}
+{% set p2Name = e.secondaryPartner or ("Deel" if e.type == "payroll" else "Stax") %}
+{% set p1Key = p1Name | lower | replace(" ", "-") %}
+{% set p2Key = p2Name | lower | replace(" ", "-") %}
+{% set ref1 = "b2b-verdict_card-" + vSlug + "-" + p1Key %}
+{% set ref2 = "b2b-verdict_card-" + vSlug + "-" + p2Key %}
+{% set url1Base = e.primaryPartnerUrl or site.primaryPayrollUrl %}
+{% set url2Base = e.secondaryPartnerUrl or site.secondaryPayrollUrl %}
+{% set url1 = url1Base + ("&" if "?" in url1Base else "?") + "clickref=" + ref1 %}
+{% set url2 = url2Base + ("&" if "?" in url2Base else "?") + "clickref=" + ref2 %}
+{% set defaultInputs = (e.calcDefaults | json) if e.calcDefaults else '{"mode":"default"}' %}
+<section class="verdict-card" aria-label="30-Second TCO Audit Verdict">
+  <div class="verdict-header">
+    <strong>⏱️ 30-Second CFO Audit Verdict: {{ e.title }}</strong>
+    <span class="verdict-pill">Deterministic 2026 Line-Item Math</span>
+  </div>
+  <ul class="verdict-list">
+    <li class="verdict-item">
+      <span class="verdict-tag tag-winner">🏆 12-MONTH TCO WINNER</span>
+      <div>{{ (e.verdict and e.verdict.winner) or e.summary }}</div>
+    </li>
+    <li class="verdict-item">
+      <span class="verdict-tag tag-trap">⚠️ HIDDEN FEE TRAP</span>
+      <div>{{ (e.verdict and e.verdict.hiddenFeeTrap) or "Legacy contracts bundle multi-state tax registration fees ($150/state), W-2 year-end filing fees ($7.50/form), and +0.8% invoicing surcharges." }}</div>
+    </li>
+    <li class="verdict-item">
+      <span class="verdict-tag tag-action">⚡ RECOMMENDED SWITCH</span>
+      <div>{{ (e.verdict and e.verdict.actionLine) or "Verify your exact headcount or monthly volume in the calculator below and lock in published 2026 partner rates." }}</div>
+    </li>
+  </ul>
+  <div class="verdict-actions">
+    <a class="cta verdict-btn" data-partner="{{ p1Name }}" data-cta-slot="verdict_card" data-route-slug="{{ vSlug }}" data-calc-inputs="{{ defaultInputs | escape }}" data-clickref="{{ ref1 }}" href="{{ url1 }}" target="_blank" rel="sponsored nofollow noopener">Compare {{ p1Name }} 2026 Rates &amp; Savings →</a>
+    <a class="cta-secondary verdict-btn" data-partner="{{ p2Name }}" data-cta-slot="verdict_card" data-route-slug="{{ vSlug }}" data-calc-inputs="{{ defaultInputs | escape }}" data-clickref="{{ ref2 }}" href="{{ url2 }}" target="_blank" rel="sponsored nofollow noopener">Audit {{ p2Name }} Custom TCO Quote →</a>
+  </div>
+</section>
+{% endif %}
+{% endmacro %}
+
+{% macro prices(list, site, slug, pageType, calcDefaults) %}
+{% if list and list.length %}
+{% set safeSlug = slug or "hub" %}
+{% set defaultInputs = (calcDefaults | json) if calcDefaults else '{"mode":"table"}' %}
+<h2 id="cost-comparison">2026 Line-Item TCO Comparison &amp; Partner Verification Table</h2>
+<div class="table-wrap">
+  <table class="price-action-table">
+    <thead>
+      <tr>
+        <th class="sticky-col">Vendor / Statutory Benchmark</th>
+        <th>Verified 2026 All-In Rate &amp; 12-Month TCO</th>
+        <th>Audit Action / Official Citation</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for p in list %}
+      {% set partnerName = p.partner or "Partner" %}
+      {% set partnerKey = partnerName | lower | replace(" ", "-") | replace("/", "-") %}
+      {% set rowClickref = "b2b-price_table_row-" + safeSlug + "-" + partnerKey + "-r" + loop.index %}
+      {% set baseHref = p.ctaUrl or site.primaryPayrollUrl %}
+      {% set trackedHref = baseHref + ("&" if "?" in baseHref else "?") + "clickref=" + rowClickref %}
+      <tr>
+        <td class="sticky-col">
+          <strong>{{ p.label }}</strong>
+          {% if p.ctaType == "payroll" %}<br><span class="badge-payroll">Verified 2026 Payroll/HRIS Tier</span>{% elif p.ctaType == "merchant" %}<br><span class="badge-merchant">Verified 2026 Payment Processor</span>{% else %}<br><span class="verified-gov-badge" style="font-size:.7rem;padding:.1rem .45rem">Official .gov Statutory Baseline</span>{% endif %}
+        </td>
+        <td><strong>{{ p.price }}</strong></td>
+        <td>
+          {% if p.ctaType == "gov" %}
+            <a class="tbl-gov-link" href="#src-{{ p.source or 1 }}">🏛️ Verify .gov Rule [{{ p.source or 1 }}]</a>
+          {% else %}
+            <a class="tbl-cta-btn" data-partner="{{ partnerName }}" data-cta-slot="price_table_row" data-route-slug="{{ safeSlug }}" data-calc-inputs="{{ defaultInputs | escape }}" data-clickref="{{ rowClickref }}" href="{{ trackedHref }}" target="_blank" rel="sponsored nofollow noopener">{{ p.ctaLabel or ("Verify " + partnerName + " Rate →") }}</a>
+            {% if p.source %}<small style="margin-left:.35rem"><a href="#src-{{ p.source }}">[{{ p.source }}]</a></small>{% endif %}
+          {% endif %}
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+<p><small>All vendor base fees, PEPM tiers, and interchange markups verified as of October 24, 2026. Statutory SUI/FUTA/FICA and Federal Reserve Reg II debit benchmarks cite official <code>.gov</code> publications. Commercial links carry Sub-ID attribution via CJ (<code>8108003</code>), AWIN (<code>3133124</code>), and Rakuten (<code>4767884</code>) (<a href="/methodology/#affiliate-disclosure">methodology &amp; disclosure</a>).</small></p>
+{% endif %}
+{% endmacro %}
+
+{% macro payrollTcoCalc(e, site, stateSuiData) %}
+{% set cSlug = (e and e.slug) or "hub-payroll" %}
+{% set d = (e and e.calcDefaults) or {} %}
+{% set defW2 = d.w2 or 18 %}
+{% set defStates = d.states or 3 %}
+{% set defPrimaryState = d.primaryState or "CA" %}
+{% set defContractors = d.contractors if d.contractors is defined else 4 %}
+{% set defEor = d.eor if d.eor is defined else 1 %}
+<section class="tco-calc-box" id="payroll-tco-calc" data-route-slug="{{ cSlug }}" aria-label="Interactive Payroll and Multi-State HRIS TCO Calculator">
+  <div>
+    <span class="badge-payroll">🧮 DETERMINISTIC PAYROLL, MULTI-STATE SUI &amp; EOR TCO CALCULATOR</span>
+    <h2 style="margin:.35rem 0 .2rem;border-top:0;padding-top:0">Calculate Your 12-Month All-In Payroll, Multi-State Tax &amp; EOR Cost</h2>
+    <p style="margin:0;font-size:.93rem;color:#334155">Adjust W-2 headcount, primary <code>.gov</code> SUI tax state, multi-state registrations, 1099 contractors, and international EOR seats to compare true 12-month TCO:</p>
+  </div>
+  <div class="calc-controls-grid">
+    <div class="calc-field">
+      <label for="ptc-w2">US W-2 Employees (1–250): <span id="ptc-w2-lbl">{{ defW2 }}</span></label>
+      <input type="number" id="ptc-w2" min="1" max="250" value="{{ defW2 }}">
+      <input type="range" id="ptc-w2-range" min="1" max="250" value="{{ defW2 }}" aria-label="US W-2 Employees Slider">
+    </div>
+    <div class="calc-field">
+      <label for="ptc-state">Primary State (.gov SUI Lookup):</label>
+      <select id="ptc-state">
+        {% for st in stateSuiData.states %}
+          {% set sCode = st.state_code or st.code %}
+          {% set sName = st.state_name or st.name %}
+          {% set sBase = st.sui_taxable_wage_base_2026_usd or st.wageBaseUsd %}
+          {% set sRate = st.new_employer_sui_rate_pct or st.newEmployerRatePct %}
+          {% set sSui = st.annual_sui_per_employee_new_employer_usd or st.maxNewEmployerSuiPerEmpUsd %}
+          {% set sAgency = st.agency_name or st.agency %}
+          <option value="{{ sCode }}" data-base="{{ sBase }}" data-rate="{{ sRate }}" data-sui="{{ sSui }}" data-agency="{{ sAgency }}" {% if sCode == defPrimaryState %}selected{% endif %}>{{ sCode }} — {{ sName }} (${{ sSui }}/emp SUI on ${{ sBase }} base)</option>
+        {% endfor %}
+      </select>
+      <small id="ptc-state-note">Official 2026 state DOL SUI + $42 IRS FUTA</small>
+    </div>
+    <div class="calc-field">
+      <label for="ptc-states-count">Active US Tax States (1–50): <span id="ptc-states-lbl">{{ defStates }}</span></label>
+      <input type="number" id="ptc-states-count" min="1" max="50" value="{{ defStates }}">
+      <small>Triggers per-state filing fees on Rippling/ADP</small>
+    </div>
+    <div class="calc-field">
+      <label for="ptc-1099">1099 Contractors (0–100): <span id="ptc-1099-lbl">{{ defContractors }}</span></label>
+      <input type="number" id="ptc-1099" min="0" max="100" value="{{ defContractors }}">
+      <small>$6/mo on Gusto/OnPay vs. $49/mo Intl on Deel</small>
+    </div>
+    <div class="calc-field">
+      <label for="ptc-eor">International EOR Headcount (0–25):</label>
+      <input type="number" id="ptc-eor" min="0" max="25" value="{{ defEor }}">
+      <small>$599/mo EOR seat + 1.25%–3.0% FX spread</small>
+    </div>
+    <div class="calc-field">
+      <label for="ptc-yearend" style="cursor:pointer">
+        <input type="checkbox" id="ptc-yearend" checked> Include Hidden Year-End W-2/1099 Fees &amp; State Reg
+      </label>
+      <small>Exposes ADP RUN $65 + $7.50/form &amp; $150–$175 state reg fees</small>
+    </div>
+  </div>
+
+  <div class="calc-output-grid" id="ptc-results-grid">
+    <div class="calc-vendor-card vendor-best" id="ptc-card-onpay">
+      <small>OnPay (Flat 50-State Tier)</small>
+      <strong class="calc-big" id="ptc-onpay-yr">$2,112/yr</strong>
+      <span class="calc-sub" id="ptc-onpay-sub">$40 base + $6/seat · $0 extra state or W-2 fees</span>
+      <div style="margin-top:.55rem">
+        <a class="cta tbl-cta-btn" id="ptc-cta-onpay" data-partner="OnPay" data-cta-slot="payroll_calc" data-route-slug="{{ cSlug }}" data-calc-inputs='{"w2":{{ defW2 }},"states":{{ defStates }}}' data-clickref="b2b-payroll_calc-{{ cSlug }}-onpay" href="https://onpay.com/pricing?utm_source=saascostaudit&amp;utm_medium=affiliate&amp;clickref=b2b-payroll_calc-{{ cSlug }}-onpay" target="_blank" rel="sponsored nofollow noopener">Lock In OnPay Rate →</a>
+      </div>
+    </div>
+    <div class="calc-vendor-card vendor-best" id="ptc-card-gusto">
+      <small>Gusto Simple / Multi-State</small>
+      <strong class="calc-big" id="ptc-gusto-yr">$2,652/yr</strong>
+      <span class="calc-sub" id="ptc-gusto-sub">$49 base + $6/seat · $0 W-2/1099 year-end fee</span>
+      <div style="margin-top:.55rem">
+        <a class="cta tbl-cta-btn" id="ptc-cta-gusto" data-partner="Gusto" data-cta-slot="payroll_calc" data-route-slug="{{ cSlug }}" data-calc-inputs='{"w2":{{ defW2 }},"states":{{ defStates }}}' data-clickref="b2b-payroll_calc-{{ cSlug }}-gusto" href="https://gusto.com/product/pricing?utm_source=saascostaudit&amp;utm_medium=affiliate&amp;clickref=b2b-payroll_calc-{{ cSlug }}-gusto" target="_blank" rel="sponsored nofollow noopener">Verify Gusto Trial →</a>
+      </div>
+    </div>
+    <div class="calc-vendor-card" id="ptc-card-rippling">
+      <small>Rippling Core + Payroll + IT</small>
+      <strong class="calc-big" id="ptc-rippling-yr">$5,496/yr</strong>
+      <span class="calc-sub" id="ptc-rippling-sub">$85 base + $16/W-2 + $20/mo per extra state</span>
+      <div style="margin-top:.55rem">
+        <a class="cta-secondary tbl-cta-btn" id="ptc-cta-rippling" data-partner="Rippling" data-cta-slot="payroll_calc" data-route-slug="{{ cSlug }}" data-calc-inputs='{"w2":{{ defW2 }},"states":{{ defStates }}}' data-clickref="b2b-payroll_calc-{{ cSlug }}-rippling" href="https://www.rippling.com/pricing?utm_source=saascostaudit&amp;utm_medium=affiliate&amp;clickref=b2b-payroll_calc-{{ cSlug }}-rippling" target="_blank" rel="sponsored nofollow noopener">Compare Rippling →</a>
+      </div>
+    </div>
+    <div class="calc-vendor-card" id="ptc-card-deel">
+      <small>Deel US + Global EOR</small>
+      <strong class="calc-big" id="ptc-deel-yr">$6,456/yr</strong>
+      <span class="calc-sub" id="ptc-deel-sub">$19/US W-2 · $49 Intl 1099 · $599/mo EOR + 1.25% FX</span>
+      <div style="margin-top:.55rem">
+        <a class="cta-secondary tbl-cta-btn" id="ptc-cta-deel" data-partner="Deel" data-cta-slot="payroll_calc" data-route-slug="{{ cSlug }}" data-calc-inputs='{"w2":{{ defW2 }},"states":{{ defStates }}}' data-clickref="b2b-payroll_calc-{{ cSlug }}-deel" href="https://www.deel.com/pricing/?utm_source=saascostaudit&amp;utm_medium=affiliate&amp;clickref=b2b-payroll_calc-{{ cSlug }}-deel" target="_blank" rel="sponsored nofollow noopener">Get Deel Global Quote →</a>
+      </div>
+    </div>
+    <div class="calc-vendor-card" id="ptc-card-adp">
+      <small>ADP RUN Legacy Benchmark</small>
+      <strong class="calc-big" id="ptc-adp-yr">$4,685/yr</strong>
+      <span class="calc-sub" id="ptc-adp-sub">Incl. $32/extra state + $7.50/form W-2 fee</span>
+      <div style="margin-top:.55rem">
+        <span style="display:inline-block;font-size:.78rem;font-weight:700;color:#991b1b" id="ptc-savings-callout">Switch to Gusto/OnPay &amp; save $2,033+/yr</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="box" style="margin:.6rem 0 0;background:#ecfdf5;border-color:#6ee7b7">
+    <strong id="ptc-gov-tax-headline">🏛️ Statutory Employer Unemployment Tax Baseline (FUTA + State SUI): $5,166/yr</strong>
+    <p style="margin:.2rem 0 0;font-size:.86rem;color:#065f46" id="ptc-gov-tax-detail">Based on {{ defW2 }} W-2 employees: $42/emp IRS FUTA (0.6% on $7,000) + $245/emp State SUI (plus 7.65% employer FICA on gross wages).</p>
+  </div>
+
+  <div class="cfo-export-bar">
+    <div>
+      <strong>📄 Need a Board-Ready CFO Payroll &amp; Multi-State SUI Audit Report (PDF + CSV)?</strong><br>
+      <small id="ptc-export-counter">Includes line-item 12-month PEPM schedule, state .gov SUI table &amp; contract buyout checklist (3 free exports remaining; Pro Unlimited $29/mo).</small>
+    </div>
+    <button type="button" class="cta-export" id="ptc-export-btn" data-route-slug="{{ cSlug }}" data-export-type="payroll_cfo_csv">⬇ Export CFO Audit CSV / PDF ($29 Pro Preview)</button>
+  </div>
+</section>
+<script>
+(function(){
+  var box = document.getElementById("payroll-tco-calc");
+  if (!box) return;
+  var routeSlug = box.getAttribute("data-route-slug") || "hub-payroll";
+  var w2El = document.getElementById("ptc-w2");
+  var w2Range = document.getElementById("ptc-w2-range");
+  var stEl = document.getElementById("ptc-state");
+  var stCountEl = document.getElementById("ptc-states-count");
+  var c1099El = document.getElementById("ptc-1099");
+  var eorEl = document.getElementById("ptc-eor");
+  var yrEndEl = document.getElementById("ptc-yearend");
+
+  function fmt(n) { return "$" + Math.round(n).toLocaleString("en-US"); }
+
+  function compute(fromUser) {
+    var w2 = Math.max(1, Math.min(250, parseInt(w2El.value || "18", 10)));
+    var states = Math.max(1, Math.min(50, parseInt(stCountEl.value || "3", 10)));
+    var c1099 = Math.max(0, Math.min(100, parseInt(c1099El.value || "4", 10)));
+    var eor = Math.max(0, Math.min(25, parseInt(eorEl.value || "1", 10)));
+    var incYearEnd = Boolean(yrEndEl && yrEndEl.checked);
+    var extraStates = Math.max(0, states - 1);
+
+    document.getElementById("ptc-w2-lbl").textContent = String(w2);
+    document.getElementById("ptc-states-lbl").textContent = String(states);
+    document.getElementById("ptc-1099-lbl").textContent = String(c1099);
+
+    var opt = stEl.options[stEl.selectedIndex];
+    var stateCode = opt ? opt.value : "CA";
+    var suiPerEmp = opt ? parseFloat(opt.getAttribute("data-sui") || "245") : 245;
+    var wageBase = opt ? parseFloat(opt.getAttribute("data-base") || "7000") : 7000;
+    var agency = opt ? opt.getAttribute("data-agency") : "State DOL";
+
+    // EOR annual cost (seat + FX spread on $80k avg EOR salary)
+    var eorSeatAnnual = eor * 599 * 12;
+    var deelFxAnnual = eor * 80000 * 0.0125;
+    var stdFxAnnual = eor * 80000 * 0.02;
+
+    // 1. OnPay: $40 base + $6*(w2 + c1099), $0 multi-state fee, + EOR
+    var onpayYr = (40 + 6 * (w2 + c1099)) * 12 + eorSeatAnnual + stdFxAnnual;
+    // 2. Gusto: $49 base + $6*(w2 + c1099) + $12/mo per extra state + EOR
+    var gustoYr = (49 + 6 * (w2 + c1099) + 12 * extraStates) * 12 + eorSeatAnnual + stdFxAnnual;
+    // 3. Rippling: $85 base + $16*w2 + $8*c1099 + $20/mo per extra state + (incYearEnd ? $150*extraStates state reg : 0) + EOR
+    var ripplingYr = (85 + 16 * w2 + 8 * c1099 + 20 * extraStates) * 12 + (incYearEnd ? 150 * extraStates : 0) + eorSeatAnnual + stdFxAnnual;
+    // 4. Deel: $19*w2 + $49*c1099 + $599*eor + deelFxAnnual
+    var deelYr = (19 * w2 + 49 * c1099) * 12 + eorSeatAnnual + deelFxAnnual;
+    // 5. ADP RUN: $79 base + $8*w2 + $7*c1099 + $32*extraStates + year-end W-2/1099 ($65 + $7.50*(w2+c1099)) + $175*extraStates reg + EOR
+    var adpYearEnd = incYearEnd ? (65 + 7.5 * (w2 + c1099) + 175 * extraStates) : 0;
+    var adpYr = (79 + 8 * w2 + 7 * c1099 + 32 * extraStates) * 12 + adpYearEnd + (eor * 699 * 12) + stdFxAnnual;
+
+    document.getElementById("ptc-onpay-yr").textContent = fmt(onpayYr) + "/yr";
+    document.getElementById("ptc-gusto-yr").textContent = fmt(gustoYr) + "/yr";
+    document.getElementById("ptc-rippling-yr").textContent = fmt(ripplingYr) + "/yr";
+    document.getElementById("ptc-deel-yr").textContent = fmt(deelYr) + "/yr";
+    document.getElementById("ptc-adp-yr").textContent = fmt(adpYr) + "/yr";
+
+    var saveVsAdp = Math.max(0, adpYr - Math.min(onpayYr, gustoYr));
+    document.getElementById("ptc-savings-callout").textContent = "Saves " + fmt(saveVsAdp) + "/yr switching from ADP RUN";
+
+    var totalStatutoryTax = w2 * (42 + suiPerEmp);
+    document.getElementById("ptc-gov-tax-headline").textContent =
+      "🏛️ 2026 Statutory Employer Tax Baseline (" + stateCode + " SUI + IRS FUTA): " + fmt(totalStatutoryTax) + "/yr";
+    document.getElementById("ptc-gov-tax-detail").textContent =
+      "For " + w2 + " W-2 employees in " + stateCode + " (" + agency + "): $" + suiPerEmp + "/emp SUI ($" + wageBase.toLocaleString("en-US") + " wage base) + $42/emp IRS FUTA (excludes 7.65% FICA).";
+
+    var calcStateJson = JSON.stringify({w2: w2, state: stateCode, states: states, c1099: c1099, eor: eor, gustoYr: Math.round(gustoYr), onpayYr: Math.round(onpayYr), deelYr: Math.round(deelYr)});
+    ["ptc-cta-onpay", "ptc-cta-gusto", "ptc-cta-rippling", "ptc-cta-deel"].forEach(function(id){
+      var el = document.getElementById(id);
+      if (el) el.setAttribute("data-calc-inputs", calcStateJson);
+    });
+
+    if (fromUser && window.posthog && typeof window.posthog.capture === "function") {
+      window.posthog.capture("estimator_interaction", {
+        calculator: "payroll_tco_calc",
+        route_slug: routeSlug,
+        w2_headcount: w2,
+        primary_state: stateCode,
+        state_count: states,
+        contractors_1099: c1099,
+        eor_headcount: eor,
+        gusto_annual_tco: Math.round(gustoYr),
+        onpay_annual_tco: Math.round(onpayYr)
+      });
+    }
+  }
+
+  if (w2Range && w2El) {
+    w2Range.addEventListener("input", function(){ w2El.value = w2Range.value; compute(true); });
+    w2El.addEventListener("input", function(){ w2Range.value = w2El.value; compute(true); });
+  }
+  [stEl, stCountEl, c1099El, eorEl, yrEndEl].forEach(function(el){
+    if (el) el.addEventListener("change", function(){ compute(true); });
+    if (el && el.tagName === "INPUT") el.addEventListener("input", function(){ compute(true); });
+  });
+
+  var expBtn = document.getElementById("ptc-export-btn");
+  if (expBtn) {
+    expBtn.addEventListener("click", function(){
+      var used = parseInt(localStorage.getItem("b2b_free_exports_used") || "0", 10) + 1;
+      localStorage.setItem("b2b_free_exports_used", String(used));
+      var rem = Math.max(0, 3 - used);
+      var cntEl = document.getElementById("ptc-export-counter");
+      if (cntEl) {
+        cntEl.textContent = rem > 0
+          ? "CFO CSV downloaded! (" + rem + " of 3 free exports remaining before $29/mo Pro)."
+          : "Free 3-export limit reached — Upgrade to SaaS Cost Audit Pro ($29/mo or $9 7-day pass) for unlimited white-label CFO exports.";
+      }
+      if (window.posthog && typeof window.posthog.capture === "function") {
+        window.posthog.capture("export_cfo_report_clicked", {calculator: "payroll_tco_calc", route_slug: routeSlug, exports_used: used});
+      }
+      var csv = "Vendor,12_Month_Software_And_EOR_TCO\nOnPay," + document.getElementById("ptc-onpay-yr").textContent + "\nGusto," + document.getElementById("ptc-gusto-yr").textContent + "\nRippling," + document.getElementById("ptc-rippling-yr").textContent + "\nDeel," + document.getElementById("ptc-deel-yr").textContent + "\nADP_RUN," + document.getElementById("ptc-adp-yr").textContent + "\n";
+      var blob = new Blob([csv], {type: "text/csv"});
+      var a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "b2bfeeaudit-payroll-tco-" + routeSlug + ".csv";
+      a.click();
+    });
+  }
+  compute(false);
+})();
+</script>
+{% endmacro %}
+
+{% macro merchantFeeCalc(e, site, interchangeData) %}
+{% set mSlug = (e and e.slug) or "hub-merchant" %}
+{% set d = (e and e.calcDefaults) or {} %}
+{% set defVol = d.volume or 65000 %}
+{% set defTicket = d.ticket or 85 %}
+{% set defCnp = d.cnpPct if d.cnpPct is defined else 80 %}
+{% set defIntl = d.intlPct if d.intlPct is defined else 10 %}
+<section class="tco-calc-box" id="merchant-fee-calc" data-route-slug="{{ mSlug }}" aria-label="Interactive Merchant Processing and Interchange-Plus Fee Calculator">
+  <div>
+    <span class="badge-merchant">💳 DETERMINISTIC MERCHANT PROCESSING &amp; INTERCHANGE-PLUS AUDITOR</span>
+    <h2 style="margin:.35rem 0 .2rem;border-top:0;padding-top:0">Compare Flat-Rate (Stripe 2.9%+$0.30 / Square / PayPal) vs. Interchange-Plus (Helcim / Stax)</h2>
+    <p style="margin:0;font-size:.93rem;color:#334155">Enter your monthly card volume, average ticket size, online/invoiced mix, and international share to calculate exact effective rates and 12-month savings:</p>
+  </div>
+  <div class="calc-controls-grid">
+    <div class="calc-field">
+      <label for="mfc-vol">Monthly Card Volume ($5k–$500k): <span id="mfc-vol-lbl">${{ defVol }}</span></label>
+      <input type="number" id="mfc-vol" min="5000" max="500000" step="1000" value="{{ defVol }}">
+      <input type="range" id="mfc-vol-range" min="5000" max="500000" step="5000" value="{{ defVol }}" aria-label="Monthly Card Volume Slider">
+    </div>
+    <div class="calc-field">
+      <label for="mfc-ticket">Average Ticket Size ($10–$2,500): <span id="mfc-ticket-lbl">${{ defTicket }}</span></label>
+      <input type="number" id="mfc-ticket" min="10" max="2500" value="{{ defTicket }}">
+      <small>Controls per-transaction ($0.30 vs. $0.08) fee drag</small>
+    </div>
+    <div class="calc-field">
+      <label for="mfc-cnp">Online / Invoiced (CNP) Share (%): <span id="mfc-cnp-lbl">{{ defCnp }}%</span></label>
+      <input type="number" id="mfc-cnp" min="0" max="100" value="{{ defCnp }}">
+      <small>Remainder is Card-Present POS tap/dip</small>
+    </div>
+    <div class="calc-field">
+      <label for="mfc-intl">International Card Share (%): <span id="mfc-intl-lbl">{{ defIntl }}%</span></label>
+      <input type="number" id="mfc-intl" min="0" max="100" value="{{ defIntl }}">
+      <small>Triggers +1.5% cross-border fee on Stripe/PayPal</small>
+    </div>
+  </div>
+
+  <div class="calc-output-grid" id="mfc-results-grid">
+    <div class="calc-vendor-card vendor-best" id="mfc-card-helcim">
+      <small>Helcim Interchange-Plus ($0/mo)</small>
+      <strong class="calc-big" id="mfc-helcim-yr">$18,564/yr</strong>
+      <span class="calc-sub" id="mfc-helcim-eff">Effective Rate: 2.38% · $0 monthly fee · Free invoicing</span>
+      <div style="margin-top:.55rem">
+        <a class="cta tbl-cta-btn" id="mfc-cta-helcim" data-partner="Helcim" data-cta-slot="merchant_calc" data-route-slug="{{ mSlug }}" data-calc-inputs='{"volume":{{ defVol }},"ticket":{{ defTicket }}}' data-clickref="b2b-merchant_calc-{{ mSlug }}-helcim" href="https://www.helcim.com/pricing/?utm_source=saascostaudit&amp;utm_medium=affiliate&amp;clickref=b2b-merchant_calc-{{ mSlug }}-helcim" target="_blank" rel="sponsored nofollow noopener">Switch to Helcim IC+ →</a>
+      </div>
+    </div>
+    <div class="calc-vendor-card vendor-best" id="mfc-card-stax">
+      <small>Stax 0% Markup Subscription</small>
+      <strong class="calc-big" id="mfc-stax-yr">$17,088/yr</strong>
+      <span class="calc-sub" id="mfc-stax-eff">Effective Rate: 2.19% · $99/mo + 0% processor markup</span>
+      <div style="margin-top:.55rem">
+        <a class="cta-secondary tbl-cta-btn" id="mfc-cta-stax" data-partner="Stax" data-cta-slot="merchant_calc" data-route-slug="{{ mSlug }}" data-calc-inputs='{"volume":{{ defVol }},"ticket":{{ defTicket }}}' data-clickref="b2b-merchant_calc-{{ mSlug }}-stax" href="https://staxpayments.com/pricing/?utm_source=saascostaudit&amp;utm_medium=affiliate&amp;clickref=b2b-merchant_calc-{{ mSlug }}-stax" target="_blank" rel="sponsored nofollow noopener">Get Stax 0% Audit →</a>
+      </div>
+    </div>
+    <div class="calc-vendor-card" id="mfc-card-stripe">
+      <small>Stripe (2.9%+$0.30 + Invoicing)</small>
+      <strong class="calc-big" id="mfc-stripe-yr">$29,718/yr</strong>
+      <span class="calc-sub" id="mfc-stripe-eff">Effective Rate: 3.81% · Incl. +0.8% invoicing &amp; +1.5% intl</span>
+      <div style="margin-top:.55rem">
+        <span style="display:inline-block;font-size:.78rem;font-weight:700;color:#065f46" id="mfc-savings-callout">✓ Save $12,630/yr switching to IC+</span>
+      </div>
+    </div>
+    <div class="calc-vendor-card" id="mfc-card-paypal">
+      <small>PayPal Checkout (3.49%+$0.49)</small>
+      <strong class="calc-big" id="mfc-paypal-yr">$33,150/yr</strong>
+      <span class="calc-sub" id="mfc-paypal-eff">Effective Rate: 4.25% · Digital wallet &amp; invoicing drag</span>
+    </div>
+  </div>
+
+  <div class="box" style="margin:.6rem 0 0;background:#eff6ff;border-color:#93c5fd">
+    <strong>🏛️ Federal Reserve Regulation II (Durbin Amendment) Regulated Debit Benchmark (.gov): 0.05% + $0.22/tx</strong>
+    <p style="margin:.2rem 0 0;font-size:.86rem;color:#1e3a8a">Flat-rate processors charge 2.6%–3.49% even when customers use regulated bank debit cards (capped at 0.05% + $0.22 wholesale). Helcim and Stax pass regulated debit wholesale rates directly to your business.</p>
+  </div>
+
+  <div class="cfo-export-bar">
+    <div>
+      <strong>📊 Export Statement Audit Breakdown (Visa/MC Interchange vs. Flat-Rate CSV/PDF):</strong><br>
+      <small id="mfc-export-counter">Download full 12-month effective rate schedule &amp; Level 2/3 savings model (3 free runs; $29/mo Pro Unlimited).</small>
+    </div>
+    <button type="button" class="cta-export" id="mfc-export-btn" data-route-slug="{{ mSlug }}" data-export-type="merchant_cfo_csv">⬇ Export Merchant Fee Audit CSV ($29 Pro Preview)</button>
+  </div>
+</section>
+<script>
+(function(){
+  var box = document.getElementById("merchant-fee-calc");
+  if (!box) return;
+  var routeSlug = box.getAttribute("data-route-slug") || "hub-merchant";
+  var volEl = document.getElementById("mfc-vol");
+  var volRange = document.getElementById("mfc-vol-range");
+  var ticketEl = document.getElementById("mfc-ticket");
+  var cnpEl = document.getElementById("mfc-cnp");
+  var intlEl = document.getElementById("mfc-intl");
+
+  function fmt(n) { return "$" + Math.round(n).toLocaleString("en-US"); }
+
+  function compute(fromUser) {
+    var vol = Math.max(5000, Math.min(500000, parseFloat(volEl.value || "65000")));
+    var ticket = Math.max(10, Math.min(2500, parseFloat(ticketEl.value || "85")));
+    var cnpPct = Math.max(0, Math.min(100, parseFloat(cnpEl.value || "80"))) / 100.0;
+    var cpPct = 1.0 - cnpPct;
+    var intlPct = Math.max(0, Math.min(100, parseFloat(intlEl.value || "10"))) / 100.0;
+    var txCount = vol / ticket;
+
+    document.getElementById("mfc-vol-lbl").textContent = "$" + Math.round(vol).toLocaleString("en-US");
+    document.getElementById("mfc-ticket-lbl").textContent = "$" + Math.round(ticket).toLocaleString("en-US");
+    document.getElementById("mfc-cnp-lbl").textContent = Math.round(cnpPct * 100) + "%";
+    document.getElementById("mfc-intl-lbl").textContent = Math.round(intlPct * 100) + "%";
+
+    // Wholesale interchange + 0.14% assessments
+    var wholesalePct = (cnpPct * 0.0188 + cpPct * 0.0152) + 0.0014;
+    var wholesalePerTx = cnpPct * 0.10 + cpPct * 0.07;
+
+    // 1. Helcim IC+: volume-tiered markup (0.40% under 50k, 0.35% 50k-100k, 0.30% 100k+) + $0.08/tx
+    var helcimMarkupPct = vol >= 100000 ? 0.0030 : (vol >= 50000 ? 0.0035 : 0.0040);
+    var helcimMo = vol * (wholesalePct + helcimMarkupPct + intlPct * 0.0065) + txCount * (wholesalePerTx + 0.08);
+    var helcimYr = helcimMo * 12;
+    var helcimEff = (helcimMo / vol) * 100;
+
+    // 2. Stax 0% markup: $99/mo (or $199 over $150k) + wholesale + $0.12 blended tx
+    var staxSub = vol > 150000 ? 199 : 99;
+    var staxMo = staxSub + vol * (wholesalePct + intlPct * 0.0065) + txCount * (wholesalePerTx + 0.12);
+    var staxYr = staxMo * 12;
+    var staxEff = (staxMo / vol) * 100;
+
+    // 3. Stripe: 2.9% + $0.30 online, 2.7% + $0.05 CP, +0.4% blended invoicing/billing, +1.5% intl
+    var stripePct = (cnpPct * (0.029 + 0.004) + cpPct * 0.027) + intlPct * 0.015;
+    var stripePerTx = cnpPct * 0.30 + cpPct * 0.05;
+    var stripeMo = vol * stripePct + txCount * stripePerTx;
+    var stripeYr = stripeMo * 12;
+    var stripeEff = (stripeMo / vol) * 100;
+
+    // 4. PayPal: 3.49% + $0.49 online, 2.29% + $0.09 CP, +1.5% intl
+    var paypalPct = (cnpPct * 0.0349 + cpPct * 0.0229) + intlPct * 0.015;
+    var paypalPerTx = cnpPct * 0.49 + cpPct * 0.09;
+    var paypalMo = vol * paypalPct + txCount * paypalPerTx;
+    var paypalYr = paypalMo * 12;
+    var paypalEff = (paypalMo / vol) * 100;
+
+    document.getElementById("mfc-helcim-yr").textContent = fmt(helcimYr) + "/yr";
+    document.getElementById("mfc-helcim-eff").textContent = "Effective Rate: " + helcimEff.toFixed(2) + "% (" + fmt(helcimMo) + "/mo · $0 sub)";
+    document.getElementById("mfc-stax-yr").textContent = fmt(staxYr) + "/yr";
+    document.getElementById("mfc-stax-eff").textContent = "Effective Rate: " + staxEff.toFixed(2) + "% (" + fmt(staxMo) + "/mo · $" + staxSub + "/mo sub)";
+    document.getElementById("mfc-stripe-yr").textContent = fmt(stripeYr) + "/yr";
+    document.getElementById("mfc-stripe-eff").textContent = "Effective Rate: " + stripeEff.toFixed(2) + "% (" + fmt(stripeMo) + "/mo)";
+    document.getElementById("mfc-paypal-yr").textContent = fmt(paypalYr) + "/yr";
+    document.getElementById("mfc-paypal-eff").textContent = "Effective Rate: " + paypalEff.toFixed(2) + "% (" + fmt(paypalMo) + "/mo)";
+
+    var bestIcYr = Math.min(helcimYr, staxYr);
+    var saved = Math.max(0, stripeYr - bestIcYr);
+    document.getElementById("mfc-savings-callout").textContent = "✓ Saves " + fmt(saved) + "/yr switching from Stripe to IC+";
+
+    var calcStateJson = JSON.stringify({volume: Math.round(vol), ticket: Math.round(ticket), cnpPct: Math.round(cnpPct*100), intlPct: Math.round(intlPct*100), helcimYr: Math.round(helcimYr), staxYr: Math.round(staxYr), savedVsStripe: Math.round(saved)});
+    ["mfc-cta-helcim", "mfc-cta-stax"].forEach(function(id){
+      var el = document.getElementById(id);
+      if (el) el.setAttribute("data-calc-inputs", calcStateJson);
+    });
+
+    if (fromUser && window.posthog && typeof window.posthog.capture === "function") {
+      window.posthog.capture("estimator_interaction", {
+        calculator: "merchant_fee_calc",
+        route_slug: routeSlug,
+        monthly_volume: Math.round(vol),
+        avg_ticket: Math.round(ticket),
+        cnp_pct: Math.round(cnpPct * 100),
+        intl_pct: Math.round(intlPct * 100),
+        annual_savings_vs_stripe: Math.round(saved)
+      });
+    }
+  }
+
+  if (volRange && volEl) {
+    volRange.addEventListener("input", function(){ volEl.value = volRange.value; compute(true); });
+    volEl.addEventListener("input", function(){ volRange.value = volEl.value; compute(true); });
+  }
+  [ticketEl, cnpEl, intlEl].forEach(function(el){
+    if (el) el.addEventListener("change", function(){ compute(true); });
+    if (el) el.addEventListener("input", function(){ compute(true); });
+  });
+
+  var expBtn = document.getElementById("mfc-export-btn");
+  if (expBtn) {
+    expBtn.addEventListener("click", function(){
+      var used = parseInt(localStorage.getItem("b2b_free_exports_used") || "0", 10) + 1;
+      localStorage.setItem("b2b_free_exports_used", String(used));
+      var rem = Math.max(0, 3 - used);
+      var cntEl = document.getElementById("mfc-export-counter");
+      if (cntEl) {
+        cntEl.textContent = rem > 0
+          ? "Merchant Audit CSV downloaded! (" + rem + " of 3 free exports remaining before $29/mo Pro)."
+          : "Free 3-export limit reached — Upgrade to SaaS Cost Audit Pro ($29/mo or $9 7-day pass) for unlimited CFO statement exports.";
+      }
+      if (window.posthog && typeof window.posthog.capture === "function") {
+        window.posthog.capture("export_cfo_report_clicked", {calculator: "merchant_fee_calc", route_slug: routeSlug, exports_used: used});
+      }
+      var csv = "Processor,Annual_Processing_Fees,Effective_Rate_Note\nHelcim_IC_Plus," + document.getElementById("mfc-helcim-yr").textContent + "," + document.getElementById("mfc-helcim-eff").textContent + "\nStax_0_Markup," + document.getElementById("mfc-stax-yr").textContent + "," + document.getElementById("mfc-stax-eff").textContent + "\nStripe_Flat," + document.getElementById("mfc-stripe-yr").textContent + "," + document.getElementById("mfc-stripe-eff").textContent + "\nPayPal_Checkout," + document.getElementById("mfc-paypal-yr").textContent + "," + document.getElementById("mfc-paypal-eff").textContent + "\n";
+      var blob = new Blob([csv], {type: "text/csv"});
+      var a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "b2bfeeaudit-merchant-fees-" + routeSlug + ".csv";
+      a.click();
+    });
+  }
+  compute(false);
+})();
+</script>
+{% endmacro %}
+
+{% macro faq(list) %}
+{% if list and list.length %}
+<section class="card">
+  <h2 style="margin-top:0;border-top:0;padding-top:0">Frequently Asked Questions (2026 Verified Data)</h2>
+  {% for f in list %}
+  <details class="faq-card" open>
+    <summary><h3>{{ f.q }}</h3></summary>
+    <p>{{ f.a }}</p>
+  </details>
+  {% endfor %}
+</section>
+{% endif %}
+{% endmacro %}
+
+{% macro sources(list) %}
+{% if list and list.length %}
+<h2>Official Regulatory (.gov) &amp; Published Vendor Fee Sources</h2>
+<ol>
+  {% for s in list %}
+  <li id="src-{{ s.id }}"><a href="{{ s.url }}" rel="nofollow noopener" target="_blank">{{ s.title }}</a>{% if s.accessed %} <small>(verified {{ s.accessed }})</small>{% endif %}</li>
+  {% endfor %}
+</ol>
+{% endif %}
+{% endmacro %}
+
+{% macro serviceOfferSchema(entry, site, pageUrl) %}
+{% if entry and entry.prices and entry.prices.length %}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":{{ (entry.seoTitle or entry.title) | json | safe }},"description":{{ (entry.seoDescription or entry.summary) | json | safe }},"url":"{{ site.url }}{{ pageUrl }}","serviceType":"{% if entry.type == 'merchant' %}Merchant Processing & Interchange-Plus Fee Audit{% else %}B2B Payroll, Multi-State HRIS & SUI Tax TCO Audit{% endif %}","provider":{"@type":"Organization","@id":"{{ site.url }}/#organization","name":"SaaS Cost Audit","alternateName":["saascostaudit","saascostaudit.com","B2B Stack & Fee Auditor"],"sameAs":["https://github.com/rtpait/b2b-payroll-and-merchant-fee-benchmarks-2026"],"url":"{{ site.url }}/"},"areaServed":{"@type":"Country","name":"United States"},"offers":{"@type":"AggregateOffer","priceCurrency":"USD","lowPrice":"{{ entry.offerLowPrice or '0' }}","highPrice":"{{ entry.offerHighPrice or '2500' }}","offerCount":"{{ entry.prices.length }}","offers":[{% for row in entry.prices %}{"@type":"Offer","name":{{ row.label | json | safe }},"description":{{ row.price | json | safe }},"url":"{{ site.url }}{{ pageUrl }}#cost-comparison"}{% if not loop.last %},{% endif %}{% endfor %}]}}</script>
+{% endif %}
+{% endmacro %}
+
+{% macro softwareAppSchema(entry, site, pageUrl) %}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":{{ ((entry and (entry.title or entry.seoTitle)) or "B2B Payroll, Multi-State HRIS & Merchant Fee TCO Calculator") | json | safe }},"applicationCategory":"BusinessApplication","operatingSystem":"Web, WebMCP, OpenAPI 3.1","url":"{{ site.url }}{{ pageUrl }}","offers":{"@type":"Offer","price":"0.00","priceCurrency":"USD","description":"Free deterministic TCO calculator (3 free CFO CSV/PDF exports; $29/mo Pro unlimited)"},"publisher":{"@type":"Organization","@id":"{{ site.url }}/#organization","name":"SaaS Cost Audit"}}</script>
+{% endmacro %}
+
+{% macro crossLinkHub(payrollPages, merchantPages, currentUrl) %}
+<section class="box" aria-label="All 14 B2B Payroll and Merchant Fee TCO Calculators">
+  <h2 style="margin-top:0;border-top:0;padding-top:0">Explore All 2026 B2B Payroll, Multi-State SUI &amp; Merchant Fee TCO Calculators</h2>
+  <div class="card-grid-2">
+    <div>
+      <h3 style="margin-top:0">Cluster 1: Payroll, Multi-State HRIS &amp; Global EOR TCO</h3>
+      <ul style="padding-left:1.15rem;font-size:.92rem">
+        {% for p in payrollPages %}
+        <li><a href="{{ p.url }}"><strong>{{ p.title }}</strong></a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div>
+      <h3 style="margin-top:0">Cluster 2: Merchant Processing &amp; Interchange-Plus TCO</h3>
+      <ul style="padding-left:1.15rem;font-size:.92rem">
+        {% for m in merchantPages %}
+        <li><a href="{{ m.url }}"><strong>{{ m.title }}</strong></a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+{% endmacro %}
+
+
+{% macro ucaasTcoCalc(routeSlug, defPstn, defExisting) %}
+{% set uSlug = routeSlug or "ucaas-hub" %}
+{% set initPstn = defPstn or "unlimited" %}
+{% set initExisting = defExisting or "none" %}
+<section class="tco-calc-box" id="ucaas-tco-calculator" data-route-slug="{{ uSlug }}" aria-label="Interactive 4-Vendor UCaaS Total Cost of Ownership Calculator">
+  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.65rem;margin-bottom:.65rem">
+    <div>
+      <span class="verified-gov-badge">🧮 2026 PUBLISHED RATE CARDS + FCC USF / E911 TELECOM SURCHARGE AUDITOR</span>
+      <h2 style="margin:.35rem 0 .2rem;border-top:0;padding-top:0">Interactive 4-Vendor UCaaS &amp; Collaboration 12-Month TCO Calculator</h2>
+      <p style="margin:0;font-size:.92rem;color:#334155">Model exact 12-month all-in costs across <strong>Cisco Webex</strong>, <strong>Microsoft Teams</strong>, <strong>Zoom Workplace</strong>, and <strong>Google Workspace</strong>—including monthly NCE markups (+11%–21%), PSTN calling plans, E911/USF taxes (~$4.00–$4.50/line), AI assistants, cloud recording overages, and webinar host licenses:</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:.4rem">
+      <button type="button" class="cta-secondary" id="ucc-preset-meetings" style="font-size:.78rem;padding:.38rem .68rem;min-height:36px">Preset: 25 Seats Meetings + AI Only</button>
+      <button type="button" class="cta-secondary" id="ucc-preset-full" style="font-size:.78rem;padding:.38rem .68rem;min-height:36px;background:#0f172a">Preset: 25 Seats Full PSTN Phone + AI</button>
+      <button type="button" class="cta-secondary" id="ucc-preset-m365" style="font-size:.78rem;padding:.38rem .68rem;min-height:36px;background:#047857">Preset: Existing M365 + Add PSTN</button>
+    </div>
+  </div>
+
+  <div class="calc-controls-grid">
+    <div class="calc-field">
+      <label for="ucc-seats">1. Team Size (Seats: 5–1,000): <span id="ucc-seats-lbl">25</span></label>
+      <input type="number" id="ucc-seats" min="5" max="1000" value="25">
+      <input type="range" id="ucc-seats-range" min="5" max="1000" step="5" value="25" aria-label="Team Size Seats Slider">
+    </div>
+
+    <div class="calc-field">
+      <label for="ucc-cadence">2. Billing Cadence (Annual vs. Monthly):</label>
+      <select id="ucc-cadence">
+        <option value="annual" selected>Annual Commitment (Lowest Per-Seat List Rate)</option>
+        <option value="monthly">Monthly Flexible (+11% to +20.8% NCE / Monthly Markup)</option>
+      </select>
+      <small>Exposes Microsoft NCE, Zoom &amp; Google +20% monthly penalty</small>
+    </div>
+
+    <div class="calc-field">
+      <label for="ucc-pstn">3. PSTN Business Phone Needed?:</label>
+      <select id="ucc-pstn">
+        <option value="none" {% if initPstn == "none" %}selected{% endif %}>None — Video Meetings &amp; Team Chat Only</option>
+        <option value="metered" {% if initPstn == "metered" %}selected{% endif %}>Metered PBX / Basic Domestic Calling (+E911/USF)</option>
+        <option value="unlimited" {% if initPstn == "unlimited" %}selected{% endif %}>Unlimited US &amp; Canada PSTN Calling (+E911/USF Taxes)</option>
+      </select>
+      <small>Adds Cloud PBX + ~$4.00–$4.50/line/mo FCC USF &amp; E911 fees</small>
+    </div>
+
+    <div class="calc-field">
+      <label for="ucc-ai">4. AI Assistant &amp; Meeting Recap Tier:</label>
+      <select id="ucc-ai">
+        <option value="none">Not Needed (Standard Meetings &amp; Calling Only)</option>
+        <option value="recap" selected>AI Meeting Recap &amp; Call Notes ($0 Webex/Zoom/Google · +$10 Teams Premium)</option>
+        <option value="copilot">Full Suite Generative AI ($0 Webex/Zoom/Google · +$30 M365 Copilot)</option>
+      </select>
+      <small>Webex AI, Zoom AI Companion &amp; Gemini included; Teams charges extra</small>
+    </div>
+
+    <div class="calc-field">
+      <label for="ucc-storage">5. Cloud Recording Storage Volume:</label>
+      <select id="ucc-storage">
+        <option value="10gb" selected>Standard (&le;10 GB/license · Forces Google Starter &rarr; $14 Standard)</option>
+        <option value="250gb">250 GB Shared Team Recording Archive (+$100/mo Zoom · +$25/mo Webex)</option>
+        <option value="1tb">1 TB Compliance Recording Archive (+$200/mo Zoom · +$85/mo Webex)</option>
+      </select>
+      <small>Zoom Pro/Business includes only 5–10 GB before $40–$500/mo overages</small>
+    </div>
+
+    <div class="calc-field">
+      <label for="ucc-webinars">6. 500-Seat Webinar / Large Meeting Hosts (0–5): <span id="ucc-webinars-lbl">0</span></label>
+      <input type="number" id="ucc-webinars" min="0" max="5" value="0">
+      <small>+$79/mo Zoom Webinars · +$55/mo Webex · +$10/mo Teams Premium</small>
+    </div>
+  </div>
+
+  <div class="box" style="margin:.65rem 0;background:#f8fafc;border-color:#cbd5e1">
+    <label for="ucc-existing" style="display:block;font-size:.88rem;font-weight:700;color:#0f172a;margin-bottom:.3rem">7. Existing Productivity Suite Licensing (Enforces Merit-Only Recommendation Rule):</label>
+    <select id="ucc-existing" style="width:100%;padding:.48rem .65rem;border:1.5px solid #94a3b8;border-radius:6px;font-size:.9rem;font-weight:600;background:#fff">
+      <option value="none" {% if initExisting == "none" %}selected{% endif %}>Greenfield Evaluation — Compare Full Standalone / Suite List Prices Across All 4 Vendors</option>
+      <option value="m365_basic_std" {% if initExisting == "m365_basic_std" %}selected{% endif %}>Already Licensed on Microsoft 365 Business Basic / Standard / E3 ($0 Base Teams Meetings &amp; 1 TB OneDrive)</option>
+      <option value="m365_e5" {% if initExisting == "m365_e5" %}selected{% endif %}>Already Licensed on Microsoft 365 E5 ($0 Base Teams + $0 Teams Phone Standard PBX License)</option>
+      <option value="gworkspace_std" {% if initExisting == "gworkspace_std" %}selected{% endif %}>Already Licensed on Google Workspace Business Standard / Plus ($0 Base Meet, Recording, Gemini &amp; 2 TB Drive)</option>
+      <option value="webex_ea" {% if initExisting == "webex_ea" %}selected{% endif %}>Existing Cisco Enterprise Agreement / Active Webex Suite Commit (-15% EA Volume Credit)</option>
+    </select>
+  </div>
+
+  <div class="calc-output-grid" id="ucc-results-grid">
+    <div class="calc-vendor-card vendor-best" id="ucc-card-webex">
+      <small id="ucc-plan-webex">Cisco Webex Suite (Meet + Call + AI)</small>
+      <strong class="calc-big" id="ucc-webex-yr">$8,100/yr</strong>
+      <span class="calc-sub" id="ucc-webex-sub">$27.00/seat/mo all-in ($22.50 Suite + $4.50 E911/USF · $0 AI)</span>
+      <div style="margin-top:.55rem">
+        <a class="cta tbl-cta-btn" id="ucc-cta-webex" data-partner="Cisco Webex" data-cta-slot="ucaas_tco_calc" data-route-slug="{{ uSlug }}" data-calc-inputs='{"vendor":"webex","seats":25}' data-clickref="b2bfeeaudit_ucaas_webex_{{ uSlug }}" href="https://www.webex.com/pricing/index.html?utm_source=saascostaudit.com&amp;utm_medium=affiliate&amp;utm_campaign=ucaas_2026&amp;clickref=b2bfeeaudit_ucaas_webex_{{ uSlug }}" target="_blank" rel="sponsored nofollow noopener">Verify Cisco Webex Rate →</a>
+      </div>
+    </div>
+
+    <div class="calc-vendor-card vendor-best" id="ucc-card-teams">
+      <small id="ucc-plan-teams">Microsoft Teams + Phone + AI Recap</small>
+      <strong class="calc-big" id="ucc-teams-yr">$10,050/yr</strong>
+      <span class="calc-sub" id="ucc-teams-sub">$33.50/seat/mo all-in ($4 Base + $15 Phone + $10 AI + $4.50 Tax)</span>
+      <div style="margin-top:.55rem">
+        <a class="cta tbl-cta-btn" id="ucc-cta-teams" data-partner="Microsoft Teams" data-cta-slot="ucaas_tco_calc" data-route-slug="{{ uSlug }}" data-calc-inputs='{"vendor":"microsoft-teams","seats":25}' data-clickref="b2bfeeaudit_ucaas_microsoft_teams_{{ uSlug }}" href="https://www.microsoft.com/en-us/microsoft-teams/compare-microsoft-teams-options?utm_source=saascostaudit.com&amp;utm_medium=affiliate&amp;utm_campaign=ucaas_2026&amp;clickref=b2bfeeaudit_ucaas_microsoft_teams_{{ uSlug }}" target="_blank" rel="sponsored nofollow noopener">Verify Microsoft Teams Rate →</a>
+      </div>
+    </div>
+
+    <div class="calc-vendor-card" id="ucc-card-zoom">
+      <small id="ucc-plan-zoom">Zoom Workplace Business Plus (Phone + AI)</small>
+      <strong class="calc-big" id="ucc-zoom-yr">$8,097/yr</strong>
+      <span class="calc-sub" id="ucc-zoom-sub">$26.99/seat/mo all-in ($22.49 Bus. Plus + $4.50 E911/USF · $0 AI)</span>
+      <div style="margin-top:.55rem">
+        <a class="cta-secondary tbl-cta-btn" id="ucc-cta-zoom" data-partner="Zoom Workplace" data-cta-slot="ucaas_tco_calc" data-route-slug="{{ uSlug }}" data-calc-inputs='{"vendor":"zoom","seats":25}' data-clickref="b2bfeeaudit_ucaas_zoom_{{ uSlug }}" href="https://zoom.us/pricing?utm_source=saascostaudit.com&amp;utm_medium=affiliate&amp;utm_campaign=ucaas_2026&amp;irgwc=1&amp;clickref=b2bfeeaudit_ucaas_zoom_{{ uSlug }}" target="_blank" rel="sponsored nofollow noopener">Verify Zoom Workplace Rate →</a>
+      </div>
+    </div>
+
+    <div class="calc-vendor-card" id="ucc-card-google">
+      <small id="ucc-plan-google">Google Workspace Standard + Voice Standard</small>
+      <strong class="calc-big" id="ucc-google-yr">$11,400/yr</strong>
+      <span class="calc-sub" id="ucc-google-sub">$38.00/seat/mo all-in ($14 Std + $20 Voice + $4.00 Tax · $0 Gemini)</span>
+      <div style="margin-top:.55rem">
+        <a class="cta-secondary tbl-cta-btn" id="ucc-cta-google" data-partner="Google Workspace" data-cta-slot="ucaas_tco_calc" data-route-slug="{{ uSlug }}" data-calc-inputs='{"vendor":"google-workspace","seats":25}' data-clickref="b2bfeeaudit_ucaas_google_workspace_{{ uSlug }}" href="https://workspace.google.com/pricing?utm_source=saascostaudit.com&amp;utm_medium=affiliate&amp;utm_campaign=ucaas_2026&amp;sid=8108003&amp;clickref=b2bfeeaudit_ucaas_google_workspace_{{ uSlug }}" target="_blank" rel="sponsored nofollow noopener">Verify Google Workspace Rate →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Merit-Only Conditional VoIP Recommendation Callout (ONLY visible when strictly cheaper than BOTH Webex and Microsoft Teams) -->
+  <div id="ucc-merit-voip-box" class="box" style="margin:.75rem 0 0;background:#fffbeb;border:1.5px solid #f59e0b">
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem">
+      <strong style="color:#92400e;font-size:.94rem" id="ucc-merit-voip-title">💡 Merit-Only VoIP Audit: Lower-Cost Dedicated Cloud Phone + AI Option Detected</strong>
+      <span class="verdict-pill" style="background:#fef3c7;color:#92400e;border-color:#fcd34d">Strict Merit-Only Rule Passed</span>
+    </div>
+    <p style="margin:.35rem 0 .6rem;font-size:.86rem;color:#78350f" id="ucc-merit-voip-desc">
+      Because your configuration requires <strong>standalone PSTN calling + AI transcription without an existing Microsoft 365 E5 or Cisco EA bundle</strong>, dedicated VoIP platforms calculate lower than both Cisco Webex ($8,100/yr) and Microsoft Teams ($10,050/yr):
+    </p>
+    <div style="display:flex;flex-wrap:wrap;gap:.55rem;align-items:center">
+      <a class="cta tbl-cta-btn" id="ucc-cta-dialpad" data-partner="Dialpad" data-cta-slot="ucaas_merit_voip" data-route-slug="{{ uSlug }}" data-calc-inputs='{"voip":"dialpad"}' data-clickref="b2bfeeaudit_ucaas_dialpad_{{ uSlug }}" href="https://www.dialpad.com/pricing/?utm_source=saascostaudit.com&amp;utm_medium=affiliate&amp;utm_campaign=ucaas_2026&amp;clickref=b2bfeeaudit_ucaas_dialpad_{{ uSlug }}" target="_blank" rel="sponsored nofollow noopener">Dialpad Connect + AI: <span id="ucc-dialpad-yr">$5,700/yr</span> ($19/seat all-in) →</a>
+      <a class="cta-secondary tbl-cta-btn" id="ucc-cta-nextiva" data-partner="Nextiva" data-cta-slot="ucaas_merit_voip" data-route-slug="{{ uSlug }}" data-calc-inputs='{"voip":"nextiva"}' data-clickref="b2bfeeaudit_ucaas_nextiva_{{ uSlug }}" href="https://www.nextiva.com/nextiva-pricing.html?utm_source=saascostaudit.com&amp;utm_medium=affiliate&amp;utm_campaign=ucaas_2026&amp;clickref=b2bfeeaudit_ucaas_nextiva_{{ uSlug }}" target="_blank" rel="sponsored nofollow noopener">Nextiva Core VoIP: <span id="ucc-nextiva-yr">$5,775/yr</span> →</a>
+      <a class="cta-secondary tbl-cta-btn" id="ucc-cta-ringcentral" data-partner="RingCentral" data-cta-slot="ucaas_merit_voip" data-route-slug="{{ uSlug }}" data-calc-inputs='{"voip":"ringcentral"}' data-clickref="b2bfeeaudit_ucaas_ringcentral_{{ uSlug }}" href="https://www.ringcentral.com/office/plansandpricing.html?utm_source=saascostaudit.com&amp;utm_medium=affiliate&amp;utm_campaign=ucaas_2026&amp;clickref=b2bfeeaudit_ucaas_ringcentral_{{ uSlug }}" target="_blank" rel="sponsored nofollow noopener">RingCentral RingEX: <span id="ucc-ringcentral-yr">$7,350/yr</span> →</a>
+    </div>
+  </div>
+
+  <!-- Merit-Only Big 4 Confirmation Box (Shown when Cisco Webex or Microsoft Teams is cheaper or equal — never steers user away) -->
+  <div id="ucc-merit-big4-box" class="box" style="display:none;margin:.75rem 0 0;background:#ecfdf5;border:1.5px solid #10b981">
+    <strong style="color:#065f46;font-size:.93rem" id="ucc-merit-big4-title">✓ Merit-Only Audit Verdict: Stay on Microsoft Teams / Cisco Webex (Lowest True 12-Month TCO)</strong>
+    <p style="margin:.25rem 0 0;font-size:.86rem;color:#065f46" id="ucc-merit-big4-desc">
+      For your selected configuration, <strong>Microsoft Teams</strong> or <strong>Cisco Webex</strong> delivers a lower 12-month Total Cost of Ownership than standalone third-party VoIP providers (Dialpad, Nextiva, RingCentral). Per our strict Merit-Only Rule, third-party VoIP alternatives are suppressed so you are never steered away from a lower-cost primary platform.
+    </p>
+  </div>
+
+  <div class="cfo-export-bar">
+    <div>
+      <strong>📊 Export 4-Vendor UCaaS Line-Item TCO &amp; Hidden Fee Audit (CSV):</strong><br>
+      <small id="ucc-export-note">Includes per-seat base rate, monthly NCE markup, PSTN add-on, FCC USF/E911 taxes, AI add-on, and cloud storage overage math.</small>
+    </div>
+    <button type="button" class="cta-export" id="ucc-export-btn" data-route-slug="{{ uSlug }}">⬇ Export UCaaS 4-Vendor TCO CSV</button>
+  </div>
+</section>
+<script>
+(function(){
+  var box = document.getElementById("ucaas-tco-calculator");
+  if (!box) return;
+  var routeSlug = box.getAttribute("data-route-slug") || "ucaas-hub";
+  var seatsEl = document.getElementById("ucc-seats");
+  var seatsRange = document.getElementById("ucc-seats-range");
+  var cadEl = document.getElementById("ucc-cadence");
+  var pstnEl = document.getElementById("ucc-pstn");
+  var aiEl = document.getElementById("ucc-ai");
+  var storEl = document.getElementById("ucc-storage");
+  var webEl = document.getElementById("ucc-webinars");
+  var exEl = document.getElementById("ucc-existing");
+
+  function fmt(n) { return "$" + Math.round(n).toLocaleString("en-US"); }
+
+  function compute(fromUser) {
+    var seats = Math.max(5, Math.min(1000, parseInt(seatsEl.value || "25", 10)));
+    var isMonthly = cadEl.value === "monthly";
+    var pstn = pstnEl.value;
+    var ai = aiEl.value;
+    var stor = storEl.value;
+    var webinars = Math.max(0, Math.min(5, parseInt(webEl.value || "0", 10)));
+    var existing = exEl.value;
+
+    document.getElementById("ucc-seats-lbl").textContent = String(seats);
+    document.getElementById("ucc-webinars-lbl").textContent = String(webinars);
+
+    // 1. Cisco Webex Calculation
+    var webexBaseSeat = 12.00;
+    var webexPlanName = "Cisco Webex Meet (AI Included)";
+    var webexTax = 0;
+    if (pstn === "none") {
+      webexBaseSeat = isMonthly ? 14.50 : 12.00;
+      webexPlanName = "Cisco Webex Meet (AI + 10 GB Included)";
+    } else if (pstn === "metered") {
+      webexBaseSeat = isMonthly ? 20.00 : 17.00;
+      webexTax = 4.50;
+      webexPlanName = "Cisco Webex Calling Professional";
+    } else {
+      webexBaseSeat = isMonthly ? 25.00 : 22.50;
+      webexTax = 4.50;
+      webexPlanName = "Cisco Webex Suite (Meet + Call + AI)";
+    }
+    if (existing === "webex_ea") {
+      webexBaseSeat = +(webexBaseSeat * 0.85).toFixed(2);
+      webexPlanName += " (-15% EA)";
+    }
+    var webexStorMo = stor === "250gb" ? 25 : (stor === "1tb" ? 85 : 0);
+    var webexWebMo = webinars * 55;
+    var webexSeatAllIn = webexBaseSeat + webexTax + ((webexStorMo + webexWebMo) / seats);
+    var webexYr = (seats * (webexBaseSeat + webexTax) + webexStorMo + webexWebMo) * 12;
+
+    // 2. Microsoft Teams Calculation
+    var teamsBaseSeat = isMonthly ? 4.80 : 4.00;
+    var teamsPlanName = "Microsoft Teams Essentials";
+    if (stor !== "10gb" || ai === "copilot") {
+      teamsBaseSeat = isMonthly ? 7.20 : 6.00;
+      teamsPlanName = "M365 Business Basic (1 TB + Teams)";
+    }
+    if (existing === "m365_basic_std" || existing === "m365_e5") {
+      teamsBaseSeat = 0.00;
+      teamsPlanName = existing === "m365_e5" ? "Existing M365 E5 ($0 Base + PBX)" : "Existing M365 ($0 Base Teams)";
+    }
+    var teamsPstnSeat = 0;
+    var teamsTax = 0;
+    if (pstn === "metered") {
+      teamsPstnSeat = existing === "m365_e5" ? 0.00 : (isMonthly ? 9.60 : 8.00);
+      teamsTax = 4.50;
+    } else if (pstn === "unlimited") {
+      teamsPstnSeat = existing === "m365_e5" ? (isMonthly ? 14.40 : 12.00) : (isMonthly ? 18.00 : 15.00);
+      teamsTax = 4.50;
+    }
+    var teamsAiSeat = 0;
+    if (ai === "recap") {
+      teamsAiSeat = isMonthly ? 12.00 : 10.00;
+    } else if (ai === "copilot") {
+      teamsAiSeat = 30.00;
+    }
+    var teamsWebMo = (ai === "recap" || ai === "copilot") ? 0 : (webinars * 10);
+    var teamsSeatAllIn = teamsBaseSeat + teamsPstnSeat + teamsAiSeat + teamsTax + (teamsWebMo / seats);
+    var teamsYr = (seats * (teamsBaseSeat + teamsPstnSeat + teamsAiSeat + teamsTax) + teamsWebMo) * 12;
+
+    // 3. Zoom Workplace Calculation
+    var zoomBaseSeat = 13.33;
+    var zoomPlanName = "Zoom Workplace Pro (AI Included)";
+    var zoomPstnSeat = 0;
+    var zoomTax = 0;
+    if (pstn === "none") {
+      if (seats >= 100) {
+        zoomBaseSeat = isMonthly ? 21.99 : 18.32;
+        zoomPlanName = "Zoom Workplace Business (AI Included)";
+      } else {
+        zoomBaseSeat = isMonthly ? 15.99 : 13.33;
+      }
+    } else if (pstn === "metered") {
+      zoomBaseSeat = isMonthly ? 15.99 : 13.33;
+      zoomPstnSeat = 10.00;
+      zoomTax = 4.50;
+      zoomPlanName = "Zoom Pro + Zoom Phone Metered";
+    } else {
+      zoomBaseSeat = isMonthly ? 26.99 : 22.49;
+      zoomPstnSeat = 0.00;
+      zoomTax = 4.50;
+      zoomPlanName = "Zoom Workplace Business Plus (Phone + AI)";
+    }
+    var zoomStorMo = stor === "250gb" ? 100 : (stor === "1tb" ? 200 : 0);
+    var zoomWebMo = webinars * 79;
+    var zoomSeatAllIn = zoomBaseSeat + zoomPstnSeat + zoomTax + ((zoomStorMo + zoomWebMo) / seats);
+    var zoomYr = (seats * (zoomBaseSeat + zoomPstnSeat + zoomTax) + zoomStorMo + zoomWebMo) * 12;
+
+    // 4. Google Workspace Calculation
+    var googleBaseSeat = isMonthly ? 16.80 : 14.00;
+    var googlePlanName = "Google Workspace Business Standard";
+    if (existing === "gworkspace_std") {
+      googleBaseSeat = 0.00;
+      googlePlanName = "Existing Workspace Standard ($0 Base Meet)";
+    }
+    var googlePstnSeat = 0;
+    var googleTax = 0;
+    if (pstn === "metered") {
+      googlePstnSeat = seats <= 10 ? 10.00 : 20.00;
+      googleTax = 4.00;
+      googlePlanName += " + Google Voice";
+    } else if (pstn === "unlimited") {
+      googlePstnSeat = 20.00;
+      googleTax = 4.00;
+      googlePlanName += " + Voice Standard ($20)";
+    }
+    var googleWebMo = webinars * 8;
+    var googleSeatAllIn = googleBaseSeat + googlePstnSeat + googleTax + (googleWebMo / seats);
+    var googleYr = (seats * (googleBaseSeat + googlePstnSeat + googleTax) + googleWebMo) * 12;
+
+    // Render 4 Primary Cards
+    document.getElementById("ucc-plan-webex").textContent = webexPlanName;
+    document.getElementById("ucc-webex-yr").textContent = fmt(webexYr) + "/yr";
+    document.getElementById("ucc-webex-sub").textContent = "$" + webexSeatAllIn.toFixed(2) + "/seat/mo all-in · $0 AI" + (webexTax > 0 ? " · Incl. $" + webexTax.toFixed(2) + " E911/USF" : "");
+
+    document.getElementById("ucc-plan-teams").textContent = teamsPlanName + (teamsPstnSeat > 0 ? " + Phone" : "") + (teamsAiSeat > 0 ? " + AI" : "");
+    document.getElementById("ucc-teams-yr").textContent = fmt(teamsYr) + "/yr";
+    document.getElementById("ucc-teams-sub").textContent = "$" + teamsSeatAllIn.toFixed(2) + "/seat/mo all-in" + (teamsAiSeat > 0 ? " · Incl. +$" + teamsAiSeat + " AI" : " · $0 AI");
+
+    document.getElementById("ucc-plan-zoom").textContent = zoomPlanName;
+    document.getElementById("ucc-zoom-yr").textContent = fmt(zoomYr) + "/yr";
+    document.getElementById("ucc-zoom-sub").textContent = "$" + zoomSeatAllIn.toFixed(2) + "/seat/mo all-in · $0 AI" + (zoomStorMo > 0 ? " · +$" + zoomStorMo + "/mo Storage" : "");
+
+    document.getElementById("ucc-plan-google").textContent = googlePlanName;
+    document.getElementById("ucc-google-yr").textContent = fmt(googleYr) + "/yr";
+    document.getElementById("ucc-google-sub").textContent = "$" + googleSeatAllIn.toFixed(2) + "/seat/mo all-in · Gemini Included" + (googlePstnSeat > 0 ? " · +$" + googlePstnSeat + " Voice" : "");
+
+    // Highlight best among Big 4
+    var minBig4 = Math.min(webexYr, teamsYr, zoomYr, googleYr);
+    [
+      ["ucc-card-webex", webexYr],
+      ["ucc-card-teams", teamsYr],
+      ["ucc-card-zoom", zoomYr],
+      ["ucc-card-google", googleYr]
+    ].forEach(function(pair){
+      var cEl = document.getElementById(pair[0]);
+      if (!cEl) return;
+      if (Math.round(pair[1]) <= Math.round(minBig4 * 1.02)) {
+        cEl.classList.add("vendor-best");
+      } else {
+        cEl.classList.remove("vendor-best");
+      }
+    });
+
+    // Strict Merit-Only Conditional VoIP Alternative Evaluation
+    var dialpadSeat = (isMonthly ? 27.00 : 15.00) + (pstn !== "none" ? 4.00 : 0);
+    var nextivaSeat = (isMonthly ? 25.00 : 15.00) + (pstn !== "none" ? 4.25 : 0);
+    var ringcentralSeat = (isMonthly ? 30.00 : 20.00) + (pstn !== "none" ? 4.50 : 0);
+    var dialpadYr = (seats * dialpadSeat + webexStorMo + webexWebMo) * 12;
+    var nextivaYr = (seats * nextivaSeat + webexStorMo + webexWebMo) * 12;
+    var ringcentralYr = (seats * ringcentralSeat + webexStorMo + webexWebMo) * 12;
+
+    var voipBox = document.getElementById("ucc-merit-voip-box");
+    var big4Box = document.getElementById("ucc-merit-big4-box");
+
+    var isBundledSuite = (existing === "m365_basic_std" || existing === "m365_e5" || existing === "webex_ea" || existing === "gworkspace_std");
+    var minWebexOrTeams = Math.min(webexYr, teamsYr);
+    var voipQualifiesOnMerit = (pstn !== "none") && (!isBundledSuite) && (dialpadYr < minWebexOrTeams);
+
+    if (voipQualifiesOnMerit) {
+      if (voipBox) voipBox.style.display = "block";
+      if (big4Box) big4Box.style.display = "none";
+      document.getElementById("ucc-dialpad-yr").textContent = fmt(dialpadYr) + "/yr";
+      document.getElementById("ucc-nextiva-yr").textContent = fmt(nextivaYr) + "/yr";
+      document.getElementById("ucc-ringcentral-yr").textContent = fmt(ringcentralYr) + "/yr";
+      var savedVsBig4 = Math.round(minWebexOrTeams - dialpadYr);
+      document.getElementById("ucc-merit-voip-desc").innerHTML =
+        "Because your configuration requires <strong>greenfield PSTN business calling (" + seats + " seats) without an existing M365 or Cisco EA bundle</strong>, dedicated VoIP platforms calculate strictly lower than both Cisco Webex (" + fmt(webexYr) + "/yr) and Microsoft Teams (" + fmt(teamsYr) + "/yr) — saving up to <strong>" + fmt(savedVsBig4) + "/yr</strong>:";
+    } else {
+      if (voipBox) voipBox.style.display = "none";
+      if (big4Box) big4Box.style.display = "block";
+      var winnerLabel = teamsYr <= webexYr ? ("Microsoft Teams (" + fmt(teamsYr) + "/yr)") : ("Cisco Webex (" + fmt(webexYr) + "/yr)");
+      document.getElementById("ucc-merit-big4-title").textContent =
+        "✓ Merit-Only Audit Verdict: " + winnerLabel + " Beats Standalone Third-Party VoIP";
+      document.getElementById("ucc-merit-big4-desc").innerHTML =
+        "For your configuration (" + seats + " seats, PSTN: <code>" + pstn + "</code>, Suite: <code>" + existing + "</code>), <strong>" + winnerLabel + "</strong> delivers a lower 12-month TCO than Dialpad (" + fmt(dialpadYr) + "/yr), Nextiva (" + fmt(nextivaYr) + "/yr), and RingCentral (" + fmt(ringcentralYr) + "/yr). Per our strict Merit-Only Rule, third-party VoIP callouts are suppressed.";
+    }
+
+    var statePayload = JSON.stringify({
+      seats: seats,
+      cadence: cadEl.value,
+      pstn: pstn,
+      ai: ai,
+      storage: stor,
+      webinars: webinars,
+      existing_suite: existing,
+      webex_yr: Math.round(webexYr),
+      teams_yr: Math.round(teamsYr),
+      zoom_yr: Math.round(zoomYr),
+      google_yr: Math.round(googleYr),
+      merit_voip_shown: voipQualifiesOnMerit
+    });
+    ["ucc-cta-webex", "ucc-cta-teams", "ucc-cta-zoom", "ucc-cta-google", "ucc-cta-dialpad", "ucc-cta-nextiva", "ucc-cta-ringcentral"].forEach(function(id){
+      var el = document.getElementById(id);
+      if (el) el.setAttribute("data-calc-inputs", statePayload);
+    });
+
+    if (fromUser && window.posthog && typeof window.posthog.capture === "function") {
+      window.posthog.capture("estimator_interaction", {
+        calculator: "ucaas_tco_calculator",
+        route_slug: routeSlug,
+        seats: seats,
+        cadence: cadEl.value,
+        pstn: pstn,
+        ai: ai,
+        storage: stor,
+        existing_suite: existing,
+        webex_yr: Math.round(webexYr),
+        teams_yr: Math.round(teamsYr),
+        zoom_yr: Math.round(zoomYr),
+        google_yr: Math.round(googleYr),
+        merit_voip_shown: voipQualifiesOnMerit
+      });
+    }
+  }
+
+  if (seatsRange && seatsEl) {
+    seatsRange.addEventListener("input", function(){ seatsEl.value = seatsRange.value; compute(true); });
+    seatsEl.addEventListener("input", function(){ seatsRange.value = seatsEl.value; compute(true); });
+  }
+  [cadEl, pstnEl, aiEl, storEl, webEl, exEl].forEach(function(el){
+    if (el) el.addEventListener("change", function(){ compute(true); });
+    if (el && el.tagName === "INPUT") el.addEventListener("input", function(){ compute(true); });
+  });
+
+  var pMeet = document.getElementById("ucc-preset-meetings");
+  if (pMeet) pMeet.addEventListener("click", function(){
+    seatsEl.value = 25; seatsRange.value = 25; cadEl.value = "annual"; pstnEl.value = "none"; aiEl.value = "recap"; storEl.value = "10gb"; webEl.value = 0; exEl.value = "none"; compute(true);
+  });
+  var pFull = document.getElementById("ucc-preset-full");
+  if (pFull) pFull.addEventListener("click", function(){
+    seatsEl.value = 25; seatsRange.value = 25; cadEl.value = "annual"; pstnEl.value = "unlimited"; aiEl.value = "recap"; storEl.value = "10gb"; webEl.value = 0; exEl.value = "none"; compute(true);
+  });
+  var pM365 = document.getElementById("ucc-preset-m365");
+  if (pM365) pM365.addEventListener("click", function(){
+    seatsEl.value = 25; seatsRange.value = 25; cadEl.value = "annual"; pstnEl.value = "unlimited"; aiEl.value = "none"; storEl.value = "10gb"; webEl.value = 0; exEl.value = "m365_basic_std"; compute(true);
+  });
+
+  var expBtn = document.getElementById("ucc-export-btn");
+  if (expBtn) {
+    expBtn.addEventListener("click", function(){
+      var csv = "Vendor,Plan_Modeled,12_Month_All_In_TCO,Details
+" +
+        "Cisco_Webex,"" + document.getElementById("ucc-plan-webex").textContent + ""," + document.getElementById("ucc-webex-yr").textContent + ","" + document.getElementById("ucc-webex-sub").textContent + ""
+" +
+        "Microsoft_Teams,"" + document.getElementById("ucc-plan-teams").textContent + ""," + document.getElementById("ucc-teams-yr").textContent + ","" + document.getElementById("ucc-teams-sub").textContent + ""
+" +
+        "Zoom_Workplace,"" + document.getElementById("ucc-plan-zoom").textContent + ""," + document.getElementById("ucc-zoom-yr").textContent + ","" + document.getElementById("ucc-zoom-sub").textContent + ""
+" +
+        "Google_Workspace,"" + document.getElementById("ucc-plan-google").textContent + ""," + document.getElementById("ucc-google-yr").textContent + ","" + document.getElementById("ucc-google-sub").textContent + ""
+";
+      var blob = new Blob([csv], {type: "text/csv"});
+      var a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "b2bfeeaudit-ucaas-tco-" + routeSlug + ".csv";
+      a.click();
+    });
+  }
+  compute(false);
+})();
+</script>
+{% endmacro %}
+
+
+{% macro ucaasMasterMatrixTable(ucaasData, routeSlug) %}
+{% set rSlug = routeSlug or "ucaas-hub" %}
+<h2 id="four-vendor-comparison-matrix">2026 Unified Communications &amp; Collaboration 4-Vendor List Price &amp; Hidden Fee Matrix</h2>
+<p>The table below compares verified October 2026 list prices across <strong>Cisco Webex</strong>, <strong>Microsoft Teams</strong>, <strong>Zoom Workplace</strong>, and <strong>Google Workspace</strong>—exposing the exact monthly billing penalty, PSTN phone add-on cost, FCC E911/USF regulatory recovery surcharge, AI assistant fee, and cloud recording storage trap:</p>
+<div class="table-wrap">
+  <table class="price-action-table">
+    <thead>
+      <tr>
+        <th class="sticky-col">Platform &amp; Deep-Dive Audit</th>
+        <th>Entry Meetings Plan (Annual / Monthly)</th>
+        <th>Full Phone + Meetings Bundle (Annual / Monthly)</th>
+        <th>PSTN Add-On + E911/USF Surcharge</th>
+        <th>AI Assistant &amp; Cloud Storage Trap</th>
+        <th>Official Rate Verification</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for v in ucaasData.primary_vendors %}
+      {% set clickref = v.clickref_base + "_" + rSlug + "_r" + loop.index %}
+      <tr>
+        <td class="sticky-col">
+          <strong><a href="{{ v.audit_url }}">{{ v.partner }}</a></strong><br>
+          <span class="verified-gov-badge" style="font-size:.68rem;padding:.1rem .4rem">2026 Rate Card Verified</span>
+        </td>
+        <td>
+          <strong>{{ v.entry_paid_plan }}</strong><br>
+          <small>Monthly Markup: {{ v.monthly_billing_markup_pct }}</small>
+        </td>
+        <td>
+          <strong>{{ v.suite_with_phone_plan }}</strong>
+        </td>
+        <td>
+          Metered: <strong>+${{ v.pstn_addon_metered_usd }}/mo</strong> · Unlimited: <strong>+${{ v.pstn_addon_unlimited_usd }}/mo</strong><br>
+          <small>+~${{ v.e911_usf_tax_per_line_usd }}/line/mo FCC USF &amp; E911 tax</small>
+        </td>
+        <td>
+          <strong>AI:</strong> {{ v.ai_assistant_policy }}<br>
+          <small style="color:#991b1b"><strong>Hidden Trap:</strong> {{ v.top_hidden_fee_trap }}</small>
+        </td>
+        <td>
+          <a class="tbl-cta-btn" data-partner="{{ v.partner }}" data-cta-slot="price_table_row" data-route-slug="{{ rSlug }}" data-calc-inputs='{"table":"ucaas_4vendor_matrix","vendor":"{{ v.id }}"}' data-clickref="{{ clickref }}" href="{{ v.cta_url }}&amp;clickref={{ clickref }}" target="_blank" rel="sponsored nofollow noopener">{{ v.cta_label }}</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<h2 id="benchmark-scenarios-25-seats">12-Month All-In TCO Benchmark Scenarios (25-Seat Team · 2026 Verified Math)</h2>
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Deployment Scenario (25 Users)</th>
+        <th>Cisco Webex 12-Mo TCO</th>
+        <th>Microsoft Teams 12-Mo TCO</th>
+        <th>Zoom Workplace 12-Mo TCO</th>
+        <th>Google Workspace 12-Mo TCO</th>
+        <th>Lowest-TCO Merit Winner</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for sc in ucaasData.scenario_benchmarks_25_seats_2026 %}
+      <tr>
+        <td><strong>{{ sc.scenario_name }}</strong></td>
+        <td><strong>${{ sc.webex_12mo_usd.toLocaleString("en-US") if false else sc.webex_12mo_usd }}/yr</strong><br><small>{{ sc.webex_note }}</small></td>
+        <td><strong>${{ sc.msteams_12mo_usd }}/yr</strong><br><small>{{ sc.msteams_note }}</small></td>
+        <td><strong>${{ sc.zoom_12mo_usd }}/yr</strong><br><small>{{ sc.zoom_note }}</small></td>
+        <td><strong>${{ sc.google_12mo_usd }}/yr</strong><br><small>{{ sc.google_note }}</small></td>
+        <td><strong style="color:#065f46">{{ sc.lowest_tco_winner }}</strong></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endmacro %}

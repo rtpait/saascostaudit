@@ -1,0 +1,19 @@
+{
+  "name": "saascostaudit",
+  "version": "1.0.0",
+  "description": "SaaS Cost Audit (saascostaudit.com) \u2014 Independent Per-Seat B2B SaaS, UCaaS (Webex, Microsoft Teams, Zoom, Google Workspace) & HRIS PEPM TCO Auditor (2026 Verified Rate Cards)",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve --port 8082",
+    "validate": "node scripts/validate.js",
+    "gate": "node scripts/check-release-gate.js",
+    "test": "node scripts/validate.js"
+  },
+  "author": "Research Triangle Park AI Transformation LLC",
+  "license": "CC-BY-4.0",
+  "type": "commonjs",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.7"
+  }
+}

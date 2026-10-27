@@ -1,0 +1,242 @@
+{
+  "project": "saascostaudit.com",
+  "domain_order_id": "12261177",
+  "entity": "Research Triangle Park AI Transformation LLC (EIN 42-3641177)",
+  "repository": "https://cursor.com/codebase/wally-buck/b2bfeeaudit",
+  "branch": "main",
+  "productOwner": {
+    "name": "SaaS Cost Audit PO",
+    "workspace": "/workspace/b2bfeeaudit",
+    "roles": [
+      "Product Owner (The Why, The What & The Measured Truth)"
+    ]
+  },
+  "releaseManager": {
+    "name": "Project Manager",
+    "id": "167b2bea-99c8-4e89-99e3-182227974962",
+    "reportsTo": {
+      "name": "Chief of Staff",
+      "id": "6bdd607c-7fa2-4559-ab73-4d368d72a455"
+    },
+    "roles": [
+      "Project Manager (The How & When)"
+    ]
+  },
+  "autoPushPolicy": {
+    "name": "Continuous Iterative Auto-Push Policy (SaaS Cost Audit Sprint 1)",
+    "gateCondition1_ContributionFloor": "mergedContributionsCount >= 3 OR uniqueSpecialistsRepresented == 5",
+    "gateCondition2_PMReadinessSignOff": "validateJsPassed == true && headlessQaPassed == true && zeroSeoRegressions == true && zeroMonetizationRegressions == true && pmSignedOff == true",
+    "organicRoutePacingRule": "MVP Slice 1 ships 16 core money HTML routes first (+ /sitemap.xml, /robots.txt, /llms.txt, /llms-full.txt, /.well-known/webmcp.json, /admin/). Remaining 48 routes in drip-queue/cohort-1..4 unlock 12 routes at a time only when GSC confirms >=75% indexation + rising WoW impressions, up to the locked 64-HTML-route (66-SEO-route) cap."
+  },
+  "specialists": [
+    {
+      "role": "UX/UI Research & Design Expert",
+      "id": "32a547b4-ece0-47aa-8763-8137899a0599"
+    },
+    {
+      "role": "Platform Optimization",
+      "id": "3baf81a9-493f-491f-997a-6263af37023e"
+    },
+    {
+      "role": "Content Writer",
+      "id": "4a9dcf1b-e8ab-444d-a13a-de4ae8e73943"
+    },
+    {
+      "role": "Data Analyst",
+      "id": "762fcc5f-c863-4c92-9c08-560d46ff4808"
+    },
+    {
+      "role": "QA Tester",
+      "id": "dc6489e7-fdca-44d4-bf7a-1674bbe6607e"
+    }
+  ],
+  "releases": [
+    {
+      "releaseId": "release-000-milestone0-po-charter-and-64-route-lock",
+      "sprint": "Milestone 0 (Pre-Build Offer Verification & PO Charter Lock)",
+      "timestamp": "2026-10-24T18:27:00-04:00",
+      "routeCount": 18,
+      "htmlPageCount": 16,
+      "quarantinedDripCohortCount": 48,
+      "routeSpecCount": 64,
+      "mvpSlice1RouteCount": 16,
+      "stagedDripQueueRouteCount": 48,
+      "liveDeployedHtmlPages": 0,
+      "status": "COMPLETED_MILESTONE_0_READY_FOR_SPRINT_1",
+      "mergedContributions": [
+        {
+          "specialist": "UX/UI Research & Design Expert",
+          "specialistId": "32a547b4-ece0-47aa-8763-8137899a0599",
+          "summary": "Eleventy (11ty) static site scaffold, macro payrollTcoCalc & macro merchantFeeCalc interactive client-side calculators, Above-the-Fold 30-Second Verdict Cards (verdict_card), 4-row prices[] tables (price_table_row), $29 CFO Audit CSV/PDF export bar, and Sticky Mobile Comparison Bar (>=44x44px tap targets)",
+          "artifactPath": "/workspace/b2bfeeaudit/src/_includes/macros.njk",
+          "mergedIntoStagedBuild": true
+        },
+        {
+          "specialist": "Data Analyst",
+          "specialistId": "762fcc5f-c863-4c92-9c08-560d46ff4808",
+          "summary": "2026 deterministic vendor pricing & 50-state .gov SUI datasets (vendors.json, state_sui_taxes_2026.json, interchange_rates_2026.json), CJ 8108003 / AWIN 3133124 / Rakuten 4767884 partner-routing-matrix.json, PostHog cta_click telemetry, ETL scripts (posthog_funnel_pull.py, affiliate_revenue_pull.py, gsc_index_pull.py), and AES-256-GCM /admin/ ground-truth console",
+          "artifactPath": "/workspace/b2bfeeaudit/analytics/build_admin_dashboard_data.py",
+          "mergedIntoStagedBuild": true
+        },
+        {
+          "specialist": "Content Writer",
+          "specialistId": "4a9dcf1b-e8ab-444d-a13a-de4ae8e73943",
+          "summary": "16 MVP Launch Cohort money routes (/ hub, /methodology/, 7 Payroll/HRIS TCO calculators, 7 Merchant Fee/IC+ calculators) with >=4 prices[] rows, >=4 FAQs, and official .gov IRS/DOL/Federal Reserve Reg II citations + 4 quarantined Cohort-1 drip files",
+          "artifactPath": "/workspace/b2bfeeaudit/content/",
+          "mergedIntoStagedBuild": true
+        },
+        {
+          "specialist": "Platform Optimization",
+          "specialistId": "3baf81a9-493f-491f-997a-6263af37023e",
+          "summary": "Agentic Engine Optimization endpoints (/llms.txt, /llms-full.txt, /.well-known/webmcp.json, /.well-known/openapi.json, /.well-known/ai-plugin.json), AI-permissive /robots.txt, CC-BY-4.0 open datasets, and 97 JSON-LD blocks (Organization, WebSite, SoftwareApplication, Service+AggregateOffer, FAQPage, BreadcrumbList) across 16/16 pages",
+          "artifactPath": "/workspace/b2bfeeaudit/src/well-known/webmcp.json",
+          "mergedIntoStagedBuild": true
+        },
+        {
+          "specialist": "QA Tester",
+          "specialistId": "dc6489e7-fdca-44d4-bf7a-1674bbe6607e",
+          "summary": "Deterministic build, schema, meta, AEO/WebMCP, and secret-hygiene validator (scripts/validate.js) + Continuous Iterative Auto-Push gate checker (scripts/check-release-gate.js) passing 16/16 HTML routes with 0 errors",
+          "artifactPath": "/workspace/b2bfeeaudit/scripts/validate.js",
+          "mergedIntoStagedBuild": true
+        }
+      ],
+      "gateEvaluation": {
+        "mergedContributionsCount": 5,
+        "uniqueSpecialistsRepresented": 5,
+        "contributionFloorMet": true,
+        "validateJsPassed": true,
+        "headlessQaPassed": true,
+        "zeroSeoRegressions": true,
+        "zeroMonetizationRegressions": true,
+        "pmSignedOff": true,
+        "signedOffBy": "Project Manager (167b2bea-99c8-4e89-99e3-182227974962)",
+        "autoPushAuthorized": true,
+        "productOwnerApprovedBy": "SaaS Cost Audit PO (76f092a4-d874-4a66-ad28-c0146be1800a)"
+      }
+    },
+    {
+      "releaseId": "release-001-b2bfeeaudit-mvp-launch",
+      "sprint": "Sprint 1 (Earliest Shippable MVP Slice of saascostaudit.com \u2014 16 Core Money Routes + WebMCP/AEO Layer + Principle 1 /admin/ Console)",
+      "timestamp": "2026-10-24T19:08:00-04:00",
+      "artifactZip": "/workspace/b2bfeeaudit/b2bfeeaudit-mvp.zip",
+      "routeCount": 18,
+      "htmlPageCount": 16,
+      "quarantinedDripCohortCount": 4,
+      "routeSpecCount": 64,
+      "status": "READY_FOR_PORKBUN_STATIC_DEPLOY",
+      "mergedContributions": [
+        {
+          "specialist": "UX/UI Research & Design Expert",
+          "specialistId": "32a547b4-ece0-47aa-8763-8137899a0599",
+          "summary": "Eleventy (11ty) static site scaffold, macro payrollTcoCalc & macro merchantFeeCalc interactive client-side calculators, Above-the-Fold 30-Second Verdict Cards (verdict_card), 4-row prices[] tables (price_table_row), $29 CFO Audit CSV/PDF export bar, and Sticky Mobile Comparison Bar (>=44x44px tap targets)",
+          "artifactPath": "/workspace/b2bfeeaudit/src/_includes/macros.njk",
+          "mergedIntoStagedBuild": true
+        },
+        {
+          "specialist": "Data Analyst",
+          "specialistId": "762fcc5f-c863-4c92-9c08-560d46ff4808",
+          "summary": "2026 deterministic vendor pricing & 50-state .gov SUI datasets (vendors.json, state_sui_taxes_2026.json, interchange_rates_2026.json), CJ 8108003 / AWIN 3133124 / Rakuten 4767884 partner-routing-matrix.json, PostHog cta_click telemetry, ETL scripts (posthog_funnel_pull.py, affiliate_revenue_pull.py, gsc_index_pull.py), and AES-256-GCM /admin/ ground-truth console",
+          "artifactPath": "/workspace/b2bfeeaudit/analytics/build_admin_dashboard_data.py",
+          "mergedIntoStagedBuild": true
+        },
+        {
+          "specialist": "Content Writer",
+          "specialistId": "4a9dcf1b-e8ab-444d-a13a-de4ae8e73943",
+          "summary": "16 MVP Launch Cohort money routes (/ hub, /methodology/, 7 Payroll/HRIS TCO calculators, 7 Merchant Fee/IC+ calculators) with >=4 prices[] rows, >=4 FAQs, and official .gov IRS/DOL/Federal Reserve Reg II citations + 4 quarantined Cohort-1 drip files",
+          "artifactPath": "/workspace/b2bfeeaudit/content/",
+          "mergedIntoStagedBuild": true
+        },
+        {
+          "specialist": "Platform Optimization",
+          "specialistId": "3baf81a9-493f-491f-997a-6263af37023e",
+          "summary": "Agentic Engine Optimization endpoints (/llms.txt, /llms-full.txt, /.well-known/webmcp.json, /.well-known/openapi.json, /.well-known/ai-plugin.json), AI-permissive /robots.txt, CC-BY-4.0 open datasets, and 97 JSON-LD blocks (Organization, WebSite, SoftwareApplication, Service+AggregateOffer, FAQPage, BreadcrumbList) across 16/16 pages",
+          "artifactPath": "/workspace/b2bfeeaudit/src/well-known/webmcp.json",
+          "mergedIntoStagedBuild": true
+        },
+        {
+          "specialist": "QA Tester",
+          "specialistId": "dc6489e7-fdca-44d4-bf7a-1674bbe6607e",
+          "summary": "Deterministic build, schema, meta, AEO/WebMCP, and secret-hygiene validator (scripts/validate.js) + Continuous Iterative Auto-Push gate checker (scripts/check-release-gate.js) passing 16/16 HTML routes with 0 errors",
+          "artifactPath": "/workspace/b2bfeeaudit/scripts/validate.js",
+          "mergedIntoStagedBuild": true
+        }
+      ],
+      "gateEvaluation": {
+        "mergedContributionsCount": 5,
+        "uniqueSpecialistsRepresented": 5,
+        "contributionFloorMet": true,
+        "validateJsPassed": true,
+        "headlessQaPassed": true,
+        "zeroSeoRegressions": true,
+        "zeroMonetizationRegressions": true,
+        "pmSignedOff": true,
+        "signedOffBy": "Project Manager (167b2bea-99c8-4e89-99e3-182227974962)",
+        "autoPushAuthorized": true,
+        "productOwnerApprovedBy": "SaaS Cost Audit PO (76f092a4-d874-4a66-ad28-c0146be1800a)"
+      }
+    },
+    {
+      "releaseId": "release-002-v1.2.0-monday-sprint-review-and-subdivisions",
+      "version": "v1.2.0",
+      "prior_version": "v1.1.0",
+      "sprint": "Monday Morning Sprint Review & Subdivision Expansion Closeout (v1.2.0 \u2014 26 HTML Routes + 3-Bucket Bot Classifier)",
+      "timestamp": "2026-10-26T09:30:00-04:00",
+      "routeCount": 28,
+      "htmlPageCount": 26,
+      "quarantinedDripCohortCount": 4,
+      "routeSpecCount": 64,
+      "status": "STAGED_FOR_RELEASE_V1.2.0",
+      "po_verdict": "ACCEPT",
+      "mergedContributions": [
+        {
+          "specialist": "UX/UI Research & Design Expert",
+          "specialistId": "32a547b4-ece0-47aa-8763-8137899a0599",
+          "summary": "Interactive /eo-insurance/ calculator (macro eoInsuranceCalc) & 4-vendor /ucaas/ TCO calculator (Cisco Webex, Microsoft Teams, Zoom Workplace, Google Workspace) with Merit-Only Conditional VoIP Recommendation Rule and 308/308 commercial CTA Sub-ID parity",
+          "artifactPath": "/workspace/b2bfeeaudit/src/_includes/macros.njk",
+          "mergedIntoStagedBuild": true
+        },
+        {
+          "specialist": "Data Analyst",
+          "specialistId": "762fcc5f-c863-4c92-9c08-560d46ff4808",
+          "summary": "2026 E&O/Cyber and UCaaS benchmark datasets (eo_insurance_benchmarks_2026.json, ucaas_benchmarks_2026.json), 2-Stage Bot Filter + 3-Bucket Traffic Classifier (bot_traffic_classifier.py), Agentic Monetization 500-call gate, and 08:44 AM EDT encrypted /admin/ ground-truth telemetry refresh",
+          "artifactPath": "/workspace/b2bfeeaudit/analytics/bot_traffic_classifier.py",
+          "mergedIntoStagedBuild": true
+        },
+        {
+          "specialist": "Content Writer",
+          "specialistId": "4a9dcf1b-e8ab-444d-a13a-de4ae8e73943",
+          "summary": "10 new subdivision routes (5 /eo-insurance/ + 5 /ucaas/ vendor audit pages) expanding production footprint from 16 to 26 validated HTML routes while keeping 4 Cohort-1 routes quarantined in drip-queue/cohort-1/",
+          "artifactPath": "/workspace/b2bfeeaudit/src/ucaas/",
+          "mergedIntoStagedBuild": true
+        },
+        {
+          "specialist": "Platform Optimization",
+          "specialistId": "3baf81a9-493f-491f-997a-6263af37023e",
+          "summary": "Expanded /llms.txt, /llms-full.txt, /.well-known/webmcp.json (v1.1.0 with 4 tools + x-agentic-monetization), /api/v1/benchmarks/* endpoints, and 133 JSON-LD blocks across 26/26 HTML pages",
+          "artifactPath": "/workspace/b2bfeeaudit/src/well-known/webmcp.json",
+          "mergedIntoStagedBuild": true
+        },
+        {
+          "specialist": "QA Tester",
+          "specialistId": "dc6489e7-fdca-44d4-bf7a-1674bbe6607e",
+          "summary": "Full 26-route validation pass via scripts/validate.js and scripts/check-release-gate.js (26/26 titles <=60c, 26/26 meta descriptions 140-158c, 133 valid JSON-LD schemas, 308/308 sponsored CTAs with Sub-IDs, 0 secret leaks)",
+          "artifactPath": "/workspace/b2bfeeaudit/scripts/validate.js",
+          "mergedIntoStagedBuild": true
+        }
+      ],
+      "gateEvaluation": {
+        "mergedContributionsCount": 5,
+        "uniqueSpecialistsRepresented": 5,
+        "contributionFloorMet": true,
+        "validateJsPassed": true,
+        "headlessQaPassed": true,
+        "zeroSeoRegressions": true,
+        "zeroMonetizationRegressions": true,
+        "pmSignedOff": true,
+        "signedOffBy": "Project Manager (167b2bea-99c8-4e89-99e3-182227974962)",
+        "autoPushAuthorized": true,
+        "productOwnerApprovedBy": "SaaS Cost Audit PO (76f092a4-d874-4a66-ad28-c0146be1800a)"
+      }
+    }
+  ]
+}

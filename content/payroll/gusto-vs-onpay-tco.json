@@ -1,0 +1,116 @@
+{
+  "type": "payroll",
+  "slug": "gusto-vs-onpay-tco",
+  "url": "/payroll/gusto-vs-onpay-tco/",
+  "title": "Gusto vs. OnPay All-In Cost Comparison for 5\u2013100 Employees (2026)",
+  "seoTitle": "Gusto vs OnPay Cost ($49+$6 vs $40+$6 Flat PEPM) 2026 TCO",
+  "seoDescription": "Compare Gusto ($49+$6/emp) vs. OnPay ($40+$6/emp) 2026 all-in payroll cost. See why OnPay's $0 multi-state tax surcharge saves $540\u2013$2,400/yr for remote SMBs.",
+  "h1": "Gusto vs. OnPay All-In Cost Comparison for 5\u2013100 Employees (2026)",
+  "updated": "2026-10-24",
+  "lastVerified": "2026-10-24",
+  "primaryPartner": "OnPay",
+  "primaryPartnerUrl": "https://onpay.com/pricing?utm_source=saascostaudit&utm_medium=affiliate",
+  "secondaryPartner": "Gusto",
+  "secondaryPartnerUrl": "https://gusto.com/product/pricing?utm_source=saascostaudit&utm_medium=affiliate",
+  "offerLowPrice": "46",
+  "offerHighPrice": "640",
+  "calcDefaults": {
+    "w2": 20,
+    "states": 4,
+    "primaryState": "FL",
+    "contractors": 3,
+    "eor": 0,
+    "includeYearEnd": true
+  },
+  "summary": "OnPay uses a single all-inclusive pricing tier ($40/mo base + $6/person) that includes multi-state payroll tax filings, HR workflows, and PTO tracking at $0 extra. For a 20-employee team operating across 4 US states, OnPay costs $2,136/yr vs. Gusto Plus at $4,080/yr\u2014saving $1,944/yr (47.6% lower software TCO).",
+  "verdict": {
+    "winner": "OnPay Wins on Multi-State Value ($0 Extra State Fees); Gusto Wins on Native SaaS Integrations",
+    "hiddenFeeTrap": "Gusto Simple ($49+$6/seat) only supports single-state payroll unless you add multi-state filing or upgrade to Gusto Plus ($80+$12/seat); OnPay includes all 50 states in its single $40+$6 tier.",
+    "actionLine": "Choose OnPay ($40 + $6/person) to lock in flat multi-state pricing; choose Gusto if you need 180+ native accounting/R&D tax credit integrations."
+  },
+  "prices": [
+    {
+      "label": "OnPay All-Inclusive (20 W-2 + 3 1099 Across 4 States)",
+      "price": "$178/mo ($2,136/yr) \u00b7 $40 base + $6/person \u00b7 $0 state fee",
+      "partner": "OnPay",
+      "ctaType": "payroll",
+      "ctaLabel": "Start OnPay Flat-Rate Trial \u2192",
+      "ctaUrl": "https://onpay.com/pricing?utm_source=saascostaudit&utm_medium=affiliate",
+      "source": 2
+    },
+    {
+      "label": "Gusto Simple + Multi-State Add-On (20 W-2 + 3 1099, 4 States)",
+      "price": "$223/mo ($2,676/yr) \u00b7 $49 base + $6/seat + $36 state fees",
+      "partner": "Gusto",
+      "ctaType": "payroll",
+      "ctaLabel": "Compare Gusto Simple Quote \u2192",
+      "ctaUrl": "https://gusto.com/product/pricing?utm_source=saascostaudit&utm_medium=affiliate",
+      "source": 3
+    },
+    {
+      "label": "Gusto Plus Multi-State HRIS (20 W-2 + 3 1099, 4 States)",
+      "price": "$338/mo ($4,056/yr) \u00b7 $80 base + $12/W-2 + $6/1099",
+      "partner": "Gusto",
+      "ctaType": "payroll",
+      "ctaLabel": "Compare Gusto Plus Features \u2192",
+      "ctaUrl": "https://gusto.com/product/pricing?utm_source=saascostaudit&utm_medium=affiliate",
+      "source": 3
+    },
+    {
+      "label": "Florida Dept. of Revenue Reemployment Tax + FUTA (20 W-2)",
+      "price": "$4,620/yr statutory tax ($189 FL SUI + $42 IRS FUTA/emp)",
+      "partner": "Gov",
+      "ctaType": "gov",
+      "source": 1
+    }
+  ],
+  "auditNotes": [
+    "Single-Tier vs. Tier-Upgrade Pricing: OnPay never forces growing SMBs from a $6/seat tier to a $12/seat tier just to unlock PTO approval, org charts, or multi-state tax filings.",
+    "Agricultural & Non-Profit Form 943 Support: OnPay natively files IRS Form 943 (agricultural employers) and vertical-specific clergy/restaurant tip tax credits at $0 surcharge.",
+    "Florida Reemployment Tax (.gov): Florida's 2026 SUI taxable wage base is $7,000 at a 2.70% new-employer rate ($189/employee/year)."
+  ],
+  "faq": [
+    {
+      "q": "Does OnPay really charge $0 extra for multi-state payroll tax filing?",
+      "a": "Yes. OnPay's single published tier ($40/mo base + $6/person) includes local, state, and federal payroll tax filings across all 50 US states with zero per-state monthly surcharges."
+    },
+    {
+      "q": "How much cheaper is OnPay than Gusto for a 20-person remote team in 4 states?",
+      "a": "For 20 W-2 employees and 3 contractors in 4 states, OnPay costs $178/mo ($2,136/yr). Gusto Simple with multi-state add-ons costs $223/mo ($2,676/yr), and Gusto Plus costs $338/mo ($4,056/yr), saving $540 to $1,920/yr with OnPay."
+    },
+    {
+      "q": "Do both Gusto and OnPay include free W-2 and 1099 year-end filings?",
+      "a": "Yes. Both OnPay and Gusto include unlimited payroll runs and year-end W-2 and 1099-NEC filings in their base monthly price."
+    },
+    {
+      "q": "What is Florida's 2026 employer Reemployment (SUI) tax rate?",
+      "a": "Per the Florida Department of Revenue (.gov), new employers in 2026 pay 2.70% on the first $7,000 of wages per employee ($189/year max per W-2 employee), plus $42/employee in federal FUTA."
+    }
+  ],
+  "sources": [
+    {
+      "id": 1,
+      "title": "Florida Department of Revenue \u2014 2026 Reemployment Tax Rate (2.70% on $7,000 Wage Base) (.gov)",
+      "url": "https://floridarevenue.com/taxes/taxesfees/Pages/rt_rate.aspx",
+      "accessed": "2026-10-24"
+    },
+    {
+      "id": 2,
+      "title": "OnPay Official 2026 Pricing ($40 Base + $6 Per Person All-Inclusive)",
+      "url": "https://onpay.com/pricing",
+      "accessed": "2026-10-24"
+    },
+    {
+      "id": 3,
+      "title": "Gusto Official 2026 Payroll & HRIS Tier Pricing",
+      "url": "https://gusto.com/product/pricing",
+      "accessed": "2026-10-24"
+    },
+    {
+      "id": 4,
+      "title": "IRS Publication 15 (2026 Federal Employer Tax Guide) (.gov)",
+      "url": "https://www.irs.gov/publications/p15",
+      "accessed": "2026-10-24"
+    }
+  ]
+}
