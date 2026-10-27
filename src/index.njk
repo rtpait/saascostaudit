@@ -1,8 +1,8 @@
 ---
 layout: base.njk
 permalink: "/"
-title: "B2B Payroll, HRIS & Merchant Fee TCO Calculator (2026 .gov)"
-description: "Audit 2026 B2B payroll (Gusto, Rippling, Deel, OnPay, ADP) + 50-state .gov SUI taxes and merchant fees (Stripe 2.9% vs. Helcim & Stax Interchange-Plus)."
+title: "SaaS Cost Audit: 2026 UCaaS, HRIS PEPM & Seat Calculator"
+description: "Audit 2026 per-seat B2B SaaS, UCaaS suites (Webex, Teams, Zoom, Google Workspace), pure PEPM HRIS software (Rippling, BambooHR, Gusto), and HubSpot tiers."
 serviceOffer:
   seoTitle: "B2B Payroll, Multi-State HRIS & Merchant Processing TCO Calculator (2026)"
   seoDescription: "Audit 2026 B2B payroll (Gusto, Rippling, Deel, OnPay, ADP) + 50-state .gov SUI taxes and merchant fees (Stripe 2.9% vs. Helcim & Stax Interchange-Plus)."
@@ -26,17 +26,17 @@ serviceOffer:
       source: 2
     - label: "Helcim Interchange-Plus Merchant Processing ($0 Monthly Fee)"
       price: "2.38% Effective ($18,564/yr on $65k/mo · Saves $11,154/yr vs. Stripe)"
-      partner: "Helcim"
-      ctaType: "merchant"
-      ctaLabel: "Switch to Helcim IC+ →"
-      ctaUrl: "https://www.helcim.com/pricing/?utm_source=saascostaudit&utm_medium=affiliate"
+      partner: "Zoom Workplace"
+      ctaType: "payroll"
+      ctaLabel: "Verify Zoom Workplace Rate →"
+      ctaUrl: "https://zoom.us/pricing?utm_source=saascostaudit.com&utm_medium=affiliate"
       source: 3
     - label: "Stax 0% Markup Wholesale Interchange Subscription ($99/mo)"
       price: "2.19% Effective ($17,088/yr on $65k/mo · 0% processor markup)"
-      partner: "Stax"
-      ctaType: "merchant"
-      ctaLabel: "Get Stax 0% Markup Quote →"
-      ctaUrl: "https://staxpayments.com/pricing/?utm_source=saascostaudit&utm_medium=affiliate"
+      partner: "Rippling"
+      ctaType: "payroll"
+      ctaLabel: "Compare Rippling Modular PEPM →"
+      ctaUrl: "https://www.rippling.com/pricing?utm_source=saascostaudit.com&utm_medium=affiliate"
       source: 4
 ---
 {% import "macros.njk" as m %}
@@ -46,8 +46,8 @@ serviceOffer:
   title: "2026 B2B Payroll, Multi-State HRIS & Merchant Processing TCO Audit",
   primaryPartner: "Gusto",
   primaryPartnerUrl: "https://gusto.com/product/pricing?utm_source=saascostaudit&utm_medium=affiliate",
-  secondaryPartner: "Helcim",
-  secondaryPartnerUrl: "https://www.helcim.com/pricing/?utm_source=saascostaudit&utm_medium=affiliate",
+  secondaryPartner: "Zoom Workplace",
+  secondaryPartnerUrl: "https://zoom.us/pricing?utm_source=saascostaudit.com&utm_medium=affiliate",
   lastVerified: "2026-10-24",
   calcDefaults: {w2: 18, states: 3, primaryState: "CA", contractors: 4, eor: 1, volume: 65000, ticket: 85, cnpPct: 80, intlPct: 10},
   verdict: {
@@ -81,44 +81,13 @@ serviceOffer:
 
 {{ m.payrollTcoCalc(hubEntry, site, state_sui_taxes_2026) }}
 
-{{ m.merchantFeeCalc(hubEntry, site, interchange_rates_2026) }}
+
 
 {{ m.prices(serviceOffer.prices, site, "home-hub", "hub", hubEntry.calcDefaults) }}
 
 {{ m.crossLinkHub(payrollPages, merchantPages, "/") }}
 
-<section class="tco-calc-box" id="eo-insurance-subdivision" aria-label="E&O and Cyber Liability Insurance Comparison Subdivision">
-  <span class="verified-gov-badge">🛡️ NEW SUBDIVISION · COMMERCIAL E&amp;O &amp; CYBER LIABILITY COMPLIANCE</span>
-  <h2 style="margin:.4rem 0 .25rem;border-top:0;padding-top:0"><a href="https://b2bcostaudit.com/eo-insurance/" style="color:#0f172a;text-decoration:none">Errors &amp; Omissions (E&amp;O) &amp; Cyber Insurance Comparison Subdivision (<code>/eo-insurance/</code>)</a></h2>
-  <p style="margin:0 0 .85rem;font-size:.94rem;color:#334155">Enterprise procurement teams require verified <strong>Tech E&amp;O ($1M/$2M to $5M/$5M)</strong>, <strong>First- &amp; Third-Party Cyber Liability</strong>, and compliant <strong>ACORD 25 Certificates of Insurance (COIs)</strong> before signing B2B SaaS, AI, FinTech, Healthcare BAA, and IT consulting contracts. Explore our 4 dedicated search-intent tools:</p>
-  <div class="card-grid-2">
-    <div class="calc-vendor-card vendor-best">
-      <small>Flagship Tool · NAIC &amp; Carrier Rate Filings</small>
-      <h3 style="margin:.25rem 0 .35rem"><a href="https://b2bcostaudit.com/eo-insurance/cyber-eo-premium-estimator/">1. Cyber Insurance Cost Calculator &amp; Professional Liability Cost by Industry</a></h3>
-      <p style="margin:0 0 .6rem;font-size:.86rem;color:#334155">Estimate 2026 premiums across SaaS/AI ($1,882/yr avg), Healthcare ($1,395/yr), FinTech ($1,365/yr), Consulting ($1,197/yr), and SMBs ($999/yr cyber / $675/yr 1–4 emp E&amp;O) with MFA/EDR/Backup control credits.</p>
-      <a class="cta tbl-cta-btn" href="https://b2bcostaudit.com/eo-insurance/cyber-eo-premium-estimator/">Launch Cyber &amp; E&amp;O Calculator →</a>
-    </div>
-    <div class="calc-vendor-card vendor-best">
-      <small>Contract-Driven Buyer Guide · SOC 2 &amp; HIPAA</small>
-      <h3 style="margin:.25rem 0 .35rem"><a href="https://b2bcostaudit.com/eo-insurance/industry-policy-requirements/">2. Tech E&amp;O &amp; Cyber Insurance Policy Requirements by Industry</a></h3>
-      <p style="margin:0 0 .6rem;font-size:.86rem;color:#334155">Unblock enterprise MSA Insurance Exhibits: First-Party vs. Third-Party Cyber, Retroactive Dates, 80/20 Soft Hammer Clauses, $250k+ Social Engineering sublimits, and same-day COI binding.</p>
-      <a class="cta-secondary tbl-cta-btn" href="https://b2bcostaudit.com/eo-insurance/industry-policy-requirements/">Audit MSA Policy Requirements →</a>
-    </div>
-    <div class="calc-vendor-card">
-      <small>Instant ACORD 25 Verification &amp; Gap Remediation</small>
-      <h3 style="margin:.25rem 0 .35rem"><a href="https://b2bcostaudit.com/eo-insurance/coi-compliance-checker/">3. Certificate of Insurance Requirements &amp; ACORD 25 COI Checker</a></h3>
-      <p style="margin:0 0 .6rem;font-size:.86rem;color:#334155">Paste an ACORD 25 COI to flag limit or endorsement gaps against $1M/$1M, $2M/$2M SOC 2, or $5M/$5M HIPAA MSAs—with direct vendor fix-gap quotes and 1-click procurement notices.</p>
-      <a class="cta-secondary tbl-cta-btn" href="https://b2bcostaudit.com/eo-insurance/coi-compliance-checker/">Run Free ACORD 25 COI Checker →</a>
-    </div>
-    <div class="calc-vendor-card">
-      <small>50-State + DC Statutory vs. Contractual Table</small>
-      <h3 style="margin:.25rem 0 .35rem"><a href="https://b2bcostaudit.com/eo-insurance/state-minimum-liability-limits/">4. State-by-State E&amp;O Minimum Liability Limits Matrix</a></h3>
-      <p style="margin:0 0 .6rem;font-size:.86rem;color:#334155">Single supporting authority table covering the 12 mandatory Real Estate E&amp;O states, OR producer/attorney statutes, state cyber tort safe-harbor laws (OH, UT, CT, TN), and state IT contract floors.</p>
-      <a class="cta-secondary tbl-cta-btn" href="https://b2bcostaudit.com/eo-insurance/state-minimum-liability-limits/">View 50-State Limits Matrix →</a>
-    </div>
-  </div>
-  <p style="margin:.65rem 0 0;font-size:.85rem"><a href="https://b2bcostaudit.com/eo-insurance/"><strong>Open the E&amp;O &amp; Cyber Insurance Subdivision Hub (`/eo-insurance/`) →</strong></a> · <a href="/datasets/eo-cyber-insurance-benchmarks-2026.json">Download 2026 E&amp;O &amp; Cyber Benchmark Dataset (JSON)</a></p>
-</section>
+
 
 
 

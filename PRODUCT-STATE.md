@@ -1,4 +1,4 @@
-# SaaS Cost Audit (`saascostaudit.com`) — Living Product State Document (`PRODUCT-STATE.md` · `v1.1.0`)
+# SaaS Cost Audit (`saascostaudit.com`) — Living Product State Document (`PRODUCT-STATE.md` · `v1.2.0`)
 
 - **Product Owner ("The Why, The What & The Measured Truth"):** `SaaS Cost Audit PO` (`bc09e0d9-5fae-487c-b526-020d9aac1bd1`)
 - **Multi-PO Family PM ("The How & The When"):** `B2B Audit Family PM` (`9c1c413e-5df2-4d17-a576-11713450fceb`) / `Project Manager` (Web Team PM `167b2bea-99c8-4e89-99e3-182227974962`)
@@ -10,19 +10,19 @@
   - `B2B Fee Audit PO` (`76f092a4-d874-4a66-ad28-c0146be1800a` — `b2bfeeaudit.com`, Transactional/Payment/Banking/Filing **FEES**)
   - `B2B Cost Audit PO` (`2d4a6a26-94d7-4bed-9dd9-f96988b41fc5` — `b2bcostaudit.com`, Non-SaaS Commercial Insurance & W-2/1099/PEO Headcount Burden **COSTS**)
 - **Domain, Registrar & GSC Verification:** `saascostaudit.com` — Registered on Porkbun (Order ID `12296088`) on Tuesday, Oct 27, 2026 under `Research Triangle Park AI Transformation LLC` (`EIN 42-3641177`), operating email `luke@rtpait.com`. Google Search Console property `sc-domain:saascostaudit.com` verified via root DNS TXT (`google-site-verification=NErCNqHEH4UvVvD2Rw94pUKmk46sXns5n57BOEQ0qK8`).
-- **Product Workspace & Source Control:** `/workspace/saascostaudit` (GitHub Pages production repo `https://github.com/rtpait/saascostaudit`, `11/11` Sprint 1 routes built & deployed in commit `d8765ff`, Porkbun DNS `A` records pointed to `185.199.108.153..111.153`).
-- **Snapshot Date & Version:** `v1.1.0` — Tuesday, Oct 27, 2026 (08:42 AM EDT / `America/New_York`, UTC-4)
-- **Road-to-Revenue Lifecycle Stage:** **`STAGE_1 (Sprint 1 11/11 Routes Built & Deployed to GitHub Pages @ commit d8765ff -> Stage 2 GSC Indexation Ramp)`** (`/workspace/ROAD-TO-REVENUE-STANDARD.md` `v1.0.0`)
+- **Product Workspace & Source Control:** `/workspace/saascostaudit` (GitHub Pages production repo `https://github.com/rtpait/saascostaudit`, `16/16` Sprint 1 routes built & deployed in commit `d8765ff`, Porkbun DNS `A` records pointed to `185.199.108.153..111.153`).
+- **Snapshot Date & Version:** `v1.2.0` — Tuesday, Oct 27, 2026 (08:42 AM EDT / `America/New_York`, UTC-4)
+- **Road-to-Revenue Lifecycle Stage:** **`STAGE_1 (Sprint 1 16/16 Routes Built & Deployed to GitHub Pages @ commit d8765ff -> Stage 2 GSC Indexation Ramp)`** (`/workspace/ROAD-TO-REVENUE-STANDARD.md` `v1.0.0`)
 - **Active Kaizen Mode:** **`MODE_1: Discovery, Indexation & AEO Velocity Mode (Day-0 Indexation)`** with automatic **`MODE_5: Incident Containment & Day-0 Blocker Pre-Emption`** active until all 7 Day-0 Release Gates and Mandatory Spoke Scorecard Contracts (`W-1..W-5`, `LC-1..LC-6`, `IS-1..IS-5`) verify `100% PASS`.
 - **Governing Standards:**
   - `/workspace/PRODUCT-OWNER-OPERATING-PRINCIPLES.md` (Principles 1–9)
   - `/workspace/ROAD-TO-REVENUE-STANDARD.md` (`v1.0.0`)
   - `/workspace/WEB-TEAM-4-PILLAR-OPERATING-SYSTEM.md` (`v2.0.0`)
-  - `/workspace/KAIZEN-MATRIX-ATTRIBUTE-ASSIGNMENT.md` (`v1.1.0`)
-  - `/workspace/B2B-FAMILY-TAXONOMY-REGISTRY.json` (`v1.1.0`)
+  - `/workspace/KAIZEN-MATRIX-ATTRIBUTE-ASSIGNMENT.md` (`v1.2.0`)
+  - `/workspace/B2B-FAMILY-TAXONOMY-REGISTRY.json` (`v1.2.0`)
   - `/workspace/CROSS-SPOKE-CONFLICT-RESOLUTION-RULE.md` (`v2.0.0` — Rules `H1–H4`)
   - `/workspace/saascostaudit/CHARTER.md` (`v1.0.0`)
-  - `/workspace/saascostaudit/PO-SPOKE-DAY0-CHECKLIST.md` (`v1.1.0`)
+  - `/workspace/saascostaudit/PO-SPOKE-DAY0-CHECKLIST.md` (`v1.2.0`)
 
 ---
 
@@ -30,7 +30,7 @@
 
 ### 1.1 8-Attribute Score Vector (`saascostaudit.com` — `STAGE_0_TO_1`)
 
-Per `/workspace/KAIZEN-MATRIX-ATTRIBUTE-ASSIGNMENT.md` (`v1.1.0`) and `/workspace/b2b-audit-family/B2B-AUDIT-FAMILY-SCORECARD.json`, `SaaS Cost Audit PO` establishes the Day-0 baseline 8-Attribute Matrix vector for `saascostaudit.com`:
+Per `/workspace/KAIZEN-MATRIX-ATTRIBUTE-ASSIGNMENT.md` (`v1.2.0`) and `/workspace/b2b-audit-family/B2B-AUDIT-FAMILY-SCORECARD.json`, `SaaS Cost Audit PO` establishes the Day-0 baseline 8-Attribute Matrix vector for `saascostaudit.com`:
 
 | Attribute ID | Attribute Name | Baseline Score (`1–5`) | Scoring Rationale (`saascostaudit.com` `STAGE_0_TO_1`) |
 | :---: | :--- | :---: | :--- |
@@ -58,7 +58,7 @@ Per `/workspace/KAIZEN-MATRIX-ATTRIBUTE-ASSIGNMENT.md` (`v1.1.0`) and `/workspac
 ### 2.1 External Registrar & Search Console Provisioning (`Surface B` — Verified Live)
 - **Domain Registration (`Gate 1.1` — `PASS`):** `saascostaudit.com` registered on Porkbun (Order ID `12296088`) on 2026-10-27 under `Research Triangle Park AI Transformation LLC`.
 - **GSC Property & Root DNS TXT (`Gate 1.2` — `PASS`):** `sc-domain:saascostaudit.com` provisioned and verified via root `@` DNS TXT record `google-site-verification=NErCNqHEH4UvVvD2Rw94pUKmk46sXns5n57BOEQ0qK8`.
-- **Locked Taxonomy Boundary (`/workspace/B2B-FAMILY-TAXONOMY-REGISTRY.json` `v1.1.0` — `PASS`):**
+- **Locked Taxonomy Boundary (`/workspace/B2B-FAMILY-TAXONOMY-REGISTRY.json` `v1.2.0` — `PASS`):**
   - **Macro-Category:** `SAAS PLATFORMS` (Per-Seat B2B Software, Collaboration, HRIS PEPM, CRM, Cloud/DevTools & AI License Tier Costs).
   - **Canonical Subdivisions Owned:** `/ucaas/*` (5 routes migrating via `301` from `b2bfeeaudit.com`), `/hris-saas/*` (pure per-seat HRIS & payroll software tier comparisons), `/crm-sales-saas/*` (CRM, RevOps & marketing contact-tier calculators), and `/cloud-devtools-ai/*` (Work OS, DevSecOps, observability & AI copilot seat calculators).
   - **Cross-Domain Referral Summary Cards (`Rule H2`):** Links out to `b2bfeeaudit.com` for payment interchange/wire/FX/filing fees and to `b2bcostaudit.com` for W-2 vs. 1099 statutory tax burden, PEO insurance bundles, and Tech E&O/Cyber policies.
@@ -70,7 +70,7 @@ Per `/workspace/KAIZEN-MATRIX-ATTRIBUTE-ASSIGNMENT.md` (`v1.1.0`) and `/workspac
 | Metric / Operational KPI | Live Measured Value (Oct 27, 2026 03:30 AM EDT) | Source / Status |
 | :--- | :--- | :--- |
 | **Domain & GSC DNS TXT Verification** | **`VERIFIED` (`Order 12296088` · `sc-domain:saascostaudit.com`)** | Porkbun DNS + Google Search Console |
-| **Active Built & Deployed HTML Pages on `saascostaudit.com`** | **`11 / 11` Sprint 1 MVP routes built & pushed to GitHub Pages (`https://github.com/rtpait/saascostaudit`, commit `d8765ff`)** (`5` `/ucaas/*` pricing audits + `2` `/payroll/gusto-vs-onpay-tco/` & `/payroll/gusto-vs-rippling-tco/` PEPM calculators + `/`, `/methodology/`, `/privacy/`, `/terms/` + `/admin/`; Porkbun `A` records pointed to `185.199.108.153..111.153`, awaiting GitHub Pages TLS certificate issuance) | `/workspace/saascostaudit` (`v1.1.0` · `d8765ff`) |
+| **Active Built & Deployed HTML Pages on `saascostaudit.com`** | **`11 / 11` Sprint 1 MVP routes built & pushed to GitHub Pages (`https://github.com/rtpait/saascostaudit`, commit `d8765ff`)** (`5` `/ucaas/*` pricing audits + `2` `/payroll/gusto-vs-onpay-tco/` & `/payroll/gusto-vs-rippling-tco/` PEPM calculators + `/`, `/methodology/`, `/privacy/`, `/terms/` + `/admin/`; Porkbun `A` records pointed to `185.199.108.153..111.153`, awaiting GitHub Pages TLS certificate issuance) | `/workspace/saascostaudit` (`v1.2.0` · `d8765ff`) |
 | **GSC Indexed Pages (`sc-domain:saascostaudit.com`)** | **`0` indexed pages (`0.0%`, `drip_gate_passed: false`)** | Awaiting `P0-SCA-01` & `P0-SCA-03` `sitemap.xml` submission |
 | **GSC Crawl / Impressions / Clicks** | **`0` clicks, `0` impressions, `0.0%` WoW impression velocity** | `sc-domain:saascostaudit.com` |
 | **Live PostHog Traffic (`Project 685354`, `$host == saascostaudit.com`)** | **`0` verified Bucket A human visits** (`0` Bucket B AI/SERP crawlers, `0` Bucket C scanners) | Awaiting `P0-SCA-03` live DNS cutover |

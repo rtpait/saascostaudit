@@ -120,7 +120,7 @@
 {% set defPrimaryState = d.primaryState or "CA" %}
 {% set defContractors = d.contractors if d.contractors is defined else 4 %}
 {% set defEor = d.eor if d.eor is defined else 1 %}
-<section class="tco-calc-box" id="payroll-tco-calc" data-route-slug="{{ cSlug }}" aria-label="Interactive Payroll and Multi-State HRIS TCO Calculator">
+<section class="tco-calc-box" id="saas-seat-calc" data-route-slug="{{ cSlug }}" aria-label="Interactive Payroll and Multi-State HRIS TCO Calculator">
   <div>
     <span class="badge-payroll">🧮 DETERMINISTIC PAYROLL, MULTI-STATE SUI &amp; EOR TCO CALCULATOR</span>
     <h2 style="margin:.35rem 0 .2rem;border-top:0;padding-top:0">Calculate Your 12-Month All-In Payroll, Multi-State Tax &amp; EOR Cost</h2>
@@ -228,7 +228,7 @@
 </section>
 <script>
 (function(){
-  var box = document.getElementById("payroll-tco-calc");
+  var box = document.getElementById("saas-seat-calc");
   if (!box) return;
   var routeSlug = box.getAttribute("data-route-slug") || "hub-payroll";
   var w2El = document.getElementById("ptc-w2");
@@ -349,211 +349,7 @@
 </script>
 {% endmacro %}
 
-{% macro merchantFeeCalc(e, site, interchangeData) %}
-{% set mSlug = (e and e.slug) or "hub-merchant" %}
-{% set d = (e and e.calcDefaults) or {} %}
-{% set defVol = d.volume or 65000 %}
-{% set defTicket = d.ticket or 85 %}
-{% set defCnp = d.cnpPct if d.cnpPct is defined else 80 %}
-{% set defIntl = d.intlPct if d.intlPct is defined else 10 %}
-<section class="tco-calc-box" id="merchant-fee-calc" data-route-slug="{{ mSlug }}" aria-label="Interactive Merchant Processing and Interchange-Plus Fee Calculator">
-  <div>
-    <span class="badge-merchant">💳 DETERMINISTIC MERCHANT PROCESSING &amp; INTERCHANGE-PLUS AUDITOR</span>
-    <h2 style="margin:.35rem 0 .2rem;border-top:0;padding-top:0">Compare Flat-Rate (Stripe 2.9%+$0.30 / Square / PayPal) vs. Interchange-Plus (Helcim / Stax)</h2>
-    <p style="margin:0;font-size:.93rem;color:#334155">Enter your monthly card volume, average ticket size, online/invoiced mix, and international share to calculate exact effective rates and 12-month savings:</p>
-  </div>
-  <div class="calc-controls-grid">
-    <div class="calc-field">
-      <label for="mfc-vol">Monthly Card Volume ($5k–$500k): <span id="mfc-vol-lbl">${{ defVol }}</span></label>
-      <input type="number" id="mfc-vol" min="5000" max="500000" step="1000" value="{{ defVol }}">
-      <input type="range" id="mfc-vol-range" min="5000" max="500000" step="5000" value="{{ defVol }}" aria-label="Monthly Card Volume Slider">
-    </div>
-    <div class="calc-field">
-      <label for="mfc-ticket">Average Ticket Size ($10–$2,500): <span id="mfc-ticket-lbl">${{ defTicket }}</span></label>
-      <input type="number" id="mfc-ticket" min="10" max="2500" value="{{ defTicket }}">
-      <small>Controls per-transaction ($0.30 vs. $0.08) fee drag</small>
-    </div>
-    <div class="calc-field">
-      <label for="mfc-cnp">Online / Invoiced (CNP) Share (%): <span id="mfc-cnp-lbl">{{ defCnp }}%</span></label>
-      <input type="number" id="mfc-cnp" min="0" max="100" value="{{ defCnp }}">
-      <small>Remainder is Card-Present POS tap/dip</small>
-    </div>
-    <div class="calc-field">
-      <label for="mfc-intl">International Card Share (%): <span id="mfc-intl-lbl">{{ defIntl }}%</span></label>
-      <input type="number" id="mfc-intl" min="0" max="100" value="{{ defIntl }}">
-      <small>Triggers +1.5% cross-border fee on Stripe/PayPal</small>
-    </div>
-  </div>
 
-  <div class="calc-output-grid" id="mfc-results-grid">
-    <div class="calc-vendor-card vendor-best" id="mfc-card-helcim">
-      <small>Helcim Interchange-Plus ($0/mo)</small>
-      <strong class="calc-big" id="mfc-helcim-yr">$18,564/yr</strong>
-      <span class="calc-sub" id="mfc-helcim-eff">Effective Rate: 2.38% · $0 monthly fee · Free invoicing</span>
-      <div style="margin-top:.55rem">
-        <a class="cta tbl-cta-btn" id="mfc-cta-helcim" data-partner="Helcim" data-cta-slot="merchant_calc" data-funnel-role="mid_content" data-4axis-key="direct_partner:merchant_calc_mid_{{ mSlug }}:SAAS_COSTS.ucaas_seats:mid_content" data-route-slug="{{ mSlug }}" data-calc-inputs='{"volume":{{ defVol }},"ticket":{{ defTicket }}}' data-clickref="b2b-merchant_calc-{{ mSlug }}-helcim" href="https://www.helcim.com/pricing/?utm_source=saascostaudit&amp;utm_medium=affiliate&amp;clickref=b2b-merchant_calc-{{ mSlug }}-helcim" target="_blank" rel="sponsored nofollow noopener">Switch to Helcim IC+ →</a>
-      </div>
-    </div>
-    <div class="calc-vendor-card vendor-best" id="mfc-card-stax">
-      <small>Stax 0% Markup Subscription</small>
-      <strong class="calc-big" id="mfc-stax-yr">$17,088/yr</strong>
-      <span class="calc-sub" id="mfc-stax-eff">Effective Rate: 2.19% · $99/mo + 0% processor markup</span>
-      <div style="margin-top:.55rem">
-        <a class="cta-secondary tbl-cta-btn" id="mfc-cta-stax" data-partner="Stax" data-cta-slot="merchant_calc" data-funnel-role="mid_content" data-4axis-key="direct_partner:merchant_calc_mid_{{ mSlug }}:SAAS_COSTS.ucaas_seats:mid_content" data-route-slug="{{ mSlug }}" data-calc-inputs='{"volume":{{ defVol }},"ticket":{{ defTicket }}}' data-clickref="b2b-merchant_calc-{{ mSlug }}-stax" href="https://staxpayments.com/pricing/?utm_source=saascostaudit&amp;utm_medium=affiliate&amp;clickref=b2b-merchant_calc-{{ mSlug }}-stax" target="_blank" rel="sponsored nofollow noopener">Get Stax 0% Audit →</a>
-      </div>
-    </div>
-    <div class="calc-vendor-card" id="mfc-card-stripe">
-      <small>Stripe (2.9%+$0.30 + Invoicing)</small>
-      <strong class="calc-big" id="mfc-stripe-yr">$29,718/yr</strong>
-      <span class="calc-sub" id="mfc-stripe-eff">Effective Rate: 3.81% · Incl. +0.8% invoicing &amp; +1.5% intl</span>
-      <div style="margin-top:.55rem">
-        <span style="display:inline-block;font-size:.78rem;font-weight:700;color:#065f46" id="mfc-savings-callout">✓ Save $12,630/yr switching to IC+</span>
-      </div>
-    </div>
-    <div class="calc-vendor-card" id="mfc-card-paypal">
-      <small>PayPal Checkout (3.49%+$0.49)</small>
-      <strong class="calc-big" id="mfc-paypal-yr">$33,150/yr</strong>
-      <span class="calc-sub" id="mfc-paypal-eff">Effective Rate: 4.25% · Digital wallet &amp; invoicing drag</span>
-    </div>
-  </div>
-
-  <div class="box" style="margin:.6rem 0 0;background:#eff6ff;border-color:#93c5fd">
-    <strong>🏛️ Federal Reserve Regulation II (Durbin Amendment) Regulated Debit Benchmark (.gov): 0.05% + $0.22/tx</strong>
-    <p style="margin:.2rem 0 0;font-size:.86rem;color:#1e3a8a">Flat-rate processors charge 2.6%–3.49% even when customers use regulated bank debit cards (capped at 0.05% + $0.22 wholesale). Helcim and Stax pass regulated debit wholesale rates directly to your business.</p>
-  </div>
-
-  <div class="cfo-export-bar">
-    <div>
-      <strong>📊 Export Statement Audit Breakdown (Visa/MC Interchange vs. Flat-Rate CSV/PDF):</strong><br>
-      <small id="mfc-export-counter">Download full 12-month effective rate schedule &amp; Level 2/3 savings model (3 free runs; $29/mo Pro Unlimited).</small>
-    </div>
-    <button type="button" class="cta-export" id="mfc-export-btn" data-route-slug="{{ mSlug }}" data-export-type="merchant_cfo_csv">⬇ Export Merchant Fee Audit CSV ($29 Pro Preview)</button>
-  </div>
-</section>
-<script>
-(function(){
-  var box = document.getElementById("merchant-fee-calc");
-  if (!box) return;
-  var routeSlug = box.getAttribute("data-route-slug") || "hub-merchant";
-  var volEl = document.getElementById("mfc-vol");
-  var volRange = document.getElementById("mfc-vol-range");
-  var ticketEl = document.getElementById("mfc-ticket");
-  var cnpEl = document.getElementById("mfc-cnp");
-  var intlEl = document.getElementById("mfc-intl");
-
-  function fmt(n) { return "$" + Math.round(n).toLocaleString("en-US"); }
-
-  function compute(fromUser) {
-    var vol = Math.max(5000, Math.min(500000, parseFloat(volEl.value || "65000")));
-    var ticket = Math.max(10, Math.min(2500, parseFloat(ticketEl.value || "85")));
-    var cnpPct = Math.max(0, Math.min(100, parseFloat(cnpEl.value || "80"))) / 100.0;
-    var cpPct = 1.0 - cnpPct;
-    var intlPct = Math.max(0, Math.min(100, parseFloat(intlEl.value || "10"))) / 100.0;
-    var txCount = vol / ticket;
-
-    document.getElementById("mfc-vol-lbl").textContent = "$" + Math.round(vol).toLocaleString("en-US");
-    document.getElementById("mfc-ticket-lbl").textContent = "$" + Math.round(ticket).toLocaleString("en-US");
-    document.getElementById("mfc-cnp-lbl").textContent = Math.round(cnpPct * 100) + "%";
-    document.getElementById("mfc-intl-lbl").textContent = Math.round(intlPct * 100) + "%";
-
-    // Wholesale interchange + 0.14% assessments
-    var wholesalePct = (cnpPct * 0.0188 + cpPct * 0.0152) + 0.0014;
-    var wholesalePerTx = cnpPct * 0.10 + cpPct * 0.07;
-
-    // 1. Helcim IC+: volume-tiered markup (0.40% under 50k, 0.35% 50k-100k, 0.30% 100k+) + $0.08/tx
-    var helcimMarkupPct = vol >= 100000 ? 0.0030 : (vol >= 50000 ? 0.0035 : 0.0040);
-    var helcimMo = vol * (wholesalePct + helcimMarkupPct + intlPct * 0.0065) + txCount * (wholesalePerTx + 0.08);
-    var helcimYr = helcimMo * 12;
-    var helcimEff = (helcimMo / vol) * 100;
-
-    // 2. Stax 0% markup: $99/mo (or $199 over $150k) + wholesale + $0.12 blended tx
-    var staxSub = vol > 150000 ? 199 : 99;
-    var staxMo = staxSub + vol * (wholesalePct + intlPct * 0.0065) + txCount * (wholesalePerTx + 0.12);
-    var staxYr = staxMo * 12;
-    var staxEff = (staxMo / vol) * 100;
-
-    // 3. Stripe: 2.9% + $0.30 online, 2.7% + $0.05 CP, +0.4% blended invoicing/billing, +1.5% intl
-    var stripePct = (cnpPct * (0.029 + 0.004) + cpPct * 0.027) + intlPct * 0.015;
-    var stripePerTx = cnpPct * 0.30 + cpPct * 0.05;
-    var stripeMo = vol * stripePct + txCount * stripePerTx;
-    var stripeYr = stripeMo * 12;
-    var stripeEff = (stripeMo / vol) * 100;
-
-    // 4. PayPal: 3.49% + $0.49 online, 2.29% + $0.09 CP, +1.5% intl
-    var paypalPct = (cnpPct * 0.0349 + cpPct * 0.0229) + intlPct * 0.015;
-    var paypalPerTx = cnpPct * 0.49 + cpPct * 0.09;
-    var paypalMo = vol * paypalPct + txCount * paypalPerTx;
-    var paypalYr = paypalMo * 12;
-    var paypalEff = (paypalMo / vol) * 100;
-
-    document.getElementById("mfc-helcim-yr").textContent = fmt(helcimYr) + "/yr";
-    document.getElementById("mfc-helcim-eff").textContent = "Effective Rate: " + helcimEff.toFixed(2) + "% (" + fmt(helcimMo) + "/mo · $0 sub)";
-    document.getElementById("mfc-stax-yr").textContent = fmt(staxYr) + "/yr";
-    document.getElementById("mfc-stax-eff").textContent = "Effective Rate: " + staxEff.toFixed(2) + "% (" + fmt(staxMo) + "/mo · $" + staxSub + "/mo sub)";
-    document.getElementById("mfc-stripe-yr").textContent = fmt(stripeYr) + "/yr";
-    document.getElementById("mfc-stripe-eff").textContent = "Effective Rate: " + stripeEff.toFixed(2) + "% (" + fmt(stripeMo) + "/mo)";
-    document.getElementById("mfc-paypal-yr").textContent = fmt(paypalYr) + "/yr";
-    document.getElementById("mfc-paypal-eff").textContent = "Effective Rate: " + paypalEff.toFixed(2) + "% (" + fmt(paypalMo) + "/mo)";
-
-    var bestIcYr = Math.min(helcimYr, staxYr);
-    var saved = Math.max(0, stripeYr - bestIcYr);
-    document.getElementById("mfc-savings-callout").textContent = "✓ Saves " + fmt(saved) + "/yr switching from Stripe to IC+";
-
-    var calcStateJson = JSON.stringify({volume: Math.round(vol), ticket: Math.round(ticket), cnpPct: Math.round(cnpPct*100), intlPct: Math.round(intlPct*100), helcimYr: Math.round(helcimYr), staxYr: Math.round(staxYr), savedVsStripe: Math.round(saved)});
-    ["mfc-cta-helcim", "mfc-cta-stax"].forEach(function(id){
-      var el = document.getElementById(id);
-      if (el) el.setAttribute("data-calc-inputs", calcStateJson);
-    });
-
-    if (fromUser && window.posthog && typeof window.posthog.capture === "function") {
-      window.posthog.capture("estimator_interaction", {
-        calculator: "merchant_fee_calc",
-        route_slug: routeSlug,
-        monthly_volume: Math.round(vol),
-        avg_ticket: Math.round(ticket),
-        cnp_pct: Math.round(cnpPct * 100),
-        intl_pct: Math.round(intlPct * 100),
-        annual_savings_vs_stripe: Math.round(saved)
-      });
-    }
-  }
-
-  if (volRange && volEl) {
-    volRange.addEventListener("input", function(){ volEl.value = volRange.value; compute(true); });
-    volEl.addEventListener("input", function(){ volRange.value = volEl.value; compute(true); });
-  }
-  [ticketEl, cnpEl, intlEl].forEach(function(el){
-    if (el) el.addEventListener("change", function(){ compute(true); });
-    if (el) el.addEventListener("input", function(){ compute(true); });
-  });
-
-  var expBtn = document.getElementById("mfc-export-btn");
-  if (expBtn) {
-    expBtn.addEventListener("click", function(){
-      var used = parseInt(localStorage.getItem("b2b_free_exports_used") || "0", 10) + 1;
-      localStorage.setItem("b2b_free_exports_used", String(used));
-      var rem = Math.max(0, 3 - used);
-      var cntEl = document.getElementById("mfc-export-counter");
-      if (cntEl) {
-        cntEl.textContent = rem > 0
-          ? "Merchant Audit CSV downloaded! (" + rem + " of 3 free exports remaining before $29/mo Pro)."
-          : "Free 3-export limit reached — Upgrade to SaaS Cost Audit Pro ($29/mo or $9 7-day pass) for unlimited CFO statement exports.";
-      }
-      if (window.posthog && typeof window.posthog.capture === "function") {
-        window.posthog.capture("export_cfo_report_clicked", {calculator: "merchant_fee_calc", route_slug: routeSlug, exports_used: used});
-      }
-      var csv = "Processor,Annual_Processing_Fees,Effective_Rate_Note\nHelcim_IC_Plus," + document.getElementById("mfc-helcim-yr").textContent + "," + document.getElementById("mfc-helcim-eff").textContent + "\nStax_0_Markup," + document.getElementById("mfc-stax-yr").textContent + "," + document.getElementById("mfc-stax-eff").textContent + "\nStripe_Flat," + document.getElementById("mfc-stripe-yr").textContent + "," + document.getElementById("mfc-stripe-eff").textContent + "\nPayPal_Checkout," + document.getElementById("mfc-paypal-yr").textContent + "," + document.getElementById("mfc-paypal-eff").textContent + "\n";
-      var blob = new Blob([csv], {type: "text/csv"});
-      var a = document.createElement("a");
-      a.href = URL.createObjectURL(blob);
-      a.download = "b2bfeeaudit-merchant-fees-" + routeSlug + ".csv";
-      a.click();
-    });
-  }
-  compute(false);
-})();
-</script>
-{% endmacro %}
 
 {% macro faq(list) %}
 {% if list and list.length %}
@@ -745,9 +541,9 @@
       Because your configuration requires <strong>standalone PSTN calling + AI transcription without an existing Microsoft 365 E5 or Cisco EA bundle</strong>, dedicated VoIP platforms calculate lower than both Cisco Webex ($8,100/yr) and Microsoft Teams ($10,050/yr):
     </p>
     <div style="display:flex;flex-wrap:wrap;gap:.55rem;align-items:center">
-      <a class="cta tbl-cta-btn" id="ucc-cta-dialpad" data-partner="Dialpad" data-cta-slot="ucaas_merit_voip" data-route-slug="{{ uSlug }}" data-calc-inputs='{"voip":"dialpad"}' data-clickref="b2bfeeaudit_ucaas_dialpad_{{ uSlug }}" href="https://www.dialpad.com/pricing/?utm_source=saascostaudit.com&amp;utm_medium=affiliate&amp;utm_campaign=ucaas_2026&amp;clickref=b2bfeeaudit_ucaas_dialpad_{{ uSlug }}" target="_blank" rel="sponsored nofollow noopener">Dialpad Connect + AI: <span id="ucc-dialpad-yr">$5,700/yr</span> ($19/seat all-in) →</a>
-      <a class="cta-secondary tbl-cta-btn" id="ucc-cta-nextiva" data-partner="Nextiva" data-cta-slot="ucaas_merit_voip" data-route-slug="{{ uSlug }}" data-calc-inputs='{"voip":"nextiva"}' data-clickref="b2bfeeaudit_ucaas_nextiva_{{ uSlug }}" href="https://www.nextiva.com/nextiva-pricing.html?utm_source=saascostaudit.com&amp;utm_medium=affiliate&amp;utm_campaign=ucaas_2026&amp;clickref=b2bfeeaudit_ucaas_nextiva_{{ uSlug }}" target="_blank" rel="sponsored nofollow noopener">Nextiva Core VoIP: <span id="ucc-nextiva-yr">$5,775/yr</span> →</a>
-      <a class="cta-secondary tbl-cta-btn" id="ucc-cta-ringcentral" data-partner="RingCentral" data-cta-slot="ucaas_merit_voip" data-route-slug="{{ uSlug }}" data-calc-inputs='{"voip":"ringcentral"}' data-clickref="b2bfeeaudit_ucaas_ringcentral_{{ uSlug }}" href="https://www.ringcentral.com/office/plansandpricing.html?utm_source=saascostaudit.com&amp;utm_medium=affiliate&amp;utm_campaign=ucaas_2026&amp;clickref=b2bfeeaudit_ucaas_ringcentral_{{ uSlug }}" target="_blank" rel="sponsored nofollow noopener">RingCentral RingEX: <span id="ucc-ringcentral-yr">$7,350/yr</span> →</a>
+      <a class="cta tbl-cta-btn" id="ucc-cta-dialpad" data-partner="Dialpad" data-cta-slot="ucaas_merit_voip" data-funnel-role="mid_content" data-4axis-key="impact:ucaas_merit_voip:SAAS_COSTS.ucaas_seats:mid_content" data-route-slug="{{ uSlug }}" data-calc-inputs='{"voip":"dialpad"}' data-clickref="b2bfeeaudit_ucaas_dialpad_{{ uSlug }}" href="https://www.dialpad.com/pricing/?utm_source=saascostaudit.com&amp;utm_medium=affiliate&amp;utm_campaign=ucaas_2026&amp;clickref=b2bfeeaudit_ucaas_dialpad_{{ uSlug }}" target="_blank" rel="sponsored nofollow noopener">Dialpad Connect + AI: <span id="ucc-dialpad-yr">$5,700/yr</span> ($19/seat all-in) →</a>
+      <a class="cta-secondary tbl-cta-btn" id="ucc-cta-nextiva" data-partner="Nextiva" data-cta-slot="ucaas_merit_voip" data-funnel-role="mid_content" data-4axis-key="impact:ucaas_merit_voip:SAAS_COSTS.ucaas_seats:mid_content" data-route-slug="{{ uSlug }}" data-calc-inputs='{"voip":"nextiva"}' data-clickref="b2bfeeaudit_ucaas_nextiva_{{ uSlug }}" href="https://www.nextiva.com/nextiva-pricing.html?utm_source=saascostaudit.com&amp;utm_medium=affiliate&amp;utm_campaign=ucaas_2026&amp;clickref=b2bfeeaudit_ucaas_nextiva_{{ uSlug }}" target="_blank" rel="sponsored nofollow noopener">Nextiva Core VoIP: <span id="ucc-nextiva-yr">$5,775/yr</span> →</a>
+      <a class="cta-secondary tbl-cta-btn" id="ucc-cta-ringcentral" data-partner="RingCentral" data-cta-slot="ucaas_merit_voip" data-funnel-role="mid_content" data-4axis-key="impact:ucaas_merit_voip:SAAS_COSTS.ucaas_seats:mid_content" data-route-slug="{{ uSlug }}" data-calc-inputs='{"voip":"ringcentral"}' data-clickref="b2bfeeaudit_ucaas_ringcentral_{{ uSlug }}" href="https://www.ringcentral.com/office/plansandpricing.html?utm_source=saascostaudit.com&amp;utm_medium=affiliate&amp;utm_campaign=ucaas_2026&amp;clickref=b2bfeeaudit_ucaas_ringcentral_{{ uSlug }}" target="_blank" rel="sponsored nofollow noopener">RingCentral RingEX: <span id="ucc-ringcentral-yr">$7,350/yr</span> →</a>
     </div>
   </div>
 

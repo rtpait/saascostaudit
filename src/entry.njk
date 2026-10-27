@@ -17,11 +17,7 @@ eleventyComputed:
 
 {{ m.verdictCard(e, site, e.type) }}
 
-{% if e.type == "payroll" %}
-  {{ m.payrollTcoCalc(e, site, state_sui_taxes_2026) }}
-{% else %}
-  {{ m.merchantFeeCalc(e, site, interchange_rates_2026) }}
-{% endif %}
+{{ m.payrollTcoCalc(e, site, state_sui_taxes_2026) }}
 
 {{ m.prices(e.prices, site, e.slug, e.type, e.calcDefaults) }}
 

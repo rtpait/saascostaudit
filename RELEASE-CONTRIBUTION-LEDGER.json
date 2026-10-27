@@ -52,7 +52,7 @@
   ],
   "releases": [
     {
-      "releaseId": "release-000-milestone0-po-charter-and-64-route-lock",
+      "releaseId": "v1.2.0",
       "sprint": "Milestone 0 (Pre-Build Offer Verification & PO Charter Lock)",
       "timestamp": "2026-10-24T18:27:00-04:00",
       "routeCount": 18,
@@ -116,7 +116,7 @@
     },
     {
       "releaseId": "release-001-b2bfeeaudit-mvp-launch",
-      "sprint": "Sprint 1 (Earliest Shippable MVP Slice of saascostaudit.com \u2014 16 Core Money Routes + WebMCP/AEO Layer + Principle 1 /admin/ Console)",
+      "sprint": "Sprint 1 (Earliest Shippable MVP Slice of saascostaudit.com — 16 Core Money Routes + WebMCP/AEO Layer + Principle 1 /admin/ Console)",
       "timestamp": "2026-10-24T19:08:00-04:00",
       "artifactZip": "/workspace/b2bfeeaudit/b2bfeeaudit-mvp.zip",
       "routeCount": 18,
@@ -179,7 +179,7 @@
       "releaseId": "release-002-v1.2.0-monday-sprint-review-and-subdivisions",
       "version": "v1.2.0",
       "prior_version": "v1.1.0",
-      "sprint": "Monday Morning Sprint Review & Subdivision Expansion Closeout (v1.2.0 \u2014 26 HTML Routes + 3-Bucket Bot Classifier)",
+      "sprint": "Monday Morning Sprint Review & Subdivision Expansion Closeout (v1.2.0 — 26 HTML Routes + 3-Bucket Bot Classifier)",
       "timestamp": "2026-10-26T09:30:00-04:00",
       "routeCount": 28,
       "htmlPageCount": 26,
@@ -238,5 +238,6 @@
         "productOwnerApprovedBy": "SaaS Cost Audit PO (76f092a4-d874-4a66-ad28-c0146be1800a)"
       }
     }
-  ]
+  ],
+  "currentVersion": "v1.2.0"
 }

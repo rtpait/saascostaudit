@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.4.0",
-  "updated_at": "2026-10-27T09:47:00-04:00",
+  "schema_version": "1.5.0",
+  "updated_at": "2026-10-27T12:42:00-05:00",
   "sister_family_group": "b2b-audit-family",
   "based_on_audit": "/workspace/b2bfeeaudit/FEE-VS-COST-PO-AUDIT-2026-10-27.md",
   "conflict_resolution_doc": "/workspace/CROSS-SPOKE-CONFLICT-RESOLUTION-RULE.md",
@@ -58,7 +58,7 @@
       "product_workspace": "/workspace/b2bcostaudit",
       "sister_portfolio_tag": "SISTER_PORTFOLIO_B2B_COST_AUDIT",
       "macro_category": "COSTS (Non-SaaS Recurring Commercial Operating, Insurance, Compliance, Fleet, Facilities & Headcount Burden Costs)",
-      "road_to_revenue_stage": "STAGE_1",
+      "road_to_revenue_stage": "STAGE_2",
       "starting_kaizen_mode": "MODE_1: Discovery, Indexation & AEO Velocity Mode (Day-0 Indexation)",
       "canonical_url_ownership": [
         "/eo-insurance/* \u2014 All 5 commercial Tech E&O and Cyber Liability routes migrated from b2bfeeaudit.com (/eo-insurance/, /eo-insurance/cyber-eo-premium-estimator/, /eo-insurance/industry-policy-requirements/, /eo-insurance/coi-compliance-checker/, /eo-insurance/state-minimum-liability-limits/)",
@@ -86,7 +86,7 @@
       "product_workspace": "/workspace/saascostaudit",
       "sister_portfolio_tag": "SISTER_PORTFOLIO_SAAS_COST_AUDIT",
       "macro_category": "SAAS PLATFORMS (Per-Seat B2B Software, Collaboration, HRIS PEPM, CRM, Cloud/DevTools & AI License Tier Costs)",
-      "road_to_revenue_stage": "STAGE_1",
+      "road_to_revenue_stage": "STAGE_2",
       "starting_kaizen_mode": "MODE_1: Discovery, Indexation & AEO Velocity Mode (Day-0 Indexation)",
       "canonical_url_ownership": [
         "/ucaas/* \u2014 All 5 UCaaS & collaboration suite pricing audit routes migrated from b2bfeeaudit.com (/ucaas/, /ucaas/cisco-webex-pricing-audit/, /ucaas/microsoft-teams-pricing-audit/, /ucaas/zoom-workplace-pricing-audit/, /ucaas/google-workspace-meet-pricing-audit/)",
@@ -118,7 +118,7 @@
       "product_workspace": "/workspace/apicostaudit",
       "sister_portfolio_tag": "SISTER_PORTFOLIO_API_COST_AUDIT",
       "macro_category": "API_COSTS (Usage-Based, Metered, Per-Call, Per-1M Token, Per-Minute Voice/Video AI, Vector Read/Write Unit & GPU/Serverless Inference API Spend)",
-      "road_to_revenue_stage": "STAGE_1",
+      "road_to_revenue_stage": "STAGE_2",
       "starting_kaizen_mode": "MODE_1: Discovery, Indexation & AEO Velocity Mode (Day-0 Indexation)",
       "canonical_url_ownership": [
         "/llm-api/* \u2014 Metered per-1M input/output/cached token, batch API, and fine-tuning cost calculators across frontier and open-weight LLM APIs (OpenAI API, Anthropic Claude API, Google Gemini/Vertex AI, AWS Bedrock, Azure OpenAI, Mistral, Cohere, DeepSeek, Together AI, Fireworks AI, Groq, Replicate)",
@@ -279,29 +279,54 @@
     },
     "chasing_pack_status": {
       "b2bcostaudit.com": {
-        "road_to_revenue_stage": "STAGE_1 -> STAGE_2",
-        "version_tag": "v1.1.1",
-        "active_routes": 11,
+        "road_to_revenue_stage": "STAGE_2",
+        "version_tag": "v1.2.0",
+        "active_routes": 16,
+        "parity_gap_routes": 0,
         "day0_external_gates": "ACCEPT (ALL MANDATORY GATES PASSED)",
-        "four_axis_affiliate_taxonomy": "ACTIVE (B2B_COSTS)",
-        "gap_to_leader": "+5 canonical routes + GSC indexation parity to match b2bfeeaudit.com"
+        "four_axis_affiliate_taxonomy": "ACTIVE (B2B_COSTS EXCLUSIVE)",
+        "single_home_calculator_isolation": "PASS (eo-premium-estimator, coi-compliance-checker, labor-burden-calc)",
+        "gap_to_leader": "0 canonical route gap (16/16 parity achieved); chasing GSC indexation velocity"
       },
       "saascostaudit.com": {
-        "road_to_revenue_stage": "STAGE_1 -> STAGE_2",
-        "version_tag": "v1.1.1",
-        "active_routes": 11,
+        "road_to_revenue_stage": "STAGE_2",
+        "version_tag": "v1.2.0",
+        "active_routes": 16,
+        "parity_gap_routes": 0,
         "day0_external_gates": "ACCEPT (ALL MANDATORY GATES PASSED)",
-        "four_axis_affiliate_taxonomy": "ACTIVE (SAAS_COSTS)",
-        "gap_to_leader": "+5 canonical routes + GSC indexation parity to match b2bfeeaudit.com"
+        "four_axis_affiliate_taxonomy": "ACTIVE (SAAS_COSTS EXCLUSIVE)",
+        "single_home_calculator_isolation": "PASS (ucaas-tco-calculator, saas-seat-calc)",
+        "gap_to_leader": "0 canonical route gap (16/16 parity achieved); chasing GSC indexation velocity"
       },
       "apicostaudit.com": {
-        "road_to_revenue_stage": "STAGE_1",
-        "version_tag": "v1.0.0",
+        "road_to_revenue_stage": "STAGE_2",
+        "version_tag": "v1.1.0",
         "active_routes": 17,
-        "day0_external_gates": "GITHUB_PAGES_DEPLOYED_AWAITING_PORKBUN_DNS_A_AND_GSC_TXT",
-        "four_axis_affiliate_taxonomy": "ACTIVE (API_COSTS generic placeholders + CROSS_FAMILY_TRAFFIC_FUNNEL)",
-        "gap_to_leader": "Porkbun DNS A record cutover (207.207.210.x -> 185.199.108-111.153) + GSC TXT record to match b2bfeeaudit.com"
+        "parity_gap_routes": 0,
+        "dns_cutover_live": true,
+        "https_enforced": true,
+        "day0_external_gates": "ACCEPT (ALL MANDATORY GATES PASSED)",
+        "four_axis_affiliate_taxonomy": "ACTIVE (API_COSTS EXCLUSIVE)",
+        "single_home_calculator_isolation": "PASS (llm-token-calc)",
+        "gap_to_leader": "0 canonical route gap (17/16 routes live over HTTPS); chasing GSC indexation velocity"
       }
     }
+  },
+  "single_home_exclusivity_standard": {
+    "rule_id": "ZERO_SIBLING_CONTENT_CONTAMINATION",
+    "enforced_by": "B2B Audit Family PM (9c1c413e-5df2-4d17-a576-11713450fceb)",
+    "canonical_calculator_exclusivity": {
+      "b2bfeeaudit.com": "B2B_FEES (Merchant Processing / Interchange-Plus, B2B ACH/Wire/Card Surcharging, Cross-Border FX Spreads, Payroll Per-Run & W-2/1099 Filing Fees)",
+      "b2bcostaudit.com": "B2B_COSTS (Commercial Insurance Tech E&O/Cyber/GL/Workers' Comp, W-2 vs 1099 Labor Burden, PEO Overhead, SOC 2 Compliance Cost)",
+      "saascostaudit.com": "SAAS_COSTS (UCaaS Webex/Teams/Zoom/Google Workspace/VoIP, HRIS PEPM Seat Tiers, CRM/SSO/AI Workspace Seat Audits)",
+      "apicostaudit.com": "API_COSTS (LLM Token APIs, Voice/Video Per-Minute APIs, Serverless GPU & Vector DB Units, Metered B2B API Overages)"
+    },
+    "affiliate_vertical_exclusivity": {
+      "b2bfeeaudit.com": "B2B_FEES",
+      "b2bcostaudit.com": "B2B_COSTS",
+      "saascostaudit.com": "SAAS_COSTS",
+      "apicostaudit.com": "API_COSTS"
+    },
+    "cross_family_linking_rule": "Sister sites link to each other only via clean canonical URLs in lightweight Cross-Family Referral Cards/Banners \u2014 never hosting a sibling's interactive calculator or outbound affiliate links."
   }
 }

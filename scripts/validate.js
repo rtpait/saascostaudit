@@ -202,8 +202,8 @@ if (!fs.existsSync(siteDir)) {
   }
   walkHtml(siteDir);
   htmlCount = htmlFiles.length;
-  if (htmlCount !== 11) {
-    fail(`Expected strictly 11 active HTML routes in _site/, found ${htmlCount}`);
+  if (htmlCount !== 16) {
+    fail(`Expected strictly 16 active HTML routes in _site/, found ${htmlCount}`);
   }
   for (const reqOut of [
     "sitemap.xml",
@@ -252,8 +252,25 @@ if (!fs.existsSync(siteDir)) {
     if (!html.includes('class="verified-gov-badge"') || !html.includes('id="mobile-comparison-bar"')) {
       fail(`${rel}: missing verifiedGovBadge or mobile-comparison-bar`);
     }
-    if (!isSubdiv && !html.includes('id="payroll-tco-calc"') && !html.includes('id="merchant-fee-calc"') && !html.includes('id="ucaas-tco-calculator"')) {
+    if (!isSubdiv && !html.includes('id="saas-seat-calc"') && !html.includes('id="ucaas-tco-calculator"')) {
       fail(`${rel}: missing interactive TCO calculator macro`);
+    }
+
+    
+    // Single-Canonical-Home & Exclusive-Vertical Affiliate Isolation Check (SAAS_COSTS only)
+    for (const fCalc of ['id="merchant-fee-calc"', 'id="payroll-fee-calc"', 'id="eo-premium-estimator"', 'id="coi-compliance-checker"', 'id="labor-burden-calc"', 'id="llm-token-calc"']) {
+      if (html.includes(fCalc)) {
+        fail(`${rel}: SINGLE_CANONICAL_HOME_VIOLATION — duplicate sibling calculator ${fCalc} found on saascostaudit.com`);
+      }
+    }
+    const axisMatches = [...html.matchAll(/data-4axis-key="([^"]+)"/g)];
+    if (axisMatches.length === 0) {
+      fail(`${rel}: missing data-4axis-key attribute`);
+    }
+    for (const am of axisMatches) {
+      if (!am[1].includes(":SAAS_COSTS.")) {
+        fail(`${rel}: EXCLUSIVE_VERTICAL_AFFILIATE_VIOLATION — foreign 4-axis key "${am[1]}" found on saascostaudit.com (must be *:SAAS_COSTS.*:*)`);
+      }
     }
 
     const scripts = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
@@ -275,7 +292,7 @@ if (!fs.existsSync(siteDir)) {
 }
 
 console.log(
-  `Validated saascostaudit.com Sprint 1 MVP: 6/6 governance & spec artifacts (PRODUCT-STATE.md, SPRINT-REVIEW-2026-10-26.md, RELEASE-CONTRIBUTION-LEDGER.json, ROUTE-SPEC-64.md, partner-routing-matrix.json), 4/4 deterministic 2026 JSON datasets, 5/5 AEO & WebMCP endpoints (/llms.txt, /llms-full.txt, /.well-known/webmcp.json, /.well-known/openapi.json, /.well-known/ai-plugin.json), 6/6 AI crawler rules in /robots.txt, ${contentFiles.length} active content JSON files + ${dripFiles.length} quarantined Cohort-1 drip files, ${htmlCount}/11 built HTML pages (${validJsonLdCount} valid JSON-LD blocks: ${orgSchemaCount} Organization, ${webSiteSchemaCount} WebSite, ${softwareAppSchemaCount} SoftwareApplication, ${serviceOfferSchemaCount} Service+AggregateOffer, ${faqSchemaCount} FAQPage, ${breadcrumbSchemaCount} BreadcrumbList), ${titleOkCount}/11 <title> <=60c, ${descOkCount}/11 meta descriptions 140-158c, and 0 private string leaks.`
+  `Validated saascostaudit.com Sprint 1 MVP: 6/6 governance & spec artifacts (PRODUCT-STATE.md, SPRINT-REVIEW-2026-10-26.md, RELEASE-CONTRIBUTION-LEDGER.json, ROUTE-SPEC-64.md, partner-routing-matrix.json), 4/4 deterministic 2026 JSON datasets, 5/5 AEO & WebMCP endpoints (/llms.txt, /llms-full.txt, /.well-known/webmcp.json, /.well-known/openapi.json, /.well-known/ai-plugin.json), 6/6 AI crawler rules in /robots.txt, ${contentFiles.length} active content JSON files + ${dripFiles.length} quarantined Cohort-1 drip files, ${htmlCount}/16 built HTML pages (${validJsonLdCount} valid JSON-LD blocks: ${orgSchemaCount} Organization, ${webSiteSchemaCount} WebSite, ${softwareAppSchemaCount} SoftwareApplication, ${serviceOfferSchemaCount} Service+AggregateOffer, ${faqSchemaCount} FAQPage, ${breadcrumbSchemaCount} BreadcrumbList), ${titleOkCount}/16 <title> <=60c, ${descOkCount}/16 meta descriptions 140-158c, and 0 private string leaks.`
 );
 console.log(bad ? `${bad} problem(s)` : "All entries valid");
 process.exit(bad ? 1 : 0);

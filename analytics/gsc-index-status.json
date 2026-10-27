@@ -9,13 +9,14 @@
   ],
   "external_verification_blocker": null,
   "live_measured_actuals": {
-    "active_mvp_html_routes": 11,
+    "active_mvp_html_routes": 16,
     "indexed_html_routes": 0,
-    "index_coverage_ratio": 0.0,
+    "index_coverage_ratio": 0,
     "non_brand_page1_rankings": 0,
     "operational_kpi_1_gsc_search_ctr": "0.0%",
     "operational_kpi_3_gsc_crawl_frequency": "LIVE_ZERO_TRAFFIC: DNS TXT verified on saascostaudit.com; awaiting initial Googlebot indexation crawl (0/11 indexed)",
-    "drip_gate_passed": false
+    "drip_gate_passed": false,
+    "total_routes": 16
   },
   "organic_seo_pacing_guardrail": {
     "required_index_coverage_ratio": 0.75,
@@ -25,8 +26,9 @@
     "status": "HOLD_AWAITING_75PCT_GSC_INDEXATION"
   },
   "quarantined_target_hypotheses": {
-    "badge": "HYPOTHESIS / TARGET MODEL \u2014 NOT LIVE TELEMETRY",
+    "badge": "HYPOTHESIS / TARGET MODEL — NOT LIVE TELEMETRY",
     "day_14_target_indexed_routes": 9,
     "actual_vs_model_variance_routes": -9
-  }
+  },
+  "total_sitemap_routes": 16
 }

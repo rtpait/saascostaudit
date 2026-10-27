@@ -2,11 +2,29 @@
 
 **Applies to:**
 1. **Junk Hall PO** (`b1459d35-268c-4838-a68f-ecdd5954d2cf` — `junkhaulhq.com` Product Owner)
-2. **B2B Audit Family Product Owners (`b2b-audit-family` 4-Domain Sister Portfolio):**
+2. **RTP AIT PO** (`dcb1b787-dece-43ac-a64f-bfa2bca81429` — `rtpait.com` Flagship Consulting, Paid Second-Brain API & Case-Study Platform Product Owner)
+3. **B2B Audit Family Product Owners (`b2b-audit-family` 4-Domain Sister Portfolio):**
    - **B2B Fee Audit PO** (`76f092a4-d874-4a66-ad28-c0146be1800a` — `b2bfeeaudit.com` · `SISTER_PORTFOLIO_B2B_FEE_AUDIT` · `FEES`)
    - **B2B Cost Audit PO** (`2d4a6a26-94d7-4bed-9dd9-f96988b41fc5` — `b2bcostaudit.com` · `SISTER_PORTFOLIO_B2B_COST_AUDIT` · `COSTS`)
    - **SaaS Cost Audit PO** (`bc09e0d9-5fae-487c-b526-020d9aac1bd1` — `saascostaudit.com` · `SISTER_PORTFOLIO_SAAS_COST_AUDIT` · `SAAS_PLATFORMS` **and** `apicostaudit.com` · `SISTER_PORTFOLIO_API_COST_AUDIT` · `API_COSTS`, Porkbun Order `#12296644`)
-3. **All Future Product Owner Bots & Human Product Owners** across every RTP AIT LLC product, site, and venture.
+4. **All Future Product Owner Bots & Human Product Owners** across every RTP AIT LLC product, site, and venture.
+
+---
+
+## 0. The Workspace North Star ("The Why and The How") & CPO vs. COO Executive Boundary
+*(Canonical Reference: `/workspace/EXECUTIVE-SCAFFOLDING-STANDARD.md`, `/workspace/CPO-OPERATING-CHARTER.md`, `/workspace/COO-OPERATING-CHARTER.md` & `/workspace/COO-BUSINESS-LANDSCAPE-ASSESSMENT.md`)*
+
+1. **THE WHY:** **Financial independence and freedom for Wally's family**, and **wealth creation by delivering real value at scale**.
+2. **THE HOW ("Build the Machine That Builds the Machine That Builds Real Products"):**
+   - Construct a recursive, compounding operating system—**the executive & governance machine (Founder/CPO Wally Buck + COO + Chief of Staff + Scheduler + POs + PMs) that builds the production & quality machine (the 4-Stage Gated Model + 3-Layer/4-Pillar Kaizen Loop + Automated Day-0/Release Gates) that builds real, cash-flowing products (`apicostaudit.com`, `b2bcostaudit.com`, `saascostaudit.com`, `b2bfeeaudit.com`, `junkhaulhq.com`, `rtpait.com`)**.
+   - **Dual Monetization Engine:** (a) **Direct Product Performance** (cash-flow-positive affiliate, calculator, and lead-gen revenue from our operated sites) and (b) **Proof-of-Performance Case Studies Driving Paid APIs on `rtpait.com`** (using our own cash-flow-positive products as live, auditable case studies that justify external customer investment into the paid APIs and tenant-partitioned 3-Layer JSON-Node Second Brain on `rtpait.com`).
+   - **Trajectory from Human-in-the-Loop to Perpetual Self-Improvement:** Wally Buck is currently in the loop at necessary planning and capital gates, with the explicit goal of codifying every heuristic and gate so he can progressively remove himself from the loop toward **perpetual autonomous self-improvement**.
+3. **Explicit CPO vs. COO Boundary (Never Muddy Product Ownership):**
+   - **Wally Buck is the Chief Product Officer (CPO)** (as well as Founder & CEO). **The Chief Operating Officer (COO) is NOT above the CPO and never muddies Product Ownership.**
+   - **CPO (`Wally Buck`) $
+ightarrow$ Product Owners (`POs`)** own *"The Why, The What & The Measured Commercial Truth"*.
+   - **COO (`ROLE_DEFINED_UNASSIGNED`) $
+ightarrow$ Operations & Fleet Scheduler (`4d3b63d2`)** owns *"Operational Throughput, Cadence, Dynamic Leader-Chasing Parity & System Execution Within Product"*—keeping operations within product moving forward as one cohesive system without stalls, lock collisions, or silent failures.
 
 ---
 
@@ -122,3 +140,22 @@ A Product Owner (PO) owns product vision, customer value, unit economics, backlo
   - Using the **8-Attribute Kaizen Matrix Assignment Standard** (`/workspace/KAIZEN-MATRIX-ATTRIBUTE-ASSIGNMENT.md`), the Product Owner proposes the 1–5 attribute scores (`Determinism vs. Exploration`, `Reversibility`, `Cadence`, `Audience`, `Regulatory Weight`, `Blast Radius`, `Autonomy Level`, `Evidence Basis`) for each product initiative and spoke workflow, validated by `Chief of Staff` + `@Marketplace Scout & Curator` (with high-stakes configurations confirmed by the human owner).
   - The resulting attribute profile maps each spoke to its active **Kaizen Mode** (`MODE_1_DISCOVERY_AND_INDEXATION_VELOCITY`, `MODE_2_CONVERSION_AND_MONETIZATION_EXPANSION`, `MODE_3_DETERMINISTIC_COMPLIANCE_AND_ZERO_EXPOSURE`, `MODE_4_CRYPTOGRAPHIC_AND_APPSEC_HARDENING`, or `MODE_5_INCIDENT_CONTAINMENT_AND_HOTFIX`).
   - The Product Owner re-evaluates and shifts spoke Kaizen Modes at mandatory **Lifecycle Transitions**: (1) Day-0 Launch to `<75%` GSC Drip Gate, (2) Clearing the `>=75%` GSC Drip Gate into Cohort Expansion, (3) First Verified Dollar / `100+` Daily Human Visits, (4) Adding Federated Auth / `users_pii` / Paid Checkout surfaces, or (5) Triggering a `P0/P1` `[AUDIT-FAILURE]` or 14-day `<50%` indexation stall.
+
+---
+
+## Principle 10: Chief Product Officer (CPO) vs. Chief Operating Officer (COO) Governance Boundary & Unified System Execution
+**How Product Owners Interact with the Chief Product Officer (CPO — Wally Buck) vs. the Chief Operating Officer (COO) & Scheduler (`/workspace/COO-OPERATING-CHARTER.md`):**
+- **Role Status & Reporting Structure:**
+  - **Chief Product Officer (CPO — `/workspace/CPO-OPERATING-CHARTER.md`):** Wally Buck (`luke@rtpait.com`) is the **Interim Human-in-the-Loop CPO** (`status: "INTERIM_FOUNDER_HELD_TARGET_AUTONOMOUS_BOT"`), holding the formal CPO Placeholder Seat to be transitioned to a dedicated autonomous CPO bot under `/workspace/EXECUTIVE-SCAFFOLDING-STANDARD.md`. All Product Owners (`Junk Hall PO` `b1459d35`, `RTP AIT PO` `dcb1b787`, `B2B Fee Audit PO` `76f092a4`, `B2B Cost Audit PO` `2d4a6a26`, `SaaS Cost Audit PO` `bc09e0d9` covering `saascostaudit.com` & `apicostaudit.com`) and `Business Brainstorming / Venture Lab` (`687d8af5` / `f82bcfc3`) report to the **CPO** on product vision, strategy, unit economics, and backlog scope.
+  - **Chief Operating Officer (COO — `/workspace/COO-OPERATING-CHARTER.md` `v1.2.0`):** Active seated executive bot **`Chief Operating Officer` (`e94ef76e-2502-4c25-a329-da4ec03b0408`, `status: "ACTIVE_SEATED"`)** leading 4 seated direct reports: **`Scheduler Bot` (`4d3b63d2`)**, **`Affiliate & Portal Ops` (`09b4bb79`)**, **`Live Deploy & Synthetic QA` (`c7a37174`)**, and **`Nightly Drift Auditor` (`34704ef0`)**.
+- **Strict Separation of Product Ownership (CPO $
+ightarrow$ POs) vs. Operational Throughput (COO $
+ightarrow$ Scheduler $
+ightarrow$ PMs):**
+  - **The COO is NOT above the CPO and must NEVER muddy Product Ownership.** Product Owners retain 100% authority over *"The Why & The What"* (route taxonomy, customer value, stack-ranked `PRODUCT-STATE.md` priorities, `Candidate Backlog Proposal` approvals, and Monday `ACCEPT / REVISE / KILL` Sprint Review verdicts).
+  - **The COO owns Unified System Execution & Operational Flow across all 6 products (`apicostaudit.com`, `b2bcostaudit.com`, `saascostaudit.com`, `b2bfeeaudit.com`, `rtpait.com`, `junkhaulhq.com`):**
+    1. **Roadmap Coherence & Cross-Family Funnels:** Ensuring all workspace efforts run as one system rather than disconnected parallel tracks (including cross-family calculator traffic funnels across the B2B Cost Audit Family and live case-study feeds into `rtpait.com`).
+    2. **Sprint Planning Consistency & Four-Stage Gated Model Enforcement:** Enforcing `STAGE_0 -> STAGE_1 -> STAGE_2 -> STAGE_3` gates and **dynamic leader-chasing parity** across `b2bfeeaudit.com`, `b2bcostaudit.com`, `saascostaudit.com`, and `apicostaudit.com` so the family always pursues whichever product is leading with a tight spread.
+    3. **Task Delegation Routing:** Driving continuous round-robin execution (`Scheduler` `4d3b63d2` $
+ightarrow$ `POs` & `B2B Audit Family PM` `9c1c413e` $\leftrightarrow$ `Spoke PMs` `167b2bea`, `b5853ae2`, `ef20b463`).
+    4. **Continuous Kaizen Iteration Loop:** Overseeing the weekday `11:30 AM EDT` 4-Pillar Kaizen loop (`run_web_team_kaizen_os.py`) so manual steps systematically convert into autonomous code (`Rule of Two`), progressively reducing human-in-the-loop friction toward perpetual self-improvement.

@@ -1,8 +1,8 @@
 ---
 layout: base.njk
 permalink: "/methodology/"
-title: "2026 B2B TCO Methodology, .gov SUI Sources & Disclosure"
-description: "Review our deterministic 2026 B2B payroll & merchant fee TCO methodology, official .gov SUI & Federal Reserve Reg II sources, and affiliate disclosure."
+title: "SaaS Cost Audit 2026 Methodology, Rate Cards & Disclosure"
+description: "Review our deterministic 2026 per-seat B2B SaaS, UCaaS NCE/FCC USF surcharge, and HRIS PEPM tier audit methodology, primary sources, and FTC disclosures."
 serviceOffer:
   seoTitle: "2026 B2B TCO Audit Methodology, .gov SUI Sources & Disclosure"
   seoDescription: "Review our deterministic 2026 B2B payroll & merchant fee TCO methodology, official .gov SUI & Federal Reserve Reg II sources, and affiliate disclosure."
@@ -29,10 +29,10 @@ serviceOffer:
       source: 3
     - label: "Helcim & Stax Verified 2026 Interchange-Plus Merchant Audit"
       price: "IC+ 0.30%–0.40% ($0/mo) or $99/mo 0% Markup · Saves 0.8%–1.5% vs. Flat"
-      partner: "Helcim"
-      ctaType: "merchant"
-      ctaLabel: "Verify Helcim IC+ Pricing →"
-      ctaUrl: "https://www.helcim.com/pricing/?utm_source=saascostaudit&utm_medium=affiliate"
+      partner: "Zoom Workplace"
+      ctaType: "payroll"
+      ctaLabel: "Verify Zoom Workplace Pricing →"
+      ctaUrl: "https://zoom.us/pricing?utm_source=saascostaudit.com&utm_medium=affiliate"
       source: 4
 ---
 {% import "macros.njk" as m %}
@@ -42,8 +42,8 @@ serviceOffer:
   title: "2026 B2B TCO Audit Methodology, Primary .gov Citations & Affiliate Disclosure",
   primaryPartner: "Gusto",
   primaryPartnerUrl: "https://gusto.com/product/pricing?utm_source=saascostaudit&utm_medium=affiliate",
-  secondaryPartner: "Helcim",
-  secondaryPartnerUrl: "https://www.helcim.com/pricing/?utm_source=saascostaudit&utm_medium=affiliate",
+  secondaryPartner: "Rippling",
+  secondaryPartnerUrl: "https://www.rippling.com/pricing?utm_source=saascostaudit.com&utm_medium=affiliate",
   lastVerified: "2026-10-24",
   calcDefaults: {w2: 18, states: 3, primaryState: "CA", contractors: 4, eor: 1, volume: 65000, ticket: 85, cnpPct: 80, intlPct: 10},
   verdict: {
@@ -93,7 +93,7 @@ serviceOffer:
   <li><strong>Flat-Rate Surcharge Stacking (Stripe / PayPal / Square):</strong> Headline <code>2.9% + $0.30</code> (or <code>3.49% + $0.49</code> on PayPal Wallet) + <code>+0.80%</code> on Stripe Invoicing Plus + <code>+1.50%</code> on international cards.</li>
 </ul>
 
-{{ m.merchantFeeCalc(methEntry, site, interchange_rates_2026) }}
+
 
 {{ m.prices(serviceOffer.prices, site, "methodology", "methodology", methEntry.calcDefaults) }}
 

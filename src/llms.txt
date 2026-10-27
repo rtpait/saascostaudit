@@ -109,3 +109,10 @@
 - [Google Workspace, Google Meet & Voice Pricing Audit: Per-Seat & Hidden Fees (2026)](https://saascostaudit.com/ucaas/google-workspace-meet-pricing-audit/) — Audits Business Starter (`$7/$8.40`), Standard (`$14/$16.80`), Plus (`$22/$26.40`), the `+100%` Starter-to-Standard recording upgrade cliff, Gemini AI inclusion, and Google Voice PSTN add-ons (`+$10/$20/$30/seat`).
 - **CC-BY-4.0 UCaaS & Collaboration Open Dataset (JSON):** https://saascostaudit.com/datasets/ucaas-collaboration-pricing-2026.json
 
+
+### New Sprint 2 Parity Expansion Routes (`v1.2.0` — 16 Total Canonical Routes)
+- https://saascostaudit.com/ucaas/ringcentral-vs-nextiva-vs-dialpad-pricing-audit/ — RingCentral ($20+) vs Nextiva vs Dialpad Seat Cost Audit
+- https://saascostaudit.com/ucaas/microsoft-365-copilot-and-teams-premium-roi-calculator/ — M365 Copilot ($30/u) vs Teams Premium ($10/u) Seat Audit
+- https://saascostaudit.com/ucaas/slack-pro-business-plus-vs-teams-pricing-calculator/ — Slack Pro ($7.25) & Business+ ($12.50) vs MS Teams Audit
+- https://saascostaudit.com/hris/bamboohr-vs-rippling-hris-pepm-calculator/ — BambooHR vs Rippling HRIS PEPM Cost Calculator (2026 Tiers)
+- https://saascostaudit.com/crm-revops/hubspot-marketing-sales-hub-seat-and-contact-tier-calculator/ — HubSpot Pricing Calculator: Core Seats, Contact Cliffs & Fee

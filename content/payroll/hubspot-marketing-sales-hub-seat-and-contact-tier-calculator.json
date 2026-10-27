@@ -1,0 +1,115 @@
+{
+  "type": "payroll",
+  "slug": "hubspot-marketing-sales-hub-seat-and-contact-tier-calculator",
+  "url": "/crm-revops/hubspot-marketing-sales-hub-seat-and-contact-tier-calculator/",
+  "title": "HubSpot Seat & Contact Tier Cliff Calculator (2026 Audit)",
+  "seoTitle": "HubSpot Pricing Calculator: Core Seats, Contact Cliffs & Fee",
+  "seoDescription": "Calculate 2026 HubSpot Sales & Marketing Hub costs: Core Seats ($45–$75/mo), Sales Pro/Enterprise seats ($90–$150/mo), contact tier cliffs, and onboarding.",
+  "h1": "HubSpot Marketing & Sales Hub Pricing Calculator: Core Seats, Contact-Tier Cliffs & Mandatory Onboarding Fees (2026)",
+  "updated": "2026-10-27",
+  "lastVerified": "2026-10-27",
+  "primaryPartner": "Rippling",
+  "primaryPartnerUrl": "https://www.rippling.com/pricing?utm_source=saascostaudit.com&utm_medium=affiliate",
+  "secondaryPartner": "Gusto",
+  "secondaryPartnerUrl": "https://gusto.com/product/pricing?utm_source=saascostaudit.com&utm_medium=affiliate",
+  "offerLowPrice": "15",
+  "offerHighPrice": "3600",
+  "calcDefaults": {
+    "w2": 20,
+    "states": 2,
+    "primaryState": "CA",
+    "contractors": 2,
+    "eor": 0,
+    "includeYearEnd": true
+  },
+  "summary": "HubSpot's 2026 Seat-Based Pricing Model splits users into Free View-Only Seats, Paid Core Seats ($15 Starter / $45–$50 Pro / $75 Enterprise per seat/month), and specialized Sales/Service Seats ($90–$100 Pro / $150 Enterprise)—plus automatic marketing contact tier escalators ($225–$250 per 5,000 contacts) and mandatory $1,500–$7,000 Professional/Enterprise onboarding fees.",
+  "verdict": {
+    "winner": "Audit Free View-Only Seats vs. $45–$100 Paid Core/Sales Seats Before Signing an Annual HubSpot Commit",
+    "hiddenFeeTrap": "HubSpot Marketing Hub Professional ($800/mo base for 2,000 contacts + 3 Core Seats) requires a mandatory $3,000 one-time onboarding fee and auto-upgrades your contact tier in 5,000-contact blocks for the remainder of your annual contract.",
+    "actionLine": "Audit your team's active seat count and multi-state SaaS PEPM baseline below before locking in annual CRM or HRIS commitments."
+  },
+  "prices": [
+    {
+      "label": "HubSpot Starter Customer Platform ($15/seat/mo annual · $20/mo monthly)",
+      "price": "$180/seat/yr · Includes 1,000 marketing contacts & basic CRM pipelines",
+      "partner": "Rippling",
+      "ctaType": "payroll",
+      "ctaLabel": "Audit SaaS App Provisioning on Rippling →",
+      "ctaUrl": "https://www.rippling.com/pricing?utm_source=saascostaudit.com&utm_medium=affiliate",
+      "source": 2
+    },
+    {
+      "label": "HubSpot Sales Hub Professional ($90/seat/mo annual · $100/mo monthly)",
+      "price": "$1,080/seat/yr + $1,500 mandatory one-time Sales Pro onboarding fee",
+      "partner": "Rippling",
+      "ctaType": "payroll",
+      "ctaLabel": "Eliminate Unused CRM Seats via Rippling IT →",
+      "ctaUrl": "https://www.rippling.com/pricing?utm_source=saascostaudit.com&utm_medium=affiliate",
+      "source": 2
+    },
+    {
+      "label": "HubSpot Marketing Hub Professional ($800/mo annual · 3 Core Seats + 2k Contacts)",
+      "price": "$9,600/yr base + $3,000 mandatory onboarding + $45/mo per extra Core Seat",
+      "partner": "Gusto",
+      "ctaType": "payroll",
+      "ctaLabel": "Benchmark SMB SaaS Stack TCO →",
+      "ctaUrl": "https://gusto.com/product/pricing?utm_source=saascostaudit.com&utm_medium=affiliate",
+      "source": 3
+    },
+    {
+      "label": "FTC 16 CFR Part 255 & CAN-SPAM Commercial Email Compliance Baseline (.gov)",
+      "price": "Official federal marketing contact & commercial disclosure rules",
+      "partner": "Gov",
+      "ctaType": "gov",
+      "source": 1
+    }
+  ],
+  "auditNotes": [
+    "View-Only Seat Reclassification: Executives and finance reviewers who only inspect dashboards should be assigned Free View-Only Seats rather than $45–$75/mo Core Seats or $90–$150/mo Sales Seats.",
+    "Non-Reversible Contact Tier Ratchet: In HubSpot Marketing Hub, crossing a marketing contact threshold mid-month ratchets your billing tier upward for the rest of your annual commitment term."
+  ],
+  "faq": [
+    {
+      "q": "What is the difference between a HubSpot Core Seat and a Sales Seat in 2026?",
+      "a": "A Paid Core Seat ($15 Starter, $45–$50 Professional, $75 Enterprise) grants edit access to the Smart CRM and Marketing/Content/Operations tools, whereas a Sales Seat ($90–$100 Pro, $150 Enterprise) is required for sequences, playbooks, deal rotation, and custom sales forecasting."
+    },
+    {
+      "q": "Can you waive HubSpot's $1,500 to $3,000 Professional onboarding fee?",
+      "a": "Yes. Working through a certified HubSpot Solutions Partner or demonstrating prior HubSpot admin certification during contract negotiation frequently waives the $1,500 Sales Pro or $3,000 Marketing Pro onboarding fee."
+    },
+    {
+      "q": "How do I stop paying for non-revenue contacts in HubSpot Marketing Hub?",
+      "a": "Designate bounced, unsubscribed, internal employee, and sales-only CRM records as 'Non-Marketing Contacts' prior to your monthly billing evaluation date; HubSpot stores up to 15 million non-marketing contacts at $0."
+    },
+    {
+      "q": "How does SSO/SCIM provisioning cut wasted CRM and SaaS seat spend?",
+      "a": "Connecting your HRIS/IdP (such as Rippling IT or Okta) automatically revokes paid HubSpot, Salesforce, Zoom, and Slack seats on the exact day an employee departs, cutting 12%–18% in zombie seat renewals."
+    }
+  ],
+  "sources": [
+    {
+      "id": 1,
+      "title": "FTC CAN-SPAM Act Compliance Guide for Business & 16 CFR Part 255 (.gov)",
+      "url": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business",
+      "accessed": "2026-10-27"
+    },
+    {
+      "id": 2,
+      "title": "HubSpot Official 2026 Seats-Based Pricing & Contact Tier Catalog",
+      "url": "https://www.hubspot.com/pricing",
+      "accessed": "2026-10-27"
+    },
+    {
+      "id": 3,
+      "title": "Rippling IT & SaaS License Provisioning Pricing Schedule",
+      "url": "https://www.rippling.com/pricing",
+      "accessed": "2026-10-27"
+    },
+    {
+      "id": 4,
+      "title": "IRS Publication 15 (2026 Employer Tax Guide) (.gov)",
+      "url": "https://www.irs.gov/publications/p15",
+      "accessed": "2026-10-27"
+    }
+  ]
+}
