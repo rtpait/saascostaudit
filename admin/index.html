@@ -1,0 +1,1796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>401 Unauthorized — Unified Admin Analytics Login (B2BFeeAudit &amp; JunkHaulHQ)</title>
+  <style>
+:root {
+  --bg: #0b1120;
+  --bg-card: #111827;
+  --bg-sub: #1e293b;
+  --border: #334155;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+  --green: #10b981;
+  --amber: #f59e0b;
+  --danger: #ef4444;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.45;
+}
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.85em;
+  background: rgba(148, 163, 184, 0.14);
+  padding: 2px 5px;
+  border-radius: 4px;
+  color: #e2e8f0;
+}
+.login-gate-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: radial-gradient(circle at top, #1e293b 0%, #0b1120 70%);
+}
+.login-card {
+  width: 100%;
+  max-width: 430px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px 28px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+.login-badge {
+  display: inline-block;
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+.login-card h1 { margin: 0 0 6px 0; font-size: 21px; }
+.login-card p { margin: 0 0 20px 0; font-size: 13.5px; color: var(--muted); }
+.form-group { margin-bottom: 16px; }
+.form-group label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #cbd5e1;
+}
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  background: #0f172a;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 14px;
+}
+.form-group input:focus { outline: none; border-color: var(--accent); }
+.login-btn {
+  width: 100%;
+  padding: 11px 16px;
+  background: #0284c7;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.login-btn:hover { background: #0369a1; }
+.login-error {
+  display: none;
+  margin-top: 14px;
+  padding: 10px 12px;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+  border-radius: 8px;
+  font-size: 13px;
+}
+.login-sec-foot {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid #1e293b;
+  font-size: 11.5px;
+  color: #64748b;
+}
+.adm-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 24px 60px;
+}
+.adm-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.adm-brand { display: flex; align-items: center; gap: 14px; }
+.adm-badge-lock {
+  background: rgba(16, 185, 129, 0.15);
+  color: #6ee7b7;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+.adm-header h1 { margin: 0; font-size: 20px; }
+.adm-sub { margin: 4px 0 0; font-size: 12.5px; color: var(--muted); }
+.adm-actions { display: flex; align-items: center; gap: 10px; }
+.adm-user-pill {
+  font-size: 12.5px;
+  color: #cbd5e1;
+  background: var(--bg-sub);
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+}
+.adm-btn {
+  padding: 7px 13px;
+  border-radius: 7px;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid var(--border);
+}
+.adm-btn-secondary { background: var(--bg-sub); color: var(--text); }
+.adm-btn-secondary:hover { background: #334155; }
+.adm-btn-danger {
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+
+.adm-btn-switch-hero {
+  background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+  color: #ffffff;
+  border: 1px solid #38bdf8;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+}
+.adm-btn-switch-hero:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #1d4ed8 100%);
+}
+.product-nav-tiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+.product-nav-tile {
+  background: #0f172a;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: all 0.16s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.product-nav-tile.tile-clickable:hover {
+  border-color: #38bdf8;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.22);
+}
+.product-nav-tile.tile-highlight-cta {
+  border-color: rgba(56, 189, 248, 0.55);
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.14) 0%, #0f172a 100%);
+}
+.product-nav-tile.tile-active {
+  border-color: #10b981;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.16) 0%, #111827 100%);
+  box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.35);
+}
+.tile-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.tile-badge {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 3px 9px;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+.tile-badge-active {
+  background: rgba(16, 185, 129, 0.2);
+  color: #6ee7b7;
+  border: 1px solid rgba(16, 185, 129, 0.45);
+}
+.tile-badge-switch {
+  background: rgba(56, 189, 248, 0.2);
+  color: #7dd3fc;
+  border: 1px solid rgba(56, 189, 248, 0.45);
+}
+.tile-badge-idle {
+  background: rgba(148, 163, 184, 0.15);
+  color: #cbd5e1;
+}
+.tile-domain {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  color: var(--muted);
+}
+.tile-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.tile-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.tile-cta-btn {
+  font-size: 12.5px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(148, 163, 184, 0.14);
+  color: #cbd5e1;
+}
+.tile-cta-prominent {
+  background: #0284c7;
+  color: #ffffff;
+  border: 1px solid #38bdf8;
+}
+.tile-stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #e2e8f0;
+}
+
+/* Product Switcher Bar */
+.product-switcher-bar {
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: #0f172a;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.product-switcher-label {
+  font-size: 12.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+.product-switcher-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex: 1;
+}
+.prod-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  background: var(--bg-card);
+  color: #cbd5e1;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.prod-pill:hover {
+  border-color: var(--accent);
+  color: #fff;
+}
+.prod-pill.active {
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.28) 0%, rgba(16, 185, 129, 0.18) 100%);
+  border-color: #38bdf8;
+  color: #fff;
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.35);
+}
+.prod-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #475569;
+}
+.prod-dot.dot-active {
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+}
+.prod-pill-meta {
+  font-size: 12px;
+  color: #94a3b8;
+  background: rgba(15, 23, 42, 0.65);
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+.product-switcher-status {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Hero Two Main Numbers Grid */
+.hero-two-numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+.hero-big-card {
+  background: var(--bg-card);
+  border-radius: 14px;
+  padding: 24px 26px;
+  border: 2px solid var(--border);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+.hero-card-visits {
+  border-color: rgba(16, 185, 129, 0.55);
+  background: linear-gradient(180deg, rgba(16, 185, 129, 0.08) 0%, #111827 100%);
+}
+.hero-card-llm {
+  border-color: rgba(56, 189, 248, 0.55);
+  background: linear-gradient(180deg, rgba(56, 189, 248, 0.08) 0%, #111827 100%);
+}
+.hero-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+.hero-eyebrow {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.hero-big-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-bottom: 4px;
+}
+.hero-big-number-row {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin: 8px 0 14px;
+  flex-wrap: wrap;
+}
+.hero-big-number {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+.hero-big-unit {
+  font-size: 15px;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+.hero-timestamp-badge {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  padding: 10px 14px;
+  border-radius: 9px;
+  font-size: 13.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.ts-label {
+  color: var(--muted);
+  font-weight: 600;
+}
+.ts-val {
+  color: #f8fafc;
+}
+.hero-mini-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(148, 163, 184, 0.15);
+  font-size: 12.5px;
+}
+.mini-stat {
+  color: #cbd5e1;
+}
+.mini-label {
+  color: var(--muted);
+  margin-right: 4px;
+}
+
+/* Empty LLM State Box */
+.empty-llm-box {
+  background: #0f172a;
+  border: 1px dashed rgba(56, 189, 248, 0.45);
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+.empty-llm-headline {
+  font-size: 15px;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 6px;
+}
+.empty-llm-sub {
+  margin: 0 0 12px 0;
+  font-size: 13px;
+  color: #cbd5e1;
+}
+.watched-ai-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.ai-chip {
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #bae6fd;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+/* Detailed Telemetry Drawer */
+.detailed-telemetry-drawer {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-top: 20px;
+}
+.detailed-telemetry-summary {
+  padding: 16px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  user-select: none;
+}
+.detailed-telemetry-body {
+  padding: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.adm-guardrail-banner {
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+}
+.status-pill {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.status-locked {
+  background: rgba(245, 158, 11, 0.18);
+  color: #fcd34d;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+.adm-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0;
+}
+.adm-tab {
+  padding: 9px 16px;
+  background: var(--bg-card);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.adm-tab.active {
+  background: #0284c7;
+  color: #fff;
+  border-color: #38bdf8;
+}
+.adm-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+.panel-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #1e293b;
+}
+.panel-title-row h2 { margin: 0 0 4px 0; font-size: 18px; }
+.panel-title-row p { margin: 0; font-size: 13px; color: var(--muted); }
+.panel-tag {
+  background: var(--bg-sub);
+  color: #cbd5e1;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 11.5px;
+  white-space: nowrap;
+}
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.kpi-grid-5 {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.kpi-card {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.kpi-label {
+  font-size: 11.5px;
+  color: var(--muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.kpi-value {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 6px 0;
+  color: #f8fafc;
+}
+.kpi-unit {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--accent);
+}
+.kpi-foot {
+  font-size: 11.5px;
+  color: #94a3b8;
+}
+.two-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+  gap: 16px;
+}
+.subcard {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  padding: 16px;
+}
+.subcard h3 {
+  margin: 0 0 12px 0;
+  font-size: 15px;
+  color: #e2e8f0;
+}
+.subcard-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+.subcard-head h3 { margin: 0; font-size: 15px; color: #e2e8f0; }
+.adm-input-sm {
+  padding: 6px 10px;
+  background: #1e293b;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 12.5px;
+  min-width: 240px;
+}
+.table-wrap { overflow-x: auto; }
+.scrollable-table { max-height: 390px; overflow-y: auto; }
+.adm-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+.adm-table th, .adm-table td {
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 1px solid #1e293b;
+}
+.adm-table th {
+  color: #94a3b8;
+  font-weight: 600;
+  background: #111827;
+  position: sticky;
+  top: 0;
+}
+.td-meta { font-size: 11.5px; color: #94a3b8; }
+.pill-green {
+  background: rgba(16, 185, 129, 0.16);
+  color: #6ee7b7;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+.pill-sky {
+  background: rgba(56, 189, 248, 0.16);
+  color: #7dd3fc;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+.pill-amber {
+  background: rgba(245, 158, 11, 0.16);
+  color: #fcd34d;
+  padding: 2px 7px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.pill-slate {
+  background: rgba(148, 163, 184, 0.16);
+  color: #cbd5e1;
+  padding: 2px 7px;
+  border-radius: 999px;
+  font-size: 11px;
+}
+.quarantined-drawer {
+  background: #111827;
+  border: 2px dashed rgba(245, 158, 11, 0.55);
+  border-radius: 12px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+.quarantined-summary {
+  padding: 16px 20px;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  background: rgba(245, 158, 11, 0.08);
+  user-select: none;
+}
+.quarantined-badge {
+  display: inline-block;
+  background: rgba(245, 158, 11, 0.22);
+  color: #fde68a;
+  border: 1px solid rgba(245, 158, 11, 0.55);
+  padding: 3px 9px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-right: 10px;
+}
+.quarantined-body {
+  padding: 20px;
+  border-top: 1px solid rgba(245, 158, 11, 0.3);
+}
+.quarantined-warning {
+  padding: 12px 14px;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: #fde68a;
+  border-radius: 8px;
+  font-size: 12.5px;
+  margin-bottom: 16px;
+}
+</style>
+</head>
+<body>
+  <main class="login-gate-wrapper" id="login-gate-view">
+    <div class="login-card">
+      <span class="login-badge">401 Authentication Required</span>
+      <h1>Unified Admin Telemetry Console</h1>
+      <p>Sign in to view live <strong>Site Visits</strong> &amp; <strong>LLM Queries</strong> across <code>b2bfeeaudit.com</code> and <code>junkhaulhq.com</code> (PostHog Project <code>685354</code>).</p>
+      <form id="admin-login-form" method="POST" action="/admin/login" autocomplete="off">
+        <div class="form-group">
+          <label for="admin-username">Admin Username</label>
+          <input type="text" id="admin-username" name="username" required autocomplete="username" placeholder="Enter username" />
+        </div>
+        <div class="form-group">
+          <label for="admin-password">Admin Password</label>
+          <input type="password" id="admin-password" name="password" required autocomplete="current-password" placeholder="Enter password" />
+        </div>
+        <button type="submit" class="login-btn" id="login-submit-btn">Unlock Admin Dashboard &rarr;</button>
+        <div class="login-error" id="login-error-box" role="alert"></div>
+      </form>
+      <div class="login-sec-foot">
+        Protected by PBKDF2-HMAC-SHA256 (250,000 iterations) &amp; AES-256-GCM zero-plaintext encryption. Unauthenticated requests are rejected with HTTP 401.
+      </div>
+    </div>
+  </main>
+  <div id="dashboard-mount" class="adm-container" style="display:none;"></div>
+
+  <script>
+  
+function esc(s) {
+  if (s === null || s === undefined) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function fmtNum(n) {
+  return Number(n || 0).toLocaleString('en-US');
+}
+function fmtUsd(n) {
+  return '$' + Number(n || 0).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+}
+
+function getOrderedProductKeys(fullPayload) {
+  const productsMap = fullPayload.products || {};
+  if (Array.isArray(fullPayload.product_catalog) && fullPayload.product_catalog.length > 0) {
+    return fullPayload.product_catalog.map(c => c.key).filter(k => productsMap[k]);
+  }
+  if (Array.isArray(fullPayload.available_products) && fullPayload.available_products.length > 0) {
+    return fullPayload.available_products.filter(k => productsMap[k]);
+  }
+  return Object.keys(productsMap);
+}
+
+function getMainDefaultProductKey(fullPayload) {
+  const keys = getOrderedProductKeys(fullPayload);
+  const productsMap = fullPayload.products || {};
+  for (const k of keys) {
+    if (productsMap[k] && productsMap[k].product_meta && productsMap[k].product_meta.is_main_default) {
+      return k;
+    }
+  }
+  return fullPayload.default_product || keys[0] || 'junkhaulhq.com';
+}
+
+function getInitialProductKey(fullPayload) {
+  const keys = getOrderedProductKeys(fullPayload);
+  const mainKey = getMainDefaultProductKey(fullPayload);
+  const params = new URLSearchParams(window.location.search);
+  const qProd = (params.get('product') || '').toLowerCase().trim();
+  if (qProd) {
+    const exact = keys.find(k => k.toLowerCase() === qProd);
+    if (exact) return exact;
+    const partial = keys.find(k => k.toLowerCase().includes(qProd) || qProd.includes(k.split('.')[0].toLowerCase()));
+    if (partial) return partial;
+  }
+  return mainKey;
+}
+
+function getProductMeta(prodData, prodKey, mainKey) {
+  const pm = (prodData && prodData.product_meta) || {};
+  const actuals = (prodData && prodData.live_measured_actuals) || {};
+  const isMain = pm.is_main_default !== undefined ? Boolean(pm.is_main_default) : (prodKey === mainKey);
+  const name = pm.name || prodKey;
+  const totalRoutes = pm.total_html_routes ?? actuals.live_gsc_total_html_routes ?? 0;
+  const endpoints = Array.isArray(pm.watched_aeo_endpoints) && pm.watched_aeo_endpoints.length > 0
+    ? pm.watched_aeo_endpoints
+    : ['/llms.txt'];
+  const thirdMetric = pm.third_mini_metric || {
+    label: 'GSC Indexed Pages',
+    value: String(actuals.live_gsc_indexed_display || `0 / ${totalRoutes}`)
+  };
+  return {
+    key: prodKey,
+    name: name,
+    tileTitle: pm.tile_title || `${name} Analytics`,
+    consoleTitle: pm.console_title || `${name} — Live Visitors & LLM Query Console`,
+    subtitle: pm.subtitle || `${name} Telemetry (${totalRoutes} Routes)`,
+    isMain: isMain,
+    posthogProjectId: pm.posthog_project_id || '685354',
+    totalRoutes: totalRoutes,
+    watchedEndpoints: endpoints,
+    guardrailSummary: pm.guardrail_summary || `Active Footprint: ${totalRoutes} HTML Routes. Current GSC Indexed: ${actuals.live_gsc_indexed_display || '0 / ' + totalRoutes}.`,
+    thirdMetric: thirdMetric
+  };
+}
+
+function renderDashboardInto(rootEl, fullPayload, authInfo, forcedProductKey) {
+  const productsMap = fullPayload.products || {
+    [fullPayload.default_product || 'junkhaulhq.com']: fullPayload
+  };
+  const orderedKeys = getOrderedProductKeys(fullPayload);
+  const mainKey = getMainDefaultProductKey(fullPayload);
+  const selectedKey = (forcedProductKey && productsMap[forcedProductKey])
+    ? forcedProductKey
+    : getInitialProductKey(fullPayload);
+  sessionStorage.setItem('adm_selected_product', selectedKey);
+
+  const data = productsMap[selectedKey] || fullPayload;
+  const meta = getProductMeta(data, selectedKey, mainKey);
+  const mainMeta = getProductMeta(productsMap[mainKey] || data, mainKey, mainKey);
+
+  const actuals = data.live_measured_actuals || {};
+  const opKpis = actuals.operational_kpis || {};
+  const models = data.quarantined_target_hypotheses || {};
+  const p1 = data.panel_1_traffic_overview || {};
+  const p2 = data.panel_2_feature_interactions || {};
+  const p3 = data.panel_3_conversion_and_revenue || {};
+  const ds = data.data_sources_status || {};
+  const varianceRows = models.actual_vs_model_variance_table || [];
+
+  const siteVisits = actuals.live_site_visits ?? actuals.live_posthog_pageviews_24h_7d ?? 0;
+  const uniqueVisitors = actuals.live_unique_visitors ?? 0;
+  const lastVisitEdt = actuals.last_visit_timestamp_edt || null;
+  const lastVisitRoute = actuals.last_visit_route || actuals.live_sample_route || '/';
+  const llmQueries = actuals.live_llm_queries ?? 0;
+  const lastLlmEdt = actuals.last_llm_query_timestamp_edt || null;
+  const llmList = actuals.llm_queries_list || [];
+  const recentVisits = actuals.recent_visits_list || [];
+  const calcInteractions = actuals.live_estimator_interactions ?? actuals.live_tco_calculator_interactions ?? 0;
+  const partnerClicks = actuals.live_outbound_affiliate_clicks ?? actuals.live_cta_clicks ?? 0;
+
+  const isViewingMain = selectedKey === mainKey;
+  const secondaryKeys = orderedKeys.filter(k => k !== mainKey);
+
+  document.title = `${meta.tileTitle}${isViewingMain ? ' (Main)' : ''} — Unified /admin Telemetry`;
+
+  // Header quick-navigation controls:
+  // - When on a secondary product view: prominent "← Back to <Main Product> (Main Page)" button
+  // - When on the main view: quick switch buttons for each secondary product in the registry
+  const headerSwitchControlsHtml = !isViewingMain
+    ? `<button type="button" class="adm-btn adm-btn-switch-hero" data-product-switch="${esc(mainKey)}">&larr; Back to ${esc(mainMeta.name)} (Main Page)</button>`
+    : secondaryKeys.map(secKey => {
+        const secMeta = getProductMeta(productsMap[secKey], secKey, mainKey);
+        return `<button type="button" class="adm-btn adm-btn-switch-hero" data-product-switch="${esc(secKey)}">Switch to ${esc(secMeta.name)} (${esc(secKey)}) &rarr;</button>`;
+      }).join('');
+
+  // Uniform Product Switcher Tiles rendered dynamically from orderedKeys (product_catalog)
+  const productTilesHtml = orderedKeys.map(prodKey => {
+    const pObj = productsMap[prodKey] || {};
+    const pMeta = getProductMeta(pObj, prodKey, mainKey);
+    const pAct = pObj.live_measured_actuals || {};
+    const isCurrent = prodKey === selectedKey;
+    const pVisits = pAct.live_site_visits ?? pAct.live_posthog_pageviews_24h_7d ?? 0;
+    const pLlm = pAct.live_llm_queries ?? 0;
+    const pLastVisit = pAct.last_visit_timestamp_edt || 'None';
+
+    let badgeLabel = '';
+    let badgeClass = '';
+    if (isCurrent && pMeta.isMain) {
+      badgeLabel = '● CURRENT VIEW (MAIN DEFAULT PAGE)';
+      badgeClass = 'tile-badge-active';
+    } else if (isCurrent && !pMeta.isMain) {
+      badgeLabel = '● CURRENT VIEW (PRODUCT ANALYTICS)';
+      badgeClass = 'tile-badge-active';
+    } else if (pMeta.isMain) {
+      badgeLabel = 'MAIN DEFAULT VIEW';
+      badgeClass = 'tile-badge-idle';
+    } else {
+      badgeLabel = 'PRODUCT ANALYTICS VIEW';
+      badgeClass = 'tile-badge-switch';
+    }
+
+    let ctaLabel = '';
+    if (isCurrent) {
+      ctaLabel = 'Viewing Now';
+    } else if (pMeta.isMain) {
+      ctaLabel = `← Back to ${pMeta.name} (Main Page)`;
+    } else {
+      ctaLabel = `Open ${pMeta.name} View →`;
+    }
+
+    const tileClasses = isCurrent
+      ? 'product-nav-tile tile-active'
+      : `product-nav-tile tile-clickable ${!pMeta.isMain ? 'tile-highlight-cta' : ''}`;
+
+    return `
+      <div class="${tileClasses}" data-product-switch="${esc(prodKey)}" tabindex="0" role="button" aria-pressed="${isCurrent}">
+        <div class="tile-top-row">
+          <span class="tile-badge ${badgeClass}">${esc(badgeLabel)}</span>
+          <span class="tile-domain">${esc(prodKey)}</span>
+        </div>
+        <div class="tile-title-row">
+          <div class="tile-title">${esc(pMeta.tileTitle)}</div>
+          <span class="tile-cta-btn ${!isCurrent ? 'tile-cta-prominent' : ''}">${esc(ctaLabel)}</span>
+        </div>
+        <div class="tile-stats-row">
+          <span><strong>${fmtNum(pVisits)}</strong> Clean Human Visits</span>
+          <span>&bull;</span>
+          <span style="color:#fcd34d;"><strong>${fmtNum(pAct.flagged_bot_visits_excluded ?? 0)}</strong> Bots Filtered (of ${fmtNum(pAct.raw_external_site_visits_unfiltered ?? 0)} raw)</span>
+          <span>&bull;</span>
+          <span><strong>${fmtNum(pLlm)}</strong> LLM Queries</span>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  const endpointsCodeHtml = meta.watchedEndpoints.map(ep => `<code>${esc(ep)}</code>`).join(', ');
+
+  rootEl.innerHTML = `
+    <header class="adm-header">
+      <div class="adm-brand">
+        <div class="adm-badge-lock">${isViewingMain ? 'MAIN DEFAULT VIEW &bull; ' + esc(selectedKey.toUpperCase()) : 'PRODUCT VIEW &bull; ' + esc(selectedKey.toUpperCase())}</div>
+        <div>
+          <h1>${esc(meta.consoleTitle)}</h1>
+          <p class="adm-sub">
+            ${esc(meta.subtitle)} &bull; PostHog Project <code>${esc(meta.posthogProjectId)}</code> &bull; Last Synced: <strong>${esc(data.generated_at_edt || fullPayload.generated_at_edt || data.generated_at_utc)}</strong>
+          </p>
+        </div>
+      </div>
+      <div class="adm-actions">
+        ${headerSwitchControlsHtml}
+        <span class="adm-user-pill">Signed in as <strong>${esc(authInfo.username || 'wally')}</strong></span>
+        <button id="btn-refresh-telemetry" class="adm-btn adm-btn-secondary" title="Pull latest live events from PostHog 685354">↻ Refresh Live Data</button>
+        <button id="btn-logout-admin" class="adm-btn adm-btn-danger">Sign Out</button>
+      </div>
+    </header>
+
+    <!-- =====================================================================
+         UNIFORM PRODUCT NAVIGATION TILES (DATA-DRIVEN FROM PRODUCT_CATALOG)
+         ===================================================================== -->
+    <section class="product-nav-tiles-grid" role="navigation" aria-label="Product Analytics Switcher Tiles">
+      ${productTilesHtml}
+    </section>
+
+    <!-- =====================================================================
+         HERO SECTION: TWO MAIN NUMBERS (SITE VISITS & LLM QUERIES)
+         ===================================================================== -->
+    <section class="hero-two-numbers-grid" aria-label="Primary Site Visits and LLM Queries">
+      <!-- BIG CARD 1: SITE VISITS -->
+      <div class="hero-big-card hero-card-visits">
+        <div class="hero-card-top">
+          <span class="hero-eyebrow">1. LIKELY REAL HUMAN EXTERNAL TRAFFIC (${esc(selectedKey)})</span>
+          <span class="pill-green">PERMANENT BOT + OWNER FILTER ACTIVE</span>
+        </div>
+        <div class="hero-big-title">Clean Human Site Visits</div>
+        <div class="hero-big-number-row">
+          <span class="hero-big-number" id="hero-site-visits-count">${fmtNum(siteVisits)}</span>
+          <span class="hero-big-unit">verified human visits (${fmtNum(uniqueVisitors)} unique ${uniqueVisitors === 1 ? 'person' : 'people'})</span>
+        </div>
+        <div class="hero-timestamp-badge">
+          <span class="ts-label">Last Human Visit:</span>
+          <strong class="ts-val" id="hero-last-visit-ts">${
+            lastVisitEdt && !String(lastVisitEdt).startsWith('No verified')
+              ? `${esc(lastVisitEdt)} &mdash; <code>${esc(lastVisitRoute)}</code>`
+              : esc(lastVisitEdt || 'No verified human visits yet')
+          }</strong>
+        </div>
+        <div style="margin-bottom:12px;padding:9px 12px;border-radius:8px;background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.38);font-size:12.5px;color:#fde68a;">
+          <strong>2-Stage Filter Summary:</strong> Raw External Hits: <strong>${fmtNum(actuals.raw_external_site_visits_unfiltered ?? 0)}</strong> &bull;
+          Flagged Bots/Stateless Excluded: <strong>${fmtNum(actuals.flagged_bot_visits_excluded ?? 0)}</strong> &bull;
+          Clean Human Visits: <strong>${fmtNum(siteVisits)}</strong>
+        </div>
+        <div class="hero-mini-metrics">
+          <div class="mini-stat">
+            <span class="mini-label">Calculator Runs:</span>
+            <strong>${fmtNum(calcInteractions)}</strong>
+          </div>
+          <div class="mini-stat">
+            <span class="mini-label">Partner Link Clicks:</span>
+            <strong>${fmtNum(partnerClicks)}</strong>
+          </div>
+          <div class="mini-stat">
+            <span class="mini-label">${esc(meta.thirdMetric.label)}:</span>
+            <strong>${esc(meta.thirdMetric.value)}</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- BIG CARD 2: LLM QUERIES -->
+      <div class="hero-big-card hero-card-llm">
+        <div class="hero-card-top">
+          <span class="hero-eyebrow">2. AI ASSISTANTS &amp; LLM QUERIES (${esc(selectedKey)})</span>
+          <span class="pill-sky">AI / LLM MONITOR</span>
+        </div>
+        <div class="hero-big-title">LLM Queries</div>
+        <div class="hero-big-number-row">
+          <span class="hero-big-number" id="hero-llm-queries-count">${fmtNum(llmQueries)}</span>
+          <span class="hero-big-unit">${llmQueries === 1 ? 'AI query recorded' : 'AI queries recorded'}</span>
+        </div>
+        <div class="hero-timestamp-badge">
+          <span class="ts-label">Last LLM Query:</span>
+          <strong class="ts-val" id="hero-last-llm-ts">${
+            lastLlmEdt
+              ? `${esc(lastLlmEdt)}`
+              : 'No LLM queries yet (0 recorded)'
+          }</strong>
+        </div>
+        <div class="hero-mini-metrics">
+          <div class="mini-stat">
+            <span class="mini-label">Watched AI Referrals:</span>
+            <strong>ChatGPT, Perplexity, Claude, Gemini, Copilot</strong>
+          </div>
+          <div class="mini-stat">
+            <span class="mini-label">Watched AEO Endpoints:</span>
+            <strong>${endpointsCodeHtml}</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SIMPLE LIST: WHAT THE LLM QUERIES WERE ABOUT (+ RECENT VISITS FEED)
+         ===================================================================== -->
+    <section class="adm-panel" id="llm-queries-topic-panel" style="border-color:#38bdf8;">
+      <div class="panel-title-row">
+        <div>
+          <h2>What the LLM Queries Were About (${esc(selectedKey)})</h2>
+          <p>Plain-English log of every time an AI assistant (ChatGPT, Perplexity, Claude, Gemini, Copilot) or AI agent queried or referred a visitor to <strong>${esc(selectedKey)}</strong>.</p>
+        </div>
+        <span class="pill-sky">${fmtNum(llmQueries)} LLM ${llmQueries === 1 ? 'Query' : 'Queries'}</span>
+      </div>
+
+      ${llmList.length > 0 ? `
+        <div class="table-wrap">
+          <table class="adm-table" id="table-llm-queries">
+            <thead>
+              <tr>
+                <th>When (EDT)</th>
+                <th>AI Assistant / Bot</th>
+                <th>What the Query Was About (Topic &amp; Page)</th>
+                <th>Page / Endpoint</th>
+                <th>Referral / Agent Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${llmList.map(item => `
+                <tr>
+                  <td><strong>${esc(item.timestamp_edt)}</strong></td>
+                  <td><span class="pill-sky">${esc(item.ai_source)}</span></td>
+                  <td><strong>${esc(item.topic_summary)}</strong></td>
+                  <td><code>${esc(item.route_or_endpoint)}</code></td>
+                  <td><span class="td-meta">${esc(item.referrer_or_agent || item.raw_event)}</span></td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      ` : `
+        <div class="empty-llm-box">
+          <div class="empty-llm-headline">No LLM queries have hit <code>${esc(selectedKey)}</code> yet (<strong>0</strong> recorded so far).</div>
+          <p class="empty-llm-sub">
+            As soon as someone clicks a citation from <strong>ChatGPT</strong>, <strong>Perplexity</strong>, <strong>Claude</strong>, <strong>Gemini</strong>, or <strong>Copilot</strong>—or an AI agent triggers <code>llm_query</code> / reads your AEO endpoints—each query will appear here in plain English with its exact EDT timestamp and what topic it asked about.
+          </p>
+          <div class="watched-ai-chips">
+            <span class="ai-chip">✓ ChatGPT / OpenAI (<code>chatgpt.com</code>, <code>GPTBot</code>, <code>OAI-SearchBot</code>)</span>
+            <span class="ai-chip">✓ Perplexity AI (<code>perplexity.ai</code>, <code>PerplexityBot</code>)</span>
+            <span class="ai-chip">✓ Claude / Anthropic (<code>claude.ai</code>, <code>ClaudeBot</code>)</span>
+            <span class="ai-chip">✓ Google Gemini (<code>gemini.google.com</code>, <code>Google-Extended</code>)</span>
+            <span class="ai-chip">✓ Endpoints (${endpointsCodeHtml})</span>
+          </div>
+        </div>
+      `}
+
+      <!-- Recent Human Site Visits Log -->
+      <div style="margin-top:20px;padding-top:16px;border-top:1px solid #1e293b;">
+        <div class="subcard-head">
+          <h3>Recent Site Visits on <code>${esc(selectedKey)}</code> (Latest ${fmtNum(recentVisits.length)} of ${fmtNum(siteVisits)} Live Visits)</h3>
+          <span class="td-meta">Last visit: <strong>${esc(lastVisitEdt || 'None')}</strong></span>
+        </div>
+        ${recentVisits.length > 0 ? `
+          <div class="table-wrap scrollable-table" style="max-height:260px;">
+            <table class="adm-table">
+              <thead>
+                <tr>
+                  <th>When (EDT)</th>
+                  <th>Page Visited</th>
+                  <th>What Page Was Viewed (Topic)</th>
+                  <th>Device</th>
+                  <th>Referrer</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${recentVisits.map(v => `
+                  <tr>
+                    <td><strong>${esc(v.timestamp_edt)}</strong></td>
+                    <td><code>${esc(v.route)}</code></td>
+                    <td>${esc(v.topic_summary)}</td>
+                    <td><span class="pill-slate">${esc(v.device)}</span></td>
+                    <td><span class="td-meta">${esc(v.referrer === '$direct' ? 'Direct / Type-In' : v.referrer)}</span></td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        ` : `
+          <p class="td-meta">No visits recorded yet.</p>
+        `}
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         PERMANENT BOT & DATA-CENTER TRAFFIC FILTER (STAGE 2 MULTI-SIGNAL AUDIT)
+         ===================================================================== -->
+    <section class="adm-panel" id="bot-traffic-filter-panel" style="border-color:#f59e0b;">
+      <div class="panel-title-row">
+        <div>
+          <h2>Permanent Bot &amp; Data-Center Traffic Filter — ${esc(selectedKey)}</h2>
+          <p>Runs automatically alongside Stage 1 (Owner iPhone/Windows/Mac in NC &amp; Linux Box exclusion) to filter cloud/datacenter ASNs, headless geometry anomalies, bot/synthetic user-agents, synchronized SERP scrapers, and zero-engagement bounces.</p>
+        </div>
+        <span class="pill-amber">${fmtNum((actuals.bot_traffic_audit && actuals.bot_traffic_audit.flagged_bot_visits_total) ?? actuals.flagged_bot_visits_excluded ?? 0)} Flagged / ${fmtNum(actuals.raw_external_site_visits_unfiltered ?? 0)} Raw External Hits</span>
+      </div>
+
+      ${(() => {
+        const bAudit = actuals.bot_traffic_audit || {};
+        const tb = bAudit.three_bucket_breakdown || {};
+        const serpRoutes = bAudit.serp_rank_tracker_routes || [];
+        const agGate = actuals.agentic_monetization_gate || {};
+        const subIdLinks = agGate.stage_1_subid_links || [];
+        const criteria = bAudit.criteria_used || [];
+        const catCounts = bAudit.signal_category_counts || {};
+        const flaggedLog = bAudit.flagged_visits_log || [];
+        const topProviders = bAudit.top_flagged_providers || [];
+        return `
+          <div style="margin-bottom:16px;padding:12px 16px;border-radius:10px;background:rgba(16,185,129,0.10);border:1px solid rgba(16,185,129,0.40);font-size:13px;color:#d1fae5;">
+            <strong>✓ Recommendation #1 Active — Analytics-Layer Filtering Only (Zero Edge Blocking):</strong>
+            ${esc(bAudit.edge_blocking_policy || 'No Cloudflare Turnstile, JS challenges, or data-center ASN blocks at the network edge — preserves 100% WebMCP & llms.txt discovery from AWS Ashburn & GCP.')}
+          </div>
+
+          <div class="subcard" style="margin-bottom:16px;border-color:#38bdf8;">
+            <div class="subcard-head">
+              <h3>3-Bucket Analytics Telemetry Split — ${esc(selectedKey)}</h3>
+              <span class="pill-sky">Bucket A = Sole CVR &amp; RPV Denominator</span>
+            </div>
+            <div class="kpi-grid" style="margin-bottom:0;">
+              <div class="kpi-card" style="border-color:rgba(16,185,129,0.5);">
+                <div class="kpi-label">Bucket A — Verified Human Sessions</div>
+                <div class="kpi-value" style="color:#10b981;">${fmtNum(tb.bucket_a_verified_human_sessions ?? siteVisits)} <span class="kpi-unit">(+ ${fmtNum(tb.bucket_a_passive_residential_bounces ?? 0)} passive bounce)</span></div>
+                <div class="kpi-foot">${esc(tb.bucket_a_description || 'Sole denominator for Conversion Rate (CVR) & Revenue Per Visitor (RPV)')}</div>
+              </div>
+              <div class="kpi-card" style="border-color:rgba(56,189,248,0.5);">
+                <div class="kpi-label">Bucket B — AI &amp; SERP Crawler Velocity</div>
+                <div class="kpi-value" style="color:#38bdf8;">${fmtNum(tb.bucket_b_ai_and_serp_discovery_velocity ?? 0)} <span class="kpi-unit">discovery hits</span></div>
+                <div class="kpi-foot">${esc(tb.bucket_b_description || 'Automated SEO rank-trackers (Ahrefs/DataForSEO pairs), AI RAG crawlers & deep route monitors')}</div>
+              </div>
+              <div class="kpi-card" style="border-color:rgba(245,158,11,0.5);">
+                <div class="kpi-label">Bucket C — SSL CT &amp; Security Scanners</div>
+                <div class="kpi-value" style="color:#f59e0b;">${fmtNum(tb.bucket_c_ssl_ct_security_scanners ?? 0)} <span class="kpi-unit">scanner probes</span></div>
+                <div class="kpi-foot">${esc(tb.bucket_c_description || 'SSL Certificate Transparency (CT) scanners (Mandiant, Scaleway, Qualys Qlfd, IP Volume) triggered by new certs')}</div>
+              </div>
+            </div>
+          </div>
+
+          ${serpRoutes.length > 0 ? `
+          <div class="subcard" style="margin-bottom:16px;border-color:#10b981;">
+            <div class="subcard-head">
+              <h3>Recommendation #2 — 4 Early-Ranking SERP Routes &amp; Sitewide Internal Link Equity Boost (JunkHaulHQ.com)</h3>
+              <span class="pill-green">64-Page Global Link Equity Active</span>
+            </div>
+            <div class="table-wrap">
+              <table class="adm-table">
+                <thead>
+                  <tr>
+                    <th>Commercial Route</th>
+                    <th>Page Title &amp; Offer</th>
+                    <th>Target SERP Cluster</th>
+                    <th>SERP Rank-Tracker Hits</th>
+                    <th>Internal Link Equity Boost Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${serpRoutes.map(sr => `
+                    <tr>
+                      <td><code>${esc(sr.route)}</code></td>
+                      <td><strong>${esc(sr.title)}</strong></td>
+                      <td><span class="td-meta">${esc(sr.target_query)}</span></td>
+                      <td><span class="pill-sky">${fmtNum(sr.serp_rank_tracker_hits)} Paired Hits</span></td>
+                      <td><span class="pill-green">${esc(sr.internal_link_boost)}</span></td>
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          </div>
+          ` : ''}
+
+          <div class="subcard" style="margin-bottom:16px;border-color:#a855f7;">
+            <div class="subcard-head">
+              <h3>Recommendations #3 &amp; #4 — Stage 1 Agentic Sub-ID Attribution &amp; Stage 2 HTTP 402 Bulk Feed Gate (${esc(selectedKey)})</h3>
+              <span class="pill-amber">${esc(agGate.gate_mode || 'STAGE_1_FREE_GROWTH_MODE_STAGE_2_ARMED')}</span>
+            </div>
+            <div class="kpi-grid" style="margin-bottom:12px;">
+              <div class="kpi-card">
+                <div class="kpi-label">Stage 1 Agentic Monetization</div>
+                <div class="kpi-value" style="font-size:16px;color:#10b981;">ACTIVE (Free RAG + Sub-IDs)</div>
+                <div class="kpi-foot"><code>/llms.txt</code> &amp; <code>/.well-known/webmcp.json</code> embed <code>clickref=aeo-llm-*</code> &amp; <code>clickref=webmcp-*</code> ($50–$250 B2B CPAs)</div>
+              </div>
+              <div class="kpi-card">
+                <div class="kpi-label">Stage 2 Gate Progress (500 Hits/Wk)</div>
+                <div class="kpi-value" style="color:#38bdf8;">${fmtNum(agGate.weekly_agentic_hits ?? 0)} / ${fmtNum(agGate.threshold_weekly_hits ?? 500)} <span class="kpi-unit">(${esc(agGate.progress_pct ?? 0)}%)</span></div>
+                <div class="kpi-foot">Weekly agentic hits (${fmtNum(agGate.llm_referral_hits_7d ?? 0)} LLM referrals + ${fmtNum(agGate.bucket_b_crawler_discovery_hits_7d ?? 0)} Bucket B crawler hits)</div>
+              </div>
+              <div class="kpi-card">
+                <div class="kpi-label">Stage 2 Bulk Feed Gate ($49/mo)</div>
+                <div class="kpi-value" style="font-size:16px;color:#94a3b8;">DISARMED / PAUSED (Free)</div>
+                <div class="kpi-foot">500 hits/wk HTTP 402 auto-trigger disabled by owner; single TCO lookups &amp; bulk feeds remain 100% free</div>
+              </div>
+            </div>
+            ${subIdLinks.length > 0 ? `
+            <div class="table-wrap">
+              <table class="adm-table">
+                <thead>
+                  <tr>
+                    <th>Partner Program</th>
+                    <th>CPA Payout Tier</th>
+                    <th>/llms.txt Sub-ID</th>
+                    <th>WebMCP Sub-ID</th>
+                    <th>Embedded Agentic Action URL</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${subIdLinks.map(sl => `
+                    <tr>
+                      <td><strong>${esc(sl.partner)}</strong></td>
+                      <td><span class="pill-green">${esc(sl.cpa_payout_range)}</span></td>
+                      <td><code>${esc(sl.llms_txt_subid)}</code></td>
+                      <td><code>${esc(sl.webmcp_subid)}</code></td>
+                      <td><code style="font-size:11px;">${esc(sl.tracked_url)}</code></td>
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+            ` : ''}
+          </div>
+
+          <div class="kpi-grid kpi-grid-5" style="margin-bottom:16px;">
+            <div class="kpi-card">
+              <div class="kpi-label">Clean Human Visits</div>
+              <div class="kpi-value" style="color:#10b981;">${fmtNum(bAudit.likely_human_visits ?? siteVisits)}</div>
+              <div class="kpi-foot">Verified human external visits on <code>${esc(selectedKey)}</code></div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Hard Cloud / Headless Bots</div>
+              <div class="kpi-value" style="color:#f59e0b;">${fmtNum(bAudit.flagged_hard_datacenter_or_headless_bots ?? 0)}</div>
+              <div class="kpi-foot">Datacenter ASN, 800x600 headless, synthetic UA, or SERP scraper</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Stateless Zero-Engagement Hits</div>
+              <div class="kpi-value" style="color:#fbbf24;">${fmtNum(bAudit.flagged_stateless_zero_engagement_residential ?? 0)}</div>
+              <div class="kpi-foot">0% scroll, no $pageleave, 0 clicks &amp; ephemeral IDs</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Cloud / Datacenter ASN Hits</div>
+              <div class="kpi-value">${fmtNum(catCounts.datacenter_or_cloud_asn ?? 0)}</div>
+              <div class="kpi-foot">AWS, GCP/Mandiant, Scaleway, LeaseWeb, M247, HostRoyale, Vultr</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Headless &amp; UA Anomalies</div>
+              <div class="kpi-value">${fmtNum(catCounts.headless_or_geometry_anomaly ?? 0)} / ${fmtNum(catCounts.bot_or_synthetic_ua ?? 0)}</div>
+              <div class="kpi-foot">Geometry anomalies / Synthetic or outdated crawler UAs</div>
+            </div>
+          </div>
+
+          <div class="subcard" style="margin-bottom:16px;">
+            <h3>5 Permanent Bot-Detection Criteria Enforced in Pipeline</h3>
+            <div class="kpi-grid" style="margin-top:10px;margin-bottom:0;">
+              ${criteria.map(c => `
+                <div style="background:#111827;border:1px solid #334155;border-radius:8px;padding:10px 12px;">
+                  <div style="font-size:12.5px;font-weight:700;color:#38bdf8;margin-bottom:4px;">${esc(c.name)}</div>
+                  <div style="font-size:11.5px;color:#94a3b8;line-height:1.4;">${esc(c.description)}</div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <div class="subcard">
+            <div class="subcard-head">
+              <h3>Flagged &amp; Excluded External Visits on <code>${esc(selectedKey)}</code> (${fmtNum(flaggedLog.length)} of ${fmtNum(bAudit.total_external_visits_raw ?? 0)} External Visits)</h3>
+              <span class="td-meta">100% excluded from headline Clean Human Site Visits</span>
+            </div>
+            <div class="table-wrap scrollable-table" style="max-height:420px;">
+              <table class="adm-table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Timestamp (EDT)</th>
+                    <th>Location &amp; IP</th>
+                    <th>ASN / Network Provider</th>
+                    <th>Route &amp; Referrer</th>
+                    <th>Device / Screen / Engagement</th>
+                    <th>Bot Signals Triggered</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${flaggedLog.map((f, i) => `
+                    <tr>
+                      <td>${i + 1}</td>
+                      <td style="white-space:nowrap;"><strong>${esc(f.timestamp_edt)}</strong></td>
+                      <td><strong>${esc(f.location)}</strong><div class="td-meta"><code>${esc(f.ip)}</code></div></td>
+                      <td><strong>${esc(f.provider)}</strong><div class="td-meta">${esc(f.asn)} &bull; ${esc(f.bot_category)}</div></td>
+                      <td><code>${esc(f.pathname)}</code><div class="td-meta">Ref: ${esc(f.referrer)}</div></td>
+                      <td>${esc(f.device_os_browser)}<div class="td-meta">${esc(f.screen_viewport)} &bull; ${esc(f.engagement)}</div></td>
+                      <td>
+                        <ul style="margin:0;padding-left:16px;color:#fca5a5;font-size:11.5px;">
+                          ${(f.signals_triggered || []).map(sig => `<li>${esc(sig)}</li>`).join('')}
+                        </ul>
+                      </td>
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        `;
+      })()}
+    </section>
+
+    <!-- =====================================================================
+         SECONDARY COLLAPSIBLE SECTION: FULL OPERATIONAL KPIS, PANELS & QUARANTINED MODEL
+         ===================================================================== -->
+    <details class="detailed-telemetry-drawer" id="detailed-telemetry-drawer">
+      <summary class="detailed-telemetry-summary">
+        <div>
+          <strong>Detailed Operational KPIs, Route Indexation, UI Macro Telemetry &amp; Partner Revenue (${esc(selectedKey)})</strong>
+          <span class="td-meta" style="margin-left:10px;">Click to expand all 5 Principle 1 Operational KPIs, route tables &amp; quarantined target models</span>
+        </div>
+        <span class="panel-tag">Expand Full Console &darr;</span>
+      </summary>
+
+      <div class="detailed-telemetry-body">
+        <div class="adm-guardrail-banner" style="margin-top:0;margin-bottom:16px;">
+          <div>
+            <strong>Standing Organic SEO &amp; AEO Pacing Guardrail (Principle 3):</strong>
+            ${esc(meta.guardrailSummary)}
+          </div>
+          <span class="status-pill status-locked">${esc((ds.gsc && ds.gsc.drip_gate_status) || 'DRIP_GATE_LOCKED')}</span>
+        </div>
+
+        <section class="adm-panel" id="live-ground-truth-headline" style="border-color:#10b981;">
+          <div class="panel-title-row">
+            <div>
+              <h2>5 Mandatory Live Operational KPIs — ${esc(selectedKey)}</h2>
+              <p>Strict Principle 1 Enforcement: 100% Live Measured Actuals separated from Quarantined Target Hypotheses.</p>
+            </div>
+            <span class="pill-green">LIVE MEASURED ACTUALS ONLY</span>
+          </div>
+
+          <div class="kpi-grid kpi-grid-5" style="margin-bottom:0;">
+            <div class="kpi-card">
+              <div class="kpi-label">1. Search CTR (<code>gsc_search_ctr</code>)</div>
+              <div class="kpi-value">${esc(opKpis.gsc_search_ctr ? opKpis.gsc_search_ctr.ctr_pct + '%' : '0.0%')}</div>
+              <div class="kpi-foot">${esc((opKpis.gsc_search_ctr && opKpis.gsc_search_ctr.display) || '0.0% GSC organic CTR')}</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">2. Prices-Table CTR (<code>price_table_affiliate_ctr</code>)</div>
+              <div class="kpi-value">${esc(opKpis.price_table_affiliate_ctr ? opKpis.price_table_affiliate_ctr.ctr_pct + '%' : '0.0%')}</div>
+              <div class="kpi-foot">${esc((opKpis.price_table_affiliate_ctr && opKpis.price_table_affiliate_ctr.display) || '0.0% on data-cta-slot="price_table_row"')}</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">3. GSC Crawl Frequency (<code>gsc_crawl_frequency</code>)</div>
+              <div class="kpi-value">${esc(actuals.live_gsc_indexed_routes ?? 0)} / ${esc(meta.totalRoutes)}</div>
+              <div class="kpi-foot">${esc((opKpis.gsc_crawl_frequency && opKpis.gsc_crawl_frequency.display) || 'GSC indexation gate tracking')}</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">4. Revenue Per Visitor (<code>revenue_per_visitor_rpv</code>)</div>
+              <div class="kpi-value">$0.00 <span class="kpi-unit">live RPV</span></div>
+              <div class="kpi-foot">${esc((opKpis.revenue_per_visitor_rpv && opKpis.revenue_per_visitor_rpv.display) || '$0.00 confirmed revenue')}</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">5. Device Split (<code>device_conversion_split</code>)</div>
+              <div class="kpi-value">${esc(opKpis.device_conversion_split && opKpis.device_conversion_split.mobile ? opKpis.device_conversion_split.mobile.traffic_share_pct + '% / ' + opKpis.device_conversion_split.desktop.traffic_share_pct + '%' : '0% / 0%')}</div>
+              <div class="kpi-foot">${esc((opKpis.device_conversion_split && opKpis.device_conversion_split.display) || 'Mobile vs. Desktop split')}</div>
+            </div>
+          </div>
+        </section>
+
+        <nav class="adm-tabs" role="tablist">
+          <button class="adm-tab active" data-tab="all">All Live Panels + Quarantined Model</button>
+          <button class="adm-tab" data-tab="panel-traffic">1. Live Traffic &amp; Routes</button>
+          <button class="adm-tab" data-tab="panel-macros">2. Live UI Macro &amp; Calculator Telemetry</button>
+          <button class="adm-tab" data-tab="panel-conversions">3. Live Partner Attribution</button>
+        </nav>
+
+        <section id="panel-traffic" class="adm-panel">
+          <div class="panel-title-row">
+            <div>
+              <h2>Panel 1 — Live Traffic by Channel, Device Split &amp; Active HTML Routes (${esc(selectedKey)})</h2>
+              <p>Live acquisition breakdown and per-route pageviews pulled from PostHog Project <code>${esc(meta.posthogProjectId)}</code>.</p>
+            </div>
+            <span class="panel-tag">Live Telemetry</span>
+          </div>
+
+          <div class="two-col">
+            <div class="subcard">
+              <h3>Live Traffic by Source / Channel</h3>
+              <div class="table-wrap">
+                <table class="adm-table">
+                  <thead>
+                    <tr>
+                      <th>Source / Channel</th>
+                      <th>Live Views</th>
+                      <th>Unique Visitors</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    ${(p1.traffic_by_source || []).map(s => `
+                      <tr>
+                        <td><strong>${esc(s.source)}</strong></td>
+                        <td><strong>${fmtNum(s.live_sessions_24h)}</strong></td>
+                        <td>${fmtNum(s.live_unique_visitors ?? s.live_sessions_24h)}</td>
+                        <td><span class="td-meta">${esc(s.status)}</span></td>
+                      </tr>
+                    `).join('')}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="subcard">
+              <h3>Live Device &amp; Viewport Split</h3>
+              <div class="table-wrap">
+                <table class="adm-table">
+                  <thead>
+                    <tr>
+                      <th>Device Class</th>
+                      <th>Live Views</th>
+                      <th>Traffic Share</th>
+                      <th>Outbound Clicks</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    ${(p1.device_viewport_split || []).map(d => `
+                      <tr>
+                        <td><strong>${esc(d.device)}</strong></td>
+                        <td><strong>${fmtNum(d.live_sessions)}</strong></td>
+                        <td>${esc(d.live_share_pct ?? 0)}%</td>
+                        <td>${fmtNum(d.live_outbound_clicks ?? 0)}</td>
+                      </tr>
+                    `).join('')}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="subcard" style="margin-top:16px;">
+            <div class="subcard-head">
+              <h3>All Active HTML Routes (${esc(selectedKey)}) — Live Pageviews &amp; GSC Status</h3>
+              <input type="search" id="filter-landing-pages" class="adm-input-sm" placeholder="Filter route or status..." />
+            </div>
+            <div class="table-wrap scrollable-table">
+              <table class="adm-table" id="table-landing-pages">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Route</th>
+                    <th>Type / Topic</th>
+                    <th>GSC Status</th>
+                    <th>Live Pageviews</th>
+                    <th>Live Outbound Clicks</th>
+                    <th>Confirmed Revenue</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${(p1.all_64_landing_pages || []).map(lp => `
+                    <tr data-search="${esc((lp.route + ' ' + lp.route_type + ' ' + lp.gsc_status).toLowerCase())}">
+                      <td>${lp.traffic_rank || lp.rank}</td>
+                      <td><code>${esc(lp.route)}</code></td>
+                      <td><span class="td-meta">${esc(lp.route_type)}</span></td>
+                      <td><span class="${lp.gsc_status === 'Indexed' ? 'pill-green' : 'pill-slate'}">${esc(lp.gsc_status)}</span></td>
+                      <td><strong>${fmtNum(lp.live_pageviews)}</strong></td>
+                      <td>${fmtNum(lp.live_outbound_clicks || 0)}</td>
+                      <td>$0.00</td>
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section id="panel-macros" class="adm-panel">
+          <div class="panel-title-row">
+            <div>
+              <h2>Panel 2 — Live On-Page Calculator &amp; UI Macro Telemetry (${esc(selectedKey)})</h2>
+              <p>Live custom event counters across instrumented calculators, CTAs, and <code>.gov</code> citations.</p>
+            </div>
+            <span class="panel-tag">PostHog Project ${esc(meta.posthogProjectId)}</span>
+          </div>
+          <div class="table-wrap">
+            <table class="adm-table">
+              <thead>
+                <tr>
+                  <th>Instrumented Feature / Macro</th>
+                  <th>Selector / Slot</th>
+                  <th>PostHog Event</th>
+                  <th>Routes Deployed</th>
+                  <th>Live Event Count</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${(p2.macros || []).map(m => `
+                  <tr>
+                    <td><strong>${esc(m.macro_name)}</strong></td>
+                    <td><code>${esc(m.posthog_selector_or_slot)}</code></td>
+                    <td><code>${esc(m.posthog_event)}</code></td>
+                    <td>${esc(m.routes_deployed)}</td>
+                    <td><strong>${fmtNum(m.live_event_count_24h)}</strong></td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="panel-conversions" class="adm-panel">
+          <div class="panel-title-row">
+            <div>
+              <h2>Panel 3 — Live Partner Network Attribution &amp; Confirmed Revenue (${esc(selectedKey)})</h2>
+              <p>Live clicks, conversions, and confirmed payouts across CJ (<code>8108003</code>), AWIN (<code>3133124</code>), and Rakuten (<code>4767884</code>).</p>
+            </div>
+            <span class="panel-tag">Confirmed Revenue: $0.00</span>
+          </div>
+          <div class="table-wrap">
+            <table class="adm-table">
+              <thead>
+                <tr>
+                  <th>Partner &amp; Network</th>
+                  <th>Status</th>
+                  <th>Payout Structure</th>
+                  <th>Live Clicks</th>
+                  <th>Live Conversions</th>
+                  <th>Confirmed Revenue</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${(p3.revenue_by_partner_network || []).map(pn => `
+                  <tr>
+                    <td><strong>${esc(pn.partner)}</strong><div class="td-meta">${esc(pn.network)}</div></td>
+                    <td><span class="pill-slate">${esc(pn.status)}</span></td>
+                    <td>${esc(pn.payout_model)}</td>
+                    <td><strong>${fmtNum(pn.live_clicks_24h)}</strong></td>
+                    <td><strong>${fmtNum(pn.live_conversions_24h)}</strong></td>
+                    <td><strong>${fmtUsd(pn.live_revenue_usd)}</strong></td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <details id="quarantined-target-hypotheses-section" class="quarantined-drawer">
+          <summary class="quarantined-summary">
+            <div>
+              <span class="quarantined-badge">HYPOTHESIS / TARGET MODEL — NOT LIVE TELEMETRY</span>
+              <strong>Quarantined Maturity Planning Model &amp; Live Actual vs. Model Variance Table (${esc(selectedKey)})</strong>
+            </div>
+            <span class="td-meta">Click to expand / collapse quarantined target hypotheses</span>
+          </summary>
+          <div class="quarantined-body">
+            <div class="quarantined-warning">
+              <strong>⚠️ PRINCIPLE 1 GOVERNANCE NOTICE (<code>HYPOTHESIS / TARGET MODEL — NOT LIVE TELEMETRY</code>):</strong>
+              ${esc(models.warning || 'Strictly quarantined planning hypotheses. Never conflate with live measured actuals.')}
+            </div>
+            <div class="table-wrap">
+              <table class="adm-table">
+                <thead>
+                  <tr>
+                    <th>Metric / Dimension</th>
+                    <th>Live Measured Actual</th>
+                    <th>Quarantined Target Model</th>
+                    <th>Actual vs. Model Variance</th>
+                    <th>Gate / Source</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${varianceRows.map(vr => `
+                    <tr>
+                      <td><strong>${esc(vr.metric)}</strong></td>
+                      <td><span class="pill-green">${esc(vr.live_actual)}</span></td>
+                      <td><span class="pill-amber">${esc(vr.target_hypothesis)}</span></td>
+                      <td><strong style="color:#fca5a5;">${esc(vr.actual_vs_model_variance)}</strong></td>
+                      <td><span class="td-meta">${esc(vr.source_and_gate || vr.gate || '')}</span></td>
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+      </div>
+    </details>
+  `;
+
+  // Wire up Product Switcher buttons and tiles (supports click + keyboard Enter/Space)
+  rootEl.querySelectorAll('[data-product-switch]').forEach(btn => {
+    const activateSwitch = () => {
+      const targetProd = btn.getAttribute('data-product-switch');
+      if (!targetProd) return;
+      const url = new URL(window.location.href);
+      url.searchParams.set('product', targetProd);
+      window.history.replaceState({}, '', url.toString());
+      renderDashboardInto(rootEl, fullPayload, authInfo, targetProd);
+    };
+    btn.addEventListener('click', activateSwitch);
+    btn.addEventListener('keydown', (ev) => {
+      if (ev.key === 'Enter' || ev.key === ' ') {
+        ev.preventDefault();
+        activateSwitch();
+      }
+    });
+  });
+
+  // Wire up Tab Switching inside Detailed Drawer
+  const tabs = rootEl.querySelectorAll('.adm-tab');
+  const panels = {
+    'panel-traffic': rootEl.querySelector('#panel-traffic'),
+    'panel-macros': rootEl.querySelector('#panel-macros'),
+    'panel-conversions': rootEl.querySelector('#panel-conversions')
+  };
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const target = tab.getAttribute('data-tab');
+      Object.keys(panels).forEach(k => {
+        if (!panels[k]) return;
+        panels[k].style.display = (target === 'all' || target === k) ? 'block' : 'none';
+      });
+    });
+  });
+
+  // Wire up Route Filter
+  const inp = rootEl.querySelector('#filter-landing-pages');
+  const tbl = rootEl.querySelector('#table-landing-pages');
+  if (inp && tbl) {
+    inp.addEventListener('input', () => {
+      const q = inp.value.trim().toLowerCase();
+      tbl.querySelectorAll('tbody tr').forEach(tr => {
+        const hay = tr.getAttribute('data-search') || '';
+        tr.style.display = (!q || hay.includes(q)) ? '' : 'none';
+      });
+    });
+  }
+
+  // Wire up Refresh & Logout buttons
+  const btnRefresh = rootEl.querySelector('#btn-refresh-telemetry');
+  if (btnRefresh) {
+    btnRefresh.addEventListener('click', async () => {
+      btnRefresh.disabled = true;
+      btnRefresh.textContent = 'Refreshing PostHog...';
+      try {
+        const res = await fetch('/admin/api/refresh', { method: 'POST', credentials: 'same-origin' });
+        if (res.ok) {
+          const fresh = await res.json();
+          renderDashboardInto(rootEl, fresh.telemetry || fresh, authInfo, selectedKey);
+        } else {
+          alert('Refresh requires active server-side admin session.');
+          btnRefresh.disabled = false;
+          btnRefresh.textContent = '↻ Refresh Live Data';
+        }
+      } catch (e) {
+        btnRefresh.disabled = false;
+        btnRefresh.textContent = '↻ Refresh Live Data';
+      }
+    });
+  }
+
+  const btnLogout = rootEl.querySelector('#btn-logout-admin');
+  if (btnLogout) {
+    btnLogout.addEventListener('click', async () => {
+      sessionStorage.removeItem('jhq_admin_unlocked');
+      sessionStorage.removeItem('jhq_admin_user');
+      try {
+        await fetch('/admin/logout', { method: 'POST', credentials: 'same-origin' });
+      } catch (_) {}
+      window.location.href = '/admin';
+    });
+  }
+}
+
+
+  async function decryptStaticBundle(username, password) {
+    const resp = await fetch('./admin-telemetry.enc.json', { cache: 'no-store' });
+    if (!resp.ok) throw new Error('Encrypted bundle unavailable');
+    const enc = await resp.json();
+    const b64ToBytes = (b64) => Uint8Array.from(atob(b64), c => c.charCodeAt(0));
+    const salt = b64ToBytes(enc.salt_b64);
+    const iv = b64ToBytes(enc.iv_b64);
+    const ciphertext = b64ToBytes(enc.ciphertext_b64);
+    const encUtf8 = new TextEncoder().encode(username + ':' + password);
+    const baseKey = await crypto.subtle.importKey('raw', encUtf8, 'PBKDF2', false, ['deriveKey']);
+    const aesKey = await crypto.subtle.deriveKey(
+      { name: 'PBKDF2', salt: salt, iterations: enc.iterations || 250000, hash: 'SHA-256' },
+      baseKey,
+      { name: 'AES-GCM', length: 256 },
+      false,
+      ['decrypt']
+    );
+    const plainBuf = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: iv }, aesKey, ciphertext);
+    return JSON.parse(new TextDecoder().decode(plainBuf));
+  }
+
+  const form = document.getElementById('admin-login-form');
+  const errBox = document.getElementById('login-error-box');
+  const submitBtn = document.getElementById('login-submit-btn');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    errBox.style.display = 'none';
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Verifying Credentials...';
+    const username = document.getElementById('admin-username').value.trim();
+    const password = document.getElementById('admin-password').value;
+
+    try {
+      const res = await fetch('/admin/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        credentials: 'same-origin',
+        body: JSON.stringify({ username, password })
+      });
+      if (res.status === 200) {
+        window.location.reload();
+        return;
+      } else if (res.status === 401) {
+        throw new Error('401 Unauthorized — Invalid admin username or password.');
+      }
+    } catch (serverErr) {
+      if (String(serverErr.message).includes('401 Unauthorized')) {
+        errBox.textContent = serverErr.message;
+        errBox.style.display = 'block';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Unlock Admin Dashboard →';
+        return;
+      }
+    }
+
+    try {
+      const decryptedData = await decryptStaticBundle(username, password);
+      sessionStorage.setItem('jhq_admin_unlocked', '1');
+      sessionStorage.setItem('jhq_admin_user', username);
+      document.getElementById('login-gate-view').style.display = 'none';
+      const mount = document.getElementById('dashboard-mount');
+      mount.style.display = 'block';
+      renderDashboardInto(mount, decryptedData, { username, mode: 'AES-256-GCM Static Session' });
+    } catch (cryptoErr) {
+      errBox.textContent = '401 Unauthorized — Invalid admin username or password.';
+      errBox.style.display = 'block';
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Unlock Admin Dashboard →';
+    }
+  });
+  </script>
+</body>
+</html>
