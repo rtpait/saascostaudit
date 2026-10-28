@@ -1,9 +1,9 @@
 {
-  "schema_version": "2026-10-28-v1.8.0",
-  "scanned_at_utc": "2026-10-28T18:04:14Z",
+  "schema_version": "2026-10-28-v1.9.0",
+  "scanned_at_utc": "2026-10-28T18:39:41Z",
   "source_domain": "saascostaudit.com",
   "primary_software_opportunity_growth_target": true,
-  "sprint_id": "RAPID-BUILD-AUTO-ROTATE-20261028-1400",
+  "sprint_id": "RAPID-BUILD-AUTO-ROTATE-20261028-1434",
   "shared_priority": "PRIORITY_1B_CONTINUOUS_AFFILIATE_SOFTWARE_OPPORTUNITY_SCANNING",
   "affiliate_portal_ops_agent_id": "09b4bb79",
   "direct_saas_costs_opportunities_logged": [
@@ -107,9 +107,35 @@
       "partner_network": "Impact (8038782) / PartnerStack",
       "estimated_commission": "$75-$250 per qualified B2B design/product team trial or subscription",
       "in_page_trigger": "Directly triggered by quarterly true-up billing traps where Editor ($15-$75/seat/mo) and Dev Mode ($12-$35/seat/mo) auto-upgrades inflate annual SaaS spend by 35%-60% without quarterly seat reclassification."
+    },
+    {
+      "opportunity_id": "SAAS-OPP-009",
+      "vendor": "Miro Business/Enterprise vs. FigJam vs. Lucidchart vs. Whimsical (Visual Collaboration & Diagramming Auto-Provisioned Visitor Seat Audit)",
+      "target_domain": "saascostaudit.com",
+      "target_routes": [
+        "/ucaas/slack-pro-business-plus-vs-teams-pricing-calculator/",
+        "/ucaas/google-workspace-meet-pricing-audit/",
+        "/"
+      ],
+      "partner_network": "PartnerStack / Impact (8038782)",
+      "estimated_commission": "20%-30% first-year seat revenue or $75-$250 B2B CPA",
+      "in_page_trigger": "Directly triggered when product and engineering teams audit Miro Business ($16/member/mo) vs. FigJam ($5/member/mo) and Lucidchart ($9-$15/user/mo) where external workshop guests auto-convert into paid quarterly true-up seats."
+    },
+    {
+      "opportunity_id": "SAAS-OPP-010",
+      "vendor": "Loom Business/Enterprise (Atlassian) vs. Riverside for Business vs. Descript Rooms vs. Vidyard (Async Video Messaging & AI Transcription Per-Creator Seat Audit)",
+      "target_domain": "saascostaudit.com",
+      "target_routes": [
+        "/ucaas/zoom-workplace-pricing-audit/",
+        "/ucaas/cisco-webex-pricing-audit/",
+        "/ucaas/"
+      ],
+      "partner_network": "PartnerStack / Impact (8038782) / CJ Affiliate (8108003)",
+      "estimated_commission": "$50-$200 per qualified B2B team trial or multi-seat conversion",
+      "in_page_trigger": "Triggered on Zoom Workplace and Webex guides where companies paying $40-$500/mo for cloud recording storage overages compare Loom Business ($12.50-$15/creator/mo + AI add-on) vs. bundled Zoom Clips / Webex Vidcast ($0 included)."
     }
   ],
-  "ingested_cross_domain_saas_opportunities_count": 28,
+  "ingested_cross_domain_saas_opportunities_count": 36,
   "ingested_cross_domain_saas_opportunities": [
     {
       "opportunity_id": "SAAS-CROSS-001",
@@ -390,6 +416,86 @@
       "partner_network": "PartnerStack / Impact (8038782)",
       "estimated_commission": "$100-$300 per qualified B2B security training subscription",
       "rationale": "Cyber insurance applications (Coalition/Embroker/Vouch) and SOC 2 CC1.4 audits require annual employee phishing training ($18-$36/seat/yr on KnowBe4/Hoxhunt)\u2014a natural per-seat SaaS cluster for saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-008",
+      "vendor": "Snyk Enterprise vs. Wiz vs. Socket.dev vs. Semgrep (AI-Generated Code SAST/SCA, Container Vulnerability & Cloud Security Per-Developer Seat SaaS)",
+      "discovered_on_route": "https://apicostaudit.com/llm-api/openai-vs-anthropic-claude-token-calculator/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "AppSec, DevSecOps & Per-Contributing-Developer Seat Licensing Audit",
+      "partner_network": "PartnerStack / Impact (8038782) / Direct B2B",
+      "estimated_commission": "$200-$500 per qualified engineering security team demo/signup",
+      "rationale": "Engineering teams running agentic coding loops (Preset 2: 450M input / 90M output tokens) must scan AI-generated PRs and containers using per-developer AppSec SaaS ($25-$98/contributing developer/mo on Snyk/Semgrep) audited on saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-009",
+      "vendor": "Vantage.sh vs. CloudZero vs. Finout vs. Cast AI (Kubernetes, GPU Cluster & Multi-Cloud FinOps Cost Allocation SaaS Subscriptions)",
+      "discovered_on_route": "https://apicostaudit.com/ai-infra-gpu/runpod-vs-vast-ai-gpu-inference-cost-calculator/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "Cloud FinOps, Kubernetes/GPU Rightsizing & Percentage-of-Cloud-Spend SaaS Tier Audit",
+      "partner_network": "Direct B2B FinOps Referral / PartnerStack",
+      "estimated_commission": "$250-$600 per qualified mid-market CTO/FinOps evaluation",
+      "rationale": "Companies spending $50k-$500k+/yr across AWS P5, RunPod, Snowflake, and OpenAI APIs subscribe to cloud FinOps SaaS platforms ($150-$2,500+/mo tiered by managed cloud spend) that belong on saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-JHQ-008",
+      "vendor": "Verizon Connect vs. Fleetio vs. Geotab vs. Azuga (Commercial Roll-Off & Dump Truck Preventive Maintenance, DVIR & IFTA Fuel-Tax Per-Vehicle SaaS)",
+      "discovered_on_route": "https://junkhaulhq.com/dumpster-rental/30-yard/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "Commercial Fleet Maintenance, DOT DVIR & Per-Asset Telematics SaaS Tier Audit",
+      "partner_network": "Impact (8038782) / CJ Affiliate (8108003) / Direct B2B",
+      "estimated_commission": "$150-$400 per qualified 5+ truck commercial fleet demo",
+      "rationale": "Roll-off and junk removal fleet owners managing hydraulic hoists, DOT daily vehicle inspection reports (DVIR), and multi-county landfill mileage pay $5-$45/vehicle/mo on Fleetio/Geotab\u2014a high-retention B2B SaaS vertical for saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-JHQ-009",
+      "vendor": "Thumbtack Pro / Angi Ads / Local Service Ads Call-Tracking & Lead-Attribution SaaS (CallRail vs. WhatConverts vs. ServiceTitan Marketing Pro)",
+      "discovered_on_route": "https://junkhaulhq.com/affiliate-disclosure/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "Home-Services Call Tracking, Dynamic Number Insertion & Marketing Attribution SaaS Audit",
+      "partner_network": "PartnerStack / Impact (8038782)",
+      "estimated_commission": "$100-$300 B2B SaaS trial/subscription CPA",
+      "rationale": "Local hauling and dumpster operators buying pay-per-call leads license CallRail ($45-$145/mo + per-minute overages) and WhatConverts ($30-$160/mo) to audit lead quality\u2014directly expanding saascostaudit.com's MarTech/ attribution SaaS vertical."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-B2BFEE-008",
+      "vendor": "Expensify vs. Navan Expense vs. Rydoo vs. Fyle (Per-Active-Member Employee Expense Report & Receipt OCR SaaS Seat Tiers)",
+      "discovered_on_route": "https://b2bfeeaudit.com/merchant/square-vs-helcim-tco/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "Finance & Employee Expense Management Per-Active-User SaaS Seat Audit",
+      "partner_network": "PartnerStack / Impact (8038782)",
+      "estimated_commission": "$100-$300 B2B SaaS subscription CPA",
+      "rationale": "Companies auditing commercial card interchange also pay $5-$18/active member/mo (or 2x unbundled card fee penalties on Expensify) for employee receipt and expense management SaaS\u2014routed directly to saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-B2BFEE-009",
+      "vendor": "Cube Software vs. Vena Solutions vs. Mosaic.tech vs. Pigment (Strategic FP&A, Headcount Planning & Multi-State Payroll/COGS Modeling SaaS)",
+      "discovered_on_route": "https://b2bfeeaudit.com/payroll/gusto-vs-rippling-tco/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "CFO FP&A & Headcount Planning Platform Base + Per-Modeler Seat Audit",
+      "partner_network": "PartnerStack / Direct B2B FP&A Referral",
+      "estimated_commission": "$250-$600 per qualified CFO/VP Finance demo",
+      "rationale": "Fractional CFOs and controllers exporting our 12-month payroll and merchant fee CSVs license FP&A modeling platforms ($1,250-$2,500+/mo on Cube/Vena/Mosaic) audited on saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-B2BCOST-008",
+      "vendor": "Thatch vs. Take Command Health vs. StretchDollar (ICHRA Individual Coverage HRA Administration Per-Employee-Per-Month SaaS)",
+      "discovered_on_route": "https://b2bcostaudit.com/peo-benefits/justworks-vs-trinet-peo-cost-calculator/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "Benefits Administration & ICHRA Per-Employee SaaS Platform Audit",
+      "partner_network": "PartnerStack / Direct B2B SaaS Referral",
+      "estimated_commission": "$150-$400 per qualified employer ICHRA plan launch",
+      "rationale": "Employers leaving TriNet or Justworks PEOs to avoid $99-$195/emp/mo admin fees adopt ICHRA software platforms ($15-$40 PEPM on Thatch/Take Command) audited on saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-B2BCOST-009",
+      "vendor": "Hyperproof vs. AuditBoard vs. Anecdotes vs. Thoropass (Enterprise Multi-Framework GRC, Continuous Control Monitoring & Vendor Risk SaaS)",
+      "discovered_on_route": "https://b2bcostaudit.com/commercial-costs/soc2-type-2-audit-and-pentest-cost-calculator/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "Enterprise GRC, Continuous Audit & Multi-Framework Compliance SaaS Tier Audit",
+      "partner_network": "Direct B2B GRC Referral / PartnerStack",
+      "estimated_commission": "$250-$600 per qualified mid-market/enterprise GRC demo",
+      "rationale": "While CPA attestation fees belong on b2bcostaudit.com, enterprise GRC software subscriptions ($12,000-$45,000+/yr on Hyperproof/Thoropass/AuditBoard) route directly to saascostaudit.com."
     }
   ],
   "expanded_saas_vertical_clusters": {
@@ -488,7 +594,18 @@
       "Figma Enterprise",
       "Figma Dev Mode",
       "Canva Teams"
+    ],
+    "cluster_9_visual_whiteboard_and_async_video_seats": [
+      "Miro Business/Enterprise",
+      "FigJam",
+      "Lucidchart",
+      "Whimsical",
+      "Loom Business",
+      "Vidyard",
+      "Descript Rooms",
+      "Ooma Office",
+      "monday CRM"
     ]
   },
-  "total_mapped_b2b_saas_clusters": 36
+  "total_mapped_b2b_saas_clusters": 46
 }
