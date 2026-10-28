@@ -1,62 +1,34 @@
-# Sprint Review & Monday Morning Telemetry Sign-Off (`v1.2.0` — `saascostaudit.com`)
+# Sprint Review — One-Page Governance Decision Record (`SPRINT-REVIEW-2026-10-28.md` · `v1.8.0`)
 
-- **Review Date:** Monday, October 26, 2026 (09:30 AM EDT — Monday Sequenced PO Sprint Review)
-- **Product Owner ("The Why, The What & The Measured Truth"):** `SaaS Cost Audit PO` (`76f092a4-d874-4a66-ad28-c0146be1800a`)
-- **Project Manager ("The How & The When"):** `Project Manager` (`167b2bea-99c8-4e89-99e3-182227974962`)
-- **Active Lease Reviewed:** `lease-20261026-092631-b2bfeeaudit` (`MONDAY-SPRINT-REVIEW`, target progression `v1.1.0 -> v1.2.0`)
-- **Sprint Scope Reviewed:**
-  1. Sprint 1 MVP (`16` core Payroll/HRIS & Merchant IC+ HTML routes, commits `fc8dd31` / `b96941b`)
-  2. Weekend Subdivision Expansions (`5` `/eo-insurance/` HTML routes in `17eb0d3` + `5` `/ucaas/` HTML routes in `434aace` = **`26` total validated HTML routes**)
-  3. Monday Oct 26, 2026 08:44 AM EDT Unified Telemetry ETL (`gsc-index-status.json`, `posthog-funnel-snapshot.json` with 2-Stage Bot Filter + 3-Bucket Traffic Classifier, `affiliate-revenue-snapshot.json`, and encrypted `/admin/` ground-truth bundle)
-- **Sprint Verdict:** **`ACCEPT`**
-
----
-
-## 1. Automated Build, Schema, Sub-ID & Governance Verification (`26/26` Routes — `0` Errors)
-
-| Verification Gate | Requirement | Measured Result (`v1.2.0`) | Verdict |
-| :--- | :--- | :--- | :--- |
-| **Eleventy Build & QA Validator (`scripts/validate.js`)** | `0` build or validation errors across all active routes | **`26/26` HTML routes built (`0` errors, `0` warnings)** | **PASS** |
-| **Title & Meta Description Bounds (Principle 5)** | `<title> <= 60` chars; `<meta name="description"> 140–158` chars | **`26/26` titles `<= 60c`; `26/26` descriptions `140–158c`** | **PASS** |
-| **JSON-LD Structured Data Parity** | Valid `Organization`, `WebSite`, `SoftwareApplication`, `Service`+`AggregateOffer`, `FAQPage`, `BreadcrumbList` | **`133` valid JSON-LD blocks across `26/26` HTML pages (`0` parse errors)** | **PASS** |
-| **Commercial CTA Sub-ID Parity (Principle 2 & 4)** | Every `rel="sponsored"` link carries `clickref` / `sid` / `utm_source` + `data-cta-slot` | **`308/308` (`100%`) sponsored CTAs verified with Sub-ID attribution** | **PASS** |
-| **UCaaS Merit-Only Conditional VoIP Rule** | Recommend `Dialpad`/`Nextiva`/`RingCentral` only when user inputs warrant external PSTN/CRM concurrency | **Enforced in `/ucaas/` calculator & all `5` UCaaS audit pages** | **PASS** |
-| **Agentic Discovery & Open Datasets (`@Platform Optimization`)** | `/llms.txt`, `/llms-full.txt`, `/.well-known/webmcp.json`, `openapi.json`, `ai-plugin.json`, `/datasets/*`, `/api/v1/benchmarks/*` | **All endpoints present, non-empty, and valid JSON/Markdown/CSV** | **PASS** |
-| **Organic Drip Pacing Gate (Principle 3)** | Quarantine Cohort 1 (`4` routes) outside `content/` until GSC indexation `>=75%` | **`4` Cohort-1 JSON files quarantined in `drip-queue/cohort-1/`; `drip_gate_passed: false` enforced** | **PASS** |
-| **Principle 1 Ground-Truth `/admin/` Console** | Live actuals only in top row; modeled targets quarantined in collapsed drawer; `0` secret leaks | **`_site/admin/index.html` + `admin-telemetry.enc.json` verified (`0` private leaks)** | **PASS** |
+- **Product:** `saascostaudit.com` (`SaaS Cost Audit` — Per-Seat B2B SaaS, UCaaS, Pure HRIS PEPM & CRM Licensing Auditor, `STAGE_2`, **Primary Software Opportunity Growth Target**)
+- **Product Owner ("The Why, The What & The Measured Truth"):** `SaaS Cost Audit PO` (`bc09e0d9-5fae-487c-b526-020d9aac1bd1`)
+- **Multi-PO Hub PM:** `B2B Audit Family PM` (`9c1c413e-5df2-4d17-a576-11713450fceb`)
+- **Web Development Spoke PM:** `Project Manager` (`167b2bea-99c8-4e89-99e3-182227974962`) + Web Team (`74d7f7da-965b-4749-ab47-aae2b5b85c63`)
+- **Active Lock Lease:** `lease-20261028-140012-saascostaudit` (`RAPID-BUILD-AUTO-ROTATE-20261028-1400`, `acquired_at_edt: 2026-10-28T14:00:12-04:00`)
+- **Release Version Tag:** `v1.8.0` (Prior Version: `v1.7.0`)
+- **Sprint Review Timestamp:** Wednesday, Oct 28, 2026, 01:05 PM CDT / 02:05 PM EDT
+- **Verdict: ACCEPT**
+- **PO Ruling: ACCEPT (All Cycle 7 Priority 1A + Priority 1B + Revenue Integrity Deliverables, 5/5 Specialist Contributions, `scripts/validate.js`, and `audit_day0_launch_gate.py --domain saascostaudit.com` Verified with 0 Blockers)**
 
 ---
 
-## 2. Live Measured Telemetry Snapshot (Monday, Oct 26, 2026 — 08:44 AM EDT ETL)
+## 1. Live Measured Production Baseline & Operational KPIs (Cycle 7 — Oct 28, 2026 01:05 PM CDT)
 
-Per **Principle 1 (Lead With Measured Reality, Quarantine Modeled Forecasts)**, our live baseline metrics from this morning's 08:44 AM EDT ETL run (`/workspace/b2bfeeaudit/analytics/`) are:
-
-- **Google Search Console (`analytics/gsc-index-status.json`):**
-  - `total_submitted_routes`: **`26`** (`16` core MVP + `5` `/eo-insurance/` + `5` `/ucaas/`)
-  - `indexed_routes`: **`0`** (`index_coverage_ratio: 0.0`, `wow_impression_velocity: 0.0`, `drip_gate_passed: false`)
-  - `total_clicks`: **`0`** | `total_impressions`: **`0`** | `gsc_search_ctr`: **`0.0%`**
-- **PostHog Funnel & 3-Bucket Bot Classifier (`analytics/posthog-funnel-snapshot.json`, Project `685354`):**
-  - `verified_human_sessions` (Bucket A Human): **`0`** (`0` desktop human views, `0` mobile human views)
-  - `raw_external_visits_classified`: **`36` total external hits**, cleanly separated by `bot_traffic_classifier.py`:
-    - **Bucket A (`HUMAN_VERIFIED`):** `0` active sessions (`1` `PASSIVE_RESIDENTIAL_BOUNCE` on `/`)
-    - **Bucket B (`AI_SEARCH_CRAWLER`):** `0` sessions (`0 / 500` toward the Tier 2 Agentic API Monetization Gate)
-    - **Bucket C (`SECURITY_SCANNER_NOISE`):** `35` automated TLS Certificate Transparency / cloud scanner hits (`AWS`, `Scaleway`, `Mandiant`, `Vultr`, `Palo Alto Cortex`) quarantined from conversion denominators while keeping edge blocking **disabled** so `WebMCP` and `/llms.txt` remain 100% open to AI agents.
-  - `calculator_runs`: **`0`** (`0` Payroll TCO runs, `0` Merchant IC+ runs)
-  - `price_table_affiliate_ctr`: **`0.0%`** (`0` clicks across all `308` tracked commercial CTAs)
-  - `device_conversion_split`: **`0.0%` Mobile CVR (`0` views) / `0.0%` Desktop CVR (`0` human views)**
-- **Confirmed Partner Revenue (`analytics/affiliate-revenue-snapshot.json`):**
-  - `total_confirmed_revenue_usd`: **`$0.00`** (`0` CJ `8108003` conversions, `0` AWIN `3133124` conversions, `0` Rakuten `4767884` conversions)
-  - `revenue_per_visitor_rpv`: **`$0.00`**
+| Metric / Operational KPI | Live Measured Value (Ground Truth — Oct 28, 2026 01:05 PM CDT) | Stage 2 Exit Gate / Target | Live Variance | Telemetry Source |
+| :--- | :--- | :--- | :--- | :--- |
+| **Live Production Footprint** | **`16` canonical `SAAS_COSTS` HTML routes** (`+ /sitemap.xml`, `/robots.txt`, `/.well-known/webmcp.json`, `/.well-known/openapi.json`, `/.well-known/ai-plugin.json`, `/llms.txt`, `/llms-full.txt`, `/admin/`) | `16` canonical `SAAS_COSTS` routes (`4` Cohort-1 routes quarantined until `>=75%` GSC gate) | `0` (`100%` compliant) | `scripts/validate.js` & `audit_day0_launch_gate.py` |
+| **Live GSC Priority Inspection Queue (`sc-domain:saascostaudit.com`)** | **`16 / 16` (`100%`) canonical `SAAS_COSTS` routes queued for GSC URL Inspection** (`0/16` indexed currently; `dns_txt_verified: true`; `16 == 16` live vs. local `sitemap.xml` parity) | `>= 75.0%` (`>= 12/16`) GSC indexation across canonical MVP routes | `16/16` canonical URLs submitted to priority inspection queue | `gsc-index-status.json` & `GSC-PRIORITY-INDEX-QUEUE.json` |
+| **Live JSON-LD, DOM Trust & AEO Schema Coverage** | **`129` valid JSON-LD blocks** (`16` `Organization`, `16` `WebSite`, `16` `SoftwareApplication`, `16` `Service+AggregateOffer` with `16/16` `offerHighPrice >= max(prices[])` enforced, `16` `FAQPage`, `16` `BreadcrumbList`, `16` `HowTo`, `16/16` `Dataset` + `1` `DataCatalog`) + **`16/16` visible `<details class="faq-card">` accordions** + **`16/16` `verifiedGovBadge` (`data-verified-gov-badge="true"`) statutory `.gov` trust bars** + **`7`-Tool `SAAS_COSTS`-Exclusive WebMCP Manifest (`v1.8.0`)** | `100%` structured schema, `offerHighPrice >= max(prices[])`, visible DOM FAQ/statutory badge parity & `<title>` (`<=60c`) / `<meta description>` (`140–158c`) | `0` schema or metadata errors | `scripts/validate.js` |
+| **Live Commercial CTA & One-Click CFO Preset Parity** | **`242 / 242` (`100%`)** `SAAS_COSTS.*` 4-axis commercial CTAs (incl. **`21` live Awin Bark US `MID 58887` Publisher `3133124` `$20–$45 CPL` links**, PartnerStack, CJ `8108003`, Impact `8038782`, Rakuten `4767884`) + **`68` One-Click CFO Preset Scenario buttons (`data-cfo-preset`)** across all calculators | `100%` `SAAS_COSTS.*` exclusivity (`0` foreign keys, `0` sister-domain calculator leaks, Merit-Only VoIP Rule preserved) | `0` foreign keys or untagged CTAs | `scripts/validate.js` & `audit_day0_launch_gate.py` |
 
 ---
 
-## 3. Product Owner Ruling & Next Progression Steps (`v1.2.0` -> Sprint 2)
+## 2. Cycle 7 (`v1.8.0`) Deliverable Verification (`RAPID-BUILD-AUTO-ROTATE-20261028-1400`)
 
-Verdict: ACCEPT
-
-1. **Release `v1.2.0` Readiness:** All `26` HTML routes (`16` Payroll/Merchant MVP + `5` `/eo-insurance/` + `5` `/ucaas/`), `133` JSON-LD blocks, `308/308` Sub-ID CTAs, and the Monday Oct 26, 2026 08:44 AM EDT 3-bucket telemetry snapshot pass `node scripts/validate.js` with `0` errors and are staged with `releases/RELEASE-v1.2.0-2026-10-26.md` and `RELEASE-CONTRIBUTION-LEDGER.json`.
-2. **Drip Queue Hold Enforced:** Because `gsc-index-status.json` reports `0/26` indexed (`drip_gate_passed: false`), Cohort 1 (`4` routes in `drip-queue/cohort-1/`) remains strictly quarantined.
-3. **Sprint 2 Priorities Ordered by Distance to First Real User & First Dollar:**
-   - **Priority 1 (Discovery & Indexation):** GSC sitemap submission (`26` canonical URLs) + off-page distribution of our 4 CC-BY-4.0 open benchmark datasets (`/datasets/*`) and `AI Search Visibility` (`5ae57185-0c06-4ef5-8ce1-6eb8f318c4d2`) prompt-citation tracking.
-   - **Priority 2 (Monetization Stage 2 Upgrade):** Swap approved CJ (`8108003`), AWIN (`3133124`), Rakuten (`4767884`), Impact, and PartnerStack affiliate links (`Gusto`, `Rippling`, `Deel`, `OnPay`, `Helcim`, `Stax`) into `src/_data/partnerRouting.json` as approvals land in `luke@rtpait.com`.
-   - **Priority 3 (Competitive Fee Drift Watch):** Automated weekly vendor fee drift checks (`Stalk Bot`, `70222ba1-5c4e-4dff-bacd-794350acf827`) feeding `/api/v1/benchmarks/vendor-fee-drift-feed.json`.
+1. **Deliverable 1A — Shared Priority 1A: Natural & Organic SEO Broadly (`16/16` Canonical `SAAS_COSTS` Routes):**
+   - Deepened verbatim statutory & 2026 SaaS / UCaaS / CRM / AI-workspace rate-drift callouts across `ucaas-tco-calculator`, `saas-seat-calc`, `crm-tco-calc` (`src/_includes/macros.njk`), all `16` canonical `SAAS_COSTS` routes, `/llms.txt`, `/llms-full.txt`, and `/.well-known/webmcp.json` (`v1.8.0`): FCC Q4 2026 Universal Service Fund (`37.6%` interstate contribution factor = `$2.40–$4.85/seat/mo` carrier USF recovery + E911 `$0.95–$3.50/line/mo` + RCRF `$3.50–$4.50/line/mo` + state/municipal telecom excise taxes `8.5%–14.2%`), FCC Ray Baum's Act (`47 CFR § 9.16` dispatchable location: street address + floor/suite/room) & Kari's Law (`47 CFR § 9.11` direct `911` dialing without `9` prefix + central front-desk notification), SEC Form 10-K/10-Q SaaS Net Dollar Retention (`NRR 108%–124%`), `7%–12%` annual auto-renewal price-uplift caps (`60–90 day` non-renewal notice), Microsoft NCE (`+20%` monthly term premium, `7-day` cancellation window) & GSA MAS Schedule 70 (`SIN 534210C` `12%–28%` enterprise discount benchmarks), and Stalk Bot Oct 28 UCaaS, CRM, and AI workspace seat add-ons (`$20–$30/user/mo` Copilot/Gemini/Notion AI/Slack AI).
+2. **Deliverable 1B — Shared Priority 1B: Continuous In-Page Affiliate Software Opportunity Scanning (Primary Growth Target: `saascostaudit.com`):**
+   - Updated `/workspace/saascostaudit/data/affiliate-opportunity-scan.json`, `/workspace/saascostaudit/src/_data/partnerRouting.json`, and `/workspace/scheduler/AFFILIATE-SOFTWARE-OPPORTUNITY-BACKLOG.json` for `Affiliate & Portal Ops` (`09b4bb79`).
+   - Logged `SAAS-OPP-007` (Atlassian Jira & Confluence Cloud Premium/Enterprise vs. Linear vs. Shortcut + Atlassian Access SAML SSO Tax) and `SAAS-OPP-008` (Figma Professional/Organization/Enterprise vs. Canva Teams vs. Penpot Dev-Mode & Editor auto-upgrade audit), bringing direct `SAAS_COSTS` opportunities to `8` and ingested cross-domain SaaS opportunities to **`28` (`36` total mapped B2B SaaS clusters across 8 verticals)**.
+3. **Deliverable 3 — Revenue Integrity (`100%` `SAAS_COSTS.*` Exclusivity & Merit-Only VoIP Rule):**
+   - Verified `242/242` (`100%`) commercial `rel="sponsored"` CTAs carry valid `*:SAAS_COSTS.*:*` 4-axis keys (`0` foreign keys, `0` leaked calculators), including `21` live Awin Bark US `MID 58887` (`$20–$45 CPL`, Publisher ID `3133124`), PartnerStack, CJ (`8108003`), Impact (`8038782`), and Rakuten (`4767884`), plus `68` One-Click CFO Preset Scenario buttons (`data-cfo-preset`) while preserving the Merit-Only Conditional VoIP Recommendation Rule.

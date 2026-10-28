@@ -325,5 +325,7 @@
       "affiliate_url_template": "https://www.awin1.com/cread.php?awinmid=60441&awinaffid=3133124&clickref={clickref}&ued=https%3A%2F%2Fwww.shopify.com%2Fpricing",
       "switching_credit_usd": 0.0
     }
-  }
+  },
+  "updated_at_utc": "2026-10-28T18:04:14Z",
+  "mapped_saas_opportunity_clusters_count": 36
 }

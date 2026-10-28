@@ -1,9 +1,9 @@
 {
-  "schema_version": "2026-10-28-v1.7.0",
-  "scanned_at_utc": "2026-10-28T17:29:07Z",
+  "schema_version": "2026-10-28-v1.8.0",
+  "scanned_at_utc": "2026-10-28T18:04:14Z",
   "source_domain": "saascostaudit.com",
   "primary_software_opportunity_growth_target": true,
-  "sprint_id": "RAPID-BUILD-AUTO-ROTATE-20261028-1146",
+  "sprint_id": "RAPID-BUILD-AUTO-ROTATE-20261028-1400",
   "shared_priority": "PRIORITY_1B_CONTINUOUS_AFFILIATE_SOFTWARE_OPPORTUNITY_SCANNING",
   "affiliate_portal_ops_agent_id": "09b4bb79",
   "direct_saas_costs_opportunities_logged": [
@@ -81,9 +81,35 @@
       "partner_network": "PartnerStack / Impact (8038782) / CJ Affiliate (8108003)",
       "estimated_commission": "20%-35% first-year rev-share or $75-$300 B2B CPA",
       "in_page_trigger": "Directly triggered by RevOps sales teams and HR onboarding teams hitting DocuSign's 100-envelope/user/year cap ($40/user/mo annual) vs. unlimited-envelope PandaDoc ($19-$49/seat/mo) and Dropbox Sign."
+    },
+    {
+      "opportunity_id": "SAAS-OPP-007",
+      "vendor": "Atlassian Jira & Confluence Cloud Premium/Enterprise vs. Linear vs. Shortcut (Engineering Seat Tier Cliffs & Atlassian Access SSO Tax Audit)",
+      "target_domain": "saascostaudit.com",
+      "target_routes": [
+        "/ucaas/slack-pro-business-plus-vs-teams-pricing-calculator/",
+        "/ucaas/microsoft-365-copilot-and-teams-premium-roi-calculator/",
+        "/"
+      ],
+      "partner_network": "PartnerStack / Impact (8038782) / Direct B2B Referral",
+      "estimated_commission": "$100-$350 per qualified engineering/product team migration",
+      "in_page_trigger": "Directly triggered when engineering teams audit Jira/Confluence Standard ($8.15/user) vs. Premium ($16/user) plus mandatory Atlassian Guard/Access SAML SSO ($4/user/mo across all domain users) vs. Linear ($8-$14/user)."
+    },
+    {
+      "opportunity_id": "SAAS-OPP-008",
+      "vendor": "Figma Professional/Organization/Enterprise vs. Canva Teams vs. Penpot (Full Design/FigJam Seat vs. Dev-Mode Seat Auto-Upgrade Audit)",
+      "target_domain": "saascostaudit.com",
+      "target_routes": [
+        "/ucaas/slack-pro-business-plus-vs-teams-pricing-calculator/",
+        "/hris/bamboohr-vs-rippling-hris-pepm-calculator/",
+        "/"
+      ],
+      "partner_network": "Impact (8038782) / PartnerStack",
+      "estimated_commission": "$75-$250 per qualified B2B design/product team trial or subscription",
+      "in_page_trigger": "Directly triggered by quarterly true-up billing traps where Editor ($15-$75/seat/mo) and Dev Mode ($12-$35/seat/mo) auto-upgrades inflate annual SaaS spend by 35%-60% without quarterly seat reclassification."
     }
   ],
-  "ingested_cross_domain_saas_opportunities_count": 20,
+  "ingested_cross_domain_saas_opportunities_count": 28,
   "ingested_cross_domain_saas_opportunities": [
     {
       "opportunity_id": "SAAS-CROSS-001",
@@ -284,6 +310,86 @@
       "partner_network": "PartnerStack / Impact (8038782)",
       "estimated_commission": "$150-$400 per qualified mid-market finance/ops demo",
       "rationale": "Companies calculating W-2 field sales and consulting labor burden also license corporate travel and expense management SaaS (Navan/TravelPerk), which belongs on saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-006",
+      "vendor": "LangSmith Plus/Enterprise vs. Arize Phoenix vs. Weights & Biases (W&B Weave) (LLM Evaluation, Prompt Versioning & MLOps Per-Seat SaaS)",
+      "discovered_on_route": "https://apicostaudit.com/llm-api/prompt-caching-vs-batch-api-savings-calculator/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "AI Engineering, LLM Evals & MLOps Experiment Tracking Per-Seat SaaS Licensing Audit",
+      "partner_network": "PartnerStack / Direct B2B SaaS Referral",
+      "estimated_commission": "$150-$400 per qualified AI engineering team conversion",
+      "rationale": "While metered trace ingestion belongs on apicostaudit.com, per-developer seat licenses ($39-$99+/seat/mo on LangSmith Plus and Weights & Biases Teams) route directly to saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-007",
+      "vendor": "LaunchDarkly vs. Statsig vs. Split.io (Feature Flagging, AI Model Routing & A/B Experimentation Per-Seat SaaS Tiers)",
+      "discovered_on_route": "https://apicostaudit.com/llm-api/openai-vs-anthropic-claude-token-calculator/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "Product Engineering & Feature Management Per-Seat SaaS Licensing Audit",
+      "partner_network": "PartnerStack / Impact (8038782)",
+      "estimated_commission": "$150-$450 B2B SaaS demo/subscription CPA",
+      "rationale": "Engineering teams dynamically routing prompts between GPT-4o, Claude 3.7/4.5 Sonnet, and Gemini Flash use feature-flagging SaaS ($20-$75/seat/mo) audited on saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-JHQ-006",
+      "vendor": "CurbWaste vs. Docket vs. Starlight Software vs. Hauler Hero (Roll-Off Dumpster Inventory, Scale-Ticket OCR & Hauler Dispatch ERP SaaS)",
+      "discovered_on_route": "https://junkhaulhq.com/dumpster-rental/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "Vertical SaaS: Waste Management, Roll-Off Bin Tracking & Per-Truck Dispatch Seat Audit",
+      "partner_network": "Direct B2B Vertical SaaS Referral",
+      "estimated_commission": "$200-$500 per qualified roll-off hauler demo/subscription",
+      "rationale": "Independent roll-off operators comparing 10-40 yard container pricing and county landfill scale overage rates pay $199-$699+/mo per truck/dispatcher seat for vertical waste-hauling software (Docket/CurbWaste/Hauler Hero)\u2014a high-ARPU B2B SaaS vertical for saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-JHQ-007",
+      "vendor": "Podium vs. Birdeye vs. NiceJob (Local Home-Services SMS Lead Conversion, Missed-Call Text-Back & Google Review Automation SaaS)",
+      "discovered_on_route": "https://junkhaulhq.com/about/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "Local Service Business Reputation, SMS Webchat & Annual Contract Lock-In SaaS Audit",
+      "partner_network": "PartnerStack / Impact (8038782)",
+      "estimated_commission": "$150-$400 per qualified multi-location home-service business conversion",
+      "rationale": "Hauling and demolition contractors competing for local 3-pack rankings face steep 12-month lock-in contracts on Podium ($399-$599/mo) vs. NiceJob ($75/mo)\u2014an ideal contract-trap calculator for saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-B2BFEE-006",
+      "vendor": "Chargebee vs. Recurly vs. Maxio vs. Paddle (B2B Subscription Billing, Dunning Management & Revenue Recognition SaaS Tiers)",
+      "discovered_on_route": "https://b2bfeeaudit.com/merchant/stripe-invoicing-fee-calculator/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "RevOps, Subscription Billing & Revenue Recognition Platform Base + Overage Audit",
+      "partner_network": "PartnerStack / Impact (8038782)",
+      "estimated_commission": "$200-$500 per qualified B2B SaaS finance team demo/signup",
+      "rationale": "Companies replacing Stripe Billing's +0.7% recurring revenue surcharge evaluate dedicated subscription management SaaS ($299-$599/mo base tiers on Chargebee/Maxio/Recurly), which routes directly to saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-B2BFEE-007",
+      "vendor": "FloQast vs. BlackLine vs. Numeric (Month-End Financial Close, Payment Reconciliation & Per-Accountant Seat Licensing SaaS)",
+      "discovered_on_route": "https://b2bfeeaudit.com/merchant/paypal-vs-stripe-b2b-tco/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "Controller & Accounting Close Automation Per-User Seat Licensing Audit",
+      "partner_network": "Direct B2B FinOps Referral / PartnerStack",
+      "estimated_commission": "$150-$400 per qualified controller/CFO demo",
+      "rationale": "Controllers reconciling multi-processor settlement batches, FX spreads, and multi-state payroll liabilities license per-seat financial close management software audited on saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-B2BCOST-006",
+      "vendor": "Carta Total Comp vs. Pave vs. Figures vs. Ravio (Real-Time Compensation Benchmarking, Salary Band & Total Rewards Per-Employee SaaS)",
+      "discovered_on_route": "https://b2bcostaudit.com/labor-burden/w2-employee-vs-1099-contractor-tco/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "HR & Finance Compensation Benchmarking Per-Employee SaaS Licensing Audit",
+      "partner_network": "PartnerStack / Direct B2B Referral",
+      "estimated_commission": "$150-$350 per qualified HR/CFO compensation benchmarking demo",
+      "rationale": "CFOs modeling 29.6%-31.8% BLS ECEC total compensation burden also license per-employee salary benchmarking SaaS ($1,500-$6,000/yr) audited on saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-B2BCOST-007",
+      "vendor": "KnowBe4 vs. Hoxhunt vs. Proofpoint Security Awareness (Employee Phishing Simulation & Cyber Insurance Underwriting Compliance Per-Seat SaaS)",
+      "discovered_on_route": "https://b2bcostaudit.com/eo-insurance/cyber-eo-premium-estimator/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "Security Awareness Training & Phishing Simulation Per-Seat SaaS Audit",
+      "partner_network": "PartnerStack / Impact (8038782)",
+      "estimated_commission": "$100-$300 per qualified B2B security training subscription",
+      "rationale": "Cyber insurance applications (Coalition/Embroker/Vouch) and SOC 2 CC1.4 audits require annual employee phishing training ($18-$36/seat/yr on KnowBe4/Hoxhunt)\u2014a natural per-seat SaaS cluster for saascostaudit.com."
     }
   ],
   "expanded_saas_vertical_clusters": {
@@ -372,6 +478,17 @@
       "PandaDoc",
       "Dropbox Sign",
       "Ironclad CLM"
+    ],
+    "cluster_8_engineering_product_and_design_seats": [
+      "Atlassian Jira",
+      "Confluence",
+      "Atlassian Guard/Access",
+      "Linear",
+      "Shortcut",
+      "Figma Enterprise",
+      "Figma Dev Mode",
+      "Canva Teams"
     ]
-  }
+  },
+  "total_mapped_b2b_saas_clusters": 36
 }
