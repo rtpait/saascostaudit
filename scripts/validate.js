@@ -158,6 +158,20 @@ for (const f of [...contentFiles, ...dripFiles]) {
     if (Array.isArray(entry.prices) && entry.prices.length < 4) {
       fail(`${rel}: must have >= 4 prices[] comparison rows (found ${entry.prices.length})`);
     }
+    if (Array.isArray(entry.prices)) {
+      let maxPrice = 0;
+      for (const p of entry.prices) {
+        const nums = [...String(p.price || "").matchAll(/\$\s*([0-9,]+(?:\.[0-9]+)?)/g)].map((m) =>
+          Number(m[1].replace(/,/g, ""))
+        );
+        for (const n of nums) {
+          if (n > maxPrice) maxPrice = n;
+        }
+      }
+      if (Number(entry.offerHighPrice || 0) < maxPrice) {
+        fail(`${rel}: IN_ROOM_EXECUTION_HOW violation — offerHighPrice (${entry.offerHighPrice}) < max(prices[]) (${maxPrice})`);
+      }
+    }
     if (Array.isArray(entry.faq) && entry.faq.length < 4) {
       fail(`${rel}: must have >= 4 FAQs (found ${entry.faq.length})`);
     }
@@ -298,7 +312,21 @@ if (!fs.existsSync(siteDir)) {
         if (parsed["@type"] === "Organization") orgSchemaCount++;
         if (parsed["@type"] === "WebSite") webSiteSchemaCount++;
         if (parsed["@type"] === "SoftwareApplication") softwareAppSchemaCount++;
-        if (parsed["@type"] === "Service" && parsed.offers && parsed.offers["@type"] === "AggregateOffer") serviceOfferSchemaCount++;
+        if (parsed["@type"] === "Service" && parsed.offers && parsed.offers["@type"] === "AggregateOffer") {
+          serviceOfferSchemaCount++;
+          let maxOfferVal = 0;
+          for (const off of parsed.offers.offers || []) {
+            const nums = [...String(off.description || "").matchAll(/\$\s*([0-9,]+(?:\.[0-9]+)?)/g)].map((m) =>
+              Number(m[1].replace(/,/g, ""))
+            );
+            for (const n of nums) {
+              if (n > maxOfferVal) maxOfferVal = n;
+            }
+          }
+          if (Number(parsed.offers.highPrice || 0) < maxOfferVal) {
+            fail(`${rel}: AggregateOffer.highPrice (${parsed.offers.highPrice}) < max(offers[]) (${maxOfferVal})`);
+          }
+        }
         if (parsed["@type"] === "FAQPage") faqSchemaCount++;
         if (parsed["@type"] === "BreadcrumbList") breadcrumbSchemaCount++;
         if (parsed["@type"] === "HowTo") howToSchemaCount++;

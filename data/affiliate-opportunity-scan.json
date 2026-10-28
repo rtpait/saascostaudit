@@ -1,9 +1,9 @@
 {
-  "schema_version": "2026-10-28-v1.6.0",
-  "scanned_at_utc": "2026-10-28T15:10:09Z",
+  "schema_version": "2026-10-28-v1.7.0",
+  "scanned_at_utc": "2026-10-28T17:29:07Z",
   "source_domain": "saascostaudit.com",
   "primary_software_opportunity_growth_target": true,
-  "sprint_id": "RAPID-BUILD-AUTO-ROTATE-20261028-1100",
+  "sprint_id": "RAPID-BUILD-AUTO-ROTATE-20261028-1146",
   "shared_priority": "PRIORITY_1B_CONTINUOUS_AFFILIATE_SOFTWARE_OPPORTUNITY_SCANNING",
   "affiliate_portal_ops_agent_id": "09b4bb79",
   "direct_saas_costs_opportunities_logged": [
@@ -55,9 +55,35 @@
       "partner_network": "Direct B2B FinOps Referral / PartnerStack",
       "estimated_commission": "$200-$600 per qualified mid-market CFO/IT SaaS spend audit",
       "in_page_trigger": "Directly triggered by the CFO CSV Export Bar and Zombie-Seat / NCE (+20%) Surcharge Auditor for 50-500 employee companies reclaiming 15%-28% in unused SaaS licenses."
+    },
+    {
+      "opportunity_id": "SAAS-OPP-005",
+      "vendor": "Zendesk Suite vs. Intercom Fin AI vs. Freshdesk vs. Help Scout (Customer Support Agent Seat & $0.99/Resolution AI Ticket Pricing Audit)",
+      "target_domain": "saascostaudit.com",
+      "target_routes": [
+        "/crm-revops/hubspot-marketing-sales-hub-seat-and-contact-tier-calculator/",
+        "/ucaas/ringcentral-vs-nextiva-vs-dialpad-pricing-audit/",
+        "/"
+      ],
+      "partner_network": "PartnerStack / Impact (8038782) / CJ Affiliate (8108003)",
+      "estimated_commission": "$100-$400 per qualified B2B support team trial or paid conversion",
+      "in_page_trigger": "Directly triggered alongside HubSpot Service Hub ($90-$150/seat) and cloud contact center VoIP where Zendesk ($55-$115/agent/mo + $50/agent Advanced AI add-on) and Intercom ($39-$139/seat + $0.99 per Fin AI resolution) create steep hybrid seat+usage bills."
+    },
+    {
+      "opportunity_id": "SAAS-OPP-006",
+      "vendor": "DocuSign Business Pro vs. PandaDoc vs. Dropbox Sign vs. Ironclad CLM (eSignature Per-Seat Envelope Caps & Contract Lifecycle Management SaaS)",
+      "target_domain": "saascostaudit.com",
+      "target_routes": [
+        "/crm-revops/hubspot-marketing-sales-hub-seat-and-contact-tier-calculator/",
+        "/hris/bamboohr-vs-rippling-hris-pepm-calculator/",
+        "/"
+      ],
+      "partner_network": "PartnerStack / Impact (8038782) / CJ Affiliate (8108003)",
+      "estimated_commission": "20%-35% first-year rev-share or $75-$300 B2B CPA",
+      "in_page_trigger": "Directly triggered by RevOps sales teams and HR onboarding teams hitting DocuSign's 100-envelope/user/year cap ($40/user/mo annual) vs. unlimited-envelope PandaDoc ($19-$49/seat/mo) and Dropbox Sign."
     }
   ],
-  "ingested_cross_domain_saas_opportunities_count": 12,
+  "ingested_cross_domain_saas_opportunities_count": 20,
   "ingested_cross_domain_saas_opportunities": [
     {
       "opportunity_id": "SAAS-CROSS-001",
@@ -178,6 +204,86 @@
       "partner_network": "PartnerStack / Impact / CJ (8108003)",
       "estimated_commission": "$100-$300 B2B SaaS trial/paid conversion CPA",
       "rationale": "To qualify for the -18% Cyber Insurance underwriting control credit (MFA -6%, EDR -5%, MDM disk encryption), SMBs must license per-seat/per-device MDM and password/SSO SaaS ($8-$16/seat/mo)\u2014a direct feeder into saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-004",
+      "vendor": "PagerDuty vs. Incident.io vs. Rootly vs. Squadcast (On-Call Incident Management, Alerting & SRE Response Per-User Seat Tiers)",
+      "discovered_on_route": "https://apicostaudit.com/b2b-apis/twilio-sms-voice-verify-per-call-fee-calculator/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "DevOps, SRE & On-Call Incident Management Per-User Seat Licensing Audit",
+      "partner_network": "PartnerStack / Impact (8038782) / Direct B2B",
+      "estimated_commission": "$150-$400 per qualified engineering/SRE team trial or conversion",
+      "rationale": "Engineering teams auditing Datadog log ingestion and Twilio SMS alert volume also pay $21-$49+/user/mo (+ AIOps add-ons) for on-call incident management seats\u2014a high-intent per-seat SaaS vertical for saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-005",
+      "vendor": "Postman Enterprise vs. SwaggerHub (SmartBear) vs. ReadMe vs. Stoplight (API Documentation, Governance & Developer Portal Per-Seat SaaS)",
+      "discovered_on_route": "https://apicostaudit.com/b2b-apis/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "Developer Tools & API Collaboration Per-Seat SaaS Licensing Audit",
+      "partner_network": "PartnerStack / CJ Affiliate (8108003) / Direct B2B",
+      "estimated_commission": "$100-$300 B2B SaaS subscription CPA",
+      "rationale": "While metered per-call API usage belongs on apicostaudit.com, per-user API design, workspace collaboration, and hosted developer portal seats ($14-$49/user/mo on Postman/SwaggerHub/ReadMe) route directly to saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-JHQ-004",
+      "vendor": "CompanyCam vs. Encircle (Contractor & Hauler Before/After Jobsite Photo Documentation & Timestamped Damage-Waiver Per-Seat SaaS)",
+      "discovered_on_route": "https://junkhaulhq.com/dumpster-rental/phoenix-az/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "Field Service & Contractor Jobsite Documentation Per-User Seat Licensing Audit",
+      "partner_network": "PartnerStack / Direct B2B SaaS Referral",
+      "estimated_commission": "$100-$250 per qualified contractor/hauler team conversion",
+      "rationale": "Roll-off dumpster and junk removal crews documenting driveway plank placement, scale tickets, and before/after cleanouts pay $24-$79/user/mo (3-seat minimum) on CompanyCam\u2014a high-intent per-seat B2B SaaS vertical for saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-JHQ-005",
+      "vendor": "QuickBooks Online Plus/Advanced vs. Xero vs. FreshBooks (Contractor Job-Costing, Dumpster Tonnage Rebilling & Multi-User Accounting SaaS)",
+      "discovered_on_route": "https://junkhaulhq.com/dumpster-rental/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "SMB Accounting & Contractor Job-Costing Per-Seat Tier Cliff Audit",
+      "partner_network": "CJ Affiliate (8108003) / Impact (8038782)",
+      "estimated_commission": "$75-$250 B2B SaaS subscription CPA",
+      "rationale": "Remodelers and hauling operators rebilling county landfill scale tickets ($37-$85/ton) and 20-yard container rentals ($380-$565) face steep per-user seat jumps from QuickBooks Plus (5 users, $99/mo) to Advanced (25 users, $235/mo) on saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-B2BFEE-004",
+      "vendor": "Avalara vs. Anrok vs. TaxJar (Stripe Tax) vs. Numeral (Automated Multi-State SaaS Sales Tax & Economic Nexus Compliance SaaS)",
+      "discovered_on_route": "https://b2bfeeaudit.com/payroll/multi-state-payroll-tax-calculator/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "FinOps, Sales Tax Nexus & Multi-State Compliance SaaS Subscription Audit",
+      "partner_network": "PartnerStack / Impact (8038782) / Direct B2B",
+      "estimated_commission": "$150-$450 per qualified B2B finance/tax team demo",
+      "rationale": "Hiring remote W-2 employees in new US states triggers physical sales-tax nexus alongside SUI payroll registration; SaaS tax automation platforms ($99-$499+/mo + tier overages vs. 0.5% Stripe Tax) route directly to saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-B2BFEE-005",
+      "vendor": "Carta vs. Pulley vs. Shareworks (Cap Table Management, 409A Valuation & Per-Stakeholder Equity SaaS Tiers)",
+      "discovered_on_route": "https://b2bfeeaudit.com/payroll/w2-employee-vs-1099-contractor-tco/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "CFO & Legal Equity / Cap-Table Per-Stakeholder SaaS Tier Cliff Audit",
+      "partner_network": "PartnerStack / Direct B2B Referral",
+      "estimated_commission": "$150-$400 per qualified startup/mid-market cap-table conversion",
+      "rationale": "Startups onboarding W-2 engineers and international EOR employees issue ISO/NSO stock options that trigger per-stakeholder cap-table tier cliffs ($2,500-$12,000+/yr on Carta vs. Pulley) audited on saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-B2BCOST-004",
+      "vendor": "Checkr vs. Certn vs. GoodHire (Automated FCRA Employment Background Checks, SOC 2 Pre-Hire Screening & Continuous Monitoring SaaS)",
+      "discovered_on_route": "https://b2bcostaudit.com/commercial-costs/soc2-type-2-audit-and-pentest-cost-calculator/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "HR Onboarding, FCRA Screening & SOC 2 CC1.4 Personnel Compliance SaaS Audit",
+      "partner_network": "Impact (8038782) / PartnerStack",
+      "estimated_commission": "$100-$300 per qualified B2B employer signup",
+      "rationale": "SOC 2 Type II Common Criteria CC1.4 requires pre-hire background checks on all W-2 and 1099 personnel; automated FCRA screening subscriptions and continuous monitoring tiers route directly to saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-B2BCOST-005",
+      "vendor": "Navan (formerly TripActions) vs. TravelPerk vs. Engine (Corporate Travel & Expense Management, Duty-of-Care & Per-User Policy SaaS)",
+      "discovered_on_route": "https://b2bcostaudit.com/labor-burden/w2-employee-vs-1099-contractor-tco/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "Corporate T&E, Spend Control & Per-Traveler SaaS Seat Tier Audit",
+      "partner_network": "PartnerStack / Impact (8038782)",
+      "estimated_commission": "$150-$400 per qualified mid-market finance/ops demo",
+      "rationale": "Companies calculating W-2 field sales and consulting labor burden also license corporate travel and expense management SaaS (Navan/TravelPerk), which belongs on saascostaudit.com."
     }
   ],
   "expanded_saas_vertical_clusters": {
@@ -256,6 +362,16 @@
       "Zylo",
       "Vendr",
       "Torii"
+    ],
+    "cluster_7_support_helpdesk_and_clm_esignature": [
+      "Zendesk Suite",
+      "Intercom Fin AI",
+      "Freshdesk",
+      "Help Scout",
+      "DocuSign",
+      "PandaDoc",
+      "Dropbox Sign",
+      "Ironclad CLM"
     ]
   }
 }

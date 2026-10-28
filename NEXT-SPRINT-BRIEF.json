@@ -3,14 +3,14 @@
   "planning_model": "PURE_EVENT_DRIVEN_COURIER_HUB_TO_SPOKE_ROUND_ROBIN_NO_TIMER",
   "domain": "saascostaudit.com",
   "repo_path": "/workspace/saascostaudit",
-  "synthesized_at_cdt": "2026-10-28T10:08:00-05:00",
+  "synthesized_at_cdt": "2026-10-28T12:28:00-05:00",
   "prior_sprint_output_summary": {
-    "latest_shipped_version": "v1.6.0",
-    "total_releases_logged": 7,
+    "latest_shipped_version": "v1.7.0",
+    "total_releases_logged": 8,
     "verified_built_html_routes": 16,
     "canonical_seo_html_routes": 16,
     "commercial_cta_4axis_parity": "242/242 (100% SAAS_COSTS)",
-    "kaizen_candidates_ingested": 9
+    "kaizen_candidates_ingested": 26
   },
   "north_star_stage_compass": {
     "active_stage_transition": "STAGE_1_TO_2",
@@ -27,9 +27,9 @@
     "future_sprints_2_to_5_pre_planned": false,
     "rule": "Strictly 1 sprint planned ahead; Sprint N+2 is never defined until Sprint N+1 completes and its live output is measured.",
     "stack_ranked_tasks": [
-      "1A. [SHARED PRIORITY 1A \u2014 NATURAL & ORGANIC PLATFORM OPTIMIZATION] Advance all 16 canonical SAAS_COSTS routes toward >=75% GSC indexation via priority URL inspection monitoring, 129 valid JSON-LD blocks (16/16 Dataset + 1 DataCatalog, HowTo, FAQPage, Service+AggregateOffer), 16/16 visible <details class=\"faq-card\"> & verifiedGovBadge statutory trust bars (FCC Q4 USF 37.6%, FCC E911 Ray Baum's Act & Kari's Law, SEC 10-K/10-Q, Microsoft NCE / GSA Schedule 70), 7-tool /.well-known/webmcp.json (v1.6.0/v1.7.0), and price-anchored title/meta CTR hooks.",
-      "1B. [SHARED PRIORITY 1B \u2014 CONTINUOUS IN-PAGE AFFILIATE SOFTWARE OPPORTUNITY SCANNING (PRIMARY GROWTH TARGET: saascostaudit.com)] Continuously expand saascostaudit.com's 16 mapped software partner clusters across UCaaS/VoIP, CRM/RevOps, HRIS PEPM, SSO/IAM/GRC/MDM, FSM/Fleet/PropMgmt, and FinOps/Spend/AI Workspaces (4 direct SAAS-OPP-001..004 + 12 ingested SAAS-CROSS-* opportunities) with Affiliate & Portal Ops (09b4bb79).",
-      "2. [v1.7.0 SEQUENCED REVENUE UNLOCK & MERIT-ONLY VOIP RULE] Maintain 100% *:SAAS_COSTS.*:* 4-axis exclusivity across all 242 commercial CTAs (including 21 live Awin Bark US MID 58887 Publisher 3133124 $20-$45 CPL links, PartnerStack, CJ 8108003, Impact 8038782, and Rakuten 4767884) and 68 One-Click CFO Preset Scenario buttons (data-cfo-preset) while enforcing the Merit-Only Conditional VoIP Recommendation Rule.",
+      "1A. [SHARED PRIORITY 1A \u2014 NATURAL & ORGANIC PLATFORM OPTIMIZATION] Advance all 16 canonical SAAS_COSTS routes toward >=75% GSC indexation via priority URL inspection monitoring, 129 valid JSON-LD blocks (16/16 Dataset + 1 DataCatalog, HowTo, FAQPage, Service+AggregateOffer with 16/16 offerHighPrice >= max(prices[]) enforced), 16/16 visible <details class=\"faq-card\"> & verifiedGovBadge statutory trust bars (FCC Q4 USF 37.6%, FCC E911 Ray Baum's Act & Kari's Law, SEC 10-K/10-Q 7%-12% renewal uplift, Microsoft NCE +20% / GSA Schedule 70 534210C), 7-tool /.well-known/webmcp.json (v1.7.0/v1.8.0), and price-anchored title/meta CTR hooks.",
+      "1B. [SHARED PRIORITY 1B \u2014 CONTINUOUS IN-PAGE AFFILIATE SOFTWARE OPPORTUNITY SCANNING (PRIMARY GROWTH TARGET: saascostaudit.com)] Continuously expand saascostaudit.com's 26 mapped software partner clusters across UCaaS/VoIP, CRM/RevOps, HRIS PEPM, SSO/IAM/GRC/MDM, FSM/Fleet/PropMgmt, FinOps/Spend/AI Workspaces, and Support/Helpdesk/CLM/eSignature (6 direct SAAS-OPP-001..006 + 20 ingested SAAS-CROSS-* opportunities) with Affiliate & Portal Ops (09b4bb79).",
+      "2. [v1.8.0 SEQUENCED REVENUE UNLOCK & MERIT-ONLY VOIP RULE] Maintain 100% *:SAAS_COSTS.*:* 4-axis exclusivity across all 242 commercial CTAs (including 21 live Awin Bark US MID 58887 Publisher 3133124 $20-$45 CPL links, PartnerStack, CJ 8108003, Impact 8038782, and Rakuten 4767884) and 68 One-Click CFO Preset Scenario buttons (data-cfo-preset) while enforcing the Merit-Only Conditional VoIP Recommendation Rule.",
       "3. [GATED COHORT EXPANSION] Hold the 4 quarantined Cohort-1 drip routes in drip-queue/cohort-1/ until GSC indexation reaches >=75% (>=12/16 routes) across the canonical MVP footprint, then promote Cohort 1."
     ]
   },
@@ -53,27 +53,27 @@
   "pm_name": "Project Manager",
   "management_mode": "SINGLE_PRODUCT_SPRINT",
   "single_owner_wake_per_turn": true,
-  "refreshed_at_cdt": "2026-10-28T10:08:00-05:00",
-  "active_lease_id": "lease-20261028-110027-saascostaudit",
-  "acquired_at_edt": "2026-10-28T11:00:27-04:00",
+  "refreshed_at_cdt": "2026-10-28T12:28:00-05:00",
+  "active_lease_id": "lease-20261028-114613-saascostaudit",
+  "acquired_at_edt": "2026-10-28T11:46:13-04:00",
   "non_progress_turns": 0,
-  "sprint_id": "RAPID-BUILD-AUTO-ROTATE-20261028-1100",
+  "sprint_id": "RAPID-BUILD-AUTO-ROTATE-20261028-1146",
   "po_agent_id": "bc09e0d9-5fae-487c-b526-020d9aac1bd1",
   "po_name": "SaaS Cost Audit PO",
   "single_owner_wake_target_id": "167b2bea-99c8-4e89-99e3-182227974962",
   "single_owner_wake_target_name": "Project Manager",
   "top_line_short_term_goal": "Improve natural SEO and organic SEO results broadly across the 16 canonical SAAS_COSTS routes by whatever appropriate means are necessary (indexation, crawlability, AEO schemas [HowTo, FAQPage, SoftwareApplication, Dataset], /llms.txt & /.well-known/webmcp.json, structured data, UCaaS/CRM/cloud-seat benchmark depth, internal/cross-family link equity, and title/meta CTR optimization \u2014 no single tactic mandated as the sole top line).",
   "organic_seo_to_revenue_sequencing": "Organic SEO & AEO traction across the 16 canonical SAAS_COSTS routes (currently 0/16 indexed in GSC; advancing toward >=75%) directly unlocks downstream SAAS_COSTS.* partner commission activation and Cohort 1 expansion.",
-  "next_sprint_goal": "Top-Line Goal (v1.6.0 -> v1.7.0): Advance all 16 canonical SAAS_COSTS routes toward >=75% GSC indexation (Priority 1A: 129 JSON-LD blocks, 16/16 Dataset + HowTo + FAQPage, 16/16 visible <details class=\"faq-card\"> & verifiedGovBadge FCC USF/E911/SEC/NCE .gov trust bars, 7-tool WebMCP manifest) + Priority 1B continuous affiliate software opportunity expansion across 16 mapped SaaS clusters (4 direct SAAS-OPP + 12 ingested SAAS-CROSS) + 100% SAAS_COSTS.* 4-axis exclusivity (242 CTAs incl. 21 Bark US MID 58887 + 68 CFO preset buttons) -> unlocking Stage 2->3 Drip Cohort 1 expansion",
+  "next_sprint_goal": "Top-Line Goal (v1.7.0 -> v1.8.0): Advance all 16 canonical SAAS_COSTS routes toward >=75% GSC indexation (Priority 1A: 129 JSON-LD blocks with 16/16 offerHighPrice >= max(prices[]) enforced, 16/16 Dataset + HowTo + FAQPage, 16/16 visible <details class=\"faq-card\"> & verifiedGovBadge FCC USF/E911/SEC/NCE .gov trust bars, 7-tool WebMCP manifest) + Priority 1B continuous affiliate software opportunity expansion across 26 mapped SaaS clusters (6 direct SAAS-OPP + 20 ingested SAAS-CROSS) + 100% SAAS_COSTS.* 4-axis exclusivity (242 CTAs incl. 21 Bark US MID 58887 + 68 CFO preset buttons) -> unlocking Stage 2->3 Drip Cohort 1 expansion",
   "completed_turn_definition": "At least 1 new git commit on <repo> since acquired_at_edt passing validate.js and audit_day0_launch_gate.py, followed by an immediate SendToAgent(target='4d3b63d2-2aa7-4aa3-bd71-a96433503ad5', priority=True) completion handoff to Courier.",
   "stall_escalation_definition": "After 2 consecutive non-progress turns without a new git commit since acquired_at_edt, Courier escalates to Founder and immediately rotates PRODUCT-LOCK.json to the next site in the 5-affiliate-site ring.",
   "last_completed_sprint": {
-    "sprint_id": "RAPID-BUILD-AUTO-ROTATE-20261028-1100",
-    "lease_id": "lease-20261028-110027-saascostaudit",
-    "shipped_version": "v1.6.0",
+    "sprint_id": "RAPID-BUILD-AUTO-ROTATE-20261028-1146",
+    "lease_id": "lease-20261028-114613-saascostaudit",
+    "shipped_version": "v1.7.0",
     "po_verdict": "ACCEPT",
     "review_file": "/workspace/saascostaudit/SPRINT-REVIEW-2026-10-28.md",
-    "completed_at_cdt": "2026-10-28T10:08:00-05:00"
+    "completed_at_cdt": "2026-10-28T12:28:00-05:00"
   },
   "product_category": "AFFILIATE_FUNNELS",
   "category_context_tag": "[CATEGORY_CONTEXT: AFFILIATE_FUNNELS \u2014 OVERRIDES ALL DEFAULT SPOKE BEHAVIORS]",
