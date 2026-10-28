@@ -187,6 +187,8 @@ let breadcrumbSchemaCount = 0;
 let howToSchemaCount = 0;
 let datasetSchemaCount = 0;
 let dataCatalogSchemaCount = 0;
+let canonicalFaqAccordionCount = 0;
+let canonicalGovBadgeCount = 0;
 let cfoPresetBtnCount = 0;
 let titleOkCount = 0;
 let descOkCount = 0;
@@ -257,6 +259,16 @@ if (!fs.existsSync(siteDir)) {
     if (!html.includes('class="verified-gov-badge"') || !html.includes('id="mobile-comparison-bar"')) {
       fail(`${rel}: missing verifiedGovBadge or mobile-comparison-bar`);
     }
+    if (!html.includes('class="verified-gov-badge"') || !html.includes('data-verified-gov-badge="true"')) {
+      fail(`${rel}: canonical SAAS_COSTS route missing verifiedGovBadge (data-verified-gov-badge="true")`);
+    } else {
+      canonicalGovBadgeCount++;
+    }
+    if (!html.includes('<details class="faq-card"')) {
+      fail(`${rel}: canonical SAAS_COSTS route missing visible <details class="faq-card"> FAQ accordion`);
+    } else {
+      canonicalFaqAccordionCount++;
+    }
     if (!isSubdiv && !html.includes('id="saas-seat-calc"') && !html.includes('id="ucaas-tco-calculator"')) {
       fail(`${rel}: missing interactive TCO calculator macro`);
     }
@@ -297,10 +309,16 @@ if (!fs.existsSync(siteDir)) {
       }
     }
   }
+  if (canonicalFaqAccordionCount !== 16) {
+    fail(`Expected 16/16 canonical SAAS_COSTS routes with visible <details class="faq-card"> FAQ accordions, found ${canonicalFaqAccordionCount}`);
+  }
+  if (canonicalGovBadgeCount !== 16) {
+    fail(`Expected 16/16 canonical SAAS_COSTS routes with verifiedGovBadge trust bars, found ${canonicalGovBadgeCount}`);
+  }
 }
 
 console.log(
-  `Validated saascostaudit.com Sprint 1 MVP: 6/6 governance & spec artifacts (PRODUCT-STATE.md, SPRINT-REVIEW-2026-10-26.md, RELEASE-CONTRIBUTION-LEDGER.json, ROUTE-SPEC-64.md, partner-routing-matrix.json), 4/4 deterministic 2026 JSON datasets, 5/5 AEO & WebMCP endpoints (/llms.txt, /llms-full.txt, /.well-known/webmcp.json, /.well-known/openapi.json, /.well-known/ai-plugin.json), 6/6 AI crawler rules in /robots.txt, ${contentFiles.length} active content JSON files + ${dripFiles.length} quarantined Cohort-1 drip files, ${htmlCount}/16 built HTML pages (${validJsonLdCount} valid JSON-LD blocks: ${orgSchemaCount} Organization, ${webSiteSchemaCount} WebSite, ${softwareAppSchemaCount} SoftwareApplication, ${serviceOfferSchemaCount} Service+AggregateOffer, ${faqSchemaCount} FAQPage, ${breadcrumbSchemaCount} BreadcrumbList, ${howToSchemaCount} HowTo, ${datasetSchemaCount} Dataset, ${dataCatalogSchemaCount} DataCatalog), ${cfoPresetBtnCount} One-Click CFO Preset Scenario buttons, ${titleOkCount}/16 <title> <=60c, ${descOkCount}/16 meta descriptions 140-158c, and 0 private string leaks.`
+  `Validated saascostaudit.com Sprint 1 MVP: 6/6 governance & spec artifacts (PRODUCT-STATE.md, SPRINT-REVIEW-2026-10-26.md, RELEASE-CONTRIBUTION-LEDGER.json, ROUTE-SPEC-64.md, partner-routing-matrix.json), 4/4 deterministic 2026 JSON datasets, 5/5 AEO & WebMCP endpoints (/llms.txt, /llms-full.txt, /.well-known/webmcp.json, /.well-known/openapi.json, /.well-known/ai-plugin.json), 6/6 AI crawler rules in /robots.txt, ${contentFiles.length} active content JSON files + ${dripFiles.length} quarantined Cohort-1 drip files, ${htmlCount}/16 built HTML pages (${validJsonLdCount} valid JSON-LD blocks: ${orgSchemaCount} Organization, ${webSiteSchemaCount} WebSite, ${softwareAppSchemaCount} SoftwareApplication, ${serviceOfferSchemaCount} Service+AggregateOffer, ${faqSchemaCount} FAQPage, ${breadcrumbSchemaCount} BreadcrumbList, ${howToSchemaCount} HowTo, ${datasetSchemaCount}/16 Dataset + ${dataCatalogSchemaCount} DataCatalog), ${canonicalFaqAccordionCount}/16 visible <details class="faq-card"> FAQ accordions, ${canonicalGovBadgeCount}/16 verifiedGovBadge statutory .gov trust bars, ${cfoPresetBtnCount} One-Click CFO Preset Scenario buttons, ${titleOkCount}/16 <title> <=60c, ${descOkCount}/16 meta descriptions 140-158c, and 0 private string leaks.`
 );
 console.log(bad ? `${bad} problem(s)` : "All entries valid");
 process.exit(bad ? 1 : 0);

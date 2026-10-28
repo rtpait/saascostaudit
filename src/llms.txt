@@ -121,7 +121,7 @@
 - **Q4 2026 FCC USF & NCE Benchmark Note:** Interconnected VoIP providers apply the FCC's Q4 2026 Universal Service Fund contribution factor (`37.6%` on the `64.9%` federal safe-harbor interstate portion of voice revenue = `~24.4%` effective federal USF recovery on voice) plus `$1.50–$3.50/line/mo` state/local E911 and RCRF fees (`~$4.00–$4.50/line/mo` total), while Microsoft New Commerce Experience (NCE), Zoom, and Google Workspace apply a `+20%` surcharge on month-to-month seat commitments versus annual commits.
 
 
-## 7-Tool SAAS_COSTS-Exclusive WebMCP Manifest (`/.well-known/webmcp.json` & `/webmcp.json` — `v1.5.0`)
+## 7-Tool SAAS_COSTS-Exclusive WebMCP Manifest (`/.well-known/webmcp.json` & `/webmcp.json` — `v1.6.0`)
 1. `calculate_ucaas_tco` (`https://saascostaudit.com/ucaas/`) — 4-Vendor UCaaS & Collaboration 12-Month TCO Calculator (`Webex`, `Microsoft Teams`, `Zoom Workplace`, `Google Workspace`, enforcing the strict Merit-Only Conditional VoIP Recommendation Rule).
 2. `calculate_payroll_hris_tco` (`https://saascostaudit.com/payroll/gusto-vs-rippling-tco/`) — Pure HRIS & Multi-State PEPM Software Tier Calculator (`Gusto`, `OnPay $49+$6`, `Rippling`, `Deel`).
 3. `audit_m365_copilot_and_teams_premium_roi` (`https://saascostaudit.com/ucaas/microsoft-365-copilot-and-teams-premium-roi-calculator/`) — Microsoft 365 Copilot (`$30/user/mo`) vs. Teams Premium (`$10/user/mo`) & `+20%` NCE Surcharge Auditor.

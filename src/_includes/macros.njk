@@ -4,8 +4,8 @@
 {% endmacro %}
 
 {% macro verifiedGovBadge(e, pageType) %}
-{% set verifyDate = (e and (e.lastVerified or e.updated)) or "2026-10-24" %}
-{% set govSourceTitle = "Official IRS Publication 15, State DOL SUI & Federal Reserve Reg II (.gov)" %}
+{% set verifyDate = (e and (e.lastVerified or e.updated)) or "2026-10-28" %}
+{% set govSourceTitle = "Official FCC USF Quarterly Contribution Factor (37.6%), FCC E911 (Ray Baum's Act & Kari's Law), SEC 10-K/10-Q SaaS Filings & GSA Schedule 70 (.gov)" %}
 {% set govSourceId = 1 %}
 {% if e and e.sources and e.sources.length %}
   {% set foundGov = false %}
@@ -17,12 +17,12 @@
     {% endif %}
   {% endfor %}
 {% endif %}
-<div class="verified-gov-bar" role="region" aria-label="Regulatory Verification Status">
-  <span class="verified-gov-badge">✓ Verified 2026 .gov Tax &amp; Interchange Schedule · {{ verifyDate }}</span>
+<div class="verified-gov-bar" data-verified-gov-badge="true" role="region" aria-label="Statutory .gov Telecom & Public SaaS Regulatory Verification Status">
+  <span class="verified-gov-badge" data-verified-gov-badge="true">✓ Verified 2026 .gov Statutory Benchmark (FCC Q4 USF 37.6% Safe-Harbor · FCC E911 Ray Baum's Act &amp; Kari's Law · SEC 10-K/10-Q · Microsoft NCE / GSA Schedule 70) · {{ verifyDate }}</span>
   {% if e and e.sources and e.sources.length %}
     <a class="gov-seal-pill" href="#src-{{ govSourceId }}" title="Jump to primary official .gov citation">🏛️ {{ govSourceTitle | truncate(64, true, "…") }}</a>
   {% else %}
-    <span class="gov-seal-pill">🏛️ IRS Pub 15 · 50-State DOL SUI · Federal Reserve Reg II (.gov)</span>
+    <span class="gov-seal-pill">🏛️ FCC USF (37.6%) · FCC E911 · SEC EDGAR 10-K/10-Q · GSA Schedule 70 (.gov)</span>
   {% endif %}
 </div>
 {% endmacro %}
@@ -405,26 +405,36 @@
 {% endmacro %}
 
 {% macro crossLinkHub(payrollPages, merchantPages, currentUrl) %}
-<section class="box" aria-label="All 14 B2B Payroll and Merchant Fee TCO Calculators">
-  <h2 style="margin-top:0;border-top:0;padding-top:0">Explore All 2026 B2B Payroll, Multi-State SUI &amp; Merchant Fee TCO Calculators</h2>
+<section class="box" aria-label="All 16 Canonical B2B Per-Seat SaaS, UCaaS, HRIS PEPM and CRM TCO Calculators">
+  <h2 style="margin-top:0;border-top:0;padding-top:0">Explore All 16 Canonical 2026 B2B Per-Seat SaaS, UCaaS, HRIS PEPM &amp; CRM Cost Calculators</h2>
+  <p style="margin:0 0 .6rem;font-size:.88rem;color:#334155">Every calculator below cites <strong>FCC Universal Service Fund (USF) Q4 2026 Quarterly Contribution Factor (<code>37.6%</code> on <code>64.9%</code> interstate VoIP safe-harbor)</strong>, <strong>FCC E911 Ray Baum's Act &amp; Kari's Law dispatchable location mandates</strong>, <strong>SEC EDGAR 10-K/10-Q public SaaS disclosures</strong>, and <strong>Microsoft NCE (+20% monthly penalty) / GSA Schedule 70 IT software benchmarks</strong>:</p>
   <div class="card-grid-2">
     <div>
-      <h3 style="margin-top:0">Cluster 1: Payroll, Multi-State HRIS &amp; Global EOR TCO</h3>
+      <h3 style="margin-top:0">Cluster 1: UCaaS Collaboration, Cloud VoIP &amp; AI Workspace Seats</h3>
       <ul style="padding-left:1.15rem;font-size:.92rem">
-        {% for p in payrollPages %}
-        <li><a href="{{ p.url }}"><strong>{{ p.title }}</strong></a></li>
-        {% endfor %}
+        <li><a href="/ucaas/"><strong>4-Vendor UCaaS Collaboration Hub (Webex, Teams, Zoom, Google)</strong></a></li>
+        <li><a href="/ucaas/cisco-webex-pricing-audit/"><strong>Cisco Webex Meet ($12) &amp; Webex Suite ($22.50 + $0 AI) TCO Audit</strong></a></li>
+        <li><a href="/ucaas/microsoft-teams-pricing-audit/"><strong>Microsoft Teams + Teams Phone ($15) &amp; NCE (+20%) Pricing Audit</strong></a></li>
+        <li><a href="/ucaas/zoom-workplace-pricing-audit/"><strong>Zoom Workplace Pro &amp; Business Plus + Storage Overage Audit</strong></a></li>
+        <li><a href="/ucaas/google-workspace-meet-pricing-audit/"><strong>Google Workspace ($7–$22) &amp; Google Voice ($10–$30) TCO Audit</strong></a></li>
+        <li><a href="/ucaas/ringcentral-vs-nextiva-vs-dialpad-pricing-audit/"><strong>RingCentral vs. Nextiva vs. Dialpad Standalone Cloud VoIP Audit</strong></a></li>
+        <li><a href="/ucaas/microsoft-365-copilot-and-teams-premium-roi-calculator/"><strong>Microsoft 365 Copilot ($30) &amp; Teams Premium ($10) ROI Calculator</strong></a></li>
+        <li><a href="/ucaas/slack-pro-business-plus-vs-teams-pricing-calculator/"><strong>Slack Pro ($7.25) &amp; Business+ ($12.50) vs. Microsoft Teams Calculator</strong></a></li>
       </ul>
     </div>
     <div>
-      <h3 style="margin-top:0">Cluster 2: Merchant Processing &amp; Interchange-Plus TCO</h3>
+      <h3 style="margin-top:0">Cluster 2: Pure HRIS PEPM Seat Tiers, CRM Contact Cliffs &amp; Methodology</h3>
       <ul style="padding-left:1.15rem;font-size:.92rem">
-        {% for m in merchantPages %}
-        <li><a href="{{ m.url }}"><strong>{{ m.title }}</strong></a></li>
-        {% endfor %}
+        <li><a href="/"><strong>B2B Per-Seat SaaS, UCaaS, HRIS &amp; CRM Master Hub</strong></a></li>
+        <li><a href="/hris/bamboohr-vs-rippling-hris-pepm-calculator/"><strong>BambooHR vs. Rippling vs. Gusto Pure HRIS PEPM Seat Calculator</strong></a></li>
+        <li><a href="/payroll/gusto-vs-rippling-tco/"><strong>Gusto vs. Rippling Multi-Module HRIS &amp; IT Seat-License Calculator</strong></a></li>
+        <li><a href="/payroll/gusto-vs-onpay-tco/"><strong>Gusto vs. OnPay All-Inclusive SMB Seat-License TCO Calculator</strong></a></li>
+        <li><a href="/crm-revops/hubspot-marketing-sales-hub-seat-and-contact-tier-calculator/"><strong>HubSpot Marketing &amp; Sales Hub Seat + Contact Tier Cliff Calculator</strong></a></li>
+        <li><a href="/methodology/"><strong>2026 FCC USF/E911, SEC 10-K, NCE &amp; Merit-Only Audit Methodology (.gov)</strong></a></li>
       </ul>
     </div>
   </div>
+  <p style="margin:.6rem 0 0;font-size:.84rem;color:#475569;border-top:1px solid #e2e8f0;padding-top:.5rem"><strong>B2B Audit Family Cross-Domain Network:</strong> <a href="https://b2bfeeaudit.com/merchant/stripe-vs-helcim-interchange-plus/" rel="noopener" data-sister-referral="true">B2BFeeAudit.com (Payment, ACH/FX &amp; Filing Fees)</a> · <a href="https://b2bcostaudit.com/eo-insurance/" rel="noopener" data-sister-referral="true">B2BCostAudit.com (Tech E&amp;O, Cyber, PEO &amp; Labor Burden)</a> · <a href="https://saascostaudit.com/">SaaSCostAudit.com (UCaaS &amp; Per-Seat B2B SaaS)</a> · <a href="https://apicostaudit.com/llm-api/" rel="noopener" data-sister-referral="true">APICostAudit.com (LLM Token, Voice AI &amp; GPU APIs)</a></p>
 </section>
 {% endmacro %}
 

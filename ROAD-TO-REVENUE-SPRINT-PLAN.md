@@ -8,6 +8,24 @@
 
 ---
 
+## 00. Mandatory Product Category Context Filter (`product_category: "AFFILIATE_FUNNELS"` — Primary Software Opportunity Growth Target)
+
+- **Assigned Product Category:** **`AFFILIATE_FUNNELS`** *(Single-category assignment today; no cross-categorization · Canonical Standard: `/workspace/PRODUCT-CATEGORY-CONTEXT-FILTERS.md` `v1.0.0`)*
+- **What the Tag Says (The Context Layer & Outright Override Rule):**
+  > **`[CATEGORY_CONTEXT: AFFILIATE_FUNNELS — OVERRIDES ALL DEFAULT SPOKE BEHAVIORS]`**  
+  > *"You are entering a Commercial Organic-Search & Affiliate Monetization Funnel governed by two shared top priorities: **(Priority 1A — Organic Platform Optimization)** earning natural and organic search/AEO visibility on high-intent buyer queries by whatever appropriate means are necessary, and **(Priority 1B — Continuous Affiliate Software Opportunity Scanning)** actively scanning every affiliate landing page, calculator output, and comparison table for additional commission-bearing software and partner opportunities—with specific emphasis on expanding the SaaS vendor and partner surface on `saascostaudit.com`. Every action on this hub must advance organic search capture, uncover and wire high-fit affiliate software programs, and convert buyer intent into verified partner commissions (CPL/CPA/rev-share)."*
+- **Shared Priority 1B — Active Software Opportunity Scanning Mandate on `saascostaudit.com`:**
+  - **Standing Contractor Obligation (Every Turn, Not One-Time):** Every contractor touching `saascostaudit.com` (and any sister `AFFILIATE_FUNNELS` property) must continuously scan landing page copy, calculator outputs, and competitor pricing tables to uncover unmonetized software vendors, replacement tools, and high-payout affiliate programs (`PartnerStack`, `Impact`, `CJ`, `Awin`, `Rakuten`, `FlexOffers`, and direct B2B SaaS programs).
+  - **Priority SaaS Verticals for Continuous Surface Expansion on `saascostaudit.com`:**
+    1. **UCaaS & Collaboration Suites:** `Cisco Webex`, `Microsoft Teams Phone`, `Zoom Workplace`, `Google Workspace`, `RingCentral`, `Nextiva`, `Dialpad`, `Aircall`, `OpenPhone`, `8x8`.
+    2. **CRM & Sales Engagement:** `HubSpot`, `Salesforce`, `Pipedrive`, `Apollo.io`, `ActiveCampaign`, `Close CRM`, `Gong`.
+    3. **Seat-License & HRIS PEPM Management:** `Gusto`, `OnPay`, `Rippling`, `BambooHR`, `Deel US PEPM`, `Remote`, `Oyster`, `Lattice`.
+    4. **SSO / IAM & Security SaaS:** `1Password Business`, `Bitwarden`, `Okta`, `JumpCloud`, `NordLayer`, `Vanta`, `Drata`.
+    5. **Project, Workflow & AI Workspace Software:** `Monday.com`, `ClickUp`, `Asana`, `Notion`, `Jira / Atlassian Guard`, `Linear`, `Smartsheet`, `Airtable`, `M365 Copilot`, `ChatGPT Team`, `Claude Team`.
+    6. **FinOps, SaaS Spend Management & Enterprise Seat-Downgrade Alternatives:** Turning every audited SaaS line item into a mapped affiliate software opportunity and wiring approved offers into 4-axis `SAAS_COSTS.*` slots (`top_of_page`, `mid_content`, `footer`) via `@Affiliate & Portal Ops` (`09b4bb79`).
+
+---
+
 ## 0A. Top-Line Short-Term Goal (#1 Priority — Updated Wednesday, Oct 28, 2026): Improve Natural & Organic SEO Results Broadly
 
 - **#1 Leading Short-Term Goal (Listed First Before Conversion/CRO & Downstream Monetization):** Improve `saascostaudit.com`'s **natural SEO and organic SEO results broadly** across the 16 canonical `SAAS_COSTS` routes (currently `0/16` indexed in GSC; advancing toward `>=75%`) by whatever appropriate means are necessary—with **no single tactic mandated as the sole top line**.

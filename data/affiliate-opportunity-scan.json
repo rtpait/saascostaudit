@@ -1,0 +1,261 @@
+{
+  "schema_version": "2026-10-28-v1.6.0",
+  "scanned_at_utc": "2026-10-28T15:10:09Z",
+  "source_domain": "saascostaudit.com",
+  "primary_software_opportunity_growth_target": true,
+  "sprint_id": "RAPID-BUILD-AUTO-ROTATE-20261028-1100",
+  "shared_priority": "PRIORITY_1B_CONTINUOUS_AFFILIATE_SOFTWARE_OPPORTUNITY_SCANNING",
+  "affiliate_portal_ops_agent_id": "09b4bb79",
+  "direct_saas_costs_opportunities_logged": [
+    {
+      "opportunity_id": "SAAS-OPP-001",
+      "vendor": "Aircall vs. OpenPhone (Quo) vs. Grasshopper vs. 8x8 (Cloud Contact Center & SMB Business Phone Per-Seat SaaS)",
+      "target_domain": "saascostaudit.com",
+      "target_routes": [
+        "/ucaas/ringcentral-vs-nextiva-vs-dialpad-pricing-audit/",
+        "/ucaas/"
+      ],
+      "partner_network": "PartnerStack / Impact (8038782) / CJ Affiliate (8108003)",
+      "estimated_commission": "$75-$300 per qualified VoIP/UCaaS trial or multi-seat signup",
+      "in_page_trigger": "Surfaced under the Merit-Only Conditional VoIP Recommendation Rule when standalone business phone or CRM-integrated dialer seats ($15-$30/user/mo) beat legacy PBX or unbundled PSTN add-ons."
+    },
+    {
+      "opportunity_id": "SAAS-OPP-002",
+      "vendor": "Pipedrive vs. Apollo.io vs. Close CRM vs. ActiveCampaign vs. Attio (Sales Engagement & RevOps CRM Without Mandatory $1,500-$3,000 Onboarding Fees)",
+      "target_domain": "saascostaudit.com",
+      "target_routes": [
+        "/crm-revops/hubspot-marketing-sales-hub-seat-and-contact-tier-calculator/",
+        "/"
+      ],
+      "partner_network": "PartnerStack / Impact (8038782)",
+      "estimated_commission": "20%-30% recurring rev-share ($100-$450 B2B CRM CPA)",
+      "in_page_trigger": "Directly triggered on the HubSpot Marketing & Sales Hub Seat & Contact Tier Calculator when contact-tier cliffs (+$225-$250/mo per 5k-10k contacts) and mandatory $1,500-$3,000 Pro onboarding push 12-month TCO above $18,000/yr."
+    },
+    {
+      "opportunity_id": "SAAS-OPP-003",
+      "vendor": "Monday.com vs. ClickUp vs. Asana vs. Linear vs. Notion Plus/Business (Project, Workflow & AI Workspace Per-Seat SaaS)",
+      "target_domain": "saascostaudit.com",
+      "target_routes": [
+        "/ucaas/slack-pro-business-plus-vs-teams-pricing-calculator/",
+        "/ucaas/microsoft-365-copilot-and-teams-premium-roi-calculator/"
+      ],
+      "partner_network": "PartnerStack / Impact (8038782)",
+      "estimated_commission": "20%-50% first-year seat revenue ($75-$300 B2B CPA)",
+      "in_page_trigger": "Appears alongside Slack Business+ ($12.50-$15/seat) and Microsoft 365 Copilot ($30/seat) for teams consolidating workflow automation, docs, and AI workspace seats ($8-$19/seat/mo)."
+    },
+    {
+      "opportunity_id": "SAAS-OPP-004",
+      "vendor": "Zylo vs. Vendr vs. Tropic vs. Torii (SaaS Spend Management, Shadow-IT Discovery & NCE Renewal Negotiation FinOps Platforms)",
+      "target_domain": "saascostaudit.com",
+      "target_routes": [
+        "/",
+        "/ucaas/microsoft-teams-pricing-audit/",
+        "/hris/bamboohr-vs-rippling-hris-pepm-calculator/"
+      ],
+      "partner_network": "Direct B2B FinOps Referral / PartnerStack",
+      "estimated_commission": "$200-$600 per qualified mid-market CFO/IT SaaS spend audit",
+      "in_page_trigger": "Directly triggered by the CFO CSV Export Bar and Zombie-Seat / NCE (+20%) Surcharge Auditor for 50-500 employee companies reclaiming 15%-28% in unused SaaS licenses."
+    }
+  ],
+  "ingested_cross_domain_saas_opportunities_count": 12,
+  "ingested_cross_domain_saas_opportunities": [
+    {
+      "opportunity_id": "SAAS-CROSS-001",
+      "vendor": "WorkOS & Clerk / Okta (Enterprise SAML SSO, SCIM Directory Sync & B2B Auth Seat Tiers)",
+      "discovered_on_route": "https://apicostaudit.com/b2b-apis/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "SSO/IAM & SCIM Seat-Tax Audit (/ucaas/slack-pro-business-plus-vs-teams-pricing-calculator/ & Cohort 1 SSO Tax routes)",
+      "partner_network": "PartnerStack / Direct B2B",
+      "estimated_commission": "$150-$400 B2B SaaS CPA",
+      "rationale": "Per-connection Enterprise SAML SSO ($125/mo/connection) and SCIM seat provisioning directly intersect saascostaudit.com's SSO Tax and zombie-seat reclamation calculators."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-002",
+      "vendor": "Datadog Pro/Enterprise Per-Host & DevOps Seat Licenses (vs. Grafana / New Relic Per-User Tiers)",
+      "discovered_on_route": "https://apicostaudit.com/b2b-apis/twilio-sms-voice-verify-per-call-fee-calculator/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "FinOps & DevOps Per-User Seat Licensing (New Relic $49-$349/user vs Datadog Per-Host)",
+      "partner_network": "PartnerStack / Impact (8038782)",
+      "estimated_commission": "$150-$350 B2B SaaS trial/conversion CPA",
+      "rationale": "While per-GB log ingestion belongs on apicostaudit.com, per-user observability seat licensing ($99-$349/full-platform user) routes directly to saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-003",
+      "vendor": "Cursor Business / GitHub Copilot Enterprise / Claude Team ($20-$39/seat/mo AI Workspace Licenses)",
+      "discovered_on_route": "https://apicostaudit.com/llm-api/openai-vs-anthropic-claude-token-calculator/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "Per-Seat AI Workspace Licenses (/ucaas/microsoft-365-copilot-and-teams-premium-roi-calculator/)",
+      "partner_network": "PartnerStack / Impact / CJ",
+      "estimated_commission": "$50-$150 B2B SaaS CPA",
+      "rationale": "Engineering teams comparing per-1M API tokens vs flat $30-$39/seat AI coding/workspace licenses are high-intent buyers for saascostaudit.com's AI seat calculators."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-JHQ-001",
+      "vendor": "Jobber vs. Housecall Pro vs. ServiceTitan (Field Service Management & Hauler Dispatch SaaS)",
+      "discovered_on_route": "https://junkhaulhq.com/junk-removal/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "Field Service Management (FSM) Per-Tech Seat & Minimum Commitment Audit",
+      "partner_network": "Impact (8038782) / PartnerStack",
+      "estimated_commission": "$100-$300 B2B SaaS trial/paid conversion CPA",
+      "rationale": "Independent junk removal and roll-off operators researching local municipal tipping fees ($37-$85/ton) need route optimization, automated SMS dispatch, and per-technician seat TCO comparisons ($49-$169/mo on Jobber/Housecall Pro vs. $250-$500/tech/mo 12-month contracts on ServiceTitan)."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-JHQ-002",
+      "vendor": "Samsara vs. Motive vs. Verizon Connect (Roll-Off Hook-Lift Fleet Telematics, ELD & DOT Compliance SaaS)",
+      "discovered_on_route": "https://junkhaulhq.com/dumpster-rental/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "Commercial Fleet Telematics & Per-Vehicle SaaS Contract Lock-In Audit",
+      "partner_network": "Impact / CJ / Direct B2B Referral",
+      "estimated_commission": "$150-$400 per qualified commercial fleet demo",
+      "rationale": "Roll-off container haulers managing 10-40 yard bin inventory, hydraulic lift sensors, and municipal ROW street permits face 36-month hardware+software lock-ins ($35-$65/vehicle/mo) that fit saascostaudit.com's B2B SaaS contract audit calculators."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-JHQ-003",
+      "vendor": "Buildium vs. AppFolio vs. DoorLoop (Property Management & Tenant Turnover Cleanout Accounting SaaS)",
+      "discovered_on_route": "https://junkhaulhq.com/dumpster-rental/phoenix-az/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "Property Management Per-Unit Minimums & Onboarding Fee Audit",
+      "partner_network": "Impact / PartnerStack / Capterra",
+      "estimated_commission": "$75-$250 B2B SaaS lead/subscription CPA",
+      "rationale": "Landlords, REO managers, and multifamily operators booking eviction cleanouts and 20-yard turnover dumpsters experience per-unit SaaS minimums ($58-$298+/mo + $400 onboarding fees) ideal for saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-B2BFEE-001",
+      "vendor": "Ramp Plus vs. Brex Empower vs. Airbase (Corporate Spend Management, Procurement & AP Automation Seat Tiers)",
+      "discovered_on_route": "https://b2bfeeaudit.com/merchant/b2b-ach-vs-credit-card-fee-calculator/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "FinOps, Spend Management & Per-User Procurement SaaS Seat Audit",
+      "partner_network": "PartnerStack / Impact (8038782) / Direct B2B",
+      "estimated_commission": "$150-$350 per qualified B2B finance team signup",
+      "rationale": "While transactional ACH/wire/FX fees belong on b2bfeeaudit.com, per-user spend management SaaS seats ($12-$15/user/mo + platform minimums on Ramp Plus, Brex Empower, and Airbase) route directly to saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-B2BFEE-002",
+      "vendor": "BILL (Bill.com) vs. Tipalti vs. Melio (Accounts Payable Automation & Per-Approver Seat Licensing)",
+      "discovered_on_route": "https://b2bfeeaudit.com/merchant/stripe-invoicing-fee-calculator/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "AP/AR Accounting Workflow Per-Approver & Per-User Seat Licensing Audit",
+      "partner_network": "CJ Affiliate (8108003) / PartnerStack",
+      "estimated_commission": "$100-$250 B2B trial/subscription CPA",
+      "rationale": "Controllers auditing Stripe Invoicing's 0.4%-0.8% fee also pay $45-$79/user/mo for AP approver seats in BILL and Tipalti\u2014a core per-seat B2B software vertical for saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-B2BFEE-003",
+      "vendor": "Lattice vs. BambooHR vs. HiBob (Core HRIS, Performance Management & Per-Employee SaaS Seat Tiers)",
+      "discovered_on_route": "https://b2bfeeaudit.com/payroll/gusto-vs-rippling-tco/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "Core HRIS & People Ops Per-Seat SaaS Licensing (Rule H2 Boundary)",
+      "partner_network": "PartnerStack / Impact (8038782)",
+      "estimated_commission": "$100-$300 B2B HRIS demo CPA",
+      "rationale": "Under B2B Audit Family Rule H2, statutory payroll tax filing belongs on b2bfeeaudit.com, whereas pure PEPM HRIS, performance management, and OKR software seats ($11-$24/seat/mo) route directly to saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-B2BCOST-001",
+      "vendor": "Vanta vs. Drata vs. Secureframe vs. Sprinto (SOC 2, ISO 27001, HIPAA & AI Risk GRC Compliance Automation SaaS)",
+      "discovered_on_route": "https://b2bcostaudit.com/commercial-costs/soc2-type-2-audit-and-pentest-cost-calculator/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "Security & GRC Compliance Automation Per-Employee Tier & Multi-Framework Add-On Audit",
+      "partner_network": "PartnerStack / Impact (8038782) / Direct B2B Referral",
+      "estimated_commission": "$200-$500 per qualified B2B GRC compliance demo/signup",
+      "rationale": "While licensed CPA audit retainers and manual penetration tests are non-SaaS operating overhead on b2bcostaudit.com, annual GRC automation SaaS subscriptions ($7,500-$25,000/yr tiered by employee seat count + $3,500/framework add-ons) route directly to saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-B2BCOST-002",
+      "vendor": "Jones vs. myCOI vs. TrustLayer vs. SmartCompliance (Automated Third-Party Vendor ACORD 25 COI Tracking SaaS)",
+      "discovered_on_route": "https://b2bcostaudit.com/eo-insurance/coi-compliance-checker/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "Procurement & Third-Party Risk Management (TPRM) SaaS Subscription Audit",
+      "partner_network": "Direct B2B SaaS Partner / Impact",
+      "estimated_commission": "$150-$350 per qualified enterprise procurement/property-management demo",
+      "rationale": "Procurement and operations teams auditing vendor ACORD 25 certificates on b2bcostaudit.com frequently purchase automated COI tracking SaaS ($300-$1,200/mo), which belongs on saascostaudit.com."
+    },
+    {
+      "opportunity_id": "SAAS-CROSS-B2BCOST-003",
+      "vendor": "Rippling IT & Device Management / Kandji / Jamf / 1Password Business (MDM & Endpoint Security Compliance SaaS Seats)",
+      "discovered_on_route": "https://b2bcostaudit.com/eo-insurance/cyber-eo-premium-estimator/",
+      "routed_to_domain": "saascostaudit.com",
+      "target_saascostaudit_cluster": "MDM, Endpoint Security & Identity Per-Device/Per-Seat SaaS Licensing",
+      "partner_network": "PartnerStack / Impact / CJ (8108003)",
+      "estimated_commission": "$100-$300 B2B SaaS trial/paid conversion CPA",
+      "rationale": "To qualify for the -18% Cyber Insurance underwriting control credit (MFA -6%, EDR -5%, MDM disk encryption), SMBs must license per-seat/per-device MDM and password/SSO SaaS ($8-$16/seat/mo)\u2014a direct feeder into saascostaudit.com."
+    }
+  ],
+  "expanded_saas_vertical_clusters": {
+    "cluster_1_ucaas_and_voip": [
+      "Cisco Webex",
+      "Microsoft Teams",
+      "Zoom Workplace",
+      "Google Workspace",
+      "RingCentral",
+      "Nextiva",
+      "Dialpad",
+      "Aircall",
+      "OpenPhone (Quo)",
+      "8x8"
+    ],
+    "cluster_2_crm_and_revops": [
+      "HubSpot",
+      "Salesforce",
+      "Pipedrive",
+      "Apollo.io",
+      "Close CRM",
+      "ActiveCampaign",
+      "Attio"
+    ],
+    "cluster_3_hris_pepm_and_people_ops": [
+      "Gusto",
+      "OnPay",
+      "Rippling",
+      "BambooHR",
+      "Deel US PEPM",
+      "Lattice",
+      "HiBob"
+    ],
+    "cluster_4_sso_iam_grc_and_mdm": [
+      "WorkOS",
+      "Clerk",
+      "Okta",
+      "Vanta",
+      "Drata",
+      "Secureframe",
+      "Rippling IT/MDM",
+      "Kandji",
+      "Jamf",
+      "1Password Business"
+    ],
+    "cluster_5_fsm_fleet_prop_mgmt_and_tprm": [
+      "Jobber",
+      "Housecall Pro",
+      "ServiceTitan",
+      "Samsara",
+      "Motive",
+      "Buildium",
+      "AppFolio",
+      "DoorLoop",
+      "Jones",
+      "myCOI",
+      "TrustLayer"
+    ],
+    "cluster_6_finops_spend_ap_and_ai_workspaces": [
+      "Ramp Plus",
+      "Brex Empower",
+      "Airbase",
+      "BILL",
+      "Tipalti",
+      "Melio",
+      "Datadog Per-Seat",
+      "New Relic Per-User",
+      "Cursor Business",
+      "GitHub Copilot Enterprise",
+      "Claude Team",
+      "M365 Copilot",
+      "Monday.com",
+      "ClickUp",
+      "Asana",
+      "Notion",
+      "Zylo",
+      "Vendr",
+      "Torii"
+    ]
+  }
+}
