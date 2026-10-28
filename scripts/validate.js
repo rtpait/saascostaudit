@@ -98,8 +98,8 @@ for (const wellKnownJson of [
     try {
       const parsed = JSON.parse(raw);
       if (wellKnownJson.endsWith("webmcp.json")) {
-        if (!Array.isArray(parsed.tools) || parsed.tools.length < 4) {
-          fail(`/${wellKnownJson}: must expose >=4 tools[] for WebMCP agent invocation`);
+        if (!Array.isArray(parsed.tools) || parsed.tools.length !== 7) {
+          fail(`/${wellKnownJson}: must expose 7 SAAS_COSTS tools[] for WebMCP agent invocation (found ${parsed.tools ? parsed.tools.length : 0})`);
         }
       }
     } catch (e) {
@@ -185,6 +185,9 @@ let serviceOfferSchemaCount = 0;
 let faqSchemaCount = 0;
 let breadcrumbSchemaCount = 0;
 let howToSchemaCount = 0;
+let datasetSchemaCount = 0;
+let dataCatalogSchemaCount = 0;
+let cfoPresetBtnCount = 0;
 let titleOkCount = 0;
 let descOkCount = 0;
 
@@ -250,6 +253,7 @@ if (!fs.existsSync(siteDir)) {
     if (!isSubdiv && (!html.includes('data-cta-slot="verdict_card"') || !html.includes('data-cta-slot="price_table_row"'))) {
       fail(`${rel}: missing verdict_card or price_table_row CTA slots`);
     }
+    cfoPresetBtnCount += (html.match(/data-cfo-preset="/g) || []).length;
     if (!html.includes('class="verified-gov-badge"') || !html.includes('id="mobile-comparison-bar"')) {
       fail(`${rel}: missing verifiedGovBadge or mobile-comparison-bar`);
     }
@@ -286,6 +290,8 @@ if (!fs.existsSync(siteDir)) {
         if (parsed["@type"] === "FAQPage") faqSchemaCount++;
         if (parsed["@type"] === "BreadcrumbList") breadcrumbSchemaCount++;
         if (parsed["@type"] === "HowTo") howToSchemaCount++;
+        if (parsed["@type"] === "Dataset") datasetSchemaCount++;
+        if (parsed["@type"] === "DataCatalog") dataCatalogSchemaCount++;
       } catch (e) {
         fail(`${rel}: invalid JSON-LD (${e.message})`);
       }
@@ -294,7 +300,7 @@ if (!fs.existsSync(siteDir)) {
 }
 
 console.log(
-  `Validated saascostaudit.com Sprint 1 MVP: 6/6 governance & spec artifacts (PRODUCT-STATE.md, SPRINT-REVIEW-2026-10-26.md, RELEASE-CONTRIBUTION-LEDGER.json, ROUTE-SPEC-64.md, partner-routing-matrix.json), 4/4 deterministic 2026 JSON datasets, 5/5 AEO & WebMCP endpoints (/llms.txt, /llms-full.txt, /.well-known/webmcp.json, /.well-known/openapi.json, /.well-known/ai-plugin.json), 6/6 AI crawler rules in /robots.txt, ${contentFiles.length} active content JSON files + ${dripFiles.length} quarantined Cohort-1 drip files, ${htmlCount}/16 built HTML pages (${validJsonLdCount} valid JSON-LD blocks: ${orgSchemaCount} Organization, ${webSiteSchemaCount} WebSite, ${softwareAppSchemaCount} SoftwareApplication, ${serviceOfferSchemaCount} Service+AggregateOffer, ${faqSchemaCount} FAQPage, ${breadcrumbSchemaCount} BreadcrumbList, ${howToSchemaCount} HowTo), ${titleOkCount}/16 <title> <=60c, ${descOkCount}/16 meta descriptions 140-158c, and 0 private string leaks.`
+  `Validated saascostaudit.com Sprint 1 MVP: 6/6 governance & spec artifacts (PRODUCT-STATE.md, SPRINT-REVIEW-2026-10-26.md, RELEASE-CONTRIBUTION-LEDGER.json, ROUTE-SPEC-64.md, partner-routing-matrix.json), 4/4 deterministic 2026 JSON datasets, 5/5 AEO & WebMCP endpoints (/llms.txt, /llms-full.txt, /.well-known/webmcp.json, /.well-known/openapi.json, /.well-known/ai-plugin.json), 6/6 AI crawler rules in /robots.txt, ${contentFiles.length} active content JSON files + ${dripFiles.length} quarantined Cohort-1 drip files, ${htmlCount}/16 built HTML pages (${validJsonLdCount} valid JSON-LD blocks: ${orgSchemaCount} Organization, ${webSiteSchemaCount} WebSite, ${softwareAppSchemaCount} SoftwareApplication, ${serviceOfferSchemaCount} Service+AggregateOffer, ${faqSchemaCount} FAQPage, ${breadcrumbSchemaCount} BreadcrumbList, ${howToSchemaCount} HowTo, ${datasetSchemaCount} Dataset, ${dataCatalogSchemaCount} DataCatalog), ${cfoPresetBtnCount} One-Click CFO Preset Scenario buttons, ${titleOkCount}/16 <title> <=60c, ${descOkCount}/16 meta descriptions 140-158c, and 0 private string leaks.`
 );
 console.log(bad ? `${bad} problem(s)` : "All entries valid");
 process.exit(bad ? 1 : 0);

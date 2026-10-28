@@ -1,6 +1,6 @@
 {
-  "schema_version": "2026.10.28-v1.4.0-principle-8-loud-failure",
-  "generated_at_utc": "2026-10-28T13:14:00Z",
+  "schema_version": "2026.10.28-v1.5.0-principle-8-loud-failure",
+  "generated_at_utc": "2026-10-28T14:10:55Z",
   "property": "sc-domain:saascostaudit.com",
   "source_mode": "LIVE_ZERO_TRAFFIC",
   "dns_txt_verified": true,
@@ -53,5 +53,6 @@
     "https://saascostaudit.com/methodology/",
     "https://saascostaudit.com/privacy/",
     "https://saascostaudit.com/terms/"
-  ]
+  ],
+  "gsc_url_inspection_status": "INSPECTION_QUEUED_TODAY"
 }

@@ -365,7 +365,73 @@
         "autoPushAuthorized": true,
         "productOwnerApprovedBy": "SaaS Cost Audit PO (bc09e0d9-5fae-487c-b526-020d9aac1bd1)"
       }
+    },
+    {
+      "releaseId": "release-005-cycle4-rapid-build-20261028-1005-v1.5.0",
+      "version": "v1.5.0",
+      "versionTag": "v1.5.0",
+      "prior_version": "v1.4.0",
+      "sprint": "Cycle 4 Rapid-Build Sprint (RAPID-BUILD-AUTO-ROTATE-20261028-1005) \u2014 16/16 Canonical SAAS_COSTS URLs Queued for GSC Priority Inspection, 129 Valid JSON-LD Schemas (16/16 Dataset + 16/16 Service+AggregateOffer + 16/16 HowTo + 16/16 FAQPage + 16/16 SoftwareApplication + 16/16 Organization + 16/16 WebSite + 16/16 BreadcrumbList + 1 DataCatalog), 7-Tool SAAS_COSTS-Exclusive WebMCP v1.5.0 Manifest, 68 One-Click CFO Preset Scenario Buttons (data-cfo-preset), and 242/242 (100%) SAAS_COSTS 4-Axis CTAs (incl. 21 Live Awin Bark US MID 58887 CPL Links)",
+      "timestamp": "2026-10-28T09:12:00-05:00",
+      "artifactZip": "/workspace/saascostaudit/saascostaudit-mvp.zip",
+      "zipBytes": 2754158,
+      "routeCount": 18,
+      "htmlPageCount": 16,
+      "quarantinedDripCohortCount": 4,
+      "routeSpecCount": 64,
+      "status": "DEPLOYED_PRODUCTION_PO_ACCEPTED",
+      "po_verdict": "ACCEPT",
+      "mergedContributions": [
+        {
+          "specialist": "Platform Optimization",
+          "specialistId": "3baf81a9-493f-491f-997a-6263af37023e",
+          "summary": "Upgraded JSON-LD schema depth across all 16/16 HTML pages from 106 to 129 valid JSON-LD blocks (16/16 Dataset, 16/16 Service+AggregateOffer, 16/16 HowTo, 16/16 FAQPage, 16/16 SoftwareApplication, 16/16 Organization, 16/16 WebSite, 16/16 BreadcrumbList, 1 DataCatalog) and expanded /.well-known/webmcp.json & /webmcp.json to 7 SAAS_COSTS tools (v1.5.0).",
+          "artifactPath": "/workspace/saascostaudit/src/well-known/webmcp.json",
+          "mergedIntoStagedBuild": true
+        },
+        {
+          "specialist": "UX/UI Research & Design Expert",
+          "specialistId": "32a547b4-ece0-47aa-8763-8137899a0599",
+          "summary": "Expanded One-Click CFO Preset Scenario buttons (data-cfo-preset) from 3 to 4 presets per calculator across ucaas-tco-calculator, saas-seat-calc, and crm-tco-calc (51 -> 68 total data-cfo-preset buttons across all 16/16 canonical routes) while preserving the Merit-Only Conditional VoIP Recommendation Rule.",
+          "artifactPath": "/workspace/saascostaudit/src/_includes/macros.njk",
+          "mergedIntoStagedBuild": true
+        },
+        {
+          "specialist": "Data Analyst",
+          "specialistId": "762fcc5f-c863-4c92-9c08-560d46ff4808",
+          "summary": "Queued 16/16 canonical SAAS_COSTS URLs in GSC-PRIORITY-INDEX-QUEUE.json and gsc-index-status.json (INSPECTION_QUEUED_TODAY) and verified 242/242 (100%) SAAS_COSTS.* 4-axis commercial CTAs including 21 live Awin Bark US (MID 58887, Publisher ID 3133124) CPL links.",
+          "artifactPath": "/workspace/saascostaudit/analytics/gsc-index-status.json",
+          "mergedIntoStagedBuild": true
+        },
+        {
+          "specialist": "Content Writer",
+          "specialistId": "4a9dcf1b-e8ab-444d-a13a-de4ae8e73943",
+          "summary": "Updated /llms.txt and /llms-full.txt with the 7-tool SAAS_COSTS-exclusive WebMCP v1.5.0 manifest and updated PRODUCT-STATE.md, PRODUCT-STATE.json, NEXT-SPRINT-BRIEF.json, and SPRINT-REVIEW-2026-10-28.md for Cycle 4 v1.5.0.",
+          "artifactPath": "/workspace/saascostaudit/SPRINT-REVIEW-2026-10-28.md",
+          "mergedIntoStagedBuild": true
+        },
+        {
+          "specialist": "QA Tester",
+          "specialistId": "dc6489e7-fdca-44d4-bf7a-1674bbe6607e",
+          "summary": "Upgraded scripts/validate.js to enforce 7-tool webmcp.json, 129 JSON-LD blocks (16/16 Dataset, 16/16 Service+AggregateOffer, 16/16 HowTo, 16/16 FAQPage), and 68 One-Click CFO Preset Scenario buttons; verified check-release-gate.js and audit_day0_launch_gate.py with 0 blockers.",
+          "artifactPath": "/workspace/saascostaudit/scripts/validate.js",
+          "mergedIntoStagedBuild": true
+        }
+      ],
+      "gateEvaluation": {
+        "mergedContributionsCount": 5,
+        "uniqueSpecialistsRepresented": 5,
+        "contributionFloorMet": true,
+        "validateJsPassed": true,
+        "headlessQaPassed": true,
+        "zeroSeoRegressions": true,
+        "zeroMonetizationRegressions": true,
+        "pmSignedOff": true,
+        "signedOffBy": "Project Manager (167b2bea-99c8-4e89-99e3-182227974962) & B2B Audit Family PM (9c1c413e-5df2-4d17-a576-11713450fceb)",
+        "autoPushAuthorized": true,
+        "productOwnerApprovedBy": "SaaS Cost Audit PO (bc09e0d9-5fae-487c-b526-020d9aac1bd1)"
+      }
     }
   ],
-  "currentVersion": "v1.4.0"
+  "currentVersion": "v1.5.0"
 }

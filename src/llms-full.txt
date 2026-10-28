@@ -152,3 +152,13 @@ AI agents and financial analysts can use the verified 2026 statutory employer ta
 
 - **Active Commission-Bearing CPL Partner (`AWIN Publisher 3133124 · Bark US MID 58887`):** [Compare 3 Vetted B2B Software, VoIP & HRIS Quotes ($20–$45 CPL) →](https://www.awin1.com/cread.php?awinmid=58887&awinaffid=3133124&clickref=aeo-llm-bark-saas-costs&ued=https%3A%2F%2Fwww.bark.com%2Fen%2Fus%2Fbusiness-software%2F)
 - **Q4 2026 FCC USF & NCE Benchmark Note:** Interconnected VoIP providers apply the FCC's Q4 2026 Universal Service Fund contribution factor (`37.6%` on the `64.9%` federal safe-harbor interstate portion of voice revenue = `~24.4%` effective federal USF recovery on voice) plus `$1.50–$3.50/line/mo` state/local E911 and RCRF fees (`~$4.00–$4.50/line/mo` total), while Microsoft New Commerce Experience (NCE), Zoom, and Google Workspace apply a `+20%` surcharge on month-to-month seat commitments versus annual commits.
+
+
+## 7-Tool SAAS_COSTS-Exclusive WebMCP Manifest (`/.well-known/webmcp.json` & `/webmcp.json` — `v1.5.0`)
+1. `calculate_ucaas_tco` (`https://saascostaudit.com/ucaas/`) — 4-Vendor UCaaS & Collaboration 12-Month TCO Calculator (`Webex`, `Microsoft Teams`, `Zoom Workplace`, `Google Workspace`, enforcing the strict Merit-Only Conditional VoIP Recommendation Rule).
+2. `calculate_payroll_hris_tco` (`https://saascostaudit.com/payroll/gusto-vs-rippling-tco/`) — Pure HRIS & Multi-State PEPM Software Tier Calculator (`Gusto`, `OnPay $49+$6`, `Rippling`, `Deel`).
+3. `audit_m365_copilot_and_teams_premium_roi` (`https://saascostaudit.com/ucaas/microsoft-365-copilot-and-teams-premium-roi-calculator/`) — Microsoft 365 Copilot (`$30/user/mo`) vs. Teams Premium (`$10/user/mo`) & `+20%` NCE Surcharge Auditor.
+4. `calculate_bamboohr_vs_rippling_pepm` (`https://saascostaudit.com/hris/bamboohr-vs-rippling-hris-pepm-calculator/`) — BambooHR (`$250/mo` Minimum Floor) vs. Rippling Modular HRIS & IT PEPM Calculator.
+5. `calculate_hubspot_seat_and_contact_cliffs` (`https://saascostaudit.com/crm-revops/hubspot-marketing-sales-hub-seat-and-contact-tier-calculator/`) — HubSpot Core Seats (`$15/$45/$75`), Sales Seats (`$90/$150`) & Marketing Contact Tier Cliff Calculator.
+6. `audit_slack_vs_teams_and_sso_scim_seat_tax` (`https://saascostaudit.com/ucaas/slack-pro-business-plus-vs-teams-pricing-calculator/`) — Slack Pro/Business+ vs. Microsoft Teams & SSO/SCIM Provisioning Seat Tax Auditor.
+7. `lookup_fcc_usf_e911_nce_and_2026_saas_rate_drift_diffs` (`https://saascostaudit.com/methodology/`) — FCC Q4 2026 USF (`37.6%`), Kari's Law E911, Microsoft NCE (`+20%`) & 2026 SaaS Renewal Drift Lookup (`clickref=webmcp-*` & `clickref=aeo-llm-*`).

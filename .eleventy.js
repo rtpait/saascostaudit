@@ -10,6 +10,7 @@ module.exports = function (cfg) {
     "src/llms-full.txt": "llms-full.txt",
     "src/datasets": "datasets",
     "src/well-known": ".well-known",
+    "src/well-known/webmcp.json": "webmcp.json",
     "src/admin": "admin",
     "src/api": "api"
   });

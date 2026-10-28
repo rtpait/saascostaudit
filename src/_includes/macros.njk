@@ -129,6 +129,7 @@
       <button type="button" class="ssc-preset-btn" data-cfo-preset="hris_seed_15" data-w2="15" data-state="CA" data-states="2" data-1099="3" data-eor="0" style="font-size:.78rem;padding:.28rem .6rem;border-radius:4px;border:1px solid #cbd5e1;background:#f8fafc;cursor:pointer;font-weight:600;color:#1e293b">⚡ 15-Seat Seed Startup (2 States, Gusto vs OnPay PEPM)</button>
       <button type="button" class="ssc-preset-btn" data-cfo-preset="hris_growth_35" data-w2="35" data-state="TX" data-states="4" data-1099="5" data-eor="1" style="font-size:.78rem;padding:.28rem .6rem;border-radius:4px;border:1px solid #cbd5e1;background:#f8fafc;cursor:pointer;font-weight:600;color:#1e293b">🏢 35-Seat Growth Team (4 States, BambooHR $250 Floor vs Rippling)</button>
       <button type="button" class="ssc-preset-btn" data-cfo-preset="hris_scale_80" data-w2="80" data-state="NY" data-states="8" data-1099="10" data-eor="3" style="font-size:.78rem;padding:.28rem .6rem;border-radius:4px;border:1px solid #cbd5e1;background:#f8fafc;cursor:pointer;font-weight:600;color:#1e293b">🌐 80-Seat Multi-State + EOR (8 States, Rippling vs Deel)</button>
+      <button type="button" class="ssc-preset-btn" data-cfo-preset="hris_ent_150_sso_scim" data-w2="150" data-state="WA" data-states="12" data-1099="20" data-eor="5" style="font-size:.78rem;padding:.28rem .6rem;border-radius:4px;border:1px solid #cbd5e1;background:#f8fafc;cursor:pointer;font-weight:600;color:#1e293b">🔐 150-Seat Enterprise HRIS + IT SSO/SCIM (12 States, Rippling vs BambooHR)</button>
     </div>
   </div>
   <div class="calc-controls-grid">
@@ -443,6 +444,7 @@
       <button type="button" class="cta-secondary" id="ucc-preset-meetings" data-cfo-preset="ucaas_meetings_ai_25" style="font-size:.78rem;padding:.38rem .68rem;min-height:36px">⚡ Preset 1: 25 Seats Meetings + AI Only</button>
       <button type="button" class="cta-secondary" id="ucc-preset-full" data-cfo-preset="ucaas_full_pstn_25" style="font-size:.78rem;padding:.38rem .68rem;min-height:36px;background:#0f172a">📞 Preset 2: 25 Seats Full PSTN Phone + AI</button>
       <button type="button" class="cta-secondary" id="ucc-preset-m365" data-cfo-preset="ucaas_existing_m365_pstn" style="font-size:.78rem;padding:.38rem .68rem;min-height:36px;background:#047857">🏢 Preset 3: Existing M365 + Add PSTN</button>
+      <button type="button" class="cta-secondary" id="ucc-preset-copilot" data-cfo-preset="ucaas_copilot_nce_50" style="font-size:.78rem;padding:.38rem .68rem;min-height:36px;background:#7c3aed">🤖 Preset 4: 50 Seats PSTN + Copilot ($30) + NCE Monthly</button>
     </div>
   </div>
 
@@ -841,6 +843,10 @@
   if (pM365) pM365.addEventListener("click", function(){
     seatsEl.value = 25; seatsRange.value = 25; cadEl.value = "annual"; pstnEl.value = "unlimited"; aiEl.value = "none"; storEl.value = "10gb"; webEl.value = 0; exEl.value = "m365_basic_std"; compute(true);
   });
+  var pCopilot = document.getElementById("ucc-preset-copilot");
+  if (pCopilot) pCopilot.addEventListener("click", function(){
+    seatsEl.value = 50; seatsRange.value = 50; cadEl.value = "monthly"; pstnEl.value = "unlimited"; aiEl.value = "copilot"; storEl.value = "250gb"; webEl.value = 1; exEl.value = "none"; compute(true);
+  });
 
   var expBtn = document.getElementById("ucc-export-btn");
   if (expBtn) {
@@ -957,6 +963,7 @@
       <button type="button" class="crm-preset-btn" data-cfo-preset="crm_starter_10" data-tier="starter" data-core="5" data-sales="5" data-contacts="2000" data-cadence="annual" style="font-size:.78rem;padding:.28rem .6rem;border-radius:4px;border:1px solid #cbd5e1;background:#f8fafc;cursor:pointer;font-weight:600;color:#1e293b">⚡ 10-Seat Starter CRM (5 Core + 5 Sales, 2k Contacts)</button>
       <button type="button" class="crm-preset-btn" data-cfo-preset="crm_pro_25" data-tier="pro" data-core="8" data-sales="10" data-contacts="15000" data-cadence="annual" style="font-size:.78rem;padding:.28rem .6rem;border-radius:4px;border:1px solid #cbd5e1;background:#f8fafc;cursor:pointer;font-weight:600;color:#1e293b">🏢 25-Seat RevOps Pro (8 Core + 10 Sales Pro, 15k Contacts + $4.5k Onboarding)</button>
       <button type="button" class="crm-preset-btn" data-cfo-preset="crm_ent_60" data-tier="enterprise" data-core="15" data-sales="25" data-contacts="50000" data-cadence="annual" style="font-size:.78rem;padding:.28rem .6rem;border-radius:4px;border:1px solid #cbd5e1;background:#f8fafc;cursor:pointer;font-weight:600;color:#1e293b">🚀 60-Seat Enterprise Revenue Org (15 Core + 25 Sales Ent, 50k Contacts)</button>
+      <button type="button" class="crm-preset-btn" data-cfo-preset="crm_zombie_reclaim_100" data-tier="enterprise" data-core="30" data-sales="40" data-contacts="100000" data-cadence="monthly" style="font-size:.78rem;padding:.28rem .6rem;border-radius:4px;border:1px solid #cbd5e1;background:#f8fafc;cursor:pointer;font-weight:600;color:#1e293b">🧹 100-Seat View-Only Seat Reclaim &amp; 100k Contact Ratchet Audit</button>
     </div>
   </div>
   <div class="calc-controls-grid">
