@@ -1692,6 +1692,26 @@
       "last_verified": "2026-10-28",
       "best_for": "DTC ecommerce brands; B2B wholesale invoices face a 2.0% third-party gateway penalty on Basic unless routed via offline/external invoicing",
       "hidden_fee_notes": "2.9% + $0.30 on Basic ($39/mo); charges a 2.0% penalty on external payment gateways unless upgraded or invoiced externally."
+    },
+    "bark-us": {
+      "id": "bark_us",
+      "slug": "bark-us",
+      "name": "Bark US (B2B SaaS, VoIP & HRIS Quotes)",
+      "plan_name": "Bark US Free 3-Quote B2B Software, VoIP & HRIS Matching (2026)",
+      "category": "saas_costs",
+      "base_monthly_usd": 0.0,
+      "pepm_w2_usd": 0.0,
+      "affiliate_network": "AWIN",
+      "publisher_account_id": "3133124",
+      "advertiser_mid": "58887",
+      "cpa_payout_usd": 35.0,
+      "cpl_range_usd": "$20-$45 CPL",
+      "cta_primary_text": "Compare 3 Vetted B2B Software, VoIP & HRIS Quotes on Bark US \u2192",
+      "cta_table_text": "Get 3 Free Quotes (Bark US) \u2192",
+      "affiliate_url_template": "https://www.awin1.com/cread.php?awinmid=58887&awinaffid=3133124&clickref={clickref}&ued=https%3A%2F%2Fwww.bark.com%2Fen%2Fus%2Fbusiness-software%2F",
+      "pricing_source_url": "https://www.bark.com/en/us/business-software/",
+      "last_verified": "2026-10-28",
+      "verification_mode": "active_awin_cpl_partner"
     }
   }
 }

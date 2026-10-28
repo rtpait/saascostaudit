@@ -6,7 +6,8 @@
   "allowed_4axis_vertical_prefix": "SAAS_COSTS.",
   "canonical_calculator_ids": [
     "ucaas-tco-calculator",
-    "saas-seat-calc"
+    "saas-seat-calc",
+    "crm-tco-calc"
   ],
   "exclusive_vertical_isolation_enforced": true,
   "live_4axis_audit_2026_10_28": {
@@ -73,6 +74,19 @@
       "partner_name": "Rippling Modular HRIS & IT Seat Platform [Quote-Only \u00b7 Modeled]",
       "destination_url": "https://www.rippling.com/pricing?utm_source=saascostaudit.com&utm_medium=affiliate&clickref=ps_saas_rippling_pepm_footer",
       "modeled_cpa_usd": "$150-$350 CPA"
+    },
+    {
+      "composite_key": "awin:awin_3133124_bark_us_58887_saas_cpl:SAAS_COSTS.ucaas_seats:mid_content",
+      "partner_network": "awin",
+      "publisher_id": "3133124",
+      "advertiser_mid": "58887",
+      "tracking_sub_id": "awin_3133124_bark_us_58887_saas_cpl",
+      "product_vertical": "SAAS_COSTS.ucaas_seats",
+      "funnel_role": "mid_content",
+      "dom_cta_slot": "ucaas_tco_calc",
+      "partner_name": "Bark US B2B Business Software, VoIP & HRIS Quotes (AWIN MID 58887)",
+      "destination_url": "https://www.awin1.com/cread.php?awinmid=58887&awinaffid=3133124&clickref=saascostaudit_bark_us_58887_saas_cpl&ued=https%3A%2F%2Fwww.bark.com%2Fen%2Fus%2Fbusiness-software%2F",
+      "modeled_cpa_usd": "$20-$45 Verified CPL (Active Commission-Bearing Partner)"
     }
   ],
   "sister_canonical_referral_urls": {
@@ -80,5 +94,13 @@
     "B2B_COSTS": "https://b2bcostaudit.com/eo-insurance/cyber-eo-premium-estimator/",
     "SAAS_COSTS": "https://saascostaudit.com/ucaas/",
     "API_COSTS": "https://apicostaudit.com/llm-api/"
+  },
+  "active_commission_bearing_fallback": {
+    "partner_network": "AWIN",
+    "publisher_id": "3133124",
+    "advertiser_name": "Bark US",
+    "advertiser_mid": "58887",
+    "payout_model": "$20-$45 CPL per verified B2B software/VoIP/HRIS quote request",
+    "tracking_url_template": "https://www.awin1.com/cread.php?awinmid=58887&awinaffid=3133124&clickref={clickref}&ued=https%3A%2F%2Fwww.bark.com%2Fen%2Fus%2Fbusiness-software%2F"
   }
 }

@@ -18,6 +18,7 @@ eleventyComputed:
 {{ m.verdictCard(e, site, e.type) }}
 
 {{ m.payrollTcoCalc(e, site, state_sui_taxes_2026) }}
+{% if e.slug == 'hubspot-marketing-sales-hub-seat-and-contact-tier-calculator' %}{{ m.crmTcoCalc(e.slug) }}{% endif %}
 
 {{ m.prices(e.prices, site, e.slug, e.type, e.calcDefaults) }}
 

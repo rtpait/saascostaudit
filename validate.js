@@ -184,6 +184,7 @@ let softwareAppSchemaCount = 0;
 let serviceOfferSchemaCount = 0;
 let faqSchemaCount = 0;
 let breadcrumbSchemaCount = 0;
+let howToSchemaCount = 0;
 let titleOkCount = 0;
 let descOkCount = 0;
 
@@ -284,6 +285,7 @@ if (!fs.existsSync(siteDir)) {
         if (parsed["@type"] === "Service" && parsed.offers && parsed.offers["@type"] === "AggregateOffer") serviceOfferSchemaCount++;
         if (parsed["@type"] === "FAQPage") faqSchemaCount++;
         if (parsed["@type"] === "BreadcrumbList") breadcrumbSchemaCount++;
+        if (parsed["@type"] === "HowTo") howToSchemaCount++;
       } catch (e) {
         fail(`${rel}: invalid JSON-LD (${e.message})`);
       }
@@ -292,7 +294,7 @@ if (!fs.existsSync(siteDir)) {
 }
 
 console.log(
-  `Validated saascostaudit.com Sprint 1 MVP: 6/6 governance & spec artifacts (PRODUCT-STATE.md, SPRINT-REVIEW-2026-10-26.md, RELEASE-CONTRIBUTION-LEDGER.json, ROUTE-SPEC-64.md, partner-routing-matrix.json), 4/4 deterministic 2026 JSON datasets, 5/5 AEO & WebMCP endpoints (/llms.txt, /llms-full.txt, /.well-known/webmcp.json, /.well-known/openapi.json, /.well-known/ai-plugin.json), 6/6 AI crawler rules in /robots.txt, ${contentFiles.length} active content JSON files + ${dripFiles.length} quarantined Cohort-1 drip files, ${htmlCount}/16 built HTML pages (${validJsonLdCount} valid JSON-LD blocks: ${orgSchemaCount} Organization, ${webSiteSchemaCount} WebSite, ${softwareAppSchemaCount} SoftwareApplication, ${serviceOfferSchemaCount} Service+AggregateOffer, ${faqSchemaCount} FAQPage, ${breadcrumbSchemaCount} BreadcrumbList), ${titleOkCount}/16 <title> <=60c, ${descOkCount}/16 meta descriptions 140-158c, and 0 private string leaks.`
+  `Validated saascostaudit.com Sprint 1 MVP: 6/6 governance & spec artifacts (PRODUCT-STATE.md, SPRINT-REVIEW-2026-10-26.md, RELEASE-CONTRIBUTION-LEDGER.json, ROUTE-SPEC-64.md, partner-routing-matrix.json), 4/4 deterministic 2026 JSON datasets, 5/5 AEO & WebMCP endpoints (/llms.txt, /llms-full.txt, /.well-known/webmcp.json, /.well-known/openapi.json, /.well-known/ai-plugin.json), 6/6 AI crawler rules in /robots.txt, ${contentFiles.length} active content JSON files + ${dripFiles.length} quarantined Cohort-1 drip files, ${htmlCount}/16 built HTML pages (${validJsonLdCount} valid JSON-LD blocks: ${orgSchemaCount} Organization, ${webSiteSchemaCount} WebSite, ${softwareAppSchemaCount} SoftwareApplication, ${serviceOfferSchemaCount} Service+AggregateOffer, ${faqSchemaCount} FAQPage, ${breadcrumbSchemaCount} BreadcrumbList, ${howToSchemaCount} HowTo), ${titleOkCount}/16 <title> <=60c, ${descOkCount}/16 meta descriptions 140-158c, and 0 private string leaks.`
 );
 console.log(bad ? `${bad} problem(s)` : "All entries valid");
 process.exit(bad ? 1 : 0);

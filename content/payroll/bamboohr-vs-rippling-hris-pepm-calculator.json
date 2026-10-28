@@ -4,8 +4,8 @@
   "url": "/hris/bamboohr-vs-rippling-hris-pepm-calculator/",
   "title": "BambooHR vs. Rippling HRIS PEPM Cost Calculator (2026)",
   "seoTitle": "BambooHR vs Rippling HRIS PEPM Cost Calculator (2026 Tiers)",
-  "seoDescription": "Compare 2026 BambooHR ($10–$22/emp + $250/mo floor) vs. Rippling ($8 Core + $8 Payroll/IT modular PEPM) and Gusto ($49+$6) software licensing costs.",
-  "h1": "BambooHR ($10–$22 PEPM + $250/mo Minimum) vs. Rippling Modular HRIS & IT Seat Cost Calculator (2026)",
+  "seoDescription": "Compare 2026 BambooHR ($10\u2013$22/emp + $250/mo floor) vs. Rippling ($8 Core + $8 Payroll/IT modular PEPM) and Gusto ($49+$6) software licensing costs.",
+  "h1": "BambooHR ($10\u2013$22 PEPM + $250/mo Minimum) vs. Rippling Modular HRIS & IT Seat Cost Calculator (2026)",
   "updated": "2026-10-28",
   "lastVerified": "2026-10-28",
   "primaryPartner": "Rippling",
@@ -22,7 +22,7 @@
     "eor": 0,
     "includeYearEnd": true
   },
-  "summary": "BambooHR transitions from flat per-employee-per-month (PEPM) pricing to a $250/month account minimum below ~20 employees and charges separate add-ons for US Payroll (+$4–$8/emp), Time Tracking (+$3/emp), and Performance Management—making Gusto ($49+$6) or OnPay ($49+$6) cheaper under 30 seats, while Rippling ($8 Core + modular HR/IT apps) wins for unified HRIS + MDM device provisioning.",
+  "summary": "BambooHR transitions from flat per-employee-per-month (PEPM) pricing to a $250/month account minimum below ~20 employees and charges separate add-ons for US Payroll (+$4\u2013$8/emp), Time Tracking (+$3/emp), and Performance Management\u2014making Gusto ($49+$6) or OnPay ($49+$6) cheaper under 30 seats, while Rippling ($8 Core + modular HR/IT apps) wins for unified HRIS + MDM device provisioning.",
   "verdict": {
     "winner": "Gusto ($49+$6) & OnPay ($49+$6) Win Under 30 Seats; Rippling Wins When Bundling HRIS + IT Device & SSO Seats",
     "hiddenFeeTrap": "BambooHR enforces a ~$250/month minimum floor for small teams and charges extra for Payroll, Time Tracking, and Benefits Administration modules on top of Core/Pro HRIS seats.",
@@ -31,10 +31,10 @@
   "prices": [
     {
       "label": "BambooHR Core / Pro HRIS + US Payroll Add-On [Modeled PEPM]",
-      "price": "$12–$22/emp/mo ($250/mo minimum floor under 20 seats) + implementation fee",
+      "price": "$12\u2013$22/emp/mo ($250/mo minimum floor under 20 seats) + implementation fee",
       "partner": "Rippling",
       "ctaType": "payroll",
-      "ctaLabel": "Compare Rippling vs. BambooHR Quote →",
+      "ctaLabel": "Compare Rippling vs. BambooHR Quote \u2192",
       "ctaUrl": "https://www.rippling.com/pricing?utm_source=saascostaudit.com&utm_medium=affiliate",
       "source": 2
     },
@@ -43,16 +43,16 @@
       "price": "$85/mo base floor + $16/emp/mo + $20/mo per extra tax state",
       "partner": "Rippling",
       "ctaType": "payroll",
-      "ctaLabel": "Audit Rippling Modular PEPM Tiers →",
+      "ctaLabel": "Audit Rippling Modular PEPM Tiers \u2192",
       "ctaUrl": "https://www.rippling.com/pricing?utm_source=saascostaudit.com&utm_medium=affiliate",
       "source": 2
     },
     {
       "label": "Gusto Simple / Plus All-In HRIS & Payroll Software ($49+$6 / $80+$12)",
-      "price": "$49/mo base + $6/seat (Simple) · $0 state registration or W-2 form fees",
+      "price": "$49/mo base + $6/seat (Simple) \u00b7 $0 state registration or W-2 form fees",
       "partner": "Gusto",
       "ctaType": "payroll",
-      "ctaLabel": "Verify Gusto 2026 PEPM Rate →",
+      "ctaLabel": "Verify Gusto 2026 PEPM Rate \u2192",
       "ctaUrl": "https://gusto.com/product/pricing?utm_source=saascostaudit.com&utm_medium=affiliate",
       "source": 3
     },
@@ -62,11 +62,20 @@
       "partner": "Gov",
       "ctaType": "gov",
       "source": 1
+    },
+    {
+      "label": "Bark US B2B Software, HRIS & VoIP 3-Quote Match (AWIN MID 58887)",
+      "price": "$0 Free Custom Quote Match \u00b7 Compare 3 vetted SaaS, HRIS & VoIP providers",
+      "partner": "Bark US",
+      "ctaType": "payroll",
+      "ctaLabel": "Get 3 Free B2B Software Quotes (Bark US) \u2192",
+      "ctaUrl": "https://www.awin1.com/cread.php?awinmid=58887&awinaffid=3133124&clickref=saascostaudit_table_bamboohr-vs-rippling-hris-pepm-calculator_bark_58887&ued=https%3A%2F%2Fwww.bark.com%2Fen%2Fus%2Fbusiness-software%2F",
+      "source": 2
     }
   ],
   "auditNotes": [
-    "BambooHR $250/Month Minimum Floor: Teams with 8–15 employees paying the $250/mo BambooHR minimum effectively pay $16.67–$31.25 per employee before adding payroll or benefits administration.",
-    "Rippling IT & SSO Consolidation Offset: Replacing standalone Jamf/Kandji ($8–$12/device) and Okta ($6–$10/seat) with Rippling IT offsets Rippling Core's $8/seat platform fee."
+    "BambooHR $250/Month Minimum Floor: Teams with 8\u201315 employees paying the $250/mo BambooHR minimum effectively pay $16.67\u2013$31.25 per employee before adding payroll or benefits administration.",
+    "Rippling IT & SSO Consolidation Offset: Replacing standalone Jamf/Kandji ($8\u2013$12/device) and Okta ($6\u2013$10/seat) with Rippling IT offsets Rippling Core's $8/seat platform fee."
   ],
   "faq": [
     {
@@ -75,7 +84,7 @@
     },
     {
       "q": "Is Rippling or BambooHR cheaper for a 25-person company?",
-      "a": "For pure HRIS + Payroll at 25 employees, both BambooHR and Rippling run roughly $450 to $580/month ($5,400–$6,960/yr), whereas Gusto Simple ($49 + $6/emp = $199/mo) and OnPay ($49 + $6/emp = $199/mo) cost less than half as much."
+      "a": "For pure HRIS + Payroll at 25 employees, both BambooHR and Rippling run roughly $450 to $580/month ($5,400\u2013$6,960/yr), whereas Gusto Simple ($49 + $6/emp = $199/mo) and OnPay ($49 + $6/emp = $199/mo) cost less than half as much."
     },
     {
       "q": "Does BambooHR charge an implementation or onboarding fee?",

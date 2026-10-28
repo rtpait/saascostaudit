@@ -8,6 +8,21 @@
 
 ---
 
+## 0A. Top-Line Short-Term Goal (#1 Priority — Updated Wednesday, Oct 28, 2026): Improve Natural & Organic SEO Results Broadly
+
+- **#1 Leading Short-Term Goal (Listed First Before Conversion/CRO & Downstream Monetization):** Improve `saascostaudit.com`'s **natural SEO and organic SEO results broadly** across the 16 canonical `SAAS_COSTS` routes (currently `0/16` indexed in GSC; advancing toward `>=75%`) by whatever appropriate means are necessary—with **no single tactic mandated as the sole top line**.
+- **Valid Means Toward Natural & Organic SEO Growth:**
+  - **Indexation & Crawlability:** Pushing all 16 canonical `SAAS_COSTS` routes through GSC URL Inspection (`sc-domain:saascostaudit.com`), maintaining `sitemap.xml` parity, and strengthening internal/cross-family link equity.
+  - **AEO Schemas & Agentic Discovery:** `HowTo`, `FAQPage`, `SoftwareApplication`, and `Dataset` JSON-LD schemas alongside `/llms.txt`, `/llms-full.txt`, and `/.well-known/webmcp.json`.
+  - **Benchmark Depth & Title/Meta CTR Optimization:** UCaaS (Webex, Microsoft Teams, Zoom, Google Workspace), CRM, and cloud-seat NCE/FCC USF benchmark depth, plus price-anchored title/meta CTR refinements.
+- **Preserved Calculator & Monetization Deliverables:**
+  1. **One-Click CFO Preset Scenarios** on `ucaas-tco-calculator`, `saas-seat-calc`, and `crm-tco-calc` (preserving the Merit-Only Conditional VoIP Rule).
+  2. **PartnerStack / CJ (`8108003`) / Impact (`8038782`) / AWIN (`3133124`) / Rakuten (`4767884`) SaaS & UCaaS link activation** across `100%` of `SAAS_COSTS.*` 4-axis slots.
+- **Explicit Sequencing Annotation (Organic SEO -> Downstream Revenue Unlocks):**
+  - **Organic SEO & AEO traction across the 16 canonical `SAAS_COSTS` routes (`>=75%` GSC indexation gate) directly unlocks downstream `SAAS_COSTS.*` partner commission activation and Cohort 1 expansion.**
+
+---
+
 ## 0. Principle 1 Enforcement: Live Measured Ground Truth vs. Quarantined Target Hypotheses
 
 > **Principle 1 Rule ("Measured Truth First"):** Lead every sprint review and dashboard with **absolute live measured metrics** and quarantine modeled projections inside a collapsed drawer badged `HYPOTHESIS / TARGET MODEL — NOT LIVE TELEMETRY`.

@@ -62,6 +62,15 @@
       "partner": "Gov",
       "ctaType": "gov",
       "source": 1
+    },
+    {
+      "label": "Bark US B2B Software, HRIS & VoIP 3-Quote Match (AWIN MID 58887)",
+      "price": "$0 Free Custom Quote Match \u00b7 Compare 3 vetted SaaS, HRIS & VoIP providers",
+      "partner": "Bark US",
+      "ctaType": "payroll",
+      "ctaLabel": "Get 3 Free B2B Software Quotes (Bark US) \u2192",
+      "ctaUrl": "https://www.awin1.com/cread.php?awinmid=58887&awinaffid=3133124&clickref=saascostaudit_table_gusto-vs-onpay-tco_bark_58887&ued=https%3A%2F%2Fwww.bark.com%2Fen%2Fus%2Fbusiness-software%2F",
+      "source": 2
     }
   ],
   "auditNotes": [

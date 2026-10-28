@@ -1,6 +1,6 @@
 {
-  "schema_version": "2026.10.28-principle-8-loud-failure",
-  "generated_at_utc": "2026-10-28T12:25:00Z",
+  "schema_version": "2026.10.28-v1.4.0-principle-8-loud-failure",
+  "generated_at_utc": "2026-10-28T13:14:00Z",
   "property": "sc-domain:saascostaudit.com",
   "source_mode": "LIVE_ZERO_TRAFFIC",
   "dns_txt_verified": true,
@@ -31,5 +31,27 @@
     "day_14_target_indexed_routes": 12,
     "actual_vs_model_variance_routes": -12
   },
-  "total_sitemap_routes": 16
+  "total_sitemap_routes": 16,
+  "sitemap_parity_verified": true,
+  "live_sitemap_url_count": 16,
+  "local_sitemap_url_count": 16,
+  "gsc_url_inspection_queue_count": 16,
+  "gsc_url_inspection_queued_urls": [
+    "https://saascostaudit.com/",
+    "https://saascostaudit.com/ucaas/",
+    "https://saascostaudit.com/ucaas/cisco-webex-pricing-audit/",
+    "https://saascostaudit.com/ucaas/microsoft-teams-pricing-audit/",
+    "https://saascostaudit.com/ucaas/zoom-workplace-pricing-audit/",
+    "https://saascostaudit.com/ucaas/google-workspace-meet-pricing-audit/",
+    "https://saascostaudit.com/ucaas/ringcentral-vs-nextiva-vs-dialpad-pricing-audit/",
+    "https://saascostaudit.com/ucaas/microsoft-365-copilot-and-teams-premium-roi-calculator/",
+    "https://saascostaudit.com/ucaas/slack-pro-business-plus-vs-teams-pricing-calculator/",
+    "https://saascostaudit.com/hris/bamboohr-vs-rippling-hris-pepm-calculator/",
+    "https://saascostaudit.com/payroll/gusto-vs-onpay-tco/",
+    "https://saascostaudit.com/payroll/gusto-vs-rippling-tco/",
+    "https://saascostaudit.com/crm-revops/hubspot-marketing-sales-hub-seat-and-contact-tier-calculator/",
+    "https://saascostaudit.com/methodology/",
+    "https://saascostaudit.com/privacy/",
+    "https://saascostaudit.com/terms/"
+  ]
 }
