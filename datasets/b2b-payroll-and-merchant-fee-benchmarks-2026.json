@@ -6,7 +6,7 @@
   "vendors": {
     "schema_version": "2026.10.24-deterministic-b2b-vendors",
     "generated_at_utc": "2026-10-24T22:26:00Z",
-    "corporate_entity": "Research Triangle Park AI Transformation LLC (EIN 42-3641177)",
+    "corporate_entity": "Research Triangle Park AI Transformation LLC",
     "domain": "b2bfeeaudit.com",
     "license": "CC-BY-4.0",
     "payroll": [
@@ -39,7 +39,7 @@
         "cta_table_text": "Audit Gusto Plan \u2192",
         "affiliate_url_template": "https://www.anrdoezrs.net/click-8108003-15739012?sid={clickref}&url=https%3A%2F%2Fgusto.com%2Fpricing",
         "pricing_source_url": "https://gusto.com/product/pricing",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "1\u201350 W-2 employees in 1\u20133 US states seeking zero W-2 year-end filing fees",
         "hidden_fee_notes": "Simple ($49+$6/pepm) covers 1 state; multi-state payroll requires Gusto Plus ($80+$12/pepm) or state tax registration add-on."
       },
@@ -73,7 +73,7 @@
         "cta_table_text": "Check Rippling Quote \u2192",
         "affiliate_url_template": "https://www.dpbolvw.net/click-8108003-15810442?sid={clickref}&url=https%3A%2F%2Fwww.rippling.com%2Fpricing",
         "pricing_source_url": "https://www.rippling.com/pricing",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "15\u2013250 employees needing unified HRIS, IT device management, and automated multi-state SUI registration",
         "hidden_fee_notes": "Advertised '$8/user/mo' requires mandatory Rippling Unity Core ($8/user/mo) plus $50/mo base minimum ($16/PEPM effective starting floor)."
       },
@@ -104,7 +104,7 @@
         "cta_table_text": "Get Deel Rate \u2192",
         "affiliate_url_template": "https://www.awin1.com/cread.php?awinmid=63110&awinaffid=3133124&clickref={clickref}&ued=https%3A%2F%2Fwww.deel.com%2Fpricing",
         "pricing_source_url": "https://www.deel.com/pricing",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "Distributed teams with multi-state US W-2s + international contractors or EOR hires across 150+ countries",
         "hidden_fee_notes": "$0 base fee and all 50 US states included at $19/PEPM; watch 1.5%\u20132.5% cross-border FX spread on non-USD contractor payouts."
       },
@@ -114,7 +114,7 @@
         "name": "OnPay",
         "plan_name": "OnPay All-Inclusive Payroll (2026)",
         "category": "payroll_hris",
-        "base_monthly_usd": 40.0,
+        "base_monthly_usd": 49.0,
         "pepm_w2_usd": 6.0,
         "contractor_1099_monthly_usd": 6.0,
         "multi_state_fee_per_extra_state_monthly_usd": 0.0,
@@ -130,12 +130,12 @@
         "advertiser_mid": "ONPAY-CJ-2026",
         "cpa_payout_usd": 100.0,
         "epc_modeled_usd": 3.6,
-        "cta_primary_text": "Check OnPay Flat $40+$6 Multi-State Price \u2192",
+        "cta_primary_text": "Check OnPay Flat $49+$6 Multi-State Price \u2192",
         "cta_table_text": "Check OnPay Price \u2192",
-        "affiliate_url_template": "https://www.jdoqocy.com/click-8108003-14029183?sid={clickref}&url=https%3A%2F%2Fonpay.com%2Fpricing",
-        "pricing_source_url": "https://onpay.com/pricing",
-        "last_verified": "2026-10-24",
-        "best_for": "5\u2013100 US employees across multiple states seeking flat $40 + $6/person pricing with zero extra state filing surcharges",
+        "affiliate_url_template": "https://www.jdoqocy.com/click-8108003-14029183?sid={clickref}&url=https%3A%2F%2Fonpay.com%2Fpayroll%2Fsoftware%2Fcosts-pricing%2F",
+        "pricing_source_url": "https://onpay.com/payroll/software/costs-pricing/",
+        "last_verified": "2026-10-28",
+        "best_for": "5\u2013100 US employees across multiple states seeking flat $49 + $6/person pricing with zero extra state filing surcharges",
         "hidden_fee_notes": "Unlimited multi-state filings included at $0 extra; $5/form W-2/1099 year-end delivery fee unless waived via partner promo."
       },
       {
@@ -164,7 +164,7 @@
         "cta_table_text": "Compare ADP Quote \u2192",
         "affiliate_url_template": "https://www.tkqlhce.com/click-8108003-13984110?sid={clickref}&url=https%3A%2F%2Fwww.adp.com%2Fwhat-we-offer%2Fproducts%2Frun-powered-by-adp.aspx",
         "pricing_source_url": "https://www.adp.com/what-we-offer/products/run-powered-by-adp.aspx",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "Legacy SMB benchmark; often carries $35/mo per extra state jurisdiction and $65+$6.50/W-2 year-end filing fees",
         "hidden_fee_notes": "Per-pay-run billing cycles (26 biweekly runs = 2 extra billing months/yr if not negotiated to monthly flat), $35/extra state/mo, and year-end W-2 package fees."
       },
@@ -194,7 +194,7 @@
         "cta_table_text": "Compare Paychex \u2192",
         "affiliate_url_template": "https://www.anrdoezrs.net/click-8108003-14112098?sid={clickref}&url=https%3A%2F%2Fwww.paychex.com%2Fpayroll%2Fpricing",
         "pricing_source_url": "https://www.paychex.com/payroll/pricing",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "Traditional SMB payroll comparison; watch $30/extra state tax filing fee and January W-2/1099 delivery charges",
         "hidden_fee_notes": "Promotional 50% off for 6 months resets to full list + $60+$6/W-2 year-end tax form processing fee and $30/mo per extra state."
       },
@@ -225,7 +225,7 @@
         "cta_table_text": "Check Justworks PEO \u2192",
         "affiliate_url_template": "https://click.linksynergy.com/deeplink?id=4767884&mid=54112&u1={clickref}&murl=https%3A%2F%2Fwww.justworks.com%2Fpricing",
         "pricing_source_url": "https://www.justworks.com/pricing",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "10\u2013100 employee teams wanting full PEO master-policy benefits and multi-state compliance under Justworks' FEIN",
         "hidden_fee_notes": "Higher $59/PEPM base, and PEO co-employment restarts FUTA/SUI wage-base caps if switching mid-calendar-year (Q2\u2013Q4)."
       },
@@ -255,7 +255,7 @@
         "cta_table_text": "Check QBO Payroll \u2192",
         "affiliate_url_template": "https://www.dpbolvw.net/click-8108003-13871002?sid={clickref}&url=https%3A%2F%2Fquickbooks.intuit.com%2Fpayroll%2Fpricing%2F",
         "pricing_source_url": "https://quickbooks.intuit.com/payroll/pricing/",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "1\u201320 single-state US employees already using QuickBooks Online accounting",
         "hidden_fee_notes": "Core charges $12/mo per additional state filing; automated local/city tax filings require upgrading to Elite ($130/mo + $11/PEPM)."
       }
@@ -317,7 +317,7 @@
         "cta_table_text": "Lock In Helcim IC+ \u2192",
         "affiliate_url_template": "https://www.anrdoezrs.net/click-8108003-15612990?sid={clickref}&url=https%3A%2F%2Fwww.helcim.com%2Fpricing%2F",
         "pricing_source_url": "https://www.helcim.com/pricing/",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "Merchants & B2B SaaS processing $15,000\u2013$120,000/mo wanting true Interchange-Plus with $0 monthly account fee",
         "hidden_fee_notes": "$0 monthly fee, $0 PCI fee, and automatic volume margin drops at $25k, $50k, and $100k/mo."
       },
@@ -348,7 +348,7 @@
         "cta_table_text": "Audit With Stax 0% IC+ \u2192",
         "affiliate_url_template": "https://www.dpbolvw.net/click-8108003-15548210?sid={clickref}&url=https%3A%2F%2Fstaxpayments.com%2Fpricing%2F",
         "pricing_source_url": "https://staxpayments.com/pricing/",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "High-volume businesses processing $40,000\u2013$500,000+/mo where 0% percentage markup saves $4,000\u2013$28,000/yr over Stripe/Square",
         "hidden_fee_notes": "$99/mo subscription up to $150k/yr ($199/mo up to $500k/yr); passes exact wholesale Visa/MC interchange with 0.00% percentage markup."
       },
@@ -379,7 +379,7 @@
         "cta_table_text": "Get Level-3 IC+ Quote \u2192",
         "affiliate_url_template": "https://www.awin1.com/cread.php?awinmid=61884&awinaffid=3133124&clickref={clickref}&ued=https%3A%2F%2Fpaymentcloudinc.com%2Fpricing%2F",
         "pricing_source_url": "https://paymentcloudinc.com/pricing/",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "B2B invoicing, wholesalers, and high-ticket services ($500\u2013$15,000 avg ticket) unlocking Visa/MC Level-2/Level-3 interchange reductions (-0.65%)",
         "hidden_fee_notes": "$15/mo gateway fee; automated Level-3 line-item data injection drops corporate/purchasing card wholesale interchange from 2.70% to ~1.90%."
       },
@@ -409,7 +409,7 @@
         "cta_table_text": "Check CDG IC+ \u2192",
         "affiliate_url_template": "https://www.jdoqocy.com/click-8108003-14992011?sid={clickref}&url=https%3A%2F%2Fwww.cdgcommerce.com%2Fpricing.php",
         "pricing_source_url": "https://www.cdgcommerce.com/pricing.php",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "US merchants processing $15,000\u2013$100,000/mo with QuickBooks B2B invoicing integration",
         "hidden_fee_notes": "$0/mo under $10k volume, $49/mo IC+ tier for $10k\u2013$100k/mo at IC + 0.25% + $0.10."
       },
@@ -441,7 +441,7 @@
         "cta_table_text": "Stripe 2.9% Baseline",
         "affiliate_url_template": "https://stripe.com/pricing",
         "pricing_source_url": "https://stripe.com/pricing",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "Early-stage startups processing <$10,000/mo before switching to Interchange-Plus",
         "hidden_fee_notes": "2.9% + $0.30 base jumps to 3.3%\u20135.4% effective when adding Stripe Invoicing (+0.4%), Stripe Billing (+0.5%), and International Cards (+1.5% + 1.0% FX)."
       },
@@ -473,7 +473,7 @@
         "cta_table_text": "Compare Square POS \u2192",
         "affiliate_url_template": "https://www.awin1.com/cread.php?awinmid=59912&awinaffid=3133124&clickref={clickref}&ued=https%3A%2F%2Fsquareup.com%2Fus%2Fen%2Fpricing",
         "pricing_source_url": "https://squareup.com/us/en/pricing",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "In-person retail/food under $15,000/mo; expensive once keyed-in (3.5%+$0.15) or ACH/invoice volume scales",
         "hidden_fee_notes": "Square Invoices over $10k and manually keyed B2B cards (3.5% + $0.15) keep regulated $0.22 Durbin debit savings instead of passing them to the merchant."
       },
@@ -506,7 +506,7 @@
         "cta_table_text": "Audit PayPal Fees \u2192",
         "affiliate_url_template": "https://www.tkqlhce.com/click-8108003-13711904?sid={clickref}&url=https%3A%2F%2Fwww.paypal.com%2Fus%2Fwebapps%2Fmpp%2Fmerchant-fees",
         "pricing_source_url": "https://www.paypal.com/us/webapps/mpp/merchant-fees",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "Secondary consumer checkout button; highest B2B invoicing cost at 3.49% + $0.49 per invoice",
         "hidden_fee_notes": "PayPal digital wallet & invoicing charges 3.49% + $0.49 plus 1.50% cross-border and 3.0%\u20134.0% currency conversion spread."
       },
@@ -538,7 +538,7 @@
         "cta_table_text": "Audit Shopify Fees \u2192",
         "affiliate_url_template": "https://www.awin1.com/cread.php?awinmid=60441&awinaffid=3133124&clickref={clickref}&ued=https%3A%2F%2Fwww.shopify.com%2Fpricing",
         "pricing_source_url": "https://www.shopify.com/pricing",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "DTC ecommerce brands; B2B wholesale invoices face a 2.0% third-party gateway penalty on Basic unless routed via offline/external invoicing",
         "hidden_fee_notes": "2.9% + $0.30 on Basic ($39/mo); charges a 2.0% penalty on external payment gateways unless upgraded or invoiced externally."
       }
@@ -573,7 +573,7 @@
         "cta_table_text": "Audit Gusto Plan \u2192",
         "affiliate_url_template": "https://www.anrdoezrs.net/click-8108003-15739012?sid={clickref}&url=https%3A%2F%2Fgusto.com%2Fpricing",
         "pricing_source_url": "https://gusto.com/product/pricing",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "1\u201350 W-2 employees in 1\u20133 US states seeking zero W-2 year-end filing fees",
         "hidden_fee_notes": "Simple ($49+$6/pepm) covers 1 state; multi-state payroll requires Gusto Plus ($80+$12/pepm) or state tax registration add-on."
       },
@@ -607,7 +607,7 @@
         "cta_table_text": "Check Rippling Quote \u2192",
         "affiliate_url_template": "https://www.dpbolvw.net/click-8108003-15810442?sid={clickref}&url=https%3A%2F%2Fwww.rippling.com%2Fpricing",
         "pricing_source_url": "https://www.rippling.com/pricing",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "15\u2013250 employees needing unified HRIS, IT device management, and automated multi-state SUI registration",
         "hidden_fee_notes": "Advertised '$8/user/mo' requires mandatory Rippling Unity Core ($8/user/mo) plus $50/mo base minimum ($16/PEPM effective starting floor)."
       },
@@ -638,7 +638,7 @@
         "cta_table_text": "Get Deel Rate \u2192",
         "affiliate_url_template": "https://www.awin1.com/cread.php?awinmid=63110&awinaffid=3133124&clickref={clickref}&ued=https%3A%2F%2Fwww.deel.com%2Fpricing",
         "pricing_source_url": "https://www.deel.com/pricing",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "Distributed teams with multi-state US W-2s + international contractors or EOR hires across 150+ countries",
         "hidden_fee_notes": "$0 base fee and all 50 US states included at $19/PEPM; watch 1.5%\u20132.5% cross-border FX spread on non-USD contractor payouts."
       },
@@ -648,7 +648,7 @@
         "name": "OnPay",
         "plan_name": "OnPay All-Inclusive Payroll (2026)",
         "category": "payroll_hris",
-        "base_monthly_usd": 40.0,
+        "base_monthly_usd": 49.0,
         "pepm_w2_usd": 6.0,
         "contractor_1099_monthly_usd": 6.0,
         "multi_state_fee_per_extra_state_monthly_usd": 0.0,
@@ -664,12 +664,12 @@
         "advertiser_mid": "ONPAY-CJ-2026",
         "cpa_payout_usd": 100.0,
         "epc_modeled_usd": 3.6,
-        "cta_primary_text": "Check OnPay Flat $40+$6 Multi-State Price \u2192",
+        "cta_primary_text": "Check OnPay Flat $49+$6 Multi-State Price \u2192",
         "cta_table_text": "Check OnPay Price \u2192",
-        "affiliate_url_template": "https://www.jdoqocy.com/click-8108003-14029183?sid={clickref}&url=https%3A%2F%2Fonpay.com%2Fpricing",
-        "pricing_source_url": "https://onpay.com/pricing",
-        "last_verified": "2026-10-24",
-        "best_for": "5\u2013100 US employees across multiple states seeking flat $40 + $6/person pricing with zero extra state filing surcharges",
+        "affiliate_url_template": "https://www.jdoqocy.com/click-8108003-14029183?sid={clickref}&url=https%3A%2F%2Fonpay.com%2Fpayroll%2Fsoftware%2Fcosts-pricing%2F",
+        "pricing_source_url": "https://onpay.com/payroll/software/costs-pricing/",
+        "last_verified": "2026-10-28",
+        "best_for": "5\u2013100 US employees across multiple states seeking flat $49 + $6/person pricing with zero extra state filing surcharges",
         "hidden_fee_notes": "Unlimited multi-state filings included at $0 extra; $5/form W-2/1099 year-end delivery fee unless waived via partner promo."
       },
       {
@@ -698,7 +698,7 @@
         "cta_table_text": "Compare ADP Quote \u2192",
         "affiliate_url_template": "https://www.tkqlhce.com/click-8108003-13984110?sid={clickref}&url=https%3A%2F%2Fwww.adp.com%2Fwhat-we-offer%2Fproducts%2Frun-powered-by-adp.aspx",
         "pricing_source_url": "https://www.adp.com/what-we-offer/products/run-powered-by-adp.aspx",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "Legacy SMB benchmark; often carries $35/mo per extra state jurisdiction and $65+$6.50/W-2 year-end filing fees",
         "hidden_fee_notes": "Per-pay-run billing cycles (26 biweekly runs = 2 extra billing months/yr if not negotiated to monthly flat), $35/extra state/mo, and year-end W-2 package fees."
       },
@@ -728,7 +728,7 @@
         "cta_table_text": "Compare Paychex \u2192",
         "affiliate_url_template": "https://www.anrdoezrs.net/click-8108003-14112098?sid={clickref}&url=https%3A%2F%2Fwww.paychex.com%2Fpayroll%2Fpricing",
         "pricing_source_url": "https://www.paychex.com/payroll/pricing",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "Traditional SMB payroll comparison; watch $30/extra state tax filing fee and January W-2/1099 delivery charges",
         "hidden_fee_notes": "Promotional 50% off for 6 months resets to full list + $60+$6/W-2 year-end tax form processing fee and $30/mo per extra state."
       },
@@ -759,7 +759,7 @@
         "cta_table_text": "Check Justworks PEO \u2192",
         "affiliate_url_template": "https://click.linksynergy.com/deeplink?id=4767884&mid=54112&u1={clickref}&murl=https%3A%2F%2Fwww.justworks.com%2Fpricing",
         "pricing_source_url": "https://www.justworks.com/pricing",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "10\u2013100 employee teams wanting full PEO master-policy benefits and multi-state compliance under Justworks' FEIN",
         "hidden_fee_notes": "Higher $59/PEPM base, and PEO co-employment restarts FUTA/SUI wage-base caps if switching mid-calendar-year (Q2\u2013Q4)."
       },
@@ -789,7 +789,7 @@
         "cta_table_text": "Check QBO Payroll \u2192",
         "affiliate_url_template": "https://www.dpbolvw.net/click-8108003-13871002?sid={clickref}&url=https%3A%2F%2Fquickbooks.intuit.com%2Fpayroll%2Fpricing%2F",
         "pricing_source_url": "https://quickbooks.intuit.com/payroll/pricing/",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "1\u201320 single-state US employees already using QuickBooks Online accounting",
         "hidden_fee_notes": "Core charges $12/mo per additional state filing; automated local/city tax filings require upgrading to Elite ($130/mo + $11/PEPM)."
       },
@@ -849,7 +849,7 @@
         "cta_table_text": "Lock In Helcim IC+ \u2192",
         "affiliate_url_template": "https://www.anrdoezrs.net/click-8108003-15612990?sid={clickref}&url=https%3A%2F%2Fwww.helcim.com%2Fpricing%2F",
         "pricing_source_url": "https://www.helcim.com/pricing/",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "Merchants & B2B SaaS processing $15,000\u2013$120,000/mo wanting true Interchange-Plus with $0 monthly account fee",
         "hidden_fee_notes": "$0 monthly fee, $0 PCI fee, and automatic volume margin drops at $25k, $50k, and $100k/mo."
       },
@@ -880,7 +880,7 @@
         "cta_table_text": "Audit With Stax 0% IC+ \u2192",
         "affiliate_url_template": "https://www.dpbolvw.net/click-8108003-15548210?sid={clickref}&url=https%3A%2F%2Fstaxpayments.com%2Fpricing%2F",
         "pricing_source_url": "https://staxpayments.com/pricing/",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "High-volume businesses processing $40,000\u2013$500,000+/mo where 0% percentage markup saves $4,000\u2013$28,000/yr over Stripe/Square",
         "hidden_fee_notes": "$99/mo subscription up to $150k/yr ($199/mo up to $500k/yr); passes exact wholesale Visa/MC interchange with 0.00% percentage markup."
       },
@@ -911,7 +911,7 @@
         "cta_table_text": "Get Level-3 IC+ Quote \u2192",
         "affiliate_url_template": "https://www.awin1.com/cread.php?awinmid=61884&awinaffid=3133124&clickref={clickref}&ued=https%3A%2F%2Fpaymentcloudinc.com%2Fpricing%2F",
         "pricing_source_url": "https://paymentcloudinc.com/pricing/",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "B2B invoicing, wholesalers, and high-ticket services ($500\u2013$15,000 avg ticket) unlocking Visa/MC Level-2/Level-3 interchange reductions (-0.65%)",
         "hidden_fee_notes": "$15/mo gateway fee; automated Level-3 line-item data injection drops corporate/purchasing card wholesale interchange from 2.70% to ~1.90%."
       },
@@ -941,7 +941,7 @@
         "cta_table_text": "Check CDG IC+ \u2192",
         "affiliate_url_template": "https://www.jdoqocy.com/click-8108003-14992011?sid={clickref}&url=https%3A%2F%2Fwww.cdgcommerce.com%2Fpricing.php",
         "pricing_source_url": "https://www.cdgcommerce.com/pricing.php",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "US merchants processing $15,000\u2013$100,000/mo with QuickBooks B2B invoicing integration",
         "hidden_fee_notes": "$0/mo under $10k volume, $49/mo IC+ tier for $10k\u2013$100k/mo at IC + 0.25% + $0.10."
       },
@@ -973,7 +973,7 @@
         "cta_table_text": "Stripe 2.9% Baseline",
         "affiliate_url_template": "https://stripe.com/pricing",
         "pricing_source_url": "https://stripe.com/pricing",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "Early-stage startups processing <$10,000/mo before switching to Interchange-Plus",
         "hidden_fee_notes": "2.9% + $0.30 base jumps to 3.3%\u20135.4% effective when adding Stripe Invoicing (+0.4%), Stripe Billing (+0.5%), and International Cards (+1.5% + 1.0% FX)."
       },
@@ -1005,7 +1005,7 @@
         "cta_table_text": "Compare Square POS \u2192",
         "affiliate_url_template": "https://www.awin1.com/cread.php?awinmid=59912&awinaffid=3133124&clickref={clickref}&ued=https%3A%2F%2Fsquareup.com%2Fus%2Fen%2Fpricing",
         "pricing_source_url": "https://squareup.com/us/en/pricing",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "In-person retail/food under $15,000/mo; expensive once keyed-in (3.5%+$0.15) or ACH/invoice volume scales",
         "hidden_fee_notes": "Square Invoices over $10k and manually keyed B2B cards (3.5% + $0.15) keep regulated $0.22 Durbin debit savings instead of passing them to the merchant."
       },
@@ -1038,7 +1038,7 @@
         "cta_table_text": "Audit PayPal Fees \u2192",
         "affiliate_url_template": "https://www.tkqlhce.com/click-8108003-13711904?sid={clickref}&url=https%3A%2F%2Fwww.paypal.com%2Fus%2Fwebapps%2Fmpp%2Fmerchant-fees",
         "pricing_source_url": "https://www.paypal.com/us/webapps/mpp/merchant-fees",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "Secondary consumer checkout button; highest B2B invoicing cost at 3.49% + $0.49 per invoice",
         "hidden_fee_notes": "PayPal digital wallet & invoicing charges 3.49% + $0.49 plus 1.50% cross-border and 3.0%\u20134.0% currency conversion spread."
       },
@@ -1070,7 +1070,7 @@
         "cta_table_text": "Audit Shopify Fees \u2192",
         "affiliate_url_template": "https://www.awin1.com/cread.php?awinmid=60441&awinaffid=3133124&clickref={clickref}&ued=https%3A%2F%2Fwww.shopify.com%2Fpricing",
         "pricing_source_url": "https://www.shopify.com/pricing",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "DTC ecommerce brands; B2B wholesale invoices face a 2.0% third-party gateway penalty on Basic unless routed via offline/external invoicing",
         "hidden_fee_notes": "2.9% + $0.30 on Basic ($39/mo); charges a 2.0% penalty on external payment gateways unless upgraded or invoiced externally."
       }
@@ -1105,7 +1105,7 @@
         "cta_table_text": "Audit Gusto Plan \u2192",
         "affiliate_url_template": "https://www.anrdoezrs.net/click-8108003-15739012?sid={clickref}&url=https%3A%2F%2Fgusto.com%2Fpricing",
         "pricing_source_url": "https://gusto.com/product/pricing",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "1\u201350 W-2 employees in 1\u20133 US states seeking zero W-2 year-end filing fees",
         "hidden_fee_notes": "Simple ($49+$6/pepm) covers 1 state; multi-state payroll requires Gusto Plus ($80+$12/pepm) or state tax registration add-on."
       },
@@ -1139,7 +1139,7 @@
         "cta_table_text": "Check Rippling Quote \u2192",
         "affiliate_url_template": "https://www.dpbolvw.net/click-8108003-15810442?sid={clickref}&url=https%3A%2F%2Fwww.rippling.com%2Fpricing",
         "pricing_source_url": "https://www.rippling.com/pricing",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "15\u2013250 employees needing unified HRIS, IT device management, and automated multi-state SUI registration",
         "hidden_fee_notes": "Advertised '$8/user/mo' requires mandatory Rippling Unity Core ($8/user/mo) plus $50/mo base minimum ($16/PEPM effective starting floor)."
       },
@@ -1170,7 +1170,7 @@
         "cta_table_text": "Get Deel Rate \u2192",
         "affiliate_url_template": "https://www.awin1.com/cread.php?awinmid=63110&awinaffid=3133124&clickref={clickref}&ued=https%3A%2F%2Fwww.deel.com%2Fpricing",
         "pricing_source_url": "https://www.deel.com/pricing",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "Distributed teams with multi-state US W-2s + international contractors or EOR hires across 150+ countries",
         "hidden_fee_notes": "$0 base fee and all 50 US states included at $19/PEPM; watch 1.5%\u20132.5% cross-border FX spread on non-USD contractor payouts."
       },
@@ -1180,7 +1180,7 @@
         "name": "OnPay",
         "plan_name": "OnPay All-Inclusive Payroll (2026)",
         "category": "payroll_hris",
-        "base_monthly_usd": 40.0,
+        "base_monthly_usd": 49.0,
         "pepm_w2_usd": 6.0,
         "contractor_1099_monthly_usd": 6.0,
         "multi_state_fee_per_extra_state_monthly_usd": 0.0,
@@ -1196,12 +1196,12 @@
         "advertiser_mid": "ONPAY-CJ-2026",
         "cpa_payout_usd": 100.0,
         "epc_modeled_usd": 3.6,
-        "cta_primary_text": "Check OnPay Flat $40+$6 Multi-State Price \u2192",
+        "cta_primary_text": "Check OnPay Flat $49+$6 Multi-State Price \u2192",
         "cta_table_text": "Check OnPay Price \u2192",
-        "affiliate_url_template": "https://www.jdoqocy.com/click-8108003-14029183?sid={clickref}&url=https%3A%2F%2Fonpay.com%2Fpricing",
-        "pricing_source_url": "https://onpay.com/pricing",
-        "last_verified": "2026-10-24",
-        "best_for": "5\u2013100 US employees across multiple states seeking flat $40 + $6/person pricing with zero extra state filing surcharges",
+        "affiliate_url_template": "https://www.jdoqocy.com/click-8108003-14029183?sid={clickref}&url=https%3A%2F%2Fonpay.com%2Fpayroll%2Fsoftware%2Fcosts-pricing%2F",
+        "pricing_source_url": "https://onpay.com/payroll/software/costs-pricing/",
+        "last_verified": "2026-10-28",
+        "best_for": "5\u2013100 US employees across multiple states seeking flat $49 + $6/person pricing with zero extra state filing surcharges",
         "hidden_fee_notes": "Unlimited multi-state filings included at $0 extra; $5/form W-2/1099 year-end delivery fee unless waived via partner promo."
       },
       "adp": {
@@ -1230,7 +1230,7 @@
         "cta_table_text": "Compare ADP Quote \u2192",
         "affiliate_url_template": "https://www.tkqlhce.com/click-8108003-13984110?sid={clickref}&url=https%3A%2F%2Fwww.adp.com%2Fwhat-we-offer%2Fproducts%2Frun-powered-by-adp.aspx",
         "pricing_source_url": "https://www.adp.com/what-we-offer/products/run-powered-by-adp.aspx",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "Legacy SMB benchmark; often carries $35/mo per extra state jurisdiction and $65+$6.50/W-2 year-end filing fees",
         "hidden_fee_notes": "Per-pay-run billing cycles (26 biweekly runs = 2 extra billing months/yr if not negotiated to monthly flat), $35/extra state/mo, and year-end W-2 package fees."
       },
@@ -1260,7 +1260,7 @@
         "cta_table_text": "Compare Paychex \u2192",
         "affiliate_url_template": "https://www.anrdoezrs.net/click-8108003-14112098?sid={clickref}&url=https%3A%2F%2Fwww.paychex.com%2Fpayroll%2Fpricing",
         "pricing_source_url": "https://www.paychex.com/payroll/pricing",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "Traditional SMB payroll comparison; watch $30/extra state tax filing fee and January W-2/1099 delivery charges",
         "hidden_fee_notes": "Promotional 50% off for 6 months resets to full list + $60+$6/W-2 year-end tax form processing fee and $30/mo per extra state."
       },
@@ -1291,7 +1291,7 @@
         "cta_table_text": "Check Justworks PEO \u2192",
         "affiliate_url_template": "https://click.linksynergy.com/deeplink?id=4767884&mid=54112&u1={clickref}&murl=https%3A%2F%2Fwww.justworks.com%2Fpricing",
         "pricing_source_url": "https://www.justworks.com/pricing",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "10\u2013100 employee teams wanting full PEO master-policy benefits and multi-state compliance under Justworks' FEIN",
         "hidden_fee_notes": "Higher $59/PEPM base, and PEO co-employment restarts FUTA/SUI wage-base caps if switching mid-calendar-year (Q2\u2013Q4)."
       },
@@ -1321,7 +1321,7 @@
         "cta_table_text": "Check QBO Payroll \u2192",
         "affiliate_url_template": "https://www.dpbolvw.net/click-8108003-13871002?sid={clickref}&url=https%3A%2F%2Fquickbooks.intuit.com%2Fpayroll%2Fpricing%2F",
         "pricing_source_url": "https://quickbooks.intuit.com/payroll/pricing/",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "1\u201320 single-state US employees already using QuickBooks Online accounting",
         "hidden_fee_notes": "Core charges $12/mo per additional state filing; automated local/city tax filings require upgrading to Elite ($130/mo + $11/PEPM)."
       },
@@ -1381,7 +1381,7 @@
         "cta_table_text": "Lock In Helcim IC+ \u2192",
         "affiliate_url_template": "https://www.anrdoezrs.net/click-8108003-15612990?sid={clickref}&url=https%3A%2F%2Fwww.helcim.com%2Fpricing%2F",
         "pricing_source_url": "https://www.helcim.com/pricing/",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "Merchants & B2B SaaS processing $15,000\u2013$120,000/mo wanting true Interchange-Plus with $0 monthly account fee",
         "hidden_fee_notes": "$0 monthly fee, $0 PCI fee, and automatic volume margin drops at $25k, $50k, and $100k/mo."
       },
@@ -1412,7 +1412,7 @@
         "cta_table_text": "Audit With Stax 0% IC+ \u2192",
         "affiliate_url_template": "https://www.dpbolvw.net/click-8108003-15548210?sid={clickref}&url=https%3A%2F%2Fstaxpayments.com%2Fpricing%2F",
         "pricing_source_url": "https://staxpayments.com/pricing/",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "High-volume businesses processing $40,000\u2013$500,000+/mo where 0% percentage markup saves $4,000\u2013$28,000/yr over Stripe/Square",
         "hidden_fee_notes": "$99/mo subscription up to $150k/yr ($199/mo up to $500k/yr); passes exact wholesale Visa/MC interchange with 0.00% percentage markup."
       },
@@ -1443,7 +1443,7 @@
         "cta_table_text": "Get Level-3 IC+ Quote \u2192",
         "affiliate_url_template": "https://www.awin1.com/cread.php?awinmid=61884&awinaffid=3133124&clickref={clickref}&ued=https%3A%2F%2Fpaymentcloudinc.com%2Fpricing%2F",
         "pricing_source_url": "https://paymentcloudinc.com/pricing/",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "B2B invoicing, wholesalers, and high-ticket services ($500\u2013$15,000 avg ticket) unlocking Visa/MC Level-2/Level-3 interchange reductions (-0.65%)",
         "hidden_fee_notes": "$15/mo gateway fee; automated Level-3 line-item data injection drops corporate/purchasing card wholesale interchange from 2.70% to ~1.90%."
       },
@@ -1473,7 +1473,7 @@
         "cta_table_text": "Check CDG IC+ \u2192",
         "affiliate_url_template": "https://www.jdoqocy.com/click-8108003-14992011?sid={clickref}&url=https%3A%2F%2Fwww.cdgcommerce.com%2Fpricing.php",
         "pricing_source_url": "https://www.cdgcommerce.com/pricing.php",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "US merchants processing $15,000\u2013$100,000/mo with QuickBooks B2B invoicing integration",
         "hidden_fee_notes": "$0/mo under $10k volume, $49/mo IC+ tier for $10k\u2013$100k/mo at IC + 0.25% + $0.10."
       },
@@ -1505,7 +1505,7 @@
         "cta_table_text": "Stripe 2.9% Baseline",
         "affiliate_url_template": "https://stripe.com/pricing",
         "pricing_source_url": "https://stripe.com/pricing",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "Early-stage startups processing <$10,000/mo before switching to Interchange-Plus",
         "hidden_fee_notes": "2.9% + $0.30 base jumps to 3.3%\u20135.4% effective when adding Stripe Invoicing (+0.4%), Stripe Billing (+0.5%), and International Cards (+1.5% + 1.0% FX)."
       },
@@ -1537,7 +1537,7 @@
         "cta_table_text": "Compare Square POS \u2192",
         "affiliate_url_template": "https://www.awin1.com/cread.php?awinmid=59912&awinaffid=3133124&clickref={clickref}&ued=https%3A%2F%2Fsquareup.com%2Fus%2Fen%2Fpricing",
         "pricing_source_url": "https://squareup.com/us/en/pricing",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "In-person retail/food under $15,000/mo; expensive once keyed-in (3.5%+$0.15) or ACH/invoice volume scales",
         "hidden_fee_notes": "Square Invoices over $10k and manually keyed B2B cards (3.5% + $0.15) keep regulated $0.22 Durbin debit savings instead of passing them to the merchant."
       },
@@ -1570,7 +1570,7 @@
         "cta_table_text": "Audit PayPal Fees \u2192",
         "affiliate_url_template": "https://www.tkqlhce.com/click-8108003-13711904?sid={clickref}&url=https%3A%2F%2Fwww.paypal.com%2Fus%2Fwebapps%2Fmpp%2Fmerchant-fees",
         "pricing_source_url": "https://www.paypal.com/us/webapps/mpp/merchant-fees",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "Secondary consumer checkout button; highest B2B invoicing cost at 3.49% + $0.49 per invoice",
         "hidden_fee_notes": "PayPal digital wallet & invoicing charges 3.49% + $0.49 plus 1.50% cross-border and 3.0%\u20134.0% currency conversion spread."
       },
@@ -1602,7 +1602,7 @@
         "cta_table_text": "Audit Shopify Fees \u2192",
         "affiliate_url_template": "https://www.awin1.com/cread.php?awinmid=60441&awinaffid=3133124&clickref={clickref}&ued=https%3A%2F%2Fwww.shopify.com%2Fpricing",
         "pricing_source_url": "https://www.shopify.com/pricing",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "DTC ecommerce brands; B2B wholesale invoices face a 2.0% third-party gateway penalty on Basic unless routed via offline/external invoicing",
         "hidden_fee_notes": "2.9% + $0.30 on Basic ($39/mo); charges a 2.0% penalty on external payment gateways unless upgraded or invoiced externally."
       },
@@ -1632,7 +1632,7 @@
         "cta_table_text": "Check QBO Payroll \u2192",
         "affiliate_url_template": "https://www.dpbolvw.net/click-8108003-13871002?sid={clickref}&url=https%3A%2F%2Fquickbooks.intuit.com%2Fpayroll%2Fpricing%2F",
         "pricing_source_url": "https://quickbooks.intuit.com/payroll/pricing/",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "1\u201320 single-state US employees already using QuickBooks Online accounting",
         "hidden_fee_notes": "Core charges $12/mo per additional state filing; automated local/city tax filings require upgrading to Elite ($130/mo + $11/PEPM)."
       },
@@ -1662,7 +1662,7 @@
         "cta_table_text": "Check CDG IC+ \u2192",
         "affiliate_url_template": "https://www.jdoqocy.com/click-8108003-14992011?sid={clickref}&url=https%3A%2F%2Fwww.cdgcommerce.com%2Fpricing.php",
         "pricing_source_url": "https://www.cdgcommerce.com/pricing.php",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "US merchants processing $15,000\u2013$100,000/mo with QuickBooks B2B invoicing integration",
         "hidden_fee_notes": "$0/mo under $10k volume, $49/mo IC+ tier for $10k\u2013$100k/mo at IC + 0.25% + $0.10."
       },
@@ -1694,7 +1694,7 @@
         "cta_table_text": "Audit Shopify Fees \u2192",
         "affiliate_url_template": "https://www.awin1.com/cread.php?awinmid=60441&awinaffid=3133124&clickref={clickref}&ued=https%3A%2F%2Fwww.shopify.com%2Fpricing",
         "pricing_source_url": "https://www.shopify.com/pricing",
-        "last_verified": "2026-10-24",
+        "last_verified": "2026-10-28",
         "best_for": "DTC ecommerce brands; B2B wholesale invoices face a 2.0% third-party gateway penalty on Basic unless routed via offline/external invoicing",
         "hidden_fee_notes": "2.9% + $0.30 on Basic ($39/mo); charges a 2.0% penalty on external payment gateways unless upgraded or invoiced externally."
       }
@@ -1733,7 +1733,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Alabama Department of Labor",
         "gov_citation_url": "https://labor.alabama.gov/uc/employer.aspx",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "AK",
@@ -1751,7 +1751,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Alaska Department of Labor and Workforce Development",
         "gov_citation_url": "https://labor.alaska.gov/estax/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "AZ",
@@ -1769,7 +1769,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Arizona Department of Economic Security",
         "gov_citation_url": "https://des.az.gov/services/employment/unemployment-employer",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "AR",
@@ -1787,7 +1787,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Arkansas Division of Workforce Services",
         "gov_citation_url": "https://dws.arkansas.gov/employers/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "CA",
@@ -1805,7 +1805,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "California Employment Development Department (EDD)",
         "gov_citation_url": "https://edd.ca.gov/en/payroll_taxes/rates_and_withholding/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "CO",
@@ -1823,7 +1823,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Colorado Department of Labor and Employment (CDLE)",
         "gov_citation_url": "https://cdle.colorado.gov/employers/unemployment-insurance-premiums",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "CT",
@@ -1841,7 +1841,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Connecticut Department of Labor",
         "gov_citation_url": "https://portal.ct.gov/dol/Divisions/Unemployment-Insurance-Tax",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "DE",
@@ -1859,7 +1859,7 @@
         "state_payroll_registration_fee_usd": 75,
         "agency_name": "Delaware Department of Labor \u2014 Division of Unemployment Insurance",
         "gov_citation_url": "https://labor.delaware.gov/divisions/unemployment-insurance/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "DC",
@@ -1877,7 +1877,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "DC Department of Employment Services (DOES)",
         "gov_citation_url": "https://does.dc.gov/service/unemployment-compensation-process-employers",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "FL",
@@ -1895,7 +1895,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Florida Department of Revenue \u2014 Reemployment Tax",
         "gov_citation_url": "https://floridarevenue.com/taxes/taxesfees/Pages/rt.aspx",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "GA",
@@ -1913,7 +1913,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Georgia Department of Labor",
         "gov_citation_url": "https://dol.georgia.gov/employers/unemployment-insurance-taxes",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "HI",
@@ -1931,7 +1931,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Hawaii Department of Labor and Industrial Relations",
         "gov_citation_url": "https://labor.hawaii.gov/ui/employer-services/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "ID",
@@ -1949,7 +1949,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Idaho Department of Labor",
         "gov_citation_url": "https://www.labor.idaho.gov/businesses/unemployment-insurance-tax/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "IL",
@@ -1967,7 +1967,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Illinois Department of Employment Security (IDES)",
         "gov_citation_url": "https://ides.illinois.gov/employers/unemployment-insurance-taxes-and-reporting.html",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "IN",
@@ -1985,7 +1985,7 @@
         "state_payroll_registration_fee_usd": 25,
         "agency_name": "Indiana Department of Workforce Development",
         "gov_citation_url": "https://www.in.gov/dwd/business-services/unemployment-insurance/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "IA",
@@ -2003,7 +2003,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Iowa Workforce Development",
         "gov_citation_url": "https://workforce.iowa.gov/employers/unemployment-insurance",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "KS",
@@ -2021,7 +2021,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Kansas Department of Labor",
         "gov_citation_url": "https://www.dol.ks.gov/employers",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "KY",
@@ -2039,7 +2039,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Kentucky Office of Unemployment Insurance",
         "gov_citation_url": "https://kcc.ky.gov/employer/Pages/default.aspx",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "LA",
@@ -2057,7 +2057,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Louisiana Workforce Commission",
         "gov_citation_url": "https://www.laworks.net/UnemploymentInsurance/UI_Employers.asp",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "ME",
@@ -2075,7 +2075,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Maine Department of Labor",
         "gov_citation_url": "https://www.maine.gov/labor/unemployment/tax/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "MD",
@@ -2093,7 +2093,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Maryland Department of Labor \u2014 Division of Unemployment Insurance",
         "gov_citation_url": "https://www.dllr.state.md.us/employment/uitax.shtml",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "MA",
@@ -2111,7 +2111,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Massachusetts Department of Unemployment Assistance (DUA)",
         "gov_citation_url": "https://www.mass.gov/orgs/department-of-unemployment-assistance",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "MI",
@@ -2129,7 +2129,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Michigan Unemployment Insurance Agency (UIA)",
         "gov_citation_url": "https://www.michigan.gov/leo/bureaus-agencies/uia/employers",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "MN",
@@ -2147,7 +2147,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Minnesota Unemployment Insurance Program",
         "gov_citation_url": "https://www.uimn.org/employers/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "MS",
@@ -2165,7 +2165,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Mississippi Department of Employment Security",
         "gov_citation_url": "https://mdes.ms.gov/employers/unemployment-tax/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "MO",
@@ -2183,7 +2183,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Missouri Department of Labor and Industrial Relations",
         "gov_citation_url": "https://labor.mo.gov/des/employers",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "MT",
@@ -2201,7 +2201,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Montana Department of Labor & Industry",
         "gov_citation_url": "https://uid.dli.mt.gov/employers/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "NE",
@@ -2219,7 +2219,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Nebraska Department of Labor",
         "gov_citation_url": "https://dol.nebraska.gov/UITax",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "NV",
@@ -2237,7 +2237,7 @@
         "state_payroll_registration_fee_usd": 50,
         "agency_name": "Nevada Department of Employment, Training and Rehabilitation",
         "gov_citation_url": "https://detr.nv.gov/Page/Employment_Security_Division_Unemployment_Insurance_Tax",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "NH",
@@ -2255,7 +2255,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "New Hampshire Employment Security",
         "gov_citation_url": "https://www.nhes.nh.gov/services/employers/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "NJ",
@@ -2273,7 +2273,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "New Jersey Department of Labor and Workforce Development",
         "gov_citation_url": "https://www.nj.gov/labor/ea/employer-services/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "NM",
@@ -2291,7 +2291,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "New Mexico Department of Workforce Solutions",
         "gov_citation_url": "https://www.dws.state.nm.us/en-us/Businesses/Unemployment-Insurance-Tax",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "NY",
@@ -2309,7 +2309,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "New York State Department of Labor (NYSDOL)",
         "gov_citation_url": "https://dol.ny.gov/unemployment-insurance-rate-information",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "NC",
@@ -2327,7 +2327,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "North Carolina Division of Employment Security (DES)",
         "gov_citation_url": "https://www.des.nc.gov/employers",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "ND",
@@ -2345,7 +2345,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Job Service North Dakota",
         "gov_citation_url": "https://www.jobsnd.com/unemployment-business-tax",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "OH",
@@ -2363,7 +2363,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Ohio Department of Job and Family Services",
         "gov_citation_url": "https://jfs.ohio.gov/job-services-and-unemployment/unemployment/for-employers",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "OK",
@@ -2381,7 +2381,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Oklahoma Employment Security Commission",
         "gov_citation_url": "https://oklahoma.gov/oesc/employers.html",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "OR",
@@ -2399,7 +2399,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Oregon Employment Department",
         "gov_citation_url": "https://unemployment.oregon.gov/employers",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "PA",
@@ -2417,7 +2417,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Pennsylvania Department of Labor & Industry",
         "gov_citation_url": "https://www.pa.gov/en/agencies/dli/programs-services/unemployment/uc-tax.html",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "RI",
@@ -2435,7 +2435,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Rhode Island Division of Taxation \u2014 Employer Tax",
         "gov_citation_url": "https://tax.ri.gov/tax-sections/employer-tax-section",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "SC",
@@ -2453,7 +2453,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "South Carolina Department of Employment and Workforce",
         "gov_citation_url": "https://dew.sc.gov/employers/tax",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "SD",
@@ -2471,7 +2471,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "South Dakota Department of Labor and Regulation",
         "gov_citation_url": "https://dlr.sd.gov/ra/businesses/default.aspx",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "TN",
@@ -2489,7 +2489,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Tennessee Department of Labor and Workforce Development",
         "gov_citation_url": "https://www.tn.gov/workforce/employers/tax-and-insurance-redirect/unemployment-insurance-tax.html",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "TX",
@@ -2507,7 +2507,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Texas Workforce Commission (TWC)",
         "gov_citation_url": "https://www.twc.texas.gov/programs/unemployment-tax",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "UT",
@@ -2525,7 +2525,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Utah Department of Workforce Services",
         "gov_citation_url": "https://jobs.utah.gov/ui/employer/index.html",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "VT",
@@ -2543,7 +2543,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Vermont Department of Labor",
         "gov_citation_url": "https://labor.vermont.gov/unemployment-insurance/employers",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "VA",
@@ -2561,7 +2561,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Virginia Employment Commission (VEC)",
         "gov_citation_url": "https://www.vec.virginia.gov/employers",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "WA",
@@ -2579,7 +2579,7 @@
         "state_payroll_registration_fee_usd": 30,
         "agency_name": "Washington Employment Security Department (ESD)",
         "gov_citation_url": "https://esd.wa.gov/employer-taxes",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "WV",
@@ -2597,7 +2597,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "WorkForce West Virginia",
         "gov_citation_url": "https://workforcewv.org/employers/unemployment-compensation-tax",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "WI",
@@ -2615,7 +2615,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Wisconsin Department of Workforce Development",
         "gov_citation_url": "https://dwd.wisconsin.gov/uitax/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       {
         "state_code": "WY",
@@ -2633,7 +2633,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Wyoming Department of Workforce Services",
         "gov_citation_url": "https://dws.wyo.gov/dws-division/unemployment-insurance/employer-resources/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       }
     ],
     "byStateCode": {
@@ -2653,7 +2653,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Alabama Department of Labor",
         "gov_citation_url": "https://labor.alabama.gov/uc/employer.aspx",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "AK": {
         "state_code": "AK",
@@ -2671,7 +2671,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Alaska Department of Labor and Workforce Development",
         "gov_citation_url": "https://labor.alaska.gov/estax/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "AZ": {
         "state_code": "AZ",
@@ -2689,7 +2689,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Arizona Department of Economic Security",
         "gov_citation_url": "https://des.az.gov/services/employment/unemployment-employer",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "AR": {
         "state_code": "AR",
@@ -2707,7 +2707,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Arkansas Division of Workforce Services",
         "gov_citation_url": "https://dws.arkansas.gov/employers/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "CA": {
         "state_code": "CA",
@@ -2725,7 +2725,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "California Employment Development Department (EDD)",
         "gov_citation_url": "https://edd.ca.gov/en/payroll_taxes/rates_and_withholding/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "CO": {
         "state_code": "CO",
@@ -2743,7 +2743,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Colorado Department of Labor and Employment (CDLE)",
         "gov_citation_url": "https://cdle.colorado.gov/employers/unemployment-insurance-premiums",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "CT": {
         "state_code": "CT",
@@ -2761,7 +2761,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Connecticut Department of Labor",
         "gov_citation_url": "https://portal.ct.gov/dol/Divisions/Unemployment-Insurance-Tax",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "DE": {
         "state_code": "DE",
@@ -2779,7 +2779,7 @@
         "state_payroll_registration_fee_usd": 75,
         "agency_name": "Delaware Department of Labor \u2014 Division of Unemployment Insurance",
         "gov_citation_url": "https://labor.delaware.gov/divisions/unemployment-insurance/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "DC": {
         "state_code": "DC",
@@ -2797,7 +2797,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "DC Department of Employment Services (DOES)",
         "gov_citation_url": "https://does.dc.gov/service/unemployment-compensation-process-employers",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "FL": {
         "state_code": "FL",
@@ -2815,7 +2815,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Florida Department of Revenue \u2014 Reemployment Tax",
         "gov_citation_url": "https://floridarevenue.com/taxes/taxesfees/Pages/rt.aspx",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "GA": {
         "state_code": "GA",
@@ -2833,7 +2833,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Georgia Department of Labor",
         "gov_citation_url": "https://dol.georgia.gov/employers/unemployment-insurance-taxes",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "HI": {
         "state_code": "HI",
@@ -2851,7 +2851,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Hawaii Department of Labor and Industrial Relations",
         "gov_citation_url": "https://labor.hawaii.gov/ui/employer-services/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "ID": {
         "state_code": "ID",
@@ -2869,7 +2869,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Idaho Department of Labor",
         "gov_citation_url": "https://www.labor.idaho.gov/businesses/unemployment-insurance-tax/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "IL": {
         "state_code": "IL",
@@ -2887,7 +2887,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Illinois Department of Employment Security (IDES)",
         "gov_citation_url": "https://ides.illinois.gov/employers/unemployment-insurance-taxes-and-reporting.html",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "IN": {
         "state_code": "IN",
@@ -2905,7 +2905,7 @@
         "state_payroll_registration_fee_usd": 25,
         "agency_name": "Indiana Department of Workforce Development",
         "gov_citation_url": "https://www.in.gov/dwd/business-services/unemployment-insurance/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "IA": {
         "state_code": "IA",
@@ -2923,7 +2923,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Iowa Workforce Development",
         "gov_citation_url": "https://workforce.iowa.gov/employers/unemployment-insurance",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "KS": {
         "state_code": "KS",
@@ -2941,7 +2941,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Kansas Department of Labor",
         "gov_citation_url": "https://www.dol.ks.gov/employers",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "KY": {
         "state_code": "KY",
@@ -2959,7 +2959,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Kentucky Office of Unemployment Insurance",
         "gov_citation_url": "https://kcc.ky.gov/employer/Pages/default.aspx",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "LA": {
         "state_code": "LA",
@@ -2977,7 +2977,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Louisiana Workforce Commission",
         "gov_citation_url": "https://www.laworks.net/UnemploymentInsurance/UI_Employers.asp",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "ME": {
         "state_code": "ME",
@@ -2995,7 +2995,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Maine Department of Labor",
         "gov_citation_url": "https://www.maine.gov/labor/unemployment/tax/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "MD": {
         "state_code": "MD",
@@ -3013,7 +3013,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Maryland Department of Labor \u2014 Division of Unemployment Insurance",
         "gov_citation_url": "https://www.dllr.state.md.us/employment/uitax.shtml",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "MA": {
         "state_code": "MA",
@@ -3031,7 +3031,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Massachusetts Department of Unemployment Assistance (DUA)",
         "gov_citation_url": "https://www.mass.gov/orgs/department-of-unemployment-assistance",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "MI": {
         "state_code": "MI",
@@ -3049,7 +3049,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Michigan Unemployment Insurance Agency (UIA)",
         "gov_citation_url": "https://www.michigan.gov/leo/bureaus-agencies/uia/employers",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "MN": {
         "state_code": "MN",
@@ -3067,7 +3067,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Minnesota Unemployment Insurance Program",
         "gov_citation_url": "https://www.uimn.org/employers/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "MS": {
         "state_code": "MS",
@@ -3085,7 +3085,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Mississippi Department of Employment Security",
         "gov_citation_url": "https://mdes.ms.gov/employers/unemployment-tax/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "MO": {
         "state_code": "MO",
@@ -3103,7 +3103,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Missouri Department of Labor and Industrial Relations",
         "gov_citation_url": "https://labor.mo.gov/des/employers",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "MT": {
         "state_code": "MT",
@@ -3121,7 +3121,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Montana Department of Labor & Industry",
         "gov_citation_url": "https://uid.dli.mt.gov/employers/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "NE": {
         "state_code": "NE",
@@ -3139,7 +3139,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Nebraska Department of Labor",
         "gov_citation_url": "https://dol.nebraska.gov/UITax",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "NV": {
         "state_code": "NV",
@@ -3157,7 +3157,7 @@
         "state_payroll_registration_fee_usd": 50,
         "agency_name": "Nevada Department of Employment, Training and Rehabilitation",
         "gov_citation_url": "https://detr.nv.gov/Page/Employment_Security_Division_Unemployment_Insurance_Tax",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "NH": {
         "state_code": "NH",
@@ -3175,7 +3175,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "New Hampshire Employment Security",
         "gov_citation_url": "https://www.nhes.nh.gov/services/employers/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "NJ": {
         "state_code": "NJ",
@@ -3193,7 +3193,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "New Jersey Department of Labor and Workforce Development",
         "gov_citation_url": "https://www.nj.gov/labor/ea/employer-services/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "NM": {
         "state_code": "NM",
@@ -3211,7 +3211,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "New Mexico Department of Workforce Solutions",
         "gov_citation_url": "https://www.dws.state.nm.us/en-us/Businesses/Unemployment-Insurance-Tax",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "NY": {
         "state_code": "NY",
@@ -3229,7 +3229,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "New York State Department of Labor (NYSDOL)",
         "gov_citation_url": "https://dol.ny.gov/unemployment-insurance-rate-information",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "NC": {
         "state_code": "NC",
@@ -3247,7 +3247,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "North Carolina Division of Employment Security (DES)",
         "gov_citation_url": "https://www.des.nc.gov/employers",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "ND": {
         "state_code": "ND",
@@ -3265,7 +3265,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Job Service North Dakota",
         "gov_citation_url": "https://www.jobsnd.com/unemployment-business-tax",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "OH": {
         "state_code": "OH",
@@ -3283,7 +3283,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Ohio Department of Job and Family Services",
         "gov_citation_url": "https://jfs.ohio.gov/job-services-and-unemployment/unemployment/for-employers",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "OK": {
         "state_code": "OK",
@@ -3301,7 +3301,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Oklahoma Employment Security Commission",
         "gov_citation_url": "https://oklahoma.gov/oesc/employers.html",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "OR": {
         "state_code": "OR",
@@ -3319,7 +3319,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Oregon Employment Department",
         "gov_citation_url": "https://unemployment.oregon.gov/employers",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "PA": {
         "state_code": "PA",
@@ -3337,7 +3337,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Pennsylvania Department of Labor & Industry",
         "gov_citation_url": "https://www.pa.gov/en/agencies/dli/programs-services/unemployment/uc-tax.html",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "RI": {
         "state_code": "RI",
@@ -3355,7 +3355,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Rhode Island Division of Taxation \u2014 Employer Tax",
         "gov_citation_url": "https://tax.ri.gov/tax-sections/employer-tax-section",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "SC": {
         "state_code": "SC",
@@ -3373,7 +3373,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "South Carolina Department of Employment and Workforce",
         "gov_citation_url": "https://dew.sc.gov/employers/tax",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "SD": {
         "state_code": "SD",
@@ -3391,7 +3391,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "South Dakota Department of Labor and Regulation",
         "gov_citation_url": "https://dlr.sd.gov/ra/businesses/default.aspx",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "TN": {
         "state_code": "TN",
@@ -3409,7 +3409,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Tennessee Department of Labor and Workforce Development",
         "gov_citation_url": "https://www.tn.gov/workforce/employers/tax-and-insurance-redirect/unemployment-insurance-tax.html",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "TX": {
         "state_code": "TX",
@@ -3427,7 +3427,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Texas Workforce Commission (TWC)",
         "gov_citation_url": "https://www.twc.texas.gov/programs/unemployment-tax",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "UT": {
         "state_code": "UT",
@@ -3445,7 +3445,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Utah Department of Workforce Services",
         "gov_citation_url": "https://jobs.utah.gov/ui/employer/index.html",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "VT": {
         "state_code": "VT",
@@ -3463,7 +3463,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Vermont Department of Labor",
         "gov_citation_url": "https://labor.vermont.gov/unemployment-insurance/employers",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "VA": {
         "state_code": "VA",
@@ -3481,7 +3481,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Virginia Employment Commission (VEC)",
         "gov_citation_url": "https://www.vec.virginia.gov/employers",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "WA": {
         "state_code": "WA",
@@ -3499,7 +3499,7 @@
         "state_payroll_registration_fee_usd": 30,
         "agency_name": "Washington Employment Security Department (ESD)",
         "gov_citation_url": "https://esd.wa.gov/employer-taxes",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "WV": {
         "state_code": "WV",
@@ -3517,7 +3517,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "WorkForce West Virginia",
         "gov_citation_url": "https://workforcewv.org/employers/unemployment-compensation-tax",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "WI": {
         "state_code": "WI",
@@ -3535,7 +3535,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Wisconsin Department of Workforce Development",
         "gov_citation_url": "https://dwd.wisconsin.gov/uitax/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       },
       "WY": {
         "state_code": "WY",
@@ -3553,7 +3553,7 @@
         "state_payroll_registration_fee_usd": 0,
         "agency_name": "Wyoming Department of Workforce Services",
         "gov_citation_url": "https://dws.wyo.gov/dws-division/unemployment-insurance/employer-resources/",
-        "last_verified": "2026-10-24"
+        "last_verified": "2026-10-28"
       }
     }
   },
