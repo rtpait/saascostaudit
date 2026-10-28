@@ -6,8 +6,8 @@
   "seoTitle": "Gusto vs Rippling Cost ($49+$6 vs $85+$16 PEPM) 2026 TCO",
   "seoDescription": "Compare Gusto ($49+$6/emp) vs. Rippling ($85+$16/emp + $20/state) true 12-month TCO. Calculate multi-state SUI taxes, W-2 fees & save $1,840\u2013$4,620/yr.",
   "h1": "Gusto vs. Rippling True 12-Month TCO Calculator (2026 Multi-State & PEPM Fee Audit)",
-  "updated": "2026-10-24",
-  "lastVerified": "2026-10-24",
+  "updated": "2026-10-28",
+  "lastVerified": "2026-10-28",
   "primaryPartner": "Gusto",
   "primaryPartnerUrl": "https://gusto.com/product/pricing?utm_source=saascostaudit&utm_medium=affiliate",
   "secondaryPartner": "Rippling",
@@ -92,25 +92,25 @@
       "id": 1,
       "title": "IRS Publication 15 (2026 Circular E, Employer's Tax Guide) & CA EDD Payroll Tax Rates (.gov)",
       "url": "https://www.irs.gov/publications/p15",
-      "accessed": "2026-10-24"
+      "accessed": "2026-10-28"
     },
     {
       "id": 2,
       "title": "Gusto Official 2026 Plan Pricing (Simple $49+$6/mo, Plus $80+$12/mo, Contractor $6/mo)",
       "url": "https://gusto.com/product/pricing",
-      "accessed": "2026-10-24"
+      "accessed": "2026-10-28"
     },
     {
       "id": 3,
       "title": "Rippling Official 2026 Modular Platform & Payroll Pricing Schedule",
       "url": "https://www.rippling.com/pricing",
-      "accessed": "2026-10-24"
+      "accessed": "2026-10-28"
     },
     {
       "id": 4,
       "title": "California Employment Development Department (EDD) 2026 UI & ETT Rates (.gov)",
       "url": "https://edd.ca.gov/en/payroll_taxes/rates_and_withholding/",
-      "accessed": "2026-10-24"
+      "accessed": "2026-10-28"
     }
   ]
 }

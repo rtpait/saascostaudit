@@ -2,7 +2,7 @@
   "schema_version": "2026.10.24-b2bfeeaudit-partner-routing",
   "generated_at_utc": "2026-10-24T22:26:00Z",
   "domain": "saascostaudit.com",
-  "corporate_entity": "Research Triangle Park AI Transformation LLC (EIN 42-3641177)",
+  "corporate_entity": "Research Triangle Park AI Transformation LLC",
   "publisher_accounts": {
     "CJ": {
       "network_name": "CJ Affiliate (Commission Junction)",
@@ -178,7 +178,7 @@
       "advertiser_mid": "ONPAY-CJ-2026",
       "cpa_payout_usd": 100.0,
       "epc_modeled_usd": 3.6,
-      "affiliate_url_template": "https://www.jdoqocy.com/click-8108003-14029183?sid={clickref}&url=https%3A%2F%2Fonpay.com%2Fpricing",
+      "affiliate_url_template": "https://www.jdoqocy.com/click-8108003-14029183?sid={clickref}&url=https%3A%2F%2Fonpay.com%2Fpayroll%2Fsoftware%2Fcosts-pricing%2F",
       "switching_credit_usd": 300.0
     },
     "adp": {

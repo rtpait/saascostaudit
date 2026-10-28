@@ -159,3 +159,20 @@ ightarrow$ PMs):**
     3. **Task Delegation Routing:** Driving continuous round-robin execution (`Scheduler` `4d3b63d2` $
 ightarrow$ `POs` & `B2B Audit Family PM` `9c1c413e` $\leftrightarrow$ `Spoke PMs` `167b2bea`, `b5853ae2`, `ef20b463`).
     4. **Continuous Kaizen Iteration Loop:** Overseeing the weekday `11:30 AM EDT` 4-Pillar Kaizen loop (`run_web_team_kaizen_os.py`) so manual steps systematically convert into autonomous code (`Rule of Two`), progressively reducing human-in-the-loop friction toward perpetual self-improvement.
+
+---
+
+## Principle 11: Rapid-Development Auto-Advance Mode & Zero-Idle Exterior Spoke Assignments
+- **Gate-Driven Auto-Accept & Immediate Lock Rotation (`lockctl.py v2.6.0` + `run_rapid_dev_auto_advance_and_checkin.py`):**
+  - During the rapid-development build phase, product iterations auto-advance without blocking on manual Product Owner `ACCEPT / REVISE` calls.
+  - Whenever an active sprint's work passes `<repo>/scripts/validate.js` (0 errors, route cap, canonicals, JSON-LD, single-home calculator/affiliate exclusivity, and zero foreign-vehicle or sister-domain leakage) and `/workspace/scheduler/audit_day0_launch_gate.py --domain <domain>` (0 critical blockers, live HTTPS 200, TLS, `llms.txt`, `/.well-known/webmcp.json`, and scorecard thresholds `W-1..W-5 >= 4.0`, `LC-1..LC-6 == 5.0`, `IS-1..IS-5 == 5.0`), the controller automatically issues `AUTO_ACCEPT_RAPID_DEV_GATE_PASS`, runs `/workspace/scheduler/pm_post_job_release.sh` to tag and ship the release (`vX.Y.Z`), and immediately releases and rotates `/workspace/scheduler/PRODUCT-LOCK.json` to the next highest-priority product in `rotation_ring[]`.
+- **Zero-Idle Exterior Spoke Assignment Matrix (`/workspace/scheduler/EXTERIOR-SPOKE-ASSIGNMENTS.json`):**
+  - All 7 exterior operational spokes—including `Web Development` (`74d7f7da`), `Legal & Compliance` (`7dab5c13`), `Identity, Auth & Security` (`0a4f80df`), `COO Release & Synthetic QA` (Unit B), `Executive Governance & CPO Discovery` (Unit A), `rtpait.com Proof Showcase, WebMCP API & Syndication` (Unit C), and `Commercial BD, Affiliate Portal Ops & Brand Citation` (Unit D), spanning all 13 GrokBot Marketplace hires—are continuously assigned concrete work against the Product Hub at all times (either executing on the active locked product `N` or pre-staging specs, proof cards, and partner deals for `N+1`).
+- **Throughout-the-Day Founder Check-In Cadence (`30 8,11,14,17 * * 1-5` CDT):**
+  - Every 3 hours on weekdays during business hours (`8:30 AM`, `11:30 AM`, `2:30 PM`, and `5:30 PM CDT` / `9:30 AM`, `12:30 PM`, `3:30 PM`, and `6:30 PM EDT`), routine `rapid-dev-auto-advance-3-hour-spoke-check-in-pin` runs `/workspace/scheduler/run_rapid_dev_auto_advance_and_checkin.py` and delivers a concise status ping to Wally in chat summarizing what each spoke team is working on, what shipped, and what is next.
+- **Preserved Safety Guardrails:** Single-active-product-per-spoke concurrency (`max_concurrent_active_products_per_spoke = 1`), the 48-hour stall preemption watchdog (`lockctl.py check-stall --threshold-hours 48`), Day-0 launch gate thresholds, and strict single-home / zero foreign-vehicle or sister-domain leakage remain 100% enforced.
+
+  - **Mandatory `priority: true` on Completion Handoffs to Courier (`4d3b63d2-2aa7-4aa3-bd71-a96433503ad5`) & Strict 5-Affiliate-Site Ring (`excluded_domains: ["rtpait.com"]`):**
+    - When a Product Owner or `Project Manager` (`167b2bea-99c8-4e89-99e3-182227974962`) finishes a sprint commit and rotates `/workspace/scheduler/PRODUCT-LOCK.json`, the completion handoff sent back to `Courier` (`4d3b63d2-2aa7-4aa3-bd71-a96433503ad5`) **MUST** use `SendToAgent` with **`priority: true`** (NEVER `priority: false`). Sending `priority: false` holds the message without waking Courier and stalls the ring.
+    - The continuous event-driven round-robin ring is strictly limited to the **5 affiliate properties** (`junkhaulhq.com`, `b2bfeeaudit.com`, `b2bcostaudit.com`, `saascostaudit.com`, `apicostaudit.com`) with `excluded_domains: ["rtpait.com"]`.
+

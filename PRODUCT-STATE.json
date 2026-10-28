@@ -1,0 +1,52 @@
+{
+  "schema_version": "2.0.0",
+  "domain": "saascostaudit.com",
+  "product_name": "SaaS Cost Audit",
+  "current_version_tag": "v1.3.0",
+  "prior_version_tag": "v1.2.0",
+  "updated_at_cdt": "2026-10-28T07:25:00-05:00",
+  "po_agent_id": "bc09e0d9-5fae-487c-b526-020d9aac1bd1",
+  "po_name": "SaaS Cost Audit PO",
+  "hub_pm_agent_id": "9c1c413e-5df2-4d17-a576-11713450fceb",
+  "hub_pm_name": "B2B Audit Family PM",
+  "web_pm_agent_id": "167b2bea-99c8-4e89-99e3-182227974962",
+  "web_pm_name": "Project Manager",
+  "sister_family_group": "b2b-audit-family",
+  "road_to_revenue_stage": "STAGE_2",
+  "active_footprint": {
+    "canonical_seo_html_routes": 16,
+    "total_built_html_routes_including_admin": 17,
+    "quarantined_cohort_1_routes": 4,
+    "route_spec_ceiling": 64,
+    "single_home_calculators": [
+      "ucaas-tco-calculator",
+      "saas-seat-calc"
+    ],
+    "aeo_endpoints": [
+      "/llms.txt",
+      "/llms-full.txt",
+      "/.well-known/webmcp.json",
+      "/.well-known/openapi.json",
+      "/.well-known/ai-plugin.json"
+    ],
+    "drip_gate_passed": false,
+    "drip_gate_status": "HOLD_AWAITING_75PCT_GSC_INDEXATION"
+  },
+  "live_measured_actuals": {
+    "as_of_utc": "2026-10-28T12:25:00Z",
+    "gsc_dns_txt_verified": true,
+    "gsc_indexed_html_routes": 0,
+    "gsc_total_html_routes": 16,
+    "gsc_index_coverage_ratio": 0.0,
+    "posthog_clean_human_visits_30d": 0,
+    "live_llm_queries_30d": 0,
+    "live_outbound_affiliate_clicks_30d": 0,
+    "live_confirmed_partner_revenue_usd": 0.0,
+    "commercial_cta_4axis_parity": "220/220 (100% SAAS_COSTS exclusive, 0 foreign keys, 0 leaked calculators)"
+  },
+  "latest_sprint_review": {
+    "sprint_id": "RAPID-BUILD-AUTO-ROTATE-20261028-0820",
+    "review_file": "/workspace/saascostaudit/SPRINT-REVIEW-2026-10-28.md",
+    "verdict": "ACCEPT"
+  }
+}

@@ -108,7 +108,7 @@
     </tbody>
   </table>
 </div>
-<p><small>All vendor base fees, PEPM tiers, and interchange markups verified as of October 24, 2026. Statutory SUI/FUTA/FICA and Federal Reserve Reg II debit benchmarks cite official <code>.gov</code> publications. Commercial links carry Sub-ID attribution via CJ (<code>8108003</code>), AWIN (<code>3133124</code>), and Rakuten (<code>4767884</code>) (<a href="/methodology/#affiliate-disclosure">methodology &amp; disclosure</a>).</small></p>
+<p><small>All vendor base fees, PEPM tiers, and interchange markups verified as of October 28, 2026. Statutory SUI/FUTA/FICA and Federal Reserve Reg II debit benchmarks cite official <code>.gov</code> publications. Commercial links carry Sub-ID attribution via CJ (<code>8108003</code>), AWIN (<code>3133124</code>), and Rakuten (<code>4767884</code>) (<a href="/methodology/#affiliate-disclosure">methodology &amp; disclosure</a>).</small></p>
 {% endif %}
 {% endmacro %}
 
@@ -173,10 +173,10 @@
   <div class="calc-output-grid" id="ptc-results-grid">
     <div class="calc-vendor-card vendor-best" id="ptc-card-onpay">
       <small>OnPay (Flat 50-State Tier)</small>
-      <strong class="calc-big" id="ptc-onpay-yr">$2,112/yr</strong>
-      <span class="calc-sub" id="ptc-onpay-sub">$40 base + $6/seat · $0 extra state or W-2 fees</span>
+      <strong class="calc-big" id="ptc-onpay-yr">$2,220/yr</strong>
+      <span class="calc-sub" id="ptc-onpay-sub">$49 base + $6/seat · $0 extra state or W-2 fees</span>
       <div style="margin-top:.55rem">
-        <a class="cta tbl-cta-btn" id="ptc-cta-onpay" data-partner="OnPay" data-cta-slot="payroll_calc" data-funnel-role="mid_content" data-4axis-key="direct_partner:payroll_calc_mid_{{ cSlug }}:SAAS_COSTS.ucaas_seats:mid_content" data-route-slug="{{ cSlug }}" data-calc-inputs='{"w2":{{ defW2 }},"states":{{ defStates }}}' data-clickref="b2b-payroll_calc-{{ cSlug }}-onpay" href="https://onpay.com/pricing?utm_source=saascostaudit&amp;utm_medium=affiliate&amp;clickref=b2b-payroll_calc-{{ cSlug }}-onpay" target="_blank" rel="sponsored nofollow noopener">Lock In OnPay Rate →</a>
+        <a class="cta tbl-cta-btn" id="ptc-cta-onpay" data-partner="OnPay" data-cta-slot="payroll_calc" data-funnel-role="mid_content" data-4axis-key="direct_partner:payroll_calc_mid_{{ cSlug }}:SAAS_COSTS.ucaas_seats:mid_content" data-route-slug="{{ cSlug }}" data-calc-inputs='{"w2":{{ defW2 }},"states":{{ defStates }}}' data-clickref="b2b-payroll_calc-{{ cSlug }}-onpay" href="https://onpay.com/payroll/software/costs-pricing/?utm_source=saascostaudit&amp;utm_medium=affiliate&amp;clickref=b2b-payroll_calc-{{ cSlug }}-onpay" target="_blank" rel="sponsored nofollow noopener">Lock In OnPay Rate →</a>
       </div>
     </div>
     <div class="calc-vendor-card vendor-best" id="ptc-card-gusto">
@@ -188,7 +188,7 @@
       </div>
     </div>
     <div class="calc-vendor-card" id="ptc-card-rippling">
-      <small>Rippling Core + Payroll + IT</small>
+      <small>Rippling Core + Payroll + IT [Quote-Only · Modeled]</small>
       <strong class="calc-big" id="ptc-rippling-yr">$5,496/yr</strong>
       <span class="calc-sub" id="ptc-rippling-sub">$85 base + $16/W-2 + $20/mo per extra state</span>
       <div style="margin-top:.55rem">
@@ -204,7 +204,7 @@
       </div>
     </div>
     <div class="calc-vendor-card" id="ptc-card-adp">
-      <small>ADP RUN Legacy Benchmark</small>
+      <small>ADP RUN Legacy Benchmark [Quote-Only · Modeled]</small>
       <strong class="calc-big" id="ptc-adp-yr">$4,685/yr</strong>
       <span class="calc-sub" id="ptc-adp-sub">Incl. $32/extra state + $7.50/form W-2 fee</span>
       <div style="margin-top:.55rem">
@@ -265,7 +265,7 @@
     var stdFxAnnual = eor * 80000 * 0.02;
 
     // 1. OnPay: $40 base + $6*(w2 + c1099), $0 multi-state fee, + EOR
-    var onpayYr = (40 + 6 * (w2 + c1099)) * 12 + eorSeatAnnual + stdFxAnnual;
+    var onpayYr = (49 + 6 * (w2 + c1099)) * 12 + eorSeatAnnual + stdFxAnnual;
     // 2. Gusto: $49 base + $6*(w2 + c1099) + $12/mo per extra state + EOR
     var gustoYr = (49 + 6 * (w2 + c1099) + 12 * extraStates) * 12 + eorSeatAnnual + stdFxAnnual;
     // 3. Rippling: $85 base + $16*w2 + $8*c1099 + $20/mo per extra state + (incYearEnd ? $150*extraStates state reg : 0) + EOR

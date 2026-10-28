@@ -1,6 +1,6 @@
 {
-  "schema_version": "2026.10.27-principle-8-loud-failure",
-  "generated_at_utc": "2026-10-27T07:35:37Z",
+  "schema_version": "2026.10.28-principle-8-loud-failure",
+  "generated_at_utc": "2026-10-28T12:25:00Z",
   "property": "sc-domain:saascostaudit.com",
   "source_mode": "LIVE_ZERO_TRAFFIC",
   "dns_txt_verified": true,
@@ -11,24 +11,25 @@
   "live_measured_actuals": {
     "active_mvp_html_routes": 16,
     "indexed_html_routes": 0,
-    "index_coverage_ratio": 0,
+    "index_coverage_ratio": 0.0,
     "non_brand_page1_rankings": 0,
     "operational_kpi_1_gsc_search_ctr": "0.0%",
-    "operational_kpi_3_gsc_crawl_frequency": "LIVE_ZERO_TRAFFIC: DNS TXT verified on saascostaudit.com; awaiting initial Googlebot indexation crawl (0/11 indexed)",
+    "operational_kpi_3_gsc_crawl_frequency": "LIVE_ZERO_TRAFFIC: DNS TXT verified on saascostaudit.com; awaiting initial Googlebot indexation crawl (0/16 canonical SEO routes indexed; 17 total built HTML routes incl. /admin/)",
     "drip_gate_passed": false,
-    "total_routes": 16
+    "total_routes": 16,
+    "total_built_html_routes_including_admin": 17
   },
   "organic_seo_pacing_guardrail": {
     "required_index_coverage_ratio": 0.75,
-    "required_indexed_routes_for_cohort_1": 9,
+    "required_indexed_routes_for_cohort_1": 12,
     "quarantined_cohort_1_routes": 4,
     "drip_gate_passed": false,
     "status": "HOLD_AWAITING_75PCT_GSC_INDEXATION"
   },
   "quarantined_target_hypotheses": {
-    "badge": "HYPOTHESIS / TARGET MODEL — NOT LIVE TELEMETRY",
-    "day_14_target_indexed_routes": 9,
-    "actual_vs_model_variance_routes": -9
+    "badge": "HYPOTHESIS / TARGET MODEL \u2014 NOT LIVE TELEMETRY",
+    "day_14_target_indexed_routes": 12,
+    "actual_vs_model_variance_routes": -12
   },
   "total_sitemap_routes": 16
 }

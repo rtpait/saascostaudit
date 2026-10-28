@@ -1,5 +1,6 @@
 {
-  "schema_version": "2.1.0-4-axis-exclusive-vertical-isolation",
+  "schema_version": "2.2.0-4-axis-exclusive-vertical-isolation-2026-10-28",
+  "verified_at_utc": "2026-10-28T12:25:00Z",
   "domain": "saascostaudit.com",
   "product_vertical_macro": "SAAS_COSTS",
   "allowed_4axis_vertical_prefix": "SAAS_COSTS.",
@@ -8,6 +9,15 @@
     "saas-seat-calc"
   ],
   "exclusive_vertical_isolation_enforced": true,
+  "live_4axis_audit_2026_10_28": {
+    "canonical_html_routes_audited": 16,
+    "total_built_html_routes_including_admin": 17,
+    "total_sponsored_ctas_audited": 220,
+    "valid_saas_costs_4axis_keys": 220,
+    "foreign_vertical_keys_detected": 0,
+    "leaked_sibling_calculators_detected": 0,
+    "compliance_rate_pct": 100.0
+  },
   "components": [
     {
       "composite_key": "impact:impact_saas_zoom_ucaas_verdict_top:SAAS_COSTS.ucaas_seats:top_of_page",
@@ -16,7 +26,7 @@
       "product_vertical": "SAAS_COSTS.ucaas_seats",
       "funnel_role": "top_of_page",
       "dom_cta_slot": "verdict_card",
-      "partner_name": "Zoom Workplace Pro & Business Plus",
+      "partner_name": "Zoom Workplace Pro & Business Plus ($13.33-$22.49/seat)",
       "destination_url": "https://zoom.us/pricing?utm_source=saascostaudit.com&utm_medium=affiliate&irgwc=1&clickref=impact_saas_zoom_ucaas_verdict_top",
       "modeled_cpa_usd": "$50-$150 CPA"
     },
@@ -32,13 +42,35 @@
       "modeled_cpa_usd": "$25-$100 Per-Seat CPA"
     },
     {
+      "composite_key": "impact:ucaas_calc_mid_ucaas-hub:SAAS_COSTS.ucaas_seats:mid_content",
+      "partner_network": "impact",
+      "tracking_sub_id": "ucaas_calc_mid_ucaas-hub",
+      "product_vertical": "SAAS_COSTS.ucaas_seats",
+      "funnel_role": "mid_content",
+      "dom_cta_slot": "ucaas_tco_calc",
+      "partner_name": "Cisco Webex Suite ($22.50/seat) & Microsoft Teams ($4-$22/seat)",
+      "destination_url": "https://www.webex.com/pricing/index.html?utm_source=saascostaudit.com&utm_medium=affiliate&utm_campaign=ucaas_2026&clickref=b2bfeeaudit_ucaas_webex_ucaas-hub",
+      "modeled_cpa_usd": "$50-$200 Qualified UCaaS CPA"
+    },
+    {
+      "composite_key": "direct_partner:payroll_calc_mid_hub-payroll:SAAS_COSTS.ucaas_seats:mid_content",
+      "partner_network": "direct_partner",
+      "tracking_sub_id": "payroll_calc_mid_hub-payroll",
+      "product_vertical": "SAAS_COSTS.ucaas_seats",
+      "funnel_role": "mid_content",
+      "dom_cta_slot": "payroll_calc",
+      "partner_name": "OnPay ($49+$6 All-Inclusive) & Gusto ($49+$6 Simple / $80+$12 Plus)",
+      "destination_url": "https://onpay.com/payroll/software/costs-pricing/?utm_source=saascostaudit&utm_medium=affiliate&clickref=b2b-payroll_calc-hub-payroll-onpay",
+      "modeled_cpa_usd": "$100-$150 Per-Account CPA"
+    },
+    {
       "composite_key": "partnerstack:ps_saas_rippling_pepm_footer:SAAS_COSTS.hris_pepm_tiers:footer",
       "partner_network": "partnerstack",
       "tracking_sub_id": "ps_saas_rippling_pepm_footer",
       "product_vertical": "SAAS_COSTS.hris_pepm_tiers",
       "funnel_role": "footer",
       "dom_cta_slot": "sticky_mobile_bar",
-      "partner_name": "Rippling Modular HRIS & IT Seat Platform",
+      "partner_name": "Rippling Modular HRIS & IT Seat Platform [Quote-Only \u00b7 Modeled]",
       "destination_url": "https://www.rippling.com/pricing?utm_source=saascostaudit.com&utm_medium=affiliate&clickref=ps_saas_rippling_pepm_footer",
       "modeled_cpa_usd": "$150-$350 CPA"
     }
