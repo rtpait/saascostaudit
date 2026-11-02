@@ -1,6 +1,7 @@
 module.exports = function (cfg) {
   cfg.addPassthroughCopy({
     "src/style.css": "style.css",
+    "src/b2b-tokens.css": "b2b-tokens.css",
     "src/logo-mark.svg": "logo-mark.svg",
     "src/og-image.svg": "og-image.svg",
     "src/robots.txt": "robots.txt",
