@@ -85,7 +85,7 @@
       "funnel_role": "mid_content",
       "dom_cta_slot": "ucaas_tco_calc",
       "partner_name": "Bark US B2B Business Software, VoIP & HRIS Quotes (AWIN MID 58887)",
-      "destination_url": "https://www.awin1.com/cread.php?awinmid=58887&awinaffid=3133124&clickref=saascostaudit_bark_us_58887_saas_cpl&ued=https%3A%2F%2Fwww.bark.com%2Fen%2Fus%2Fbusiness-software%2F",
+      "destination_url": "https://www.awin1.com/cread.php?awinmid=58887&awinaffid=3133124&clickref=saascostaudit_bark_us_58887_saas_cpl&ued=https%3A%2F%2Fwww.bark.com%2Fen%2Fus%2Fsoftware-development%2F",
       "modeled_cpa_usd": "$20-$45 Verified CPL (Active Commission-Bearing Partner)"
     }
   ],
@@ -101,6 +101,6 @@
     "advertiser_name": "Bark US",
     "advertiser_mid": "58887",
     "payout_model": "$20-$45 CPL per verified B2B software/VoIP/HRIS quote request",
-    "tracking_url_template": "https://www.awin1.com/cread.php?awinmid=58887&awinaffid=3133124&clickref={clickref}&ued=https%3A%2F%2Fwww.bark.com%2Fen%2Fus%2Fbusiness-software%2F"
+    "tracking_url_template": "https://www.awin1.com/cread.php?awinmid=58887&awinaffid=3133124&clickref={clickref}&ued=https%3A%2F%2Fwww.bark.com%2Fen%2Fus%2Fsoftware-development%2F"
   }
 }

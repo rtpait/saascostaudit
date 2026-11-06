@@ -1708,8 +1708,8 @@
       "cpl_range_usd": "$20-$45 CPL",
       "cta_primary_text": "Compare 3 Vetted B2B Software, VoIP & HRIS Quotes on Bark US \u2192",
       "cta_table_text": "Get 3 Free Quotes (Bark US) \u2192",
-      "affiliate_url_template": "https://www.awin1.com/cread.php?awinmid=58887&awinaffid=3133124&clickref={clickref}&ued=https%3A%2F%2Fwww.bark.com%2Fen%2Fus%2Fbusiness-software%2F",
-      "pricing_source_url": "https://www.bark.com/en/us/business-software/",
+      "affiliate_url_template": "https://www.awin1.com/cread.php?awinmid=58887&awinaffid=3133124&clickref={clickref}&ued=https%3A%2F%2Fwww.bark.com%2Fen%2Fus%2Fsoftware-development%2F",
+      "pricing_source_url": "https://www.bark.com/en/us/software-development/",
       "last_verified": "2026-10-28",
       "verification_mode": "active_awin_cpl_partner"
     }
