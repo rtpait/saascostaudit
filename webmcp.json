@@ -169,7 +169,7 @@
       "name": "calculate_payroll_hris_tco",
       "title": "Payroll & Multi-State HRIS 12-Month TCO Calculator",
       "description": "Calculates deterministic 12-month all-in cost across Gusto, OnPay, Rippling, Deel, ADP RUN, and Paychex Flex including base fees, W-2 PEPM, 1099 contractor fees, extra-state tax filing surcharges, year-end W-2/1099 fees, and global EOR FX spreads.",
-      "canonical_route": "https://saascostaudit.com/payroll/gusto-vs-rippling-tco/",
+      "canonical_route": "https://b2bfeeaudit.com/payroll/gusto-vs-rippling-tco/",
       "inputSchema": {
         "type": "object",
         "required": [
