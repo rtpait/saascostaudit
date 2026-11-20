@@ -1,0 +1,17 @@
+# saascostaudit: real 301s replacing HTTP-200 "Moved" stubs (meta refresh + JS + canonical). Added 2026-11-19 (GSC fixes).
+/payroll/ https://b2bfeeaudit.com/payroll/ 301
+/payroll https://b2bfeeaudit.com/payroll/ 301
+/payroll/1099-vs-w2-employer-tax-calculator/ https://b2bcostaudit.com/labor-burden/w2-employee-vs-1099-contractor-tco/ 301
+/payroll/1099-vs-w2-employer-tax-calculator https://b2bcostaudit.com/labor-burden/w2-employee-vs-1099-contractor-tco/ 301
+/payroll/gusto-vs-adp-run-cost/ https://b2bfeeaudit.com/payroll/ 301
+/payroll/gusto-vs-adp-run-cost https://b2bfeeaudit.com/payroll/ 301
+/payroll/gusto-vs-onpay-tco/ https://b2bfeeaudit.com/payroll/gusto-vs-onpay-tco/ 301
+/payroll/gusto-vs-onpay-tco https://b2bfeeaudit.com/payroll/gusto-vs-onpay-tco/ 301
+/payroll/gusto-vs-rippling-tco/ https://b2bfeeaudit.com/payroll/gusto-vs-rippling-tco/ 301
+/payroll/gusto-vs-rippling-tco https://b2bfeeaudit.com/payroll/gusto-vs-rippling-tco/ 301
+/payroll/multi-state-payroll-tax-fee-calculator/ https://b2bfeeaudit.com/payroll/multi-state-payroll-tax-calculator/ 301
+/payroll/multi-state-payroll-tax-fee-calculator https://b2bfeeaudit.com/payroll/multi-state-payroll-tax-calculator/ 301
+/payroll/paychex-vs-gusto-switching-roi/ https://b2bfeeaudit.com/payroll/ 301
+/payroll/paychex-vs-gusto-switching-roi https://b2bfeeaudit.com/payroll/ 301
+/payroll/rippling-vs-deel-eor-cost/ https://b2bfeeaudit.com/payroll/ 301
+/payroll/rippling-vs-deel-eor-cost https://b2bfeeaudit.com/payroll/ 301
