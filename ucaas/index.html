@@ -234,8 +234,8 @@
 
     <div class="calc-vendor-card vendor-best" id="ucc-card-teams">
       <small id="ucc-plan-teams">Microsoft Teams + Phone + AI Recap</small>
-      <strong class="calc-big" id="ucc-teams-yr">$10,050/yr</strong>
-      <span class="calc-sub" id="ucc-teams-sub">$33.50/seat/mo all-in ($4 Base + $15 Phone + $10 AI + $4.50 Tax)</span>
+      <strong class="calc-big" id="ucc-teams-yr">$9,300/yr</strong>
+      <span class="calc-sub" id="ucc-teams-sub">$31.00/seat/mo all-in ($4 Base + $17 Phone incl. taxes &amp; fees + $10 AI)</span>
       <div style="margin-top:.55rem">
         <a class="cta tbl-cta-btn" id="ucc-cta-teams" data-cta-slot="ucaas_tco_calc" data-funnel-role="mid_content" data-route-slug="ucaas-hub" data-calc-inputs='{"vendor":"microsoft-teams","seats":25}' href="https://www.microsoft.com/en-us/microsoft-teams/compare-microsoft-teams-options" target="_blank" rel="nofollow noopener">Verify Microsoft Teams Rate →</a>
       </div>
@@ -349,7 +349,7 @@
     var teamsBaseSeat = isMonthly ? 4.80 : 4.00;
     var teamsPlanName = "Microsoft Teams Essentials";
     if (stor !== "10gb" || ai === "copilot") {
-      teamsBaseSeat = isMonthly ? 7.20 : 6.00;
+      teamsBaseSeat = isMonthly ? 8.40 : 7.00;
       teamsPlanName = "M365 Business Basic (1 TB + Teams)";
     }
     if (existing === "m365_basic_std" || existing === "m365_e5") {
@@ -362,8 +362,8 @@
       teamsPstnSeat = existing === "m365_e5" ? 0.00 : (isMonthly ? 9.60 : 8.00);
       teamsTax = 4.50;
     } else if (pstn === "unlimited") {
-      teamsPstnSeat = existing === "m365_e5" ? (isMonthly ? 14.40 : 12.00) : (isMonthly ? 18.00 : 15.00);
-      teamsTax = 4.50;
+      teamsPstnSeat = existing === "m365_e5" ? (isMonthly ? 14.40 : 12.00) : (isMonthly ? 20.40 : 17.00);
+      teamsTax = existing === "m365_e5" ? 4.50 : 0; // $17 Teams Phone with Calling Plan: Microsoft price includes communication taxes and fees
     }
     var teamsAiSeat = 0;
     if (ai === "recap") {
@@ -560,16 +560,11 @@
   var expBtn = document.getElementById("ucc-export-btn");
   if (expBtn) {
     expBtn.addEventListener("click", function(){
-      var csv = "Vendor,Plan_Modeled,12_Month_All_In_TCO,Details
-" +
-        "Cisco_Webex,"" + document.getElementById("ucc-plan-webex").textContent + ""," + document.getElementById("ucc-webex-yr").textContent + ","" + document.getElementById("ucc-webex-sub").textContent + ""
-" +
-        "Microsoft_Teams,"" + document.getElementById("ucc-plan-teams").textContent + ""," + document.getElementById("ucc-teams-yr").textContent + ","" + document.getElementById("ucc-teams-sub").textContent + ""
-" +
-        "Zoom_Workplace,"" + document.getElementById("ucc-plan-zoom").textContent + ""," + document.getElementById("ucc-zoom-yr").textContent + ","" + document.getElementById("ucc-zoom-sub").textContent + ""
-" +
-        "Google_Workspace,"" + document.getElementById("ucc-plan-google").textContent + ""," + document.getElementById("ucc-google-yr").textContent + ","" + document.getElementById("ucc-google-sub").textContent + ""
-";
+      var csv = "Vendor,Plan_Modeled,12_Month_All_In_TCO,Details\n" +
+        "Cisco_Webex,\"" + document.getElementById("ucc-plan-webex").textContent + "\"," + document.getElementById("ucc-webex-yr").textContent + ",\"" + document.getElementById("ucc-webex-sub").textContent + "\"\n" +
+        "Microsoft_Teams,\"" + document.getElementById("ucc-plan-teams").textContent + "\"," + document.getElementById("ucc-teams-yr").textContent + ",\"" + document.getElementById("ucc-teams-sub").textContent + "\"\n" +
+        "Zoom_Workplace,\"" + document.getElementById("ucc-plan-zoom").textContent + "\"," + document.getElementById("ucc-zoom-yr").textContent + ",\"" + document.getElementById("ucc-zoom-sub").textContent + "\"\n" +
+        "Google_Workspace,\"" + document.getElementById("ucc-plan-google").textContent + "\"," + document.getElementById("ucc-google-yr").textContent + ",\"" + document.getElementById("ucc-google-sub").textContent + "\"\n";
       var blob = new Blob([csv], {type: "text/csv"});
       var a = document.createElement("a");
       a.href = URL.createObjectURL(blob);
